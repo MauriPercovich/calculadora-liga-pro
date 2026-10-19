@@ -1,0 +1,49 @@
+name: Actualizar datos
+
+# Cada hora de 9:00 a 0:00 (hora de Uruguay, UTC-3): baja los campeonatos en curso
+# de ligapro.uy, recalcula las probabilidades y, si algo cambió, lo sube al repo.
+# Vercel publica solo cada commit nuevo.
+on:
+  schedule:
+    - cron: "5 12-23 * * *"
+    - cron: "5 0-3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Bajar campeonatos en curso
+        run: node scripts/import.mjs --desde 2026 --solo-actual
+
+      - name: Recalcular probabilidades
+        run: npx tsx scripts/build-data.ts
+
+      - name: Subir si cambió algo
+        run: |
+          if git diff --quiet -- public/data/divisionales; then
+            echo "Sin cambios en los partidos ni en las tablas."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          git commit -m "Actualiza datos de Liga Pro"
+          git push

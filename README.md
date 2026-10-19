@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calculadora Liga Pro
 
-## Getting Started
+Chances de salir campeón, ascender, ganar las copas de Oro, Plata y Bronce o descender para cada equipo de [Liga Pro](https://www.ligapro.uy) (fútbol 8, Montevideo), actualizadas después de cada fecha.
 
-First, run the development server:
+Proyecto independiente. Los datos son los que la Liga publica en su web.
+
+## Qué hace
+
+- **Tu equipo primero**: elegís tu cuadro y la portada abre con sus chances y su próximo partido.
+- **Chances por divisional**: campeón, ascenso, descenso y copas, con tabla oficial y tabla proyectada.
+- **Ficha de equipo**: qué pasa si gana, empata o pierde; con cuántos puntos le alcanza; qué partidos de otros le importan; cómo cambiaron sus chances fecha a fecha; sancionados propios y del rival.
+- **Partidos**: probabilidad de cada resultado en lo que viene, y en lo jugado, lo que el modelo esperaba antes (con las sorpresas marcadas).
+- **Simular**: elegís resultados de los partidos que faltan y se recalcula todo en el navegador.
+
+## Cómo calcula
+
+1. **La tabla oficial manda**: se toma la tabla de la Liga y solo se simulan los partidos que faltan.
+2. **Modelo de goles**: ataque y defensa de cada equipo a partir de sus goles del torneo, acercados a la media de la divisional. Sin localía (en Liga Pro no hay). Goles esperados de A = media × ataque de A × defensa de B; de ahí la probabilidad de cada marcador.
+3. **Monte Carlo**: 20.000 simulaciones con el reglamento completo (Apertura: campeón, 4 ascensos, 4 descensos; Clausura: copas de Oro, Plata y Bronce con semis 1º vs 4º y 2º vs 3º, final por la divisional para el 1º, penales 50/50).
+4. **Desempate**: diferencia de gol, goles a favor, enfrentamiento directo y sorteo.
+
+El detalle está en [`src/lib/engine`](src/lib/engine) y en la página *Cómo se calcula*.
+
+## Stack
+
+Next.js 15 (App Router, páginas estáticas) · TypeScript · motor de simulación propio sin dependencias · GitHub Actions para actualizar datos · Vercel.
+
+## Datos
 
 ```bash
+node scripts/import.mjs --desde 2024     # baja de ligapro.uy a data/raw/ (respeta el límite de ~60 pedidos/min)
+npx tsx scripts/build-data.ts            # normaliza y precalcula en public/data/
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Endpoints públicos que usa: `/api/tournaments`, `/api/tournaments/{id}`, `/positions`, `/groupweeks`, `/games?filter[groupweek][0]={fecha}` y `/penalizations`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+La GitHub Action [`actualizar-datos`](.github/workflows/actualizar-datos.yml) corre cada hora, baja solo los campeonatos en curso y sube los datos si cambió algo.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las probabilidades son estimaciones estadísticas. No son cuotas de apuestas ni garantías.

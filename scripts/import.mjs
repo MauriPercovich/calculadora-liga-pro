@@ -103,7 +103,8 @@ async function main() {
     const [dd, mm, yy] = String(d.finish_at).split("/").map(Number);
     return new Date(yy, mm - 1, dd + 7) >= hoy;
   };
-  const aBajar = SOLO_ACTUAL ? elegidos.filter(enCurso) : elegidos;
+  // primero lo más nuevo: el torneo en curso es lo que la web necesita ya
+  const aBajar = (SOLO_ACTUAL ? elegidos.filter(enCurso) : elegidos).sort((a, b) => b.id - a.id);
   await writeFile(path.join(OUT, "tournaments-detail.json"), JSON.stringify(elegidos, null, 1));
   console.log(`Apertura/Clausura desde ${DESDE} (sin series especiales): ${elegidos.length}; a bajar: ${aBajar.length}`);
 
