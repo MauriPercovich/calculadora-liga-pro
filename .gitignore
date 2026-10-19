@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# datos crudos de la API (se regeneran con scripts/import.mjs)
+/data/raw/
