@@ -1,0 +1,1237 @@
+{
+ "actualizado": "2026-10-19T23:10:59.547Z",
+ "torneo": "Clausura 2026",
+ "divisionales": [
+  {
+   "torneoId": 552,
+   "serie": "3",
+   "divisional": "C",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 8,
+   "totalFechas": 13,
+   "esPrimera": false,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30573,
+      "fecha": 8,
+      "dia": "2026-10-10",
+      "hora": null,
+      "cancha": "Complejo LigaSiete",
+      "a": 147,
+      "b": 960,
+      "golesA": 1,
+      "golesB": 0,
+      "fase": "regular"
+     },
+     "antes": [
+      0.37955337747632845,
+      0.20919378207720132,
+      0.4112528404464703
+     ],
+     "cambios": [
+      {
+       "equipoId": 147,
+       "objetivo": "desciende",
+       "de": 0.6333333333333333,
+       "a": 0.3935
+      },
+      {
+       "equipoId": 960,
+       "objetivo": "desciende",
+       "de": 0.6616666666666666,
+       "a": 0.8289
+      }
+     ],
+     "max": 0.2398333333333333
+    },
+    {
+     "partido": {
+      "id": 30575,
+      "fecha": 8,
+      "dia": "2026-10-10",
+      "hora": null,
+      "cancha": "Complejo LigaSiete",
+      "a": 604,
+      "b": 1103,
+      "golesA": 2,
+      "golesB": 5,
+      "fase": "regular"
+     },
+     "antes": [
+      0.21485574037252006,
+      0.18505528317875217,
+      0.6000889764487278
+     ],
+     "cambios": [
+      {
+       "equipoId": 1103,
+       "objetivo": "asciende",
+       "de": 0.235,
+       "a": 0.4377
+      },
+      {
+       "equipoId": 604,
+       "objetivo": "desciende",
+       "de": 0.24566666666666667,
+       "a": 0.3706
+      }
+     ],
+     "max": 0.2027
+    },
+    {
+     "partido": {
+      "id": 30577,
+      "fecha": 8,
+      "dia": "2026-10-10",
+      "hora": null,
+      "cancha": "Complejo LigaSiete",
+      "a": 739,
+      "b": 877,
+      "golesA": 3,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.25717123220190086,
+      0.16703473500004995,
+      0.5757940327980491
+     ],
+     "cambios": [
+      {
+       "equipoId": 739,
+       "objetivo": "desciende",
+       "de": 0.22666666666666666,
+       "a": 0.0337
+      },
+      {
+       "equipoId": 877,
+       "objetivo": "asciende",
+       "de": 0.2976666666666667,
+       "a": 0.10875
+      }
+     ],
+     "max": 0.19296666666666665
+    }
+   ],
+   "equipos": [
+    {
+     "id": 999,
+     "nombre": "Berges FC (S)",
+     "slug": "berges-fc-s",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6998ae042a3e6.jpg"
+    },
+    {
+     "id": 21,
+     "nombre": "La Ley del Ex",
+     "slug": "la-ley-del-ex",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb84c10bd2a.png"
+    },
+    {
+     "id": 282,
+     "nombre": "Bolke F.C.",
+     "slug": "bolke-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ec535a69f23.png"
+    },
+    {
+     "id": 1103,
+     "nombre": "Viagua",
+     "slug": "viagua",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/688a66c0b38e6.jpeg"
+    },
+    {
+     "id": 1183,
+     "nombre": "La Maplera Fc",
+     "slug": "la-maplera-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cca6e6932d.jpeg"
+    },
+    {
+     "id": 739,
+     "nombre": "Puchineta",
+     "slug": "puchineta",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642308b2c1b15.png"
+    },
+    {
+     "id": 274,
+     "nombre": "Cristal Palas FC",
+     "slug": "cristal-palas-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ee1881daeaf3.png"
+    },
+    {
+     "id": 604,
+     "nombre": "Esfinter de Milan",
+     "slug": "esfinter-de-milan",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6248d3ea26e3e.png"
+    },
+    {
+     "id": 877,
+     "nombre": "Real Viñedo (S)",
+     "slug": "real-vinedo-s",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcda4464a73.png"
+    },
+    {
+     "id": 1089,
+     "nombre": "Deportivo Marivent",
+     "slug": "deportivo-marivent",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcd9c7d68a1.png"
+    },
+    {
+     "id": 147,
+     "nombre": "CSD La Pavota",
+     "slug": "csd-la-pavota",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69aad226d730247014e6abb6702f618c.png"
+    },
+    {
+     "id": 1218,
+     "nombre": "Bidon SAD",
+     "slug": "bidon-sad",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cbe625835a1.jpeg"
+    },
+    {
+     "id": 960,
+     "nombre": "La Diosa FC.",
+     "slug": "la-diosa-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66cc7eed9c6d9.png"
+    },
+    {
+     "id": 489,
+     "nombre": "Celta de Vino FC",
+     "slug": "celta-de-vino-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/641dc1ec0cc38.png"
+    }
+   ]
+  },
+  {
+   "torneoId": 553,
+   "serie": "3",
+   "divisional": "D",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 8,
+   "totalFechas": 11,
+   "esPrimera": false,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30657,
+      "fecha": 8,
+      "dia": "2026-10-10",
+      "hora": null,
+      "cancha": "Complejo LigaSiete",
+      "a": 125,
+      "b": 1286,
+      "golesA": 1,
+      "golesB": 8,
+      "fase": "regular"
+     },
+     "antes": [
+      0.18370421872610876,
+      0.16084139792606447,
+      0.6554543833478268
+     ],
+     "cambios": [
+      {
+       "equipoId": 125,
+       "objetivo": "asciende",
+       "de": 0.9196666666666666,
+       "a": 0.6133
+      },
+      {
+       "equipoId": 1286,
+       "objetivo": "campeon",
+       "de": 0.792,
+       "a": 0.9171
+      }
+     ],
+     "max": 0.3063666666666667
+    },
+    {
+     "partido": {
+      "id": 30660,
+      "fecha": 8,
+      "dia": "2026-10-17",
+      "hora": "16:40",
+      "cancha": "Complejo LigaSiete",
+      "a": 1225,
+      "b": 1151,
+      "golesA": 3,
+      "golesB": 4,
+      "fase": "regular"
+     },
+     "antes": [
+      0.5324076998606607,
+      0.17257345464475687,
+      0.29501884549458235
+     ],
+     "cambios": [
+      {
+       "equipoId": 1151,
+       "objetivo": "asciende",
+       "de": 0.06766666666666667,
+       "a": 0.27245
+      },
+      {
+       "equipoId": 1225,
+       "objetivo": "asciende",
+       "de": 0.9276666666666666,
+       "a": 0.79625
+      }
+     ],
+     "max": 0.20478333333333337
+    },
+    {
+     "partido": {
+      "id": 30658,
+      "fecha": 8,
+      "dia": "2026-10-10",
+      "hora": null,
+      "cancha": "Complejo LigaSiete",
+      "a": 1232,
+      "b": 1295,
+      "golesA": 0,
+      "golesB": 3,
+      "fase": "regular"
+     },
+     "antes": [
+      0.2786426453459863,
+      0.2326638000085147,
+      0.48869355464549896
+     ],
+     "cambios": [
+      {
+       "equipoId": 1295,
+       "objetivo": "desciende",
+       "de": 0.9473333333333334,
+       "a": 0.78115
+      },
+      {
+       "equipoId": 1232,
+       "objetivo": "desciende",
+       "de": 0.8703333333333333,
+       "a": 0.95855
+      }
+     ],
+     "max": 0.16618333333333335
+    }
+   ],
+   "equipos": [
+    {
+     "id": 1286,
+     "nombre": "M.F.C City",
+     "slug": "mfc-city",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/fef9b6b5943761f15a2dfb968af9be1b.jpg"
+    },
+    {
+     "id": 1226,
+     "nombre": "Sporting La Costa",
+     "slug": "sporting-la-costa",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e66d47919d3.png"
+    },
+    {
+     "id": 125,
+     "nombre": "Deportivo Guarani",
+     "slug": "deportivo-guarani",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f1b0c851cc63.png"
+    },
+    {
+     "id": 1225,
+     "nombre": "La Ambulancia",
+     "slug": "la-ambulancia",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3a388c76a80823004d7286bfd49dcbf.jpg"
+    },
+    {
+     "id": 184,
+     "nombre": "Sportivo Yapa",
+     "slug": "sportivo-yapa",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5eea79e417702.png"
+    },
+    {
+     "id": 1151,
+     "nombre": "Velero Fc",
+     "slug": "velero-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b22ccc7671adb32a3b3fc311c118af48.jpg"
+    },
+    {
+     "id": 931,
+     "nombre": "Aston Montevideo (S)",
+     "slug": "aston-montevideo-s",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6679a0002a433.png"
+    },
+    {
+     "id": 1170,
+     "nombre": "Old Harwood",
+     "slug": "old-harwood",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6972403a1feed.jpeg"
+    },
+    {
+     "id": 86,
+     "nombre": "Biorn FC",
+     "slug": "biorn-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f54ad6735c.png"
+    },
+    {
+     "id": 1295,
+     "nombre": "El Clan (S3)",
+     "slug": "el-clan-s3",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/1a00bd9dad69f8936cf5d99c12c9212e.jpg"
+    },
+    {
+     "id": 1287,
+     "nombre": "SV FC",
+     "slug": "sv-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/186769275550e43ae60311e9465b18fb.jpg"
+    },
+    {
+     "id": 1232,
+     "nombre": "Tifón FC",
+     "slug": "tifon-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e04085e94a3.jpeg"
+    },
+    {
+     "id": 1095,
+     "nombre": "Sabalito Sabale",
+     "slug": "sabalito-sabale",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68714d4ce4b89.jpeg"
+    }
+   ]
+  },
+  {
+   "torneoId": 554,
+   "serie": "6",
+   "divisional": "A",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 8,
+   "totalFechas": 11,
+   "esPrimera": true,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30856,
+      "fecha": 8,
+      "dia": "2026-10-25",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 397,
+      "b": 1069,
+      "golesA": 6,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.87992757066419,
+      0.06892012064750931,
+      0.051152308688300674
+     ],
+     "cambios": [
+      {
+       "equipoId": 397,
+       "objetivo": "campeon",
+       "de": 0.083,
+       "a": 0.1057
+      }
+     ],
+     "max": 0.022699999999999998
+    }
+   ],
+   "equipos": [
+    {
+     "id": 1084,
+     "nombre": "Porte FC (D)",
+     "slug": "porte-fc-d",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/685ae68ee1605.jpg"
+    },
+    {
+     "id": 397,
+     "nombre": "La Costa FC",
+     "slug": "la-costa-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3a81bb2f55.png"
+    },
+    {
+     "id": 879,
+     "nombre": "Academia FC",
+     "slug": "academia-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d1a090c60e3.jpeg"
+    },
+    {
+     "id": 1045,
+     "nombre": "FC Fernetbache (D)",
+     "slug": "fc-fernetbache-d",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810de7501106.png"
+    },
+    {
+     "id": 707,
+     "nombre": "Berges FC (D)",
+     "slug": "berges-fc-d",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63e0dadc82e3b.png"
+    },
+    {
+     "id": 452,
+     "nombre": "La Bufarra",
+     "slug": "la-bufarra",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3aab26deb9.png"
+    },
+    {
+     "id": 1178,
+     "nombre": "La Calidad FC",
+     "slug": "la-calidad-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984c52039f01.jpeg"
+    },
+    {
+     "id": 1184,
+     "nombre": "ENFUGEIRA FC",
+     "slug": "enfugeira-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cd2f86f939.jpeg"
+    },
+    {
+     "id": 61,
+     "nombre": "Porvenir FC",
+     "slug": "porvenir-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162808bfcb1.png"
+    },
+    {
+     "id": 1164,
+     "nombre": "Prestcold FC",
+     "slug": "prestcold-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/696904977571d.png"
+    },
+    {
+     "id": 1200,
+     "nombre": "Falta Envido (D)",
+     "slug": "falta-envido-d",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69aadb3feb51a.jpeg"
+    },
+    {
+     "id": 1069,
+     "nombre": "La Bomba",
+     "slug": "la-bomba",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6848579867054.png"
+    }
+   ]
+  },
+  {
+   "torneoId": 555,
+   "serie": "6",
+   "divisional": "B",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 7,
+   "totalFechas": 13,
+   "esPrimera": false,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30918,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 1193,
+      "b": 873,
+      "golesA": 3,
+      "golesB": 5,
+      "fase": "regular"
+     },
+     "antes": [
+      0.2384777478176744,
+      0.16803443081351147,
+      0.5934878213688142
+     ],
+     "cambios": [
+      {
+       "equipoId": 873,
+       "objetivo": "asciende",
+       "de": 0.4856666666666667,
+       "a": 0.65065
+      },
+      {
+       "equipoId": 1193,
+       "objetivo": "asciende",
+       "de": 0.10033333333333333,
+       "a": 0.0275
+      }
+     ],
+     "max": 0.16498333333333326
+    },
+    {
+     "partido": {
+      "id": 30914,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 698,
+      "b": 1291,
+      "golesA": 2,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.5915979766852427,
+      0.15898523543944196,
+      0.2494167878753153
+     ],
+     "cambios": [
+      {
+       "equipoId": 698,
+       "objetivo": "campeon",
+       "de": 0.2723333333333333,
+       "a": 0.1637
+      },
+      {
+       "equipoId": 698,
+       "objetivo": "asciende",
+       "de": 0.8743333333333333,
+       "a": 0.779
+      }
+     ],
+     "max": 0.1086333333333333
+    },
+    {
+     "partido": {
+      "id": 30916,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 121,
+      "b": 1109,
+      "golesA": 4,
+      "golesB": 1,
+      "fase": "regular"
+     },
+     "antes": [
+      0.9504962604555012,
+      0.02804586134737359,
+      0.021457878197125257
+     ],
+     "cambios": [
+      {
+       "equipoId": 121,
+       "objetivo": "asciende",
+       "de": 0.235,
+       "a": 0.3269
+      },
+      {
+       "equipoId": 121,
+       "objetivo": "desciende",
+       "de": 0.028666666666666667,
+       "a": 0.00725
+      }
+     ],
+     "max": 0.09190000000000004
+    }
+   ],
+   "equipos": [
+    {
+     "id": 1289,
+     "nombre": "LF Buceo",
+     "slug": "lf-buceo",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/dcfb6f2b157df6fa3e924dd57c336072.jpg"
+    },
+    {
+     "id": 698,
+     "nombre": "1987 FUNF",
+     "slug": "1987-funf",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/660d57f222148.jpg"
+    },
+    {
+     "id": 1291,
+     "nombre": "Pata de palo (D)",
+     "slug": "pata-de-palo-d",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/f57475b2b1fc9c9d4c540211c87c4911.png"
+    },
+    {
+     "id": 873,
+     "nombre": "El Vapa",
+     "slug": "el-vapa",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6642059a1cd14.jpeg"
+    },
+    {
+     "id": 1147,
+     "nombre": "Parque Guarani",
+     "slug": "parque-guarani",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcf38992603.png"
+    },
+    {
+     "id": 121,
+     "nombre": "MFC Montevideo",
+     "slug": "mfc-montevideo",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/beaca04cba4fc2046d631dd8e5af0f8d.jpg"
+    },
+    {
+     "id": 888,
+     "nombre": "Keloke Futbol Club",
+     "slug": "keloke-futbol-club",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cc107b295d3.jpeg"
+    },
+    {
+     "id": 1193,
+     "nombre": "Alta Gama F.C",
+     "slug": "alta-gama-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f24c5562be6.png"
+    },
+    {
+     "id": 1197,
+     "nombre": "EduSkol",
+     "slug": "eduskol",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69a07b90bec4b.jpeg"
+    },
+    {
+     "id": 925,
+     "nombre": "Safaera FC.",
+     "slug": "safaera-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6661dc8a9cb19.png"
+    },
+    {
+     "id": 549,
+     "nombre": "Club Atletico Parenaese",
+     "slug": "club-atletico-parenaese",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6256e315d5521.png"
+    },
+    {
+     "id": 1202,
+     "nombre": "Eltekadisco",
+     "slug": "eltekadisco",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b066918d612.jpeg"
+    },
+    {
+     "id": 1109,
+     "nombre": "Real Envido",
+     "slug": "real-envido",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68cd812203c0c.png"
+    }
+   ]
+  },
+  {
+   "torneoId": 556,
+   "serie": "9",
+   "divisional": "A",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 7,
+   "totalFechas": 9,
+   "esPrimera": true,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30717,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": "10:00",
+      "cancha": "Nasazzi",
+      "a": 1159,
+      "b": 1167,
+      "golesA": 2,
+      "golesB": 1,
+      "fase": "regular"
+     },
+     "antes": [
+      0.18874305317465334,
+      0.15208966215065217,
+      0.6591672846746945
+     ],
+     "cambios": [
+      {
+       "equipoId": 1159,
+       "objetivo": "desciende",
+       "de": 0.4563333333333333,
+       "a": 0.14305
+      },
+      {
+       "equipoId": 1167,
+       "objetivo": "campeon",
+       "de": 0.36566666666666664,
+       "a": 0.11345
+      }
+     ],
+     "max": 0.3132833333333333
+    },
+    {
+     "partido": {
+      "id": 30718,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": "08:00",
+      "cancha": "Nasazzi",
+      "a": 820,
+      "b": 1160,
+      "golesA": 0,
+      "golesB": 5,
+      "fase": "regular"
+     },
+     "antes": [
+      0.25068191407397167,
+      0.1948972251344434,
+      0.5544208607915849
+     ],
+     "cambios": [
+      {
+       "equipoId": 820,
+       "objetivo": "desciende",
+       "de": 0.7523333333333333,
+       "a": 0.97045
+      },
+      {
+       "equipoId": 1160,
+       "objetivo": "campeon",
+       "de": 0.07166666666666667,
+       "a": 0.1776
+      }
+     ],
+     "max": 0.21811666666666674
+    },
+    {
+     "partido": {
+      "id": 30716,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": "08:00",
+      "cancha": "Nasazzi",
+      "a": 771,
+      "b": 1068,
+      "golesA": 2,
+      "golesB": 1,
+      "fase": "regular"
+     },
+     "antes": [
+      0.3494577064155701,
+      0.2231540523021372,
+      0.42738824128229264
+     ],
+     "cambios": [
+      {
+       "equipoId": 771,
+       "objetivo": "campeon",
+       "de": 0.36533333333333334,
+       "a": 0.57745
+      },
+      {
+       "equipoId": 1068,
+       "objetivo": "campeon",
+       "de": 0.12166666666666667,
+       "a": 0.03665
+      }
+     ],
+     "max": 0.21211666666666668
+    }
+   ],
+   "equipos": [
+    {
+     "id": 771,
+     "nombre": "AS Rústicos",
+     "slug": "as-rusticos",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/64fcfaf417dbb.png"
+    },
+    {
+     "id": 332,
+     "nombre": "Deportivo Casavalle FC",
+     "slug": "deportivo-casavalle-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0258d81f386.png"
+    },
+    {
+     "id": 1167,
+     "nombre": "Zorzales FC",
+     "slug": "zorzales-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb94172b7d2.png"
+    },
+    {
+     "id": 1160,
+     "nombre": "La Petro FC",
+     "slug": "la-petro-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/1f79565f056504930671906159a00a18.jpg"
+    },
+    {
+     "id": 1068,
+     "nombre": "Elite FC",
+     "slug": "elite-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb936105844.png"
+    },
+    {
+     "id": 1159,
+     "nombre": "Oeste FC",
+     "slug": "oeste-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6954113ea4a2f.jpeg"
+    },
+    {
+     "id": 820,
+     "nombre": "Arsenal FC Dom.",
+     "slug": "arsenal-fc-dom",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6613f253186d2.png"
+    },
+    {
+     "id": 862,
+     "nombre": "Colón FC",
+     "slug": "colon-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66103ac863be9.jpeg"
+    },
+    {
+     "id": 716,
+     "nombre": "Gordos FC",
+     "slug": "gordos-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6420a1856d943.png"
+    },
+    {
+     "id": 823,
+     "nombre": "AKD",
+     "slug": "akd",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65faf04b6a8f7.png"
+    }
+   ]
+  },
+  {
+   "torneoId": 557,
+   "serie": "9",
+   "divisional": "B",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 7,
+   "totalFechas": 9,
+   "esPrimera": false,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30761,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 822,
+      "b": 1120,
+      "golesA": 1,
+      "golesB": 3,
+      "fase": "regular"
+     },
+     "antes": [
+      0.17502912582761648,
+      0.1216035866856689,
+      0.7033672874867146
+     ],
+     "cambios": [
+      {
+       "equipoId": 822,
+       "objetivo": "desciende",
+       "de": 0.49333333333333335,
+       "a": 0.8015
+      },
+      {
+       "equipoId": 1120,
+       "objetivo": "campeon",
+       "de": 0.059,
+       "a": 0.1652
+      }
+     ],
+     "max": 0.30816666666666664
+    },
+    {
+     "partido": {
+      "id": 30762,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 1122,
+      "b": 949,
+      "golesA": 2,
+      "golesB": 3,
+      "fase": "regular"
+     },
+     "antes": [
+      0.46186903046219996,
+      0.1955202991486238,
+      0.3426106703891762
+     ],
+     "cambios": [
+      {
+       "equipoId": 1122,
+       "objetivo": "asciende",
+       "de": 0.9403333333333334,
+       "a": 0.73835
+      },
+      {
+       "equipoId": 949,
+       "objetivo": "desciende",
+       "de": 0.16066666666666668,
+       "a": 0.031
+      }
+     ],
+     "max": 0.2019833333333334
+    },
+    {
+     "partido": {
+      "id": 30763,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 695,
+      "b": 1117,
+      "golesA": 6,
+      "golesB": 0,
+      "fase": "regular"
+     },
+     "antes": [
+      0.7465896899114944,
+      0.13875849442000487,
+      0.1146518156685007
+     ],
+     "cambios": [
+      {
+       "equipoId": 695,
+       "objetivo": "asciende",
+       "de": 0.64,
+       "a": 0.8007
+      },
+      {
+       "equipoId": 695,
+       "objetivo": "campeon",
+       "de": 0.027,
+       "a": 0.07315
+      }
+     ],
+     "max": 0.16069999999999995
+    }
+   ],
+   "equipos": [
+    {
+     "id": 1181,
+     "nombre": "Team Casoni",
+     "slug": "team-casoni",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb973588098.png"
+    },
+    {
+     "id": 1120,
+     "nombre": "Sportivo Ponzi",
+     "slug": "sportivo-ponzi",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68af434a77619.jpeg"
+    },
+    {
+     "id": 695,
+     "nombre": "Macedonia",
+     "slug": "macedonia",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/635b06bc2e6ff.png"
+    },
+    {
+     "id": 1122,
+     "nombre": "Galácticos V (Nasazzi)",
+     "slug": "galacticos-v-nasazzi",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68b07bf15456c.png"
+    },
+    {
+     "id": 671,
+     "nombre": "Estrella de Galicia",
+     "slug": "estrella-de-galicia",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62f900c1d13bc.png"
+    },
+    {
+     "id": 949,
+     "nombre": "Club Atlético NPC",
+     "slug": "club-atletico-npc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6888fbdb0624c.jpg"
+    },
+    {
+     "id": 822,
+     "nombre": "Madridismo",
+     "slug": "madridismo",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fb007b12429.jpg"
+    },
+    {
+     "id": 1150,
+     "nombre": "Garrufa F.C",
+     "slug": "garrufa-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb96d415051.png"
+    },
+    {
+     "id": 899,
+     "nombre": "Man Red",
+     "slug": "man-red",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66bf68b8da26c.jpg"
+    },
+    {
+     "id": 1117,
+     "nombre": "Piroca FC",
+     "slug": "piroca-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68a611548ccdd.png"
+    }
+   ]
+  },
+  {
+   "torneoId": 558,
+   "serie": "9",
+   "divisional": "C",
+   "categoria": "Clausura",
+   "anio": 2026,
+   "ultimaJugada": 7,
+   "totalFechas": 9,
+   "esPrimera": false,
+   "picantes": [
+    {
+     "partido": {
+      "id": 30966,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": "11:20",
+      "cancha": "Nasazzi",
+      "a": 1154,
+      "b": 1294,
+      "golesA": 2,
+      "golesB": 7,
+      "fase": "regular"
+     },
+     "antes": [
+      0.3830568671864496,
+      0.2108352598473251,
+      0.4061078729662253
+     ],
+     "cambios": [
+      {
+       "equipoId": 1294,
+       "objetivo": "desciende",
+       "de": 0.7823333333333333,
+       "a": 0.3884
+      },
+      {
+       "equipoId": 1154,
+       "objetivo": "desciende",
+       "de": 0.6856666666666666,
+       "a": 0.9619
+      }
+     ],
+     "max": 0.3939333333333333
+    },
+    {
+     "partido": {
+      "id": 30799,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 1293,
+      "b": 1100,
+      "golesA": 5,
+      "golesB": 0,
+      "fase": "regular"
+     },
+     "antes": [
+      0.7194682223304008,
+      0.14084218466740067,
+      0.13968959300219858
+     ],
+     "cambios": [
+      {
+       "equipoId": 1293,
+       "objetivo": "campeon",
+       "de": 0.494,
+       "a": 0.7369
+      },
+      {
+       "equipoId": 1100,
+       "objetivo": "desciende",
+       "de": 0.8283333333333334,
+       "a": 0.9666
+      }
+     ],
+     "max": 0.2429
+    },
+    {
+     "partido": {
+      "id": 30802,
+      "fecha": 7,
+      "dia": "2026-10-18",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 1020,
+      "b": 1253,
+      "golesA": 2,
+      "golesB": 0,
+      "fase": "regular"
+     },
+     "antes": [
+      0.33439267972246195,
+      0.17813474612840358,
+      0.4874725741491344
+     ],
+     "cambios": [
+      {
+       "equipoId": 1020,
+       "objetivo": "desciende",
+       "de": 0.4226666666666667,
+       "a": 0.20985
+      },
+      {
+       "equipoId": 1253,
+       "objetivo": "campeon",
+       "de": 0.2786666666666667,
+       "a": 0.07875
+      }
+     ],
+     "max": 0.21281666666666668
+    }
+   ],
+   "equipos": [
+    {
+     "id": 1293,
+     "nombre": "UDEM",
+     "slug": "udem",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4096ae78eadda171a0f08337f30b62b7.jpg"
+    },
+    {
+     "id": 1254,
+     "nombre": "El Tunel FC",
+     "slug": "el-tunel-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/d698adc38708173dcabb30add82a1e44.png"
+    },
+    {
+     "id": 1253,
+     "nombre": "La Pampara F.C",
+     "slug": "la-pampara-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a120107ad41d326ae4c5f54a427958c5.png"
+    },
+    {
+     "id": 1243,
+     "nombre": "Croacia Fútbol Club",
+     "slug": "croacia-futbol-club",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a04b99c66e56.png"
+    },
+    {
+     "id": 1020,
+     "nombre": "Deportivo 29",
+     "slug": "deportivo-29",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d862b0826fb.jpeg"
+    },
+    {
+     "id": 1169,
+     "nombre": "La Blanca F.C",
+     "slug": "la-blanca-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb97a8a561e.png"
+    },
+    {
+     "id": 1294,
+     "nombre": "Los Poquitos De Siempre FC",
+     "slug": "los-poquitos-de-siempre-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/bc7d202a400272cec2365981b4bc263d.jpg"
+    },
+    {
+     "id": 1154,
+     "nombre": "Prado F.C",
+     "slug": "prado-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb95132c7e1.png"
+    },
+    {
+     "id": 1100,
+     "nombre": "Burmese FC",
+     "slug": "burmese-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6882808ae74b6.jpeg"
+    },
+    {
+     "id": 805,
+     "nombre": "Del Oeste FC",
+     "slug": "del-oeste-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6613f2140b19d.jpeg"
+    }
+   ]
+  }
+ ],
+ "historicas": 16
+}

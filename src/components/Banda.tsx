@@ -38,8 +38,3 @@ export function Banda({ actual, todas, sub, destino = "divisional" }: { actual: 
     </section>
   );
 }
-
-export const subtituloFecha = (d: DivisionalIndice) =>
-  d.ultimaJugada >= d.totalFechas
-    ? `Fase regular terminada (${d.totalFechas} fechas)`
-    : `Fecha ${d.ultimaJugada} de ${d.totalFechas} jugada`;

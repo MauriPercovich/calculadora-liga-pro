@@ -83,6 +83,7 @@ button { font: inherit; color: inherit; }
 .band { background: var(--band); border-bottom: 1px solid var(--line); }
 .band .wrap { display: flex; align-items: center; gap: 14px; padding-block: 12px; flex-wrap: wrap; }
 .trophy { width: 34px; height: 34px; flex-shrink: 0; border-radius: 8px; background: var(--gold); display: grid; place-items: center; color: #02224b; }
+.band .wrap > div:nth-child(2) { flex: 1; min-width: 0; }
 .band h1 { font-size: 15px; font-weight: 800; text-transform: uppercase; margin: 0; line-height: 1.2; text-wrap: balance; }
 .band .sub { font-size: 12px; color: var(--muted); }
 .sel { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
@@ -129,6 +130,9 @@ tr.down td { background: var(--zone-down); }
 tr.down td.pts { background: color-mix(in srgb, var(--zone-down) 70%, var(--line)); }
 tr.fav td { box-shadow: inset 0 2px 0 var(--gold), inset 0 -2px 0 var(--gold); }
 td.team-cell { max-width: 220px; }
+/* en la columna angosta los nombres largos se cortan para que entren todas las columnas */
+.grid > .stack + .stack td.team-cell .nm { max-width: 110px; }
+.grid > .stack + .stack td { padding-left: 4px; padding-right: 4px; }
 .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); padding: 10px 16px 14px; }
 .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -2px; }
 
@@ -196,8 +200,8 @@ td.team-cell { max-width: 220px; }
 .pos-d { color: var(--c-asc); font-weight: 800; }
 .neg-d { color: var(--c-desc); font-weight: 800; }
 
-.hot { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-@media (max-width: 900px) { .hot { grid-template-columns: minmax(0, 1fr); } }
+.hot { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+@media (max-width: 400px) { .hot { grid-template-columns: minmax(0, 1fr); } }
 .hot .card { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
 .swing { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; }
 

@@ -62,12 +62,17 @@ function faseDe(nombreFecha: string): Partido["fase"] | null {
 async function normalizar(id: number): Promise<Divisional | null> {
   const dir = path.join(RAW, String(id));
   const d = await leer<RawDetail>(path.join(dir, "detail.json"));
-  const pos = await leer<{ data: { name: string; positions: RawPos[] }[] }>(path.join(dir, "positions.json"));
+  // La tabla viene en dos formatos: con grupos (data: [{ name, positions }]) o plana (data: [filas]).
+  const pos = await leer<{ has_groups?: boolean; data: ({ name: string; positions: RawPos[] } | RawPos)[] }>(path.join(dir, "positions.json"));
   const games = (await leer<RawGame[]>(path.join(dir, "games.json"))) ?? [];
   const pens = (await leer<{ data: RawPen[] }>(path.join(dir, "penalizations.json")))?.data ?? [];
   if (!d || !pos?.data?.length) return null;
 
-  const grupo = pos.data.find((g) => clave(g.name).endsWith(clave(d.divisional_name))) ?? pos.data[0];
+  const grupos = pos.data.every((g) => "positions" in g)
+    ? (pos.data as { name: string; positions: RawPos[] }[])
+    : [{ name: d.divisional_name, positions: pos.data as RawPos[] }];
+  const grupo = grupos.find((g) => clave(g.name).endsWith(clave(d.divisional_name))) ?? grupos[0];
+  if (!grupo?.positions?.length) return null;
   const equipos: Equipo[] = grupo.positions.map((p) => ({ id: p.id, nombre: limpiar(p.name), slug: p.slug || slugDe(p.name), escudo: p.logo }));
   const porNombre = new Map(equipos.map((e) => [clave(e.nombre), e.id]));
   const tablaOficial: FilaTabla[] = grupo.positions.map((p) => ({ equipoId: p.id, pts: p.points, pj: p.games, pg: p.games_won, pe: p.games_tied, pp: p.games_lost, gf: p.goals_for, gc: p.goals_against }));

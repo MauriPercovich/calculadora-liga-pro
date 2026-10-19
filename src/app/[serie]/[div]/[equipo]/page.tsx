@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Banda, subtituloFecha } from "@/components/Banda";
+import { Banda } from "@/components/Banda";
 import { VistaEquipo } from "@/components/VistaEquipo";
+import { subtituloFecha } from "@/lib/datos";
 import { buscarDivisional, leerIndice } from "@/lib/datos-servidor";
 import { objetivoPrincipal, objetivosDe, OBJETIVOS, pct } from "@/lib/formato";
 

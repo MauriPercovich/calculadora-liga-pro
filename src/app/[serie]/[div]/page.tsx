@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Banda, subtituloFecha } from "@/components/Banda";
+import { Banda } from "@/components/Banda";
 import { VistaDivisional } from "@/components/VistaDivisional";
 import { buscarDivisional, leerIndice } from "@/lib/datos-servidor";
-import { nombreDivisional } from "@/lib/datos";
+import { nombreDivisional, subtituloFecha } from "@/lib/datos";
 
 type Params = { serie: string; div: string };
 

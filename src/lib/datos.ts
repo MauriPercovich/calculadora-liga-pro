@@ -38,3 +38,6 @@ export const rutaDivisional = (d: { serie: string; divisional: string }) => `/se
 export const rutaEquipo = (d: { serie: string; divisional: string }, slug: string) => `${rutaDivisional(d)}/${slug}`;
 export const nombreDivisional = (d: { serie: string; divisional: string; categoria: string; anio: number }) =>
   `Serie ${d.serie} / Divisional ${d.divisional} / ${d.categoria} ${d.anio}`;
+
+export const subtituloFecha = (d: { ultimaJugada: number; totalFechas: number }) =>
+  d.ultimaJugada >= d.totalFechas ? `Fase regular terminada (${d.totalFechas} fechas)` : `Fecha ${d.ultimaJugada} de ${d.totalFechas} jugada`;
