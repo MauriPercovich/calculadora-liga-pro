@@ -10,6 +10,8 @@ export interface DivisionalIndice {
   ultimaJugada: number;
   totalFechas: number;
   esPrimera: boolean;
+  jugados: number;
+  restantes: number;
   picantes: Picante[];
   equipos: EquipoIndice[];
 }
@@ -39,5 +41,7 @@ export const rutaEquipo = (d: { serie: string; divisional: string }, slug: strin
 export const nombreDivisional = (d: { serie: string; divisional: string; categoria: string; anio: number }) =>
   `Serie ${d.serie} / Divisional ${d.divisional} / ${d.categoria} ${d.anio}`;
 
-export const subtituloFecha = (d: { ultimaJugada: number; totalFechas: number }) =>
-  d.ultimaJugada >= d.totalFechas ? `Fase regular terminada (${d.totalFechas} fechas)` : `Fecha ${d.ultimaJugada} de ${d.totalFechas} jugada`;
+export const subtituloFecha = (d: { jugados: number; restantes: number; totalFechas: number }) =>
+  d.restantes === 0
+    ? `Fase regular terminada · ${d.jugados} partidos`
+    : `${d.jugados} partidos jugados · ${d.restantes === 1 ? "queda 1" : `quedan ${d.restantes}`} · ${d.totalFechas} fechas`;

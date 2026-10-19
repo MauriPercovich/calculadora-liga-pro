@@ -20,7 +20,7 @@ export default async function Pagina() {
                 .filter((d) => d.serie === s)
                 .map((d) => (
                   <Link key={d.torneoId} className="btn ghost" href={rutaDivisional(d)}>
-                    Divisional {d.divisional} · fecha {d.ultimaJugada}/{d.totalFechas}
+                    Divisional {d.divisional} · {d.restantes === 0 ? "fase regular terminada" : `quedan ${d.restantes} partidos`}
                   </Link>
                 ))}
             </div>

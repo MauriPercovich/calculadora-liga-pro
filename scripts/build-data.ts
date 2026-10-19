@@ -277,6 +277,8 @@ async function main() {
       ultimaJugada: calc.ultimaJugada,
       totalFechas: calc.totalFechas,
       esPrimera: div.esPrimera,
+      jugados: div.partidos.filter((p) => p.fase === "regular" && p.golesA !== null).length,
+      restantes: div.partidos.filter((p) => p.fase === "regular" && p.golesA === null).length,
       picantes: calc.picantes.slice(0, 3),
       equipos: div.equipos.map((e) => ({ id: e.id, nombre: e.nombre, slug: e.slug, escudo: e.escudo })),
     });

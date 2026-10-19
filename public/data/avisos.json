@@ -1,58 +1,43 @@
 [
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 17/03/2024 (180 FC vs Real Amistad)"
+  "detalle": "08/10/2023 -> 23/03/2024 (25 de Agosto vs La Junta FC. (Sab))"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 24/03/2024 (Del Oeste FC vs 180 FC)"
+  "detalle": "01/10/2023 -> 30/03/2024 (La Junta FC. (Sab) vs De Taquito FC)"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 31/03/2024 (180 FC vs Tatanka FC)"
+  "detalle": "01/10/2023 -> 06/04/2024 (La Noche FC vs La Junta FC. (Sab))"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 07/04/2024 (180 FC vs AKD)"
+  "detalle": "08/10/2023 -> 13/04/2024 (Sensei FC vs La Junta FC. (Sab))"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 14/04/2024 (Arsenal FC Dom. vs 180 FC)"
+  "detalle": "24/09/2023 -> 20/04/2024 (La Junta FC. (Sab) vs Pata de Palo)"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 21/04/2024 (180 FC vs Las Viviendas FC.)"
+  "detalle": "08/10/2023 -> 27/04/2024 (Milano FC vs La Junta FC. (Sab))"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 28/04/2024 (180 FC vs Flamengo FC )"
+  "detalle": "01/10/2023 -> 04/05/2024 (La Junta FC. (Sab) vs Puchineta )"
  },
  {
-  "torneoId": 319,
+  "torneoId": 317,
   "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 05/05/2024 (Larrobla FC  vs 180 FC)"
- },
- {
-  "torneoId": 319,
-  "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 12/05/2024 (180 FC vs Maiame FC)"
- },
- {
-  "torneoId": 319,
-  "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 19/05/2024 (Club Deportivo Leónes vs 180 FC)"
- },
- {
-  "torneoId": 319,
-  "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 26/05/2024 (180 FC vs Colón FC)"
+  "detalle": "09/09/2023 -> 11/05/2024 (La Junta FC. (Sab) vs Doble Fibra)"
  },
  {
   "torneoId": 318,
@@ -120,46 +105,6 @@
   "detalle": "08/10/2023 -> 08/06/2024 (Man Red vs Macedonia)"
  },
  {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 23/03/2024 (25 de Agosto vs La Junta FC. (Sab))"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 30/03/2024 (La Junta FC. (Sab) vs De Taquito FC)"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 06/04/2024 (La Noche FC vs La Junta FC. (Sab))"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 13/04/2024 (Sensei FC vs La Junta FC. (Sab))"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "24/09/2023 -> 20/04/2024 (La Junta FC. (Sab) vs Pata de Palo)"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 27/04/2024 (Milano FC vs La Junta FC. (Sab))"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 04/05/2024 (La Junta FC. (Sab) vs Puchineta )"
- },
- {
-  "torneoId": 317,
-  "tipo": "anio-corregido",
-  "detalle": "09/09/2023 -> 11/05/2024 (La Junta FC. (Sab) vs Doble Fibra)"
- },
- {
   "torneoId": 336,
   "tipo": "anio-corregido",
   "detalle": "02/09/2023 -> 20/03/2024 (Catania FC vs Hacha y Tiza Nasazzi)"
@@ -213,6 +158,61 @@
   "torneoId": 336,
   "tipo": "anio-corregido",
   "detalle": "08/10/2023 -> 29/05/2024 (Vieja Escuela FC vs Hacha y Tiza Nasazzi)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "24/09/2023 -> 17/03/2024 (180 FC vs Real Amistad)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "24/09/2023 -> 24/03/2024 (Del Oeste FC vs 180 FC)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "24/09/2023 -> 31/03/2024 (180 FC vs Tatanka FC)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "24/09/2023 -> 07/04/2024 (180 FC vs AKD)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 14/04/2024 (Arsenal FC Dom. vs 180 FC)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "24/09/2023 -> 21/04/2024 (180 FC vs Las Viviendas FC.)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 28/04/2024 (180 FC vs Flamengo FC )"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 05/05/2024 (Larrobla FC  vs 180 FC)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "24/09/2023 -> 12/05/2024 (180 FC vs Maiame FC)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 19/05/2024 (Club Deportivo Leónes vs 180 FC)"
+ },
+ {
+  "torneoId": 319,
+  "tipo": "anio-corregido",
+  "detalle": "08/10/2023 -> 26/05/2024 (180 FC vs Colón FC)"
  },
  {
   "torneoId": 558,
