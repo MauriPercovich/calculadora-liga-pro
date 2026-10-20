@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Sistema de diseño</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1280px; min-height: 2684px; box-sizing: border-box; padding: 56px 64px; background: #F3F4F6; color: #111827; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; gap: 48px">
+
+  <div style="display: flex; align-items: center; gap: 14px">
+    <div style="background: #02224B; border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+      <span style="color: #FFFFFF; font-size: 22px; font-weight: 800; font-style: italic">LigaPro</span>
+      <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+    </div>
+    <div>
+      <h1 style="margin: 0; font-size: 32px; font-weight: 800">Sistema de diseño</h1>
+      <div style="font-size: 15px; color: #4B5563">Fuente del sistema, sin librerías. Cada token tiene su valor claro y oscuro; los nombres son los de las variables CSS.</div>
+    </div>
+  </div>
+
+  <section>
+    <h2 style="margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #4B5563">1 · COLOR DE INTERFAZ</h2>
+    <div style="display: grid; grid-template-columns: 220px repeat(2, minmax(0, 1fr)) 300px; gap: 0 16px; align-items: center; font-size: 12px; font-weight: 700; color: #4B5563; padding: 0 0 8px">
+      <span>Token</span><span>Claro</span><span>Oscuro</span><span>Uso</span>
+    </div>
+    <sc-for list="{{colors}}" as="c" hint-placeholder-count="20">
+      <div style="display: grid; grid-template-columns: 220px repeat(2, minmax(0, 1fr)) 300px; gap: 0 16px; align-items: center; height: 40px; border-top: 1px solid #E5E7EB; font-size: 13px">
+        <code style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; font-weight: 600">--{{c.k}}</code>
+        <span style="display: flex; align-items: center; gap: 10px"><span style="width: 44px; height: 24px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.12); background: {{c.l}}"></span><code style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px">{{c.l}}</code></span>
+        <span style="display: flex; align-items: center; gap: 10px"><span style="width: 44px; height: 24px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.12); background: {{c.d}}"></span><code style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px">{{c.d}}</code></span>
+        <span style="color: #4B5563">{{c.u}}</span>
+      </div>
+    </sc-for>
+  </section>
+
+  <section>
+    <h2 style="margin: 0 0 6px; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #4B5563">2 · COLOR POR OBJETIVO (FIJO EN TODA LA APP)</h2>
+    <p style="margin: 0 0 16px; font-size: 14px; color: #4B5563">Cada objetivo tiene una forma propia además del color: cuadrado 1º, triángulo arriba o abajo, y círculo con inicial para las copas. El texto siempre acompaña.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+      <sc-for list="{{goals}}" as="g" hint-placeholder-count="6">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(2,34,75,0.08)">
+          <div style="background: #FFFFFF; padding: 14px 16px">
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: {{g.lt}}"><span style="{{g.lmk.st}}" aria-hidden="true">{{g.lmk.g}}</span>{{g.l}}</div>
+            <div style="font-size: 26px; font-weight: 800; color: {{g.lt}}; margin-top: 4px">{{g.v}}</div>
+            <div style="height: 6px; background: #EEF2F6; border-radius: 3px; margin-top: 6px; overflow: hidden"><div style="width: 60%; height: 6px; background: {{g.lb}}"></div></div>
+            <div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; color: #4B5563; margin-top: 8px">texto {{g.lt}}<br>barra {{g.lb}}</div>
+          </div>
+          <div style="background: #131C2F; padding: 14px 16px">
+            <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: {{g.dt}}"><span style="{{g.dmk.st}}" aria-hidden="true">{{g.dmk.g}}</span>{{g.l}}</div>
+            <div style="font-size: 26px; font-weight: 800; color: {{g.dt}}; margin-top: 4px">{{g.v}}</div>
+            <div style="height: 6px; background: #1F2A44; border-radius: 3px; margin-top: 6px; overflow: hidden"><div style="width: 60%; height: 6px; background: {{g.db}}"></div></div>
+            <div style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; color: #A9B4C8; margin-top: 8px">texto {{g.dt}}<br>barra {{g.db}}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; gap: 24px; margin-top: 16px; font-size: 13px; color: #4B5563">
+      <span style="display: flex; align-items: center; gap: 8px"><span style="width: 40px; height: 12px; background: #003C8A; border-radius: 3px"></span>Gana (partido)</span>
+      <span style="display: flex; align-items: center; gap: 8px"><span style="width: 40px; height: 12px; background: #CBD5E1; border-radius: 3px"></span>Empate</span>
+      <span style="display: flex; align-items: center; gap: 8px"><span style="width: 40px; height: 12px; background: #64748B; border-radius: 3px"></span>Gana el otro</span>
+      <span>La barra de partido usa azul y grises a propósito: el rojo queda reservado para Desciende.</span>
+    </div>
+  </section>
+
+  <section style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px">
+    <div>
+      <h2 style="margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #4B5563">3 · TIPOGRAFÍA · system-ui · cifras tabulares</h2>
+      <sc-for list="{{type}}" as="ty" hint-placeholder-count="8">
+        <div style="display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 10px 0; border-top: 1px solid #E5E7EB">
+          <div><div style="font-size: 13px; font-weight: 700">{{ty.n}}</div><code style="font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; color: #4B5563">{{ty.spec}}</code></div>
+          <div style="{{ty.st}}">{{ty.s}}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 32px">
+      <div>
+        <h2 style="margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #4B5563">4 · ESPACIADO (base 4)</h2>
+        <sc-for list="{{space}}" as="s" hint-placeholder-count="7">
+          <div style="display: flex; align-items: center; gap: 12px; height: 28px">
+            <code style="width: 80px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px">--s-{{s.n}}</code>
+            <span style="height: 12px; width: {{s.w}}; background: #003C8A; border-radius: 2px"></span>
+            <span style="font-size: 12px; color: #4B5563">{{s.n}} px</span>
+          </div>
+        </sc-for>
+      </div>
+      <div>
+        <h2 style="margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #4B5563">5 · RADIOS Y SOMBRAS</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px">
+          <sc-for list="{{radii}}" as="r" hint-placeholder-count="5">
+            <div style="text-align: center"><div style="width: 64px; height: 64px; background: #FFFFFF; border: 1px solid #D1D5DB; border-radius: {{r.v}}"></div><div style="font-size: 12px; margin-top: 6px">{{r.n}}</div></div>
+          </sc-for>
+        </div>
+        <div style="display: flex; gap: 16px; margin-top: 20px">
+          <div style="flex: 1; height: 72px; background: #FFFFFF; border-radius: 10px; box-shadow: 0 1px 2px rgba(2,34,75,0.08); padding: 10px; box-sizing: border-box; font-size: 12px"><b>--shadow-card</b><br>0 1px 2px / 8%</div>
+          <div style="flex: 1; height: 72px; background: #FFFFFF; border-radius: 10px; box-shadow: 0 4px 12px rgba(2,34,75,0.14); padding: 10px; box-sizing: border-box; font-size: 12px"><b>--shadow-raise</b><br>0 4px 12px / 14%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #4B5563">6 · COMPONENTES Y ESTADOS</h2>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+
+      <div style="background: #FFFFFF; border-radius: 10px; padding: 20px; box-shadow: 0 1px 2px rgba(2,34,75,0.08)">
+        <div style="font-size: 15px; font-weight: 800; margin-bottom: 14px">Botones · 44 px mínimo</div>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; font-size: 11px; color: #4B5563; text-align: center">
+          <span>Normal</span><span>Hover</span><span>Presionado</span><span>Foco</span><span>Deshabilitado</span>
+          <button style="height: 44px; border: 0; border-radius: 6px; background: #003C8A; color: #FFFFFF; font-weight: 700; font-family: inherit">Copiar</button>
+          <button style="height: 44px; border: 0; border-radius: 6px; background: #02224B; color: #FFFFFF; font-weight: 700; font-family: inherit">Copiar</button>
+          <button style="height: 44px; border: 0; border-radius: 6px; background: #011733; color: #FFFFFF; font-weight: 700; font-family: inherit; transform: translateY(1px)">Copiar</button>
+          <button style="height: 44px; border: 0; border-radius: 6px; background: #003C8A; color: #FFFFFF; font-weight: 700; font-family: inherit; outline: 3px solid #2563EB; outline-offset: 2px">Copiar</button>
+          <button disabled style="height: 44px; border: 0; border-radius: 6px; background: #D1D5DB; color: #4B5563; font-weight: 700; font-family: inherit">Copiar</button>
+          <button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #F3F4F6; color: #111827; font-weight: 700; font-family: inherit">Limpiar</button>
+          <button style="height: 44px; border: 1px solid #9CA3AF; border-radius: 6px; background: #E5E7EB; color: #111827; font-weight: 700; font-family: inherit">Limpiar</button>
+          <button style="height: 44px; border: 1px solid #9CA3AF; border-radius: 6px; background: #D1D5DB; color: #111827; font-weight: 700; font-family: inherit">Limpiar</button>
+          <button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #F3F4F6; color: #111827; font-weight: 700; font-family: inherit; outline: 3px solid #2563EB; outline-offset: 2px">Limpiar</button>
+          <button disabled style="height: 44px; border: 1px solid #E5E7EB; border-radius: 6px; background: #F9FAFB; color: #6B7280; font-weight: 700; font-family: inherit">Limpiar</button>
+        </div>
+        <div style="font-size: 12px; color: #4B5563; margin-top: 12px">Foco: anillo de 3 px #2563EB en claro y #FACC15 en oscuro, separado 2 px.</div>
+      </div>
+
+      <div style="background: #FFFFFF; border-radius: 10px; padding: 20px; box-shadow: 0 1px 2px rgba(2,34,75,0.08)">
+        <div style="font-size: 15px; font-weight: 800; margin-bottom: 14px">Selector 1 / E / 2 · pestañas · chips</div>
+        <div style="display: flex; gap: 24px; align-items: flex-end; flex-wrap: wrap">
+          <div>
+            <div style="font-size: 11px; color: #4B5563; margin-bottom: 6px">Sin elegir</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 44px); gap: 4px"><button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #FFFFFF; font-weight: 800; font-family: inherit">1</button><button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #FFFFFF; font-weight: 800; font-family: inherit">E</button><button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #FFFFFF; font-weight: 800; font-family: inherit">2</button></div>
+          </div>
+          <div>
+            <div style="font-size: 11px; color: #4B5563; margin-bottom: 6px">Elegido «1»</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 44px); gap: 4px"><button style="height: 44px; border: 1px solid #003C8A; border-radius: 6px; background: #003C8A; color: #FFFFFF; font-weight: 800; font-family: inherit">1</button><button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #FFFFFF; font-weight: 800; font-family: inherit">E</button><button style="height: 44px; border: 1px solid #D1D5DB; border-radius: 6px; background: #FFFFFF; font-weight: 800; font-family: inherit">2</button></div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 4px; margin-top: 18px; border-bottom: 1px solid #E5E7EB">
+          <span style="height: 40px; display: flex; align-items: center; gap: 6px; padding: 0 10px; font-size: 13px; font-weight: 800; color: #15803D; border-bottom: 3px solid #16A34A">▲ Asciende</span>
+          <span style="height: 40px; display: flex; align-items: center; padding: 0 10px; font-size: 13px; font-weight: 600; color: #4B5563; border-bottom: 3px solid transparent">Campeón</span>
+          <span style="height: 40px; display: flex; align-items: center; padding: 0 10px; font-size: 13px; font-weight: 600; color: #4B5563; border-bottom: 3px solid transparent">Desciende</span>
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap">
+          <span style="height: 44px; display: flex; align-items: center; padding: 0 14px; border-radius: 999px; border: 1px solid #D1D5DB; background: #F3F4F6; font-size: 13px; font-weight: 700">Serie 9 · A</span>
+          <span style="height: 44px; display: flex; align-items: center; padding: 0 14px; border-radius: 999px; border: 1px solid #003C8A; background: #003C8A; color: #FFFFFF; font-size: 13px; font-weight: 700">Serie 9 · C</span>
+          <span style="height: 24px; align-self: center; display: flex; align-items: center; padding: 0 8px; border-radius: 999px; background: #FEF3C7; color: #854D0E; font-size: 11px; font-weight: 800">SORPRESA</span>
+          <span style="height: 24px; align-self: center; display: flex; align-items: center; padding: 0 8px; border-radius: 999px; background: #FEF3C7; color: #02224B; font-size: 11px; font-weight: 700">Tu cuadro</span>
+        </div>
+      </div>
+
+      <div style="background: #FFFFFF; border-radius: 10px; padding: 20px; box-shadow: 0 1px 2px rgba(2,34,75,0.08)">
+        <div style="font-size: 15px; font-weight: 800; margin-bottom: 14px">Barra de partido · 3 tramos</div>
+        <div style="display: flex; height: 24px; gap: 2px; font-size: 12px; font-weight: 800">
+          <div style="width: 60%; background: #003C8A; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 8px">60%</div>
+          <div style="width: 18%; background: #CBD5E1; color: #1F2937; display: flex; align-items: center; justify-content: center">18%</div>
+          <div style="width: 22%; background: #64748B; color: #FFFFFF; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px">22%</div>
+        </div>
+        <div style="font-size: 12px; color: #4B5563; margin-top: 10px">Si un tramo mide menos de 12%, el número sale debajo de la barra en vez de adentro.</div>
+        <div style="display: flex; height: 24px; gap: 2px; font-size: 12px; font-weight: 800; margin-top: 12px">
+          <div style="width: 83%; background: #003C8A; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 8px">83%</div>
+          <div style="width: 10%; background: #CBD5E1"></div>
+          <div style="width: 7%; background: #64748B; border-radius: 0 4px 4px 0"></div>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 12px; font-size: 12px; font-weight: 700; color: #4B5563; margin-top: 4px"><span>E 10%</span><span>7%</span></div>
+      </div>
+
+      <div style="background: #FFFFFF; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(2,34,75,0.08)">
+        <div style="font-size: 15px; font-weight: 800; padding: 20px 20px 10px">Filas de tabla</div>
+        <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr) 40px 64px 120px; gap: 8px; align-items: center; height: 40px; padding: 0 20px; border-top: 1px solid #E5E7EB; background: #FEF9C3; font-size: 13px"><span>1</span><b>UDEM</b><b style="background: #F3F4F6; align-self: stretch; display: flex; align-items: center; justify-content: center">16</b><span style="color: #15803D; font-weight: 700; text-align: right">&gt;99,9%</span><span style="font-size: 11px; color: #4B5563">tu cuadro</span></div>
+        <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr) 40px 64px 120px; gap: 8px; align-items: center; height: 40px; padding: 0 20px; border-top: 1px solid #E5E7EB; background: #DBEAFE; font-size: 13px"><span>2</span><span style="font-weight: 600">El Tunel FC</span><b style="background: #F3F4F6; align-self: stretch; display: flex; align-items: center; justify-content: center">14</b><span style="color: #15803D; font-weight: 700; text-align: right">91%</span><span style="font-size: 11px; color: #4B5563">top 4 (celeste)</span></div>
+        <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr) 40px 64px 120px; gap: 8px; align-items: center; min-height: 40px; padding: 0 20px; border-top: 1px solid #E5E7EB; font-size: 13px"><span>7</span><span style="font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Los Poquitos De Siempre FC</span><b style="background: #F3F4F6; align-self: stretch; display: flex; align-items: center; justify-content: center">7</b><span style="color: #15803D; font-weight: 700; text-align: right">2,8%</span><span style="font-size: 11px; color: #4B5563">nombre largo: corte con «…»; en tablas anchas, 2 líneas</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":2684}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const colors = [
+      ['bg', '#E5E7EB', '#0B1220', 'Fondo de página (gris de ligapro.uy)'],
+      ['card', '#FFFFFF', '#131C2F', 'Tarjetas'],
+      ['surface-2', '#F3F4F6', '#1A2540', 'Columna Pts, marcadores, chips'],
+      ['line', '#E5E7EB', '#1F2A44', 'Divisores'],
+      ['line-strong', '#D1D5DB', '#2C3A5A', 'Bordes de controles'],
+      ['text', '#111827', '#F1F5F9', 'Texto principal'],
+      ['text-2', '#4B5563', '#A9B4C8', 'Texto secundario (AA sobre tarjeta)'],
+      ['nav', '#02224B', '#020B1A', 'Barra superior e inferior'],
+      ['hero', '#02224B', '#0A2A5C', 'Portada con tu equipo y ficha'],
+      ['action', '#003C8A', '#2563EB', 'Botón primario, selección'],
+      ['link', '#003C8A', '#93C5FD', 'Links y texto de acción'],
+      ['accent', '#EAB308', '#EAB308', 'Amarillo Liga: logo, «%», foco de nav'],
+      ['accent-text', '#854D0E', '#FACC15', 'Amarillo como texto (AA)'],
+      ['accent-soft', '#FEF3C7', '#3A2F0B', 'Fondo de Sorpresa y avisos'],
+      ['top4', '#DBEAFE', '#14294D', 'Filas celestes del top 4'],
+      ['mine', '#FEF9C3', '#2A2410', 'Fila de tu equipo'],
+      ['track', '#EEF2F6', '#1F2A44', 'Fondo de barras'],
+      ['match-win', '#003C8A', '#2563EB', 'Barra: gana el primero'],
+      ['match-draw', '#CBD5E1', '#475569', 'Barra: empate'],
+      ['match-lose', '#64748B', '#94A3B8', 'Barra: gana el segundo']
+    ].map(([k, l, d, u]) => ({ k, l, d, u }));
+    const GC = { light: { camp: ['#003C8A', '#003C8A'], asc: ['#15803D', '#16A34A'], oro: ['#854D0E', '#EAB308'], plata: ['#4B5563', '#9CA3AF'], bronce: ['#9A3412', '#C2410C'], desc: ['#B91C1C', '#DC2626'] }, dark: { camp: ['#93C5FD', '#3B82F6'], asc: ['#4ADE80', '#22C55E'], oro: ['#FACC15', '#EAB308'], plata: ['#CBD5E1', '#94A3B8'], bronce: ['#FB923C', '#EA580C'], desc: ['#F87171', '#EF4444'] } };
+    const mark = (k, m) => { const c = GC[m][k]; const b = 'width: 16px; height: 16px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; line-height: 1; ';
+      if (k === 'camp') return { g: '1º', st: b + 'border-radius: 4px; background: ' + c[1] + '; color: #FFFFFF; font-size: 8px' };
+      if (k === 'asc') return { g: '▲', st: b + 'color: ' + c[1] + '; font-size: 12px' };
+      if (k === 'desc') return { g: '▼', st: b + 'color: ' + c[1] + '; font-size: 12px' };
+      const L = { oro: ['O', '#02224B'], plata: ['P', '#111827'], bronce: ['B', '#FFFFFF'] }[k];
+      return { g: L[0], st: b + 'border-radius: 50%; background: ' + c[1] + '; color: ' + L[1] + '; font-size: 9px' }; };
+    const GL = [['camp', 'Campeón', '74%'], ['asc', 'Asciende', '>99,9%'], ['oro', 'Copa de Oro', '47%'], ['plata', 'Copa de Plata', '<0,1%'], ['bronce', 'Copa de Bronce', '9,8%'], ['desc', 'Desciende', '21%']];
+    const goals = GL.map(([k, l, v]) => ({ l, v, lt: GC.light[k][0], lb: GC.light[k][1], dt: GC.dark[k][0], db: GC.dark[k][1], lmk: mark(k, 'light'), dmk: mark(k, 'dark') }));
+    const type = [
+      ['Cifra héroe', '104/0.9 · 800 · −4', 'font-size: 104px; line-height: 0.9; font-weight: 800; letter-spacing: -4px; color: #02224B', '74%'],
+      ['Título página', '22–32 · 800', 'font-size: 28px; font-weight: 800', 'SERIE 9 / DIVISIONAL C'],
+      ['Título tarjeta', '17 · 800 (20 en escritorio)', 'font-size: 17px; font-weight: 800', 'Chances de cada equipo'],
+      ['Cifra de tabla', '15 · 800 · tabular', 'font-size: 15px; font-weight: 800; color: #15803D', '>99,9%   91%   9,8%   <0,1%'],
+      ['Cuerpo', '15 · 400–700', 'font-size: 15px', 'UDEM vs Croacia Fútbol Club'],
+      ['Secundario', '13 · 400', 'font-size: 13px; color: #4B5563', 'Elegí resultados. Los partidos que no toques los sigue simulando el modelo.'],
+      ['Sobretítulo', '11 · 800 · +0,8 · MAYÚS', 'font-size: 11px; font-weight: 800; letter-spacing: 0.8px; color: #4B5563', 'PRÓXIMO PARTIDO · FECHA 8 · DOM 25 OCT'],
+      ['Etiqueta nav', '11 · 600/700', 'font-size: 11px; font-weight: 700', 'Inicio · Tabla · Partidos · Mi equipo · Simular']
+    ].map(([n, spec, st, s]) => ({ n, spec, st, s }));
+    const space = [4, 8, 12, 16, 24, 32, 48].map(n => ({ n, w: (n * 4) + 'px' }));
+    const radii = [['4 · marca', '4px'], ['6 · botón', '6px'], ['8 · mosaico', '8px'], ['10 · tarjeta', '10px'], ['12 · ficha', '12px'], ['999 · chip', '999px']].map(([n, v]) => ({ n, v }));
+    return { colors, goals, type, space, radii };
+  }
+}
+</script>
+</body>
+</html>

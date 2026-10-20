@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Equipo · escritorio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="min-height: 1310px; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+
+  <header style="background: {{t.nav}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+        <span style="color: #FFFFFF; font-size: 22px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+        <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+      </div>
+      <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto">
+        <sc-for list="{{dnav}}" as="n" hint-placeholder-count="6">
+          <a href="{{n.href}}" style="{{n.st}}; height: 64px; box-sizing: border-box; display: flex; align-items: center; padding: 0 12px; font-size: 13px; letter-spacing: 0.4px; text-decoration: none">{{n.l}}</a>
+        </sc-for>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: {{t.card}}; border-bottom: 1px solid {{t.line2}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+      <div style="width: 44px; height: 44px; border-radius: 8px; background: #EAB308; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#02224B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+      </div>
+      <div style="flex: 1; min-width: 240px">
+        <div style="font-size: 20px; font-weight: 800">SERIE 9 / DIVISIONAL C / CLAUSURA 2026</div>
+        <div style="font-size: 14px; color: {{t.tx2}}">Fecha 7 de 9 jugada</div>
+      </div>
+      <button style="height: 44px; padding: 0 14px; border: 1px solid {{t.line2}}; background: {{t.card}}; border-radius: 6px; color: {{t.tx}}; font-size: 14px; font-weight: 600; font-family: inherit">Cambiar de equipo</button>
+    </div>
+  </section>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+    <main style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+      <article aria-label="Ficha de UDEM para compartir" style="background: #02224B; color: #FFFFFF; border-radius: 12px; padding: 24px; box-shadow: {{t.raise}}">
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end">
+          <div style="flex: 1 1 280px">
+            <div style="font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #CBD5E1">SERIE 9 · DIVISIONAL C · CLAUSURA 2026</div>
+            <div style="display: flex; align-items: center; gap: 14px; margin-top: 14px">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: #FFFFFF; color: #312E81; font-size: 24px; font-weight: 800; display: flex; align-items: center; justify-content: center">U</div>
+              <div>
+                <h1 style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 800">UDEM</h1>
+                <div style="font-size: 14px; color: #CBD5E1">1º · 16 pts · le quedan 2 partidos</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: flex-end; gap: 14px; margin-top: 18px">
+              <div style="font-size: 120px; line-height: 0.85; font-weight: 800; letter-spacing: -5px">74<span style="font-size: 64px; letter-spacing: 0; color: #EAB308">%</span></div>
+              <div style="padding-bottom: 6px; font-size: 17px; font-weight: 700; line-height: 1.2">chances de<br>salir campeón</div>
+            </div>
+          </div>
+          <div role="group" aria-label="Elegí qué chance mostrar en grande" style="flex: 1 1 320px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+            <sc-for list="{{tiles}}" as="g" hint-placeholder-count="6">
+              <button aria-pressed="{{g.on}}" style="{{g.st}}; min-height: 64px; border-radius: 8px; padding: 10px 12px; text-align: left; font-family: inherit; color: #FFFFFF">
+                <span style="display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; color: #E2E8F0"><span style="{{g.mk.st}}" aria-hidden="true">{{g.mk.g}}</span>{{g.l}}</span>
+                <span style="display: block; font-size: 22px; font-weight: 800; color: {{g.tx}}; margin-top: 4px">{{g.v}}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 18px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.16); font-size: 12px; color: #CBD5E1">
+          <span style="font-weight: 800; font-style: italic; color: #FFFFFF">LigaPro <span style="font-style: normal; color: #EAB308">· Calculadora</span></span>
+          <span>Después de la fecha 7 · 20/10/2026</span>
+        </div>
+      </article>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button aria-pressed="true" style="height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid {{t.line2}}; background: {{t.card}}; color: {{t.tx}}; font-size: 14px; font-weight: 700; font-family: inherit"><span aria-hidden="true" style="color: #EAB308">★</span> Es tu cuadro</button>
+        <button style="height: 44px; padding: 0 16px; border-radius: 6px; border: 0; background: {{t.act}}; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit">Copiar para compartir</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+            <h2 style="margin: 0; font-size: 17px; font-weight: 800">¿Qué pasa si…?</h2>
+            <span style="font-size: 13px; color: {{t.tx2}}">vs Croacia · fecha 8</span>
+          </div>
+          <p style="margin: 4px 0 0; font-size: 13px; color: {{t.tx2}}">Chances de salir campeón según el resultado.</p>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 14px">
+            <sc-for list="{{ifs}}" as="w" hint-placeholder-count="3">
+              <div style="background: {{t.sub}}; border-radius: 8px; padding: 12px 8px; text-align: center; border-top: 4px solid {{w.c}}">
+                <div style="font-size: 12px; font-weight: 800; letter-spacing: 0.6px; color: {{t.tx2}}">{{w.l}}</div>
+                <div style="font-size: 28px; font-weight: 800; color: {{w.tx}}; margin-top: 2px">{{w.v}}</div>
+                <div style="font-size: 12px; font-weight: 700; color: {{w.dtx}}">{{w.d}}</div>
+              </div>
+            </sc-for>
+          </div>
+        </article>
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">¿Con cuántos puntos salgo campeón?</h2>
+          <p style="margin: 4px 0 0; font-size: 13px; color: {{t.tx2}}">Hoy tenés 16 y podés llegar a 22.</p>
+          <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 4px">
+            <sc-for list="{{pts}}" as="p" hint-placeholder-count="6">
+              <div style="display: grid; grid-template-columns: 54px minmax(0, 1fr) 56px; gap: 10px; align-items: center; height: 28px">
+                <span style="font-size: 13px; font-weight: 700">{{p.l}}</span>
+                <div style="height: 16px; background: {{t.track}}; border-radius: 4px; overflow: hidden"><div style="width: {{p.w}}; height: 16px; background: {{p.bar}}"></div></div>
+                <span style="text-align: right; font-size: 14px; font-weight: 800; color: {{p.tx}}">{{p.v}}</span>
+              </div>
+            </sc-for>
+          </div>
+        </article>
+      </div>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Cómo vino su chance</h2>
+          <span style="font-size: 13px; color: {{t.tx2}}">Campeón · fecha a fecha</span>
+        </div>
+        <svg role="img" aria-label="Chance de salir campeón por fecha: 18, 22, 31, 40, 52, 49 y 74%" width="100%" height="200" viewBox="0 0 640 200" style="display: block; margin-top: 12px">
+          <line x1="36" y1="20" x2="630" y2="20" stroke="{{t.line}}"></line>
+          <line x1="36" y1="90" x2="630" y2="90" stroke="{{t.line}}"></line>
+          <line x1="36" y1="160" x2="630" y2="160" stroke="{{t.line2}}"></line>
+          <text x="0" y="24" font-size="12" fill="{{t.tx2}}">100%</text>
+          <text x="6" y="94" font-size="12" fill="{{t.tx2}}">50%</text>
+          <text x="14" y="164" font-size="12" fill="{{t.tx2}}">0%</text>
+          <polyline points="{{chart.pts}}" fill="none" stroke="{{chart.c}}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></polyline>
+          <circle cx="610" cy="{{chart.ly}}" r="6" fill="{{chart.c}}"></circle>
+          <text x="598" y="{{chart.ty}}" font-size="14" font-weight="800" fill="{{chart.c}}" text-anchor="end">74%</text>
+          <text x="60" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 1</text>
+          <text x="152" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 2</text>
+          <text x="244" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 3</text>
+          <text x="336" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 4</text>
+          <text x="428" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 5</text>
+          <text x="520" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 6</text>
+          <text x="604" y="190" font-size="12" fill="{{t.tx2}}" text-anchor="middle">Fecha 7</text>
+        </svg>
+      </article>
+    </main>
+
+    <aside style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 16px 18px 6px">
+        <h2 style="margin: 0 0 4px; font-size: 17px; font-weight: 800">Lo que le queda</h2>
+        <sc-for list="{{left}}" as="p" hint-placeholder-count="2">
+          <div style="padding: 12px 0; border-top: 1px solid {{t.line}}">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: {{t.tx2}}"><span>{{p.f}}</span><span>{{p.pos}}</span></div>
+            <div style="font-size: 15px; font-weight: 800; margin-top: 2px">vs {{p.rival}}</div>
+            <div style="display: flex; height: 22px; gap: 2px; margin-top: 8px; font-size: 11px; font-weight: 800">
+              <div style="width: {{p.w1}}; background: {{t.win}}; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 6px">{{p.winLab}}</div>
+              <div style="width: {{p.wx}}; background: {{t.draw}}; color: {{t.drawTx}}; display: flex; align-items: center; justify-content: center">{{p.px}}</div>
+              <div style="width: {{p.w2}}; background: {{t.lose}}; color: {{t.loseTx}}; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px">{{p.p2}}</div>
+            </div>
+          </div>
+        </sc-for>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 16px 18px 6px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Partidos de otros que más te importan</h2>
+        <p style="margin: 4px 0 6px; font-size: 13px; color: {{t.tx2}}">Cuánto cambia tu chance de salir campeón, en puntos porcentuales.</p>
+        <sc-for list="{{others}}" as="o" hint-placeholder-count="3">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 68px; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid {{t.line}}">
+            <div>
+              <div style="font-size: 14px; font-weight: 700; line-height: 1.25">{{o.what}}</div>
+              <div style="font-size: 12px; color: {{t.tx2}}; margin-top: 2px">{{o.when}}</div>
+            </div>
+            <span style="text-align: right; font-size: 18px; font-weight: 800; color: {{o.tx}}">{{o.d}}</span>
+          </div>
+        </sc-for>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 16px 18px 6px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Sancionados</h2>
+        <sc-for list="{{sanc}}" as="s" hint-placeholder-count="2">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}; margin: 12px 0 2px">{{s.title}}</div>
+          <sc-for list="{{s.ps}}" as="p" hint-placeholder-count="2">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 10px 0; border-top: 1px solid {{t.line}}">
+              <div>
+                <div style="font-size: 14px; font-weight: 700">{{p.n}}</div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 3px; font-size: 12px; color: {{t.tx2}}"><span style="{{p.cardSt}}" aria-hidden="true"></span>{{p.tipo}} · {{p.fechas}}</div>
+              </div>
+              <span style="font-size: 13px; font-weight: 800; white-space: nowrap">{{p.queda}}</span>
+            </div>
+          </sc-for>
+        </sc-for>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 18px 8px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Arriba en la tabla</h2>
+          <a href="DivDesk.dc.html" style="font-size: 13px; font-weight: 700; color: {{t.ink}}">Tabla completa</a>
+        </div>
+        <sc-for list="{{mini}}" as="r" hint-placeholder-count="5">
+          <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr) 38px 60px; gap: 8px; align-items: center; height: 40px; padding: 0 18px; border-top: 1px solid {{t.line}}; background: {{r.bg}}">
+            <span style="font-size: 13px; color: {{t.tx2}}">{{r.pos}}</span>
+            <span style="font-size: 13px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+            <span style="font-size: 14px; font-weight: 800; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+            <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{r.tx}}">{{r.camp}}</span>
+          </div>
+        </sc-for>
+      </article>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1280,"height":1310}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',sub:'#F3F4F6',line:'#E5E7EB',line2:'#D1D5DB',tx:'#111827',tx2:'#4B5563',nav:'#02224B',navTx:'#CBD5E1',act:'#003C8A',ink:'#003C8A',acc:'#EAB308',top4:'#DBEAFE',pts:'#F3F4F6',track:'#EEF2F6',win:'#003C8A',draw:'#CBD5E1',drawTx:'#1F2937',lose:'#64748B',loseTx:'#FFFFFF',shadow:'0 1px 2px rgba(2,34,75,0.08)',raise:'0 4px 12px rgba(2,34,75,0.14)',mine:'#FEF9C3',up:'#15803D',down:'#B91C1C'},
+dark:{bg:'#0B1220',card:'#131C2F',sub:'#1A2540',line:'#1F2A44',line2:'#2C3A5A',tx:'#F1F5F9',tx2:'#A9B4C8',nav:'#020B1A',navTx:'#A9B4C8',act:'#2563EB',ink:'#93C5FD',acc:'#EAB308',top4:'#14294D',pts:'#1A2540',track:'#1F2A44',win:'#2563EB',draw:'#475569',drawTx:'#F1F5F9',lose:'#94A3B8',loseTx:'#0B1220',shadow:'0 1px 2px rgba(0,0,0,0.4)',raise:'0 6px 16px rgba(0,0,0,0.5)',mine:'#2A2410',up:'#4ADE80',down:'#F87171'}};
+const GC={light:{camp:['#003C8A','#003C8A'],asc:['#15803D','#16A34A'],oro:['#854D0E','#EAB308'],plata:['#4B5563','#9CA3AF'],bronce:['#9A3412','#C2410C'],desc:['#B91C1C','#DC2626']},dark:{camp:['#93C5FD','#3B82F6'],asc:['#4ADE80','#22C55E'],oro:['#FACC15','#EAB308'],plata:['#CBD5E1','#94A3B8'],bronce:['#FB923C','#EA580C'],desc:['#F87171','#EF4444']}};
+const GL={camp:'Campeón',asc:'Asciende',oro:'Copa de Oro',plata:'Copa de Plata',bronce:'Copa de Bronce',desc:'Desciende'};
+function mark(k,m){const c=GC[m][k];const b='width: 16px; height: 16px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; line-height: 1; ';
+if(k==='camp')return{g:'1º',st:b+'border-radius: 4px; background: '+c[1]+'; color: #FFFFFF; font-size: 8px'};
+if(k==='asc')return{g:'▲',st:b+'color: '+c[1]+'; font-size: 12px'};
+if(k==='desc')return{g:'▼',st:b+'color: '+c[1]+'; font-size: 12px'};
+const L={oro:['O','#02224B'],plata:['P','#111827'],bronce:['B','#FFFFFF']}[k];
+return{g:L[0],st:b+'border-radius: 50%; background: '+c[1]+'; color: '+L[1]+'; font-size: 9px'};}
+const DNAV=[['INICIO','InicioDesk.dc.html'],['TABLA Y CHANCES','DivDesk.dc.html'],['PARTIDOS','PartidosDesk.dc.html'],['MI EQUIPO','EquipoDesk.dc.html'],['SIMULAR','SimularDesk.dc.html'],['SANCIONADOS','SancDesk.dc.html']];
+return {T,GC,GL,mark,DNAV};
+}
+  renderVals() {
+    const {T,GC,GL,mark,DNAV} = this.lp();
+    const m = this.props.dark ? 'dark' : 'light';
+    const t = T[m];
+    const mine = {camp:'74%',asc:'>99,9%',oro:'47%',plata:'<0,1%',bronce:'0%',desc:'0%'};
+    const GS = {camp:'Campeón',asc:'Asciende',oro:'Oro',plata:'Plata',bronce:'Bronce',desc:'Desciende'};
+    const tiles = Object.keys(GL).map(k => ({ l: GS[k], v: mine[k], on: k === 'camp', mk: mark(k, 'dark'), tx: GC.dark[k][0], st: k === 'camp' ? 'background: rgba(255,255,255,0.12); border: 2px solid #EAB308' : 'background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16)' }));
+    const ifs = [
+      { l: 'GANA', v: '93%', d: '▲ 18,6 pp', c: t.win, tx: t.ink, dtx: t.up },
+      { l: 'EMPATA', v: '67%', d: '▼ 6,8 pp', c: t.draw, tx: t.tx, dtx: t.down },
+      { l: 'PIERDE', v: '37%', d: '▼ 37,0 pp', c: t.lose, tx: t.tx, dtx: t.down }
+    ];
+    const P = [['16 pts', 0.8], ['17 pts', 17], ['18 pts', 47], ['19 pts', 71], ['20 pts', 100], ['22 pts', 100]];
+    const pts = P.map(([l, v]) => ({ l, v: v === 100 ? 'seguro' : String(v).replace('.', ',') + '%', w: Math.max(v, 1.5) + '%', bar: GC[m].camp[1], tx: GC[m].camp[0] }));
+    const others = [
+      { what: 'Que gane La Blanca', when: 'Fecha 9 · El Tunel FC vs La Blanca F.C', d: '+12,0', tx: t.up },
+      { what: 'Que gane El Tunel', when: 'Fecha 8 · El Tunel FC vs La Pampara F.C', d: '−11,0', tx: t.down },
+      { what: 'Que empaten El Tunel y La Pampara', when: 'Fecha 8 · El Tunel FC vs La Pampara F.C', d: '+10,6', tx: t.up }
+    ];
+    const left = [
+      { f: 'FECHA 8 · DOM 25 OCT', pos: 'rival 4º · 13 pts', rival: 'Croacia Fútbol Club', winLab: 'Gana 60%', p1: '60%', px: '18%', p2: '22%', w1: '60%', wx: '18%', w2: '22%' },
+      { f: 'FECHA 9 · DOM 1 NOV', pos: 'rival 5º · 10 pts', rival: 'Deportivo 29', winLab: 'Gana 55%', p1: '55%', px: '21%', p2: '24%', w1: '55%', wx: '21%', w2: '24%' }
+    ];
+    const V = [18, 22, 31, 40, 52, 49, 74];
+    const xs = [60, 152, 244, 336, 428, 520, 610];
+    const y = (v) => 160 - v * 1.4;
+    const chart = { pts: V.map((v, i) => xs[i] + ',' + y(v)).join(' '), ly: y(74), ty: y(74) - 12, c: GC[m].camp[1] };
+    const card = (c) => 'width: 10px; height: 14px; border-radius: 2px; background: ' + c;
+    const sanc = [
+      { title: 'DE UDEM', ps: [{ n: 'M. Silva', tipo: 'Roja', fechas: '2 fechas', queda: 'Le queda 1', cardSt: card('#DC2626') }] },
+      { title: 'DE CROACIA, TU PRÓXIMO RIVAL', ps: [{ n: 'F. Rodríguez', tipo: 'Roja', fechas: '1 fecha', queda: 'Le queda 1', cardSt: card('#DC2626') }, { n: 'L. Pereira', tipo: '5 amarillas', fechas: '1 fecha', queda: 'Le queda 1', cardSt: card('#EAB308') }] }
+    ];
+    const M = [['UDEM', 16, '74%'], ['El Tunel FC', 14, '11%'], ['La Pampara F.C', 13, '7,9%'], ['Croacia Fútbol Club', 13, '6,0%'], ['Deportivo 29', 10, '1,5%']];
+    const mini = M.map((r, i) => ({ pos: i + 1, n: r[0], pts: r[1], camp: r[2], tx: GC[m].camp[0], fw: i === 0 ? 800 : 600, bg: i === 0 ? t.mine : (i < 4 ? t.top4 : 'transparent') }));
+    const act = 'MI EQUIPO';
+    const dnav = DNAV.map(([l, href]) => ({ l, href, st: 'color: ' + (l === act ? '#FFFFFF' : t.navTx) + '; font-weight: ' + (l === act ? 800 : 600) + '; border-bottom: 3px solid ' + (l === act ? t.acc : 'transparent') }));
+    return { t, tiles, ifs, pts, others, left, chart, sanc, mini, dnav };
+  }
+}
+</script>
+</body>
+</html>

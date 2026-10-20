@@ -1,0 +1,73 @@
+{
+  "_nota": "Datos del diseño. Los campos marcados en _ejemplo NO son reales: reemplazarlos por los de ligapro.uy y el modelo antes de publicar.",
+  "_ejemplo": [
+    "equipos[6..9].pj/pg/pe/pp/gf/gc (solo se veían las filas 1 a 6 en la captura)",
+    "chances de oro/plata/bronce de todos menos UDEM",
+    "probabilidades de partidos restantes salvo UDEM vs Croacia (60/18/22)",
+    "probabilidades 'antes del partido' de la fecha 7",
+    "evolucion fecha a fecha",
+    "sancionados (nombres inventados)",
+    "colores de escudo (no hay escudos reales todavía)"
+  ],
+  "torneo": { "serie": 9, "divisional": "C", "fase": "Clausura", "anio": 2026, "fechasJugadas": 7, "fechasTotales": 9, "actualizado": "2026-10-20" },
+  "equipos": [
+    { "id": "udem", "nombre": "UDEM", "corto": "UDEM", "sigla": "U", "color": "#312E81", "pts": 16, "pj": 7, "pg": 5, "pe": 1, "pp": 1, "gf": 24, "gc": 9, "ptsEsperados": 18.6,
+      "chances": { "camp": 74, "asc": 99.96, "oro": 47, "plata": 0.04, "bronce": 0, "desc": 0 } },
+    { "id": "el-tunel", "nombre": "El Tunel FC", "corto": "El Tunel", "sigla": "ET", "color": "#0F766E", "pts": 14, "pj": 7, "pg": 4, "pe": 2, "pp": 1, "gf": 14, "gc": 10, "ptsEsperados": 16.4,
+      "chances": { "camp": 11, "asc": 91, "oro": 21, "plata": 4.0, "bronce": 0, "desc": 0 } },
+    { "id": "la-pampara", "nombre": "La Pampara F.C", "corto": "La Pampara", "sigla": "LP", "color": "#155E75", "pts": 13, "pj": 7, "pg": 4, "pe": 1, "pp": 2, "gf": 19, "gc": 14, "ptsEsperados": 15.2,
+      "chances": { "camp": 7.9, "asc": 91, "oro": 15, "plata": 4.1, "bronce": 0, "desc": 0.1 } },
+    { "id": "croacia", "nombre": "Croacia Fútbol Club", "corto": "Croacia", "sigla": "C", "color": "#1E40AF", "pts": 13, "pj": 7, "pg": 4, "pe": 1, "pp": 2, "gf": 15, "gc": 12, "ptsEsperados": 15.1,
+      "chances": { "camp": 6.0, "asc": 84, "oro": 13, "plata": 6.3, "bronce": 0, "desc": 0.2 } },
+    { "id": "deportivo-29", "nombre": "Deportivo 29", "corto": "Deportivo 29", "sigla": "D2", "color": "#166534", "pts": 10, "pj": 7, "pg": 3, "pe": 1, "pp": 3, "gf": 18, "gc": 13, "ptsEsperados": 11.9,
+      "chances": { "camp": 1.5, "asc": 22, "oro": 3.1, "plata": 31, "bronce": 5.2, "desc": 21 } },
+    { "id": "la-blanca", "nombre": "La Blanca F.C", "corto": "La Blanca", "sigla": "LB", "color": "#0E7490", "pts": 9, "pj": 7, "pg": 2, "pe": 3, "pp": 2, "gf": 21, "gc": 20, "ptsEsperados": 10.8,
+      "chances": { "camp": 0.3, "asc": 9.8, "oro": 0.6, "plata": 27, "bronce": 10, "desc": 47 } },
+    { "id": "los-poquitos", "nombre": "Los Poquitos De Siempre FC", "corto": "Los Poquitos", "sigla": "LP", "color": "#6B21A8", "pts": 7, "pj": 7, "pg": 2, "pe": 1, "pp": 4, "gf": 14, "gc": 19, "ptsEsperados": 8.6,
+      "chances": { "camp": 0.04, "asc": 2.8, "oro": 0.2, "plata": 22, "bronce": 18, "desc": 39 } },
+    { "id": "prado", "nombre": "Prado F.C", "corto": "Prado", "sigla": "P", "color": "#991B1B", "pts": 6, "pj": 7, "pg": 1, "pe": 3, "pp": 3, "gf": 12, "gc": 20, "ptsEsperados": 7.1,
+      "chances": { "camp": 0, "asc": 0, "oro": 0, "plata": 2.9, "bronce": 20, "desc": 96 } },
+    { "id": "burmese", "nombre": "Burmese FC", "corto": "Burmese", "sigla": "B", "color": "#7E22CE", "pts": 6, "pj": 7, "pg": 1, "pe": 3, "pp": 3, "gf": 9, "gc": 18, "ptsEsperados": 7.0,
+      "chances": { "camp": 0, "asc": 0, "oro": 0, "plata": 2.7, "bronce": 21, "desc": 97 } },
+    { "id": "del-oeste", "nombre": "Del Oeste FC", "corto": "Del Oeste", "sigla": "DO", "color": "#713F12", "pts": 3, "pj": 7, "pg": 1, "pe": 0, "pp": 6, "gf": 8, "gc": 19, "ptsEsperados": 3.9,
+      "chances": { "camp": 0, "asc": 0, "oro": 0, "plata": 0, "bronce": 26, "desc": 99.96 } }
+  ],
+  "restantes": [
+    { "fecha": 8, "dia": "2026-10-25", "a": "udem", "b": "croacia", "p": [60, 18, 22] },
+    { "fecha": 8, "dia": "2026-10-25", "a": "prado", "b": "del-oeste", "p": [52, 22, 26] },
+    { "fecha": 8, "dia": "2026-10-25", "a": "la-blanca", "b": "deportivo-29", "p": [34, 24, 42] },
+    { "fecha": 8, "dia": "2026-10-25", "a": "el-tunel", "b": "la-pampara", "p": [41, 25, 34] },
+    { "fecha": 8, "dia": "2026-10-25", "a": "los-poquitos", "b": "burmese", "p": [49, 23, 28] },
+    { "fecha": 9, "dia": "2026-11-01", "a": "croacia", "b": "burmese", "p": [63, 19, 18] },
+    { "fecha": 9, "dia": "2026-11-01", "a": "deportivo-29", "b": "udem", "p": [24, 21, 55] },
+    { "fecha": 9, "dia": "2026-11-01", "a": "la-pampara", "b": "prado", "p": [66, 17, 17] },
+    { "fecha": 9, "dia": "2026-11-01", "a": "el-tunel", "b": "la-blanca", "p": [54, 22, 24] },
+    { "fecha": 9, "dia": "2026-11-01", "a": "del-oeste", "b": "los-poquitos", "p": [30, 23, 47] }
+  ],
+  "resultados": [
+    { "fecha": 7, "dia": "2026-10-18", "a": "udem", "b": "burmese", "ga": 5, "gb": 0, "pAntes": [71, 16, 13] },
+    { "fecha": 7, "dia": "2026-10-18", "a": "del-oeste", "b": "el-tunel", "ga": 0, "gb": 1, "pAntes": [18, 22, 60] },
+    { "fecha": 7, "dia": "2026-10-18", "a": "deportivo-29", "b": "la-pampara", "ga": 2, "gb": 0, "pAntes": [19, 23, 58] },
+    { "fecha": 7, "dia": "2026-10-18", "a": "croacia", "b": "la-blanca", "ga": 1, "gb": 1, "pAntes": [49, 27, 24] },
+    { "fecha": 7, "dia": "2026-10-18", "a": "prado", "b": "los-poquitos", "ga": 2, "gb": 7, "pAntes": [40, 24, 36] }
+  ],
+  "picante": [
+    { "partido": ["prado", "los-poquitos"], "movimientos": [ { "equipo": "los-poquitos", "objetivo": "desc", "antes": 78, "despues": 39 }, { "equipo": "prado", "objetivo": "desc", "antes": 69, "despues": 96 } ] },
+    { "partido": ["udem", "burmese"], "movimientos": [ { "equipo": "udem", "objetivo": "camp", "antes": 49, "despues": 74 }, { "equipo": "burmese", "objetivo": "desc", "antes": 83, "despues": 97 } ] },
+    { "partido": ["deportivo-29", "la-pampara"], "movimientos": [ { "equipo": "deportivo-29", "objetivo": "desc", "antes": 42, "despues": 21 }, { "equipo": "la-pampara", "objetivo": "camp", "antes": 19, "despues": 7.9 } ] }
+  ],
+  "evolucionUDEMCampeon": [18, 22, 31, 40, 52, 49, 74],
+  "sancionados": [
+    { "jugador": "M. Silva", "equipo": "udem", "tipo": "roja", "fechas": 2, "restan": 1 },
+    { "jugador": "F. Rodríguez", "equipo": "croacia", "tipo": "roja", "fechas": 1, "restan": 1 },
+    { "jugador": "L. Pereira", "equipo": "croacia", "tipo": "amarillas", "detalle": "5ª amarilla", "fechas": 1, "restan": 1 },
+    { "jugador": "S. González", "equipo": "del-oeste", "tipo": "roja", "fechas": 4, "restan": 3 },
+    { "jugador": "J. Martínez", "equipo": "los-poquitos", "tipo": "roja", "fechas": 3, "restan": 2 },
+    { "jugador": "D. Fernández", "equipo": "prado", "tipo": "amarillas", "detalle": "5ª amarilla", "fechas": 1, "restan": 1 }
+  ],
+  "divisiones": [
+    { "serie": 9, "divisionales": ["A", "B", "C"] },
+    { "serie": 6, "divisionales": ["A", "B"] },
+    { "serie": 3, "divisionales": ["C", "D"] }
+  ]
+}

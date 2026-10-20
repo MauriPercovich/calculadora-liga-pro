@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Sancionados · celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 934px; display: flex; flex-direction: column; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+
+  <section style="background: {{t.hero}}; padding: 0 16px 16px; color: {{t.heroTx}}">
+    <header style="height: 52px; display: flex; align-items: center; gap: 10px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+      <span style="font-size: 20px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+      <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+    </header>
+    <button style="height: 44px; width: 100%; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: {{t.heroFill}}; border: 1px solid {{t.heroLine}}; border-radius: 8px; color: #FFFFFF; text-align: left; font-family: inherit">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+      <span style="flex: 1; font-size: 12px; font-weight: 800; letter-spacing: 0.4px">SERIE 9 / DIVISIONAL C / CLAUSURA 2026</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+  </section>
+
+  <main style="flex: 1; padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+    <div style="padding: 4px 4px 0">
+      <h1 style="margin: 0; font-size: 22px; font-weight: 800">Sancionados</h1>
+      <p style="margin: 4px 0 0; font-size: 13px; color: {{t.tx2}}">Para la fecha 8 · actualizado el 20/10/2026 con el informe de la Liga.</p>
+    </div>
+    <sc-for list="{{groups}}" as="g" hint-placeholder-count="3">
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 4px; border: {{g.border}}">
+        <h2 style="margin: 0 0 4px; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; color: {{g.hc}}">{{g.title}}</h2>
+        <sc-for list="{{g.ps}}" as="p" hint-placeholder-count="2">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 12px 0; border-top: 1px solid {{t.line}}">
+            <div style="min-width: 0">
+              <div style="font-size: 15px; font-weight: 700">{{p.n}}</div>
+              <div style="font-size: 13px; color: {{t.tx2}}; margin-top: 2px">{{p.team}}</div>
+              <div style="display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12px; font-weight: 700"><span style="{{p.cardSt}}" aria-hidden="true"></span>{{p.tipo}} · {{p.fechas}}</div>
+            </div>
+            <div style="text-align: right">
+              <div style="font-size: 24px; font-weight: 800; line-height: 1">{{p.queda}}</div>
+              <div style="font-size: 12px; color: {{t.tx2}}">{{p.quedaL}}</div>
+            </div>
+          </div>
+        </sc-for>
+      </article>
+    </sc-for>
+  </main>
+
+  <nav aria-label="Principal" style="position: sticky; bottom: 0; height: 64px; background: {{t.nav}}; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); box-shadow: 0 -2px 8px rgba(2,34,75,0.18)">
+    <sc-for list="{{nav}}" as="n" hint-placeholder-count="5">
+      <button style="{{n.st}}; background: none; border-left: 0; border-right: 0; border-bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 11px; font-family: inherit"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{n.d}}"></path></svg>{{n.l}}</button>
+    </sc-for>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":934}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',line:'#E5E7EB',tx:'#111827',tx2:'#4B5563',nav:'#02224B',navTx:'#CBD5E1',navOn:'#FACC15',hero:'#02224B',heroTx:'#FFFFFF',heroLine:'rgba(255,255,255,0.18)',heroFill:'rgba(255,255,255,0.08)',acc:'#EAB308',accTx:'#854D0E',shadow:'0 1px 2px rgba(2,34,75,0.08)'},
+dark:{bg:'#0B1220',card:'#131C2F',line:'#1F2A44',tx:'#F1F5F9',tx2:'#A9B4C8',nav:'#020B1A',navTx:'#A9B4C8',navOn:'#FACC15',hero:'#0A2A5C',heroTx:'#FFFFFF',heroLine:'rgba(255,255,255,0.2)',heroFill:'rgba(255,255,255,0.08)',acc:'#EAB308',accTx:'#FACC15',shadow:'0 1px 2px rgba(0,0,0,0.4)'}};
+const S=[['M. Silva','UDEM','Roja','2 fechas',1],['F. Rodríguez','Croacia Fútbol Club','Roja','1 fecha',1],['L. Pereira','Croacia Fútbol Club','Amarilla (5ª)','1 fecha',1],['S. González','Del Oeste FC','Roja','4 fechas',3],['J. Martínez','Los Poquitos De Siempre FC','Roja','3 fechas',2],['D. Fernández','Prado F.C','Amarilla (5ª)','1 fecha',1]];
+const NAV=[['Inicio','M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z'],['Tabla','M4 6h16M4 12h16M4 18h16'],['Partidos','M21 12a9 9 0 1 1-18 0a9 9 0 1 1 18 0M12 7.5l3.8 2.8-1.4 4.4H9.6l-1.4-4.4z'],['Mi equipo','M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'],['Simular','M6 20V10M12 20V4M18 20v-7']];
+return {T,S,NAV};
+}
+  renderVals() {
+    const {T,S,NAV} = this.lp();
+    const m = this.props.dark ? 'dark' : 'light';
+    const t = T[m];
+    const p = (x) => ({ n: x[0], team: x[1], tipo: x[2], fechas: x[3], queda: x[4], quedaL: x[4] === 1 ? 'le queda' : 'le quedan', cardSt: 'width: 10px; height: 14px; border-radius: 2px; flex-shrink: 0; background: ' + (x[2] === 'Roja' ? '#DC2626' : '#EAB308') });
+    const groups = [
+      { title: 'DE TU CUADRO · UDEM', ps: S.filter(x => x[1] === 'UDEM').map(p), border: '2px solid ' + t.acc, hc: t.accTx },
+      { title: 'DE TU PRÓXIMO RIVAL · CROACIA', ps: S.filter(x => x[1] === 'Croacia Fútbol Club').map(p), border: '1px solid transparent', hc: t.tx2 },
+      { title: 'RESTO DE LA DIVISIONAL', ps: S.filter(x => x[1] !== 'UDEM' && x[1] !== 'Croacia Fútbol Club').map(p), border: '1px solid transparent', hc: t.tx2 }
+    ];
+    const nav = NAV.map(([l, d]) => ({ l, d, st: 'color: ' + t.navTx + '; border-top: 3px solid transparent; font-weight: 600' }));
+    return { t, groups, nav };
+  }
+}
+</script>
+</body>
+</html>

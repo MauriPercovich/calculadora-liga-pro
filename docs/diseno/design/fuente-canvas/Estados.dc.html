@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Estados</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1280px; min-height: 1147px; box-sizing: border-box; padding: 48px 32px; background: #F3F4F6; color: #111827; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-direction: column; gap: 32px">
+  <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; font-size: 14px; font-weight: 800">
+    <span>Cargando</span><span>Sin datos</span><span>Fase regular terminada</span><span>Equipo sin partidos</span><span>Sin sancionados</span>
+  </div>
+  <sc-for list="{{themes}}" as="t" hint-placeholder-count="2">
+    <div>
+      <div style="font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #4B5563; margin-bottom: 10px">{{t.name}}</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px">
+
+        <div style="background: {{t.bg}}; border-radius: 16px; overflow: hidden; height: 460px; display: flex; flex-direction: column">
+          <div style="background: {{t.hero}}; padding: 14px 14px 40px">
+            <div style="height: 14px; width: 90px; border-radius: 4px; background: rgba(255,255,255,0.18)"></div>
+            <div style="height: 30px; border-radius: 6px; background: rgba(255,255,255,0.1); margin-top: 12px"></div>
+            <div style="height: 64px; width: 120px; border-radius: 8px; background: rgba(255,255,255,0.14); margin-top: 14px"></div>
+          </div>
+          <div style="margin: -26px 10px 0; background: {{t.card}}; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+            <div style="height: 10px; width: 70%; border-radius: 4px; background: {{t.sk}}"></div>
+            <div style="height: 8px; border-radius: 4px; background: {{t.sk}}"></div>
+            <div style="height: 8px; width: 80%; border-radius: 4px; background: {{t.sk}}"></div>
+          </div>
+          <div style="margin: 10px; background: {{t.card}}; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 10px">
+            <div style="height: 8px; border-radius: 4px; background: {{t.sk}}"></div>
+            <div style="height: 8px; border-radius: 4px; background: {{t.sk}}"></div>
+            <div style="height: 8px; width: 60%; border-radius: 4px; background: {{t.sk}}"></div>
+          </div>
+          <div role="status" style="margin: auto 12px 14px; font-size: 12px; color: {{t.tx2}}; text-align: center">Calculando 20.000 simulaciones…</div>
+        </div>
+
+        <div style="background: {{t.bg}}; border-radius: 16px; overflow: hidden; height: 460px; display: flex; flex-direction: column">
+          <div style="background: {{t.hero}}; padding: 14px; color: #FFFFFF; font-size: 11px; font-weight: 800; letter-spacing: 0.4px">SERIE 3 / DIVISIONAL D / CLAUSURA 2026</div>
+          <div style="margin: 16px 10px; background: {{t.card}}; border-radius: 10px; padding: 20px 14px; text-align: center">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="{{t.tx2}}" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
+            <div style="font-size: 15px; font-weight: 800; color: {{t.tx}}; margin-top: 8px">Todavía no hay datos de esta divisional</div>
+            <div style="font-size: 12px; line-height: 1.45; color: {{t.tx2}}; margin-top: 6px">Las chances aparecen cuando la Liga publica la primera fecha.</div>
+            <button style="height: 44px; width: 100%; margin-top: 14px; border: 0; border-radius: 6px; background: {{t.act}}; color: #FFFFFF; font-size: 13px; font-weight: 700; font-family: inherit">Elegí otra divisional</button>
+          </div>
+        </div>
+
+        <div style="background: {{t.bg}}; border-radius: 16px; overflow: hidden; height: 460px; display: flex; flex-direction: column">
+          <div style="background: {{t.hero}}; padding: 14px 14px 18px; color: #FFFFFF">
+            <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.4px; color: #CBD5E1">FASE REGULAR TERMINADA</div>
+            <div style="font-size: 16px; font-weight: 800; margin-top: 6px">UDEM terminó 1º</div>
+            <div style="display: flex; align-items: flex-end; gap: 8px; margin-top: 8px"><span style="font-size: 52px; line-height: 0.9; font-weight: 800; letter-spacing: -2px">47<span style="font-size: 28px; color: #EAB308">%</span></span><span style="font-size: 12px; font-weight: 700; line-height: 1.2; padding-bottom: 4px">de ganar la<br>Copa de Oro</span></div>
+          </div>
+          <div style="margin: 10px; background: {{t.accSoft}}; color: {{t.accTx}}; border-radius: 8px; padding: 10px; font-size: 12px; font-weight: 600; line-height: 1.4">Ascenso y descenso ya están definidos. Ahora se juegan las copas.</div>
+          <div style="margin: 0 10px; background: {{t.card}}; border-radius: 10px; padding: 10px 12px; font-size: 12px; color: {{t.tx}}">
+            <div style="display: flex; justify-content: space-between; padding: 6px 0"><span>Campeón</span><b>Sí</b></div>
+            <div style="display: flex; justify-content: space-between; padding: 6px 0; border-top: 1px solid {{t.line}}"><span>Asciende</span><b>Sí</b></div>
+            <div style="display: flex; justify-content: space-between; padding: 6px 0; border-top: 1px solid {{t.line}}"><span>Semi vs Croacia</span><b>Gana 60%</b></div>
+          </div>
+        </div>
+
+        <div style="background: {{t.bg}}; border-radius: 16px; overflow: hidden; height: 460px; display: flex; flex-direction: column">
+          <div style="background: {{t.hero}}; padding: 14px 14px 40px; color: #FFFFFF">
+            <div style="font-size: 16px; font-weight: 800">Del Oeste FC</div>
+            <div style="display: flex; align-items: flex-end; gap: 8px; margin-top: 8px"><span style="font-size: 52px; line-height: 0.9; font-weight: 800; letter-spacing: -2px">&gt;99,9<span style="font-size: 28px; color: #EAB308">%</span></span></div>
+            <div style="font-size: 12px; font-weight: 700; margin-top: 4px">de descender</div>
+          </div>
+          <div style="margin: -26px 10px 0; background: {{t.card}}; border: 1px dashed {{t.line2}}; border-radius: 10px; padding: 14px; text-align: center">
+            <div style="font-size: 14px; font-weight: 800; color: {{t.tx}}">No le quedan partidos</div>
+            <div style="font-size: 12px; line-height: 1.45; color: {{t.tx2}}; margin-top: 4px">Ya jugó todo en la fase regular. Ahora depende de los demás.</div>
+          </div>
+          <div style="margin: 10px; background: {{t.card}}; border-radius: 10px; padding: 12px; font-size: 12px; color: {{t.tx}}">
+            <div style="font-weight: 800; margin-bottom: 6px">Lo que tiene que pasar</div>
+            <div style="color: {{t.tx2}}; line-height: 1.45">Que Burmese pierda con Croacia y con Los Poquitos.</div>
+          </div>
+        </div>
+
+        <div style="background: {{t.bg}}; border-radius: 16px; overflow: hidden; height: 460px; display: flex; flex-direction: column">
+          <div style="background: {{t.hero}}; padding: 14px; color: #FFFFFF; font-size: 15px; font-weight: 800">Sancionados</div>
+          <div style="margin: 16px 10px; background: {{t.card}}; border-radius: 10px; padding: 20px 14px; text-align: center">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="{{t.ok}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg>
+            <div style="font-size: 15px; font-weight: 800; color: {{t.tx}}; margin-top: 8px">UDEM tiene a todos</div>
+            <div style="font-size: 12px; line-height: 1.45; color: {{t.tx2}}; margin-top: 6px">Nadie suspendido para la fecha 8. Croacia, tu rival, tampoco.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1147}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const themes = [
+      { name: 'CLARO', bg: '#E5E7EB', card: '#FFFFFF', hero: '#02224B', sk: '#E5E7EB', tx: '#111827', tx2: '#4B5563', line: '#E5E7EB', line2: '#D1D5DB', act: '#003C8A', accSoft: '#FEF3C7', accTx: '#854D0E', ok: '#15803D' },
+      { name: 'OSCURO', bg: '#0B1220', card: '#131C2F', hero: '#0A2A5C', sk: '#1F2A44', tx: '#F1F5F9', tx2: '#A9B4C8', line: '#1F2A44', line2: '#2C3A5A', act: '#2563EB', accSoft: '#3A2F0B', accTx: '#FACC15', ok: '#4ADE80' }
+    ];
+    return { themes };
+  }
+}
+</script>
+</body>
+</html>

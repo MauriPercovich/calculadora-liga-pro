@@ -1,0 +1,526 @@
+{
+"v": 3,
+"createdOnFiles": {
+"v": 1,
+"at": "2026-10-20T12:00:00Z"
+},
+"title": "Calculadora Liga Pro",
+"launch": {
+"view": "canvas",
+"page": "p0"
+},
+"pages": [
+{
+"id": "p0",
+"name": "▶ Prototipo"
+},
+{
+"id": "p1",
+"name": "1 · Elegir equipo"
+},
+{
+"id": "p2",
+"name": "2 · Inicio"
+},
+{
+"id": "p3",
+"name": "3 · Divisional"
+},
+{
+"id": "p4",
+"name": "4 · Equipo"
+},
+{
+"id": "p5",
+"name": "5 · Partidos"
+},
+{
+"id": "p6",
+"name": "6 · Simular"
+},
+{
+"id": "p7",
+"name": "7 · Sancionados"
+},
+{
+"id": "ds",
+"name": "Sistema de diseño"
+},
+{
+"id": "est",
+"name": "Estados"
+}
+],
+"boards": {
+"Main.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 1997,
+"title": "Celular · claro",
+"page": "p2",
+"radius": 28
+},
+"MainDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 1997,
+"title": "Celular · oscuro",
+"page": "p2",
+"radius": 28
+},
+"InicioDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 1179,
+"title": "Escritorio · claro",
+"page": "p2",
+"expand": "fill"
+},
+"InicioDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 1179,
+"title": "Escritorio · oscuro",
+"page": "p2",
+"expand": "fill"
+},
+"ElegirCel.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 1438,
+"title": "Celular · claro",
+"page": "p1",
+"radius": 28
+},
+"ElegirCelDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 1438,
+"title": "Celular · oscuro",
+"page": "p1",
+"radius": 28
+},
+"ElegirDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 887,
+"title": "Escritorio · claro",
+"page": "p1",
+"expand": "fill"
+},
+"ElegirDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 887,
+"title": "Escritorio · oscuro",
+"page": "p1",
+"expand": "fill"
+},
+"DivCel.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 3116,
+"title": "Celular · claro",
+"page": "p3",
+"radius": 28
+},
+"DivCelDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 3116,
+"title": "Celular · oscuro",
+"page": "p3",
+"radius": 28
+},
+"DivDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 1955,
+"title": "Escritorio · claro",
+"page": "p3",
+"expand": "fill"
+},
+"DivDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 1955,
+"title": "Escritorio · oscuro",
+"page": "p3",
+"expand": "fill"
+},
+"EquipoCel.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 2470,
+"title": "Celular · claro",
+"page": "p4",
+"radius": 28
+},
+"EquipoCelDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 2470,
+"title": "Celular · oscuro",
+"page": "p4",
+"radius": 28
+},
+"EquipoDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 1310,
+"title": "Escritorio · claro",
+"page": "p4",
+"expand": "fill"
+},
+"EquipoDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 1310,
+"title": "Escritorio · oscuro",
+"page": "p4",
+"expand": "fill"
+},
+"PartidosCel.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 2511,
+"title": "Celular · claro",
+"page": "p5",
+"radius": 28
+},
+"PartidosCelDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 2511,
+"title": "Celular · oscuro",
+"page": "p5",
+"radius": 28
+},
+"PartidosDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 1547,
+"title": "Escritorio · claro",
+"page": "p5",
+"expand": "fill"
+},
+"PartidosDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 1547,
+"title": "Escritorio · oscuro",
+"page": "p5",
+"expand": "fill"
+},
+"SimularCel.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 1808,
+"title": "Celular · claro",
+"page": "p6",
+"radius": 28,
+"is_interactive": true
+},
+"SimularCelDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 1808,
+"title": "Celular · oscuro",
+"page": "p6",
+"radius": 28,
+"is_interactive": true
+},
+"SimularDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 955,
+"title": "Escritorio · claro",
+"page": "p6",
+"expand": "fill",
+"is_interactive": true
+},
+"SimularDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 955,
+"title": "Escritorio · oscuro",
+"page": "p6",
+"expand": "fill",
+"is_interactive": true
+},
+"SancCel.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 934,
+"title": "Celular · claro",
+"page": "p7",
+"radius": 28
+},
+"SancCelDark.dc.html": {
+"x": 470,
+"y": 0,
+"w": 390,
+"h": 934,
+"title": "Celular · oscuro",
+"page": "p7",
+"radius": 28
+},
+"SancDesk.dc.html": {
+"x": 940,
+"y": 0,
+"w": 1280,
+"h": 677,
+"title": "Escritorio · claro",
+"page": "p7",
+"expand": "fill"
+},
+"SancDeskDark.dc.html": {
+"x": 2300,
+"y": 0,
+"w": 1280,
+"h": 677,
+"title": "Escritorio · oscuro",
+"page": "p7",
+"expand": "fill"
+},
+"Sistema.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1280,
+"h": 2684,
+"title": "Sistema de diseño",
+"page": "ds"
+},
+"Estados.dc.html": {
+"x": 0,
+"y": 0,
+"w": 1280,
+"h": 1147,
+"title": "Estados",
+"page": "est"
+},
+"Prototipo.dc.html": {
+"x": 0,
+"y": 0,
+"w": 390,
+"h": 844,
+"title": "Prototipo · celular",
+"page": "p0",
+"radius": 28,
+"is_interactive": true
+}
+},
+"order": [
+"Prototipo.dc.html",
+"Main.dc.html",
+"MainDark.dc.html",
+"InicioDesk.dc.html",
+"InicioDeskDark.dc.html",
+"ElegirCel.dc.html",
+"ElegirCelDark.dc.html",
+"ElegirDesk.dc.html",
+"ElegirDeskDark.dc.html",
+"DivCel.dc.html",
+"DivCelDark.dc.html",
+"DivDesk.dc.html",
+"DivDeskDark.dc.html",
+"EquipoCel.dc.html",
+"EquipoCelDark.dc.html",
+"EquipoDesk.dc.html",
+"EquipoDeskDark.dc.html",
+"PartidosCel.dc.html",
+"PartidosCelDark.dc.html",
+"PartidosDesk.dc.html",
+"PartidosDeskDark.dc.html",
+"SimularCel.dc.html",
+"SimularCelDark.dc.html",
+"SimularDesk.dc.html",
+"SimularDeskDark.dc.html",
+"SancCel.dc.html",
+"SancCelDark.dc.html",
+"SancDesk.dc.html",
+"SancDeskDark.dc.html",
+"Sistema.dc.html",
+"Estados.dc.html"
+],
+"notes": {
+"t1": {
+"x": 0,
+"y": -300,
+"text": "1 · Elegir equipo",
+"kind": "title1",
+"maxW": 3580,
+"page": "p1"
+},
+"n1": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p1",
+"text": "Qué se ve primero: la pregunta «¿De qué cuadro sos?» y el buscador. Los equipos van agrupados por serie y divisional, en acordeones. Con un toque se elige y se guarda, sin botón de confirmar: es la única decisión que se pide en toda la app."
+},
+"t2": {
+"x": 0,
+"y": -300,
+"text": "2 · Inicio con tu equipo",
+"kind": "title1",
+"maxW": 3580,
+"page": "p2"
+},
+"n2": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p2",
+"text": "Qué se ve primero: el 74% en blanco sobre el azul de la Liga, con el nombre del equipo arriba y el rival de la fecha 8 en la tarjeta que se superpone a la portada. Son las dos preguntas del domingo a la noche y entran sin scroll. Más abajo: las 6 chances, lo más picante, la tabla corta y otras divisionales."
+},
+"t3": {
+"x": 0,
+"y": -300,
+"text": "3 · Divisional",
+"kind": "title1",
+"maxW": 3580,
+"page": "p3"
+},
+"n3": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p3",
+"text": "Qué se ve primero: el ranking de chances, con una pestaña por objetivo, porque es lo que se discute en el grupo. Después va la tabla oficial, igual a la de ligapro.uy (top 4 en celeste y Pts sobre gris), con la proyectada como segunda pestaña. Siguen los partidos que quedan, cómo siguen las copas y los resultados con la marca Sorpresa."
+},
+"t4": {
+"x": 0,
+"y": -300,
+"text": "4 · Equipo",
+"kind": "title1",
+"maxW": 3580,
+"page": "p4"
+},
+"n4": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p4",
+"text": "Qué se ve primero: la ficha (escudo, posición, la chance grande y las 6 chances) en un bloque cerrado, con la fecha y la marca de la Liga, pensada para capturarla y mandarla por WhatsApp. Debajo va lo que se puede explorar: ¿qué pasa si…?, los puntos que hacen falta, los partidos ajenos que importan, la evolución y los sancionados."
+},
+"t5": {
+"x": 0,
+"y": -300,
+"text": "5 · Partidos",
+"kind": "title1",
+"maxW": 3580,
+"page": "p5"
+},
+"n5": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p5",
+"text": "Qué se ve primero: la próxima fecha, cada partido con su barra de tres tramos. El de tu cuadro va primero y marcado. Después vienen las copas y finales (en gris hasta que existan) y los resultados, con la marca Sorpresa cuando el ganador tenía menos de 25%."
+},
+"t6": {
+"x": 0,
+"y": -300,
+"text": "6 · Simular",
+"kind": "title1",
+"maxW": 3580,
+"page": "p6"
+},
+"n6": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p6",
+"text": "Qué se ve primero: una franja fija con cómo queda tu cuadro y la lista de partidos con 1 / E / 2 grandes para el dedo. La tabla recalculada va abajo en celular y al costado en escritorio. Se puede tocar: elegí resultados en Play."
+},
+"t7": {
+"x": 0,
+"y": -300,
+"text": "7 · Sancionados",
+"kind": "title1",
+"maxW": 3580,
+"page": "p7"
+},
+"n7": {
+"x": -480,
+"y": 0,
+"w": 400,
+"size": "m",
+"fill": "blue",
+"page": "p7",
+"text": "Qué se ve primero: tus sancionados y los del próximo rival, que son los que cambian el partido del fin de semana. Después va la lista completa de la divisional, con roja o amarilla escrita en texto y no solo como color."
+},
+"tds": {
+"x": 0,
+"y": -300,
+"text": "Sistema de diseño",
+"kind": "title1",
+"maxW": 1280,
+"page": "ds"
+},
+"test": {
+"x": 0,
+"y": -300,
+"text": "Estados",
+"kind": "title1",
+"maxW": 1280,
+"page": "est"
+},
+"t0": {
+"x": 0,
+"y": -300,
+"text": "Prototipo navegable",
+"kind": "title1",
+"maxW": 1400,
+"page": "p0"
+},
+"n0": {
+"x": 470,
+"y": 0,
+"w": 440,
+"size": "m",
+"fill": "blue",
+"page": "p0",
+"text": "Tocá Play y usalo como en el celular. Primero elegí tu cuadro; queda guardado. La barra de abajo navega; las pestañas, los mosaicos de chances, las filas de la tabla y el selector de divisional responden. La luna arriba a la derecha pasa a modo oscuro.\n\nTodas las chances salen de un mismo modelo: se recorren las 59.049 combinaciones posibles de los 10 partidos que quedan con las probabilidades de cada partido. Por eso «¿Qué pasa si…?», «¿Con cuántos puntos…?», «Partidos de otros» y Simular siempre son coherentes entre sí y con la tabla. Sin tocar nada, se ven exactamente los números publicados."
+}
+},
+"designSystems": []
+}

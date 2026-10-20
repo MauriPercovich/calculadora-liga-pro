@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Sancionados · escritorio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="min-height: 677px; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+
+  <header style="background: {{t.nav}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+        <span style="color: #FFFFFF; font-size: 22px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+        <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+      </div>
+      <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto">
+        <sc-for list="{{dnav}}" as="n" hint-placeholder-count="6">
+          <a href="{{n.href}}" style="{{n.st}}; height: 64px; box-sizing: border-box; display: flex; align-items: center; padding: 0 12px; font-size: 13px; letter-spacing: 0.4px; text-decoration: none">{{n.l}}</a>
+        </sc-for>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: {{t.card}}; border-bottom: 1px solid {{t.line2}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+      <div style="width: 44px; height: 44px; border-radius: 8px; background: #EAB308; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#02224B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+      </div>
+      <div style="flex: 1; min-width: 240px">
+        <h1 style="margin: 0; font-size: 20px; font-weight: 800">SERIE 9 / DIVISIONAL C / CLAUSURA 2026</h1>
+        <div style="font-size: 14px; color: {{t.tx2}}">Sancionados para la fecha 8 · actualizado el 20/10/2026</div>
+      </div>
+      <button style="height: 44px; padding: 0 14px; border: 1px solid {{t.line2}}; background: {{t.card}}; border-radius: 6px; color: {{t.tx}}; font-size: 14px; font-weight: 600; font-family: inherit">Serie 9 · Divisional C</button>
+    </div>
+  </section>
+
+  <main style="max-width: 1180px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+    <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+      <div style="overflow-x: auto">
+        <div style="min-width: 760px">
+          <div style="display: grid; grid-template-columns: minmax(180px, 1.2fr) minmax(220px, 1.4fr) 180px 100px 110px; gap: 16px; align-items: center; height: 44px; padding: 0 20px; font-size: 12px; font-weight: 700; color: {{t.tx2}}; border-bottom: 1px solid {{t.line2}}">
+            <span>Jugador</span><span>Equipo</span><span>Sanción</span><span style="text-align: right">Fechas</span><span style="text-align: right">Le quedan</span>
+          </div>
+          <sc-for list="{{groups}}" as="g" hint-placeholder-count="3">
+            <div style="padding: 10px 20px 6px; font-size: 12px; font-weight: 800; letter-spacing: 0.8px; color: {{g.hc}}; background: {{g.bg}}">{{g.title}}</div>
+            <sc-for list="{{g.ps}}" as="p" hint-placeholder-count="2">
+              <div style="display: grid; grid-template-columns: minmax(180px, 1.2fr) minmax(220px, 1.4fr) 180px 100px 110px; gap: 16px; align-items: center; height: 52px; padding: 0 20px; font-size: 14px; border-top: 1px solid {{t.line}}; background: {{g.bg}}">
+                <span style="font-weight: 700">{{p.n}}</span>
+                <span>{{p.team}}</span>
+                <span style="display: flex; align-items: center; gap: 8px; font-weight: 600"><span style="{{p.cardSt}}" aria-hidden="true"></span>{{p.tipo}}</span>
+                <span style="text-align: right">{{p.fechas}}</span>
+                <span style="text-align: right; font-size: 18px; font-weight: 800">{{p.queda}}</span>
+              </div>
+            </sc-for>
+          </sc-for>
+        </div>
+      </div>
+    </article>
+    <p style="margin: 0 4px; font-size: 13px; color: {{t.tx2}}">Primero tu cuadro y tu próximo rival. Dato tomado del informe semanal de la Liga.</p>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1280,"height":677}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',line:'#E5E7EB',line2:'#D1D5DB',tx:'#111827',tx2:'#4B5563',nav:'#02224B',navTx:'#CBD5E1',acc:'#EAB308',accTx:'#854D0E',mine:'#FEF9C3',shadow:'0 1px 2px rgba(2,34,75,0.08)'},
+dark:{bg:'#0B1220',card:'#131C2F',line:'#1F2A44',line2:'#2C3A5A',tx:'#F1F5F9',tx2:'#A9B4C8',nav:'#020B1A',navTx:'#A9B4C8',acc:'#EAB308',accTx:'#FACC15',mine:'#2A2410',shadow:'0 1px 2px rgba(0,0,0,0.4)'}};
+const S=[['M. Silva','UDEM','Roja','2',1],['F. Rodríguez','Croacia Fútbol Club','Roja','1',1],['L. Pereira','Croacia Fútbol Club','Amarilla (5ª)','1',1],['S. González','Del Oeste FC','Roja','4',3],['J. Martínez','Los Poquitos De Siempre FC','Roja','3',2],['D. Fernández','Prado F.C','Amarilla (5ª)','1',1]];
+const DNAV=[['INICIO','InicioDesk.dc.html'],['TABLA Y CHANCES','DivDesk.dc.html'],['PARTIDOS','PartidosDesk.dc.html'],['MI EQUIPO','EquipoDesk.dc.html'],['SIMULAR','SimularDesk.dc.html'],['SANCIONADOS','SancDesk.dc.html']];
+return {T,S,DNAV};
+}
+  renderVals() {
+    const {T,S,DNAV} = this.lp();
+    const m = this.props.dark ? 'dark' : 'light';
+    const t = T[m];
+    const p = (x) => ({ n: x[0], team: x[1], tipo: x[2], fechas: x[3], queda: x[4], cardSt: 'width: 10px; height: 14px; border-radius: 2px; flex-shrink: 0; background: ' + (x[2] === 'Roja' ? '#DC2626' : '#EAB308') });
+    const groups = [
+      { title: 'TU CUADRO · UDEM', ps: S.filter(x => x[1] === 'UDEM').map(p), bg: t.mine, hc: t.accTx },
+      { title: 'TU PRÓXIMO RIVAL · CROACIA FÚTBOL CLUB', ps: S.filter(x => x[1] === 'Croacia Fútbol Club').map(p), bg: 'transparent', hc: t.tx2 },
+      { title: 'RESTO DE LA DIVISIONAL', ps: S.filter(x => x[1] !== 'UDEM' && x[1] !== 'Croacia Fútbol Club').map(p), bg: 'transparent', hc: t.tx2 }
+    ];
+    const act = 'SANCIONADOS';
+    const dnav = DNAV.map(([l, href]) => ({ l, href, st: 'color: ' + (l === act ? '#FFFFFF' : t.navTx) + '; font-weight: ' + (l === act ? 800 : 600) + '; border-bottom: 3px solid ' + (l === act ? t.acc : 'transparent') }));
+    return { t, groups, dnav };
+  }
+}
+</script>
+</body>
+</html>

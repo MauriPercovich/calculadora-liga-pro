@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Simular · celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 390px; min-height: 1808px; display: flex; flex-direction: column; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+
+  <section style="background: {{t.hero}}; padding: 0 16px 16px; color: {{t.heroTx}}">
+    <header style="height: 52px; display: flex; align-items: center; gap: 10px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+      <span style="font-size: 20px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+      <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+    </header>
+    <button style="height: 44px; width: 100%; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: {{t.heroFill}}; border: 1px solid {{t.heroLine}}; border-radius: 8px; color: #FFFFFF; text-align: left; font-family: inherit">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+      <span style="flex: 1; font-size: 12px; font-weight: 800; letter-spacing: 0.4px">SERIE 9 / DIVISIONAL C / CLAUSURA 2026</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+    </button>
+  </section>
+
+  <div style="position: sticky; top: 0; z-index: 1; background: {{t.card}}; border-bottom: 1px solid {{t.line2}}; padding: 10px 16px; display: flex; align-items: center; gap: 10px">
+    <span style="width: 28px; height: 28px; border-radius: 50%; background: #312E81; color: #FFFFFF; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center">U</span>
+    <span style="flex: 1; font-size: 14px"><b>UDEM</b> quedaría <b>{{me.pos}}º</b> con <b>{{me.pts}} pts</b></span>
+    <span style="font-size: 12px; font-weight: 700; color: {{t.tx2}}">{{count}} de 10</span>
+  </div>
+
+  <main style="flex: 1; padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+    <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+      <h2 style="margin: 0; font-size: 17px; font-weight: 800">Armá tu escenario</h2>
+      <p style="margin: 4px 0 4px; font-size: 13px; line-height: 1.4; color: {{t.tx2}}">Elegí resultados. Los partidos que no toques los sigue simulando el modelo.</p>
+      <sc-for list="{{matches}}" as="p" hint-placeholder-count="10">
+        <div style="padding: 10px 0; border-top: 1px solid {{t.line}}">
+          <div style="font-size: 11px; font-weight: 700; color: {{t.tx2}}">{{p.f}}</div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 10px; align-items: center; margin-top: 2px">
+            <div style="font-size: 14px; font-weight: {{p.fw}}; line-height: 1.25">{{p.a}}<br><span style="font-weight: 500; color: {{t.tx2}}">vs</span> {{p.b}}</div>
+            <div role="radiogroup" aria-label="Resultado de {{p.a}} contra {{p.b}}" style="display: grid; grid-template-columns: repeat(3, 44px); gap: 4px">
+              <sc-for list="{{p.opts}}" as="o" hint-placeholder-count="3">
+                <button role="radio" aria-checked="{{o.on}}" aria-label="{{o.aria}}" onClick="{{o.pick}}" style="{{o.st}}; height: 44px; border-radius: 6px; font-size: 15px; font-weight: 800; font-family: inherit; cursor: pointer">{{o.l}}</button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+      <div style="font-size: 12px; color: {{t.tx2}}; padding: 8px 0 12px; border-top: 1px solid {{t.line}}">1 = gana el primero · E = empate · 2 = gana el segundo</div>
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px">
+        <button onClick="{{fill}}" style="height: 48px; border: 0; border-radius: 6px; background: {{t.act}}; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Completar con lo más probable</button>
+        <button onClick="{{clear}}" style="height: 48px; padding: 0 16px; border: 1px solid {{t.line2}}; border-radius: 6px; background: {{t.sub}}; color: {{t.tx}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Limpiar</button>
+      </div>
+    </article>
+
+    <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 14px 16px 8px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Así quedaría</h2>
+        <span style="font-size: 12px; color: {{t.tx2}}">{{status}}</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr) 34px 52px 52px; gap: 6px; padding: 0 12px 6px; font-size: 11px; font-weight: 700; color: {{t.tx2}}">
+        <span></span><span>Equipo</span><span style="text-align: center">Pts</span><span style="text-align: right">1º Camp.</span><span style="text-align: right">▼ Desc.</span>
+      </div>
+      <sc-for list="{{table}}" as="r" hint-placeholder-count="10">
+        <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr) 34px 52px 52px; gap: 6px; align-items: center; height: 40px; padding: 0 12px; border-top: 1px solid {{t.line}}; background: {{r.bg}}">
+          <span style="font-size: 13px; color: {{t.tx2}}">{{r.pos}}</span>
+          <span style="font-size: 13px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+          <span style="font-size: 14px; font-weight: 800; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+          <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.camp}}">{{r.camp}}</span>
+          <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.desc}}">{{r.desc}}</span>
+        </div>
+      </sc-for>
+      <div style="padding: 10px 16px 14px; font-size: 12px; line-height: 1.4; color: {{t.tx2}}">Los puntos suman solo lo que elegiste. Las chances tienen en cuenta todo, incluidos los partidos sin tocar.</div>
+    </article>
+  </main>
+
+  <nav aria-label="Principal" style="position: sticky; bottom: 0; height: 64px; background: {{t.nav}}; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); box-shadow: 0 -2px 8px rgba(2,34,75,0.18)">
+    <sc-for list="{{nav}}" as="n" hint-placeholder-count="5">
+      <button style="{{n.st}}; background: none; border-left: 0; border-right: 0; border-bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 11px; font-family: inherit"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{n.d}}"></path></svg>{{n.l}}</button>
+    </sc-for>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":1808}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',sub:'#F3F4F6',line:'#E5E7EB',line2:'#D1D5DB',tx:'#111827',tx2:'#4B5563',nav:'#02224B',navTx:'#CBD5E1',navOn:'#FACC15',hero:'#02224B',heroTx:'#FFFFFF',heroLine:'rgba(255,255,255,0.18)',heroFill:'rgba(255,255,255,0.08)',act:'#003C8A',acc:'#EAB308',top4:'#DBEAFE',pts:'#F3F4F6',shadow:'0 1px 2px rgba(2,34,75,0.08)',mine:'#FEF9C3'},
+dark:{bg:'#0B1220',card:'#131C2F',sub:'#1A2540',line:'#1F2A44',line2:'#2C3A5A',tx:'#F1F5F9',tx2:'#A9B4C8',nav:'#020B1A',navTx:'#A9B4C8',navOn:'#FACC15',hero:'#0A2A5C',heroTx:'#FFFFFF',heroLine:'rgba(255,255,255,0.2)',heroFill:'rgba(255,255,255,0.08)',act:'#2563EB',acc:'#EAB308',top4:'#14294D',pts:'#1A2540',shadow:'0 1px 2px rgba(0,0,0,0.4)',mine:'#2A2410'}};
+const GC={light:{camp:'#003C8A',desc:'#B91C1C'},dark:{camp:'#93C5FD',desc:'#F87171'}};
+const TEAMS=[['UDEM',16,'74%','0%'],['El Tunel FC',14,'11%','0%'],['La Pampara F.C',13,'7,9%','0,1%'],['Croacia Fútbol Club',13,'6,0%','0,2%'],['Deportivo 29',10,'1,5%','21%'],['La Blanca F.C',9,'0,3%','47%'],['Los Poquitos De Siempre FC',7,'<0,1%','39%'],['Prado F.C',6,'0%','96%'],['Burmese FC',6,'0%','97%'],['Del Oeste FC',3,'0%','>99,9%']];
+const M=[['Fecha 8','UDEM','Croacia Fútbol Club',60,18,22],['Fecha 8','Prado F.C','Del Oeste FC',52,22,26],['Fecha 8','La Blanca F.C','Deportivo 29',34,24,42],['Fecha 8','El Tunel FC','La Pampara F.C',41,25,34],['Fecha 8','Los Poquitos De Siempre FC','Burmese FC',49,23,28],['Fecha 9','Croacia Fútbol Club','Burmese FC',63,19,18],['Fecha 9','Deportivo 29','UDEM',24,21,55],['Fecha 9','La Pampara F.C','Prado F.C',66,17,17],['Fecha 9','El Tunel FC','La Blanca F.C',54,22,24],['Fecha 9','Del Oeste FC','Los Poquitos De Siempre FC',30,23,47]];
+const NAV=[['Inicio','M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z'],['Tabla','M4 6h16M4 12h16M4 18h16'],['Partidos','M21 12a9 9 0 1 1-18 0a9 9 0 1 1 18 0M12 7.5l3.8 2.8-1.4 4.4H9.6l-1.4-4.4z'],['Mi equipo','M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'],['Simular','M6 20V10M12 20V4M18 20v-7']];
+return {T,GC,TEAMS,M,NAV};
+}
+  renderVals() {
+    const {T,GC,TEAMS,M,NAV} = this.lp();
+    const m = this.props.dark ? 'dark' : 'light';
+    const t = T[m];
+    const picks = (this.state && this.state.picks) || {};
+    const setPick = (i, o) => { const p = { ...picks }; if (p[i] === o) delete p[i]; else p[i] = o; this.setState({ picks: p }); };
+    const OPTS = [['1', 0], ['E', 1], ['2', 2]];
+    const matches = M.map((x, i) => ({
+      f: x[0], a: x[1], b: x[2], fw: (x[1] === 'UDEM' || x[2] === 'UDEM') ? 800 : 600,
+      opts: OPTS.map(([l]) => { const on = picks[i] === l; return { l, on, aria: l === '1' ? 'Gana ' + x[1] : (l === 'E' ? 'Empate' : 'Gana ' + x[2]), pick: () => setPick(i, l), st: on ? 'background: ' + t.act + '; color: #FFFFFF; border: 1px solid ' + t.act : 'background: ' + t.card + '; color: ' + t.tx + '; border: 1px solid ' + t.line2 }; })
+    }));
+    const pts = {}; TEAMS.forEach(r => { pts[r[0]] = r[1]; });
+    Object.keys(picks).forEach(i => { const x = M[i]; const o = picks[i]; if (o === '1') pts[x[1]] += 3; else if (o === '2') pts[x[2]] += 3; else { pts[x[1]] += 1; pts[x[2]] += 1; } });
+    const sorted = TEAMS.map((r, i) => ({ r, i })).sort((a, b) => (pts[b.r[0]] - pts[a.r[0]]) || (a.i - b.i));
+    const table = sorted.map((s, k) => ({ pos: k + 1, n: s.r[0], pts: pts[s.r[0]], camp: s.r[2], desc: s.r[3], fw: s.r[0] === 'UDEM' ? 800 : 600, bg: s.r[0] === 'UDEM' ? t.mine : (k < 4 ? t.top4 : 'transparent') }));
+    const me = table.find(r => r.n === 'UDEM');
+    const count = Object.keys(picks).length;
+    const fill = () => { const p = {}; M.forEach((x, i) => { const mx = Math.max(x[3], x[4], x[5]); p[i] = mx === x[3] ? '1' : (mx === x[4] ? 'E' : '2'); }); this.setState({ picks: p }); };
+    const clear = () => this.setState({ picks: {} });
+    const nav = NAV.map(([l, d]) => ({ l, d, st: 'color: ' + (l === 'Simular' ? t.navOn : t.navTx) + '; border-top: 3px solid ' + (l === 'Simular' ? t.acc : 'transparent') + '; font-weight: ' + (l === 'Simular' ? 700 : 600) }));
+    return { t, c: GC[m], matches, table, me, count, status: count === 0 ? 'sin cambios' : count + (count === 1 ? ' resultado elegido' : ' resultados elegidos'), fill, clear, nav };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Simular · escritorio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="min-height: 955px; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+
+  <header style="background: {{t.nav}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+        <span style="color: #FFFFFF; font-size: 22px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+        <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+      </div>
+      <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto">
+        <sc-for list="{{dnav}}" as="n" hint-placeholder-count="6">
+          <a href="{{n.href}}" style="{{n.st}}; height: 64px; box-sizing: border-box; display: flex; align-items: center; padding: 0 12px; font-size: 13px; letter-spacing: 0.4px; text-decoration: none">{{n.l}}</a>
+        </sc-for>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: {{t.card}}; border-bottom: 1px solid {{t.line2}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+      <div style="width: 44px; height: 44px; border-radius: 8px; background: #EAB308; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#02224B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+      </div>
+      <div style="flex: 1; min-width: 240px">
+        <h1 style="margin: 0; font-size: 20px; font-weight: 800">SERIE 9 / DIVISIONAL C / CLAUSURA 2026</h1>
+        <div style="font-size: 14px; color: {{t.tx2}}">Simulador · quedan 10 partidos</div>
+      </div>
+      <button style="height: 44px; padding: 0 14px; border: 1px solid {{t.line2}}; background: {{t.card}}; border-radius: 6px; color: {{t.tx}}; font-size: 14px; font-weight: 600; font-family: inherit">Serie 9 · Divisional C</button>
+    </div>
+  </section>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+    <main style="flex: 999 1 560px; min-width: 0; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px 20px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <h2 style="margin: 0; font-size: 20px; font-weight: 800">Armá tu escenario</h2>
+        <span style="font-size: 13px; font-weight: 700; color: {{t.tx2}}">{{count}} de 10 elegidos</span>
+      </div>
+      <p style="margin: 4px 0 8px; font-size: 14px; color: {{t.tx2}}">Elegí resultados. Los partidos que no toques los sigue simulando el modelo.</p>
+      <sc-for list="{{matches}}" as="p" hint-placeholder-count="10">
+        <div style="display: grid; grid-template-columns: 64px minmax(0, 1fr) 148px; gap: 16px; align-items: center; min-height: 58px; border-top: 1px solid {{t.line}}">
+          <span style="font-size: 12px; font-weight: 700; color: {{t.tx2}}">{{p.f}}</span>
+          <span style="font-size: 15px; font-weight: {{p.fw}}">{{p.a}} <span style="font-weight: 500; color: {{t.tx2}}">vs</span> {{p.b}}</span>
+          <div role="radiogroup" aria-label="Resultado de {{p.a}} contra {{p.b}}" style="display: grid; grid-template-columns: repeat(3, 46px); gap: 4px">
+            <sc-for list="{{p.opts}}" as="o" hint-placeholder-count="3">
+              <button role="radio" aria-checked="{{o.on}}" aria-label="{{o.aria}}" onClick="{{o.pick}}" style="{{o.st}}; height: 44px; border-radius: 6px; font-size: 15px; font-weight: 800; font-family: inherit; cursor: pointer">{{o.l}}</button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+      <div style="font-size: 13px; color: {{t.tx2}}; padding: 10px 0 14px; border-top: 1px solid {{t.line}}">1 = gana el primero · E = empate · 2 = gana el segundo</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button onClick="{{fill}}" style="height: 44px; padding: 0 18px; border: 0; border-radius: 6px; background: {{t.act}}; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Completar con lo más probable</button>
+        <button onClick="{{clear}}" style="height: 44px; padding: 0 18px; border: 1px solid {{t.line2}}; border-radius: 6px; background: {{t.sub}}; color: {{t.tx}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Limpiar</button>
+      </div>
+    </main>
+
+    <aside style="flex: 1 1 380px; min-width: 0; position: sticky; top: 16px; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 18px 18px 10px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Así quedaría</h2>
+        <span style="font-size: 13px; color: {{t.tx2}}">{{status}}</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr) 36px 56px 56px 56px; gap: 6px; padding: 0 14px 6px; font-size: 11px; font-weight: 700; color: {{t.tx2}}">
+        <span></span><span>Equipo</span><span style="text-align: center">Pts</span><span style="text-align: right">1º Camp.</span><span style="text-align: right">▲ Asc.</span><span style="text-align: right">▼ Desc.</span>
+      </div>
+      <sc-for list="{{table}}" as="r" hint-placeholder-count="10">
+        <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr) 36px 56px 56px 56px; gap: 6px; align-items: center; height: 42px; padding: 0 14px; border-top: 1px solid {{t.line}}; background: {{r.bg}}">
+          <span style="font-size: 13px; color: {{t.tx2}}">{{r.pos}}</span>
+          <span style="font-size: 13px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+          <span style="font-size: 14px; font-weight: 800; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+          <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.camp}}">{{r.camp}}</span>
+          <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.asc}}">{{r.asc}}</span>
+          <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.desc}}">{{r.desc}}</span>
+        </div>
+      </sc-for>
+      <div style="padding: 12px 18px 16px; font-size: 12px; line-height: 1.4; color: {{t.tx2}}">Los puntos suman solo lo que elegiste. Las chances tienen en cuenta todo, incluidos los partidos sin tocar.</div>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1280,"height":955}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',sub:'#F3F4F6',line:'#E5E7EB',line2:'#D1D5DB',tx:'#111827',tx2:'#4B5563',nav:'#02224B',navTx:'#CBD5E1',act:'#003C8A',acc:'#EAB308',top4:'#DBEAFE',pts:'#F3F4F6',shadow:'0 1px 2px rgba(2,34,75,0.08)',mine:'#FEF9C3'},
+dark:{bg:'#0B1220',card:'#131C2F',sub:'#1A2540',line:'#1F2A44',line2:'#2C3A5A',tx:'#F1F5F9',tx2:'#A9B4C8',nav:'#020B1A',navTx:'#A9B4C8',act:'#2563EB',acc:'#EAB308',top4:'#14294D',pts:'#1A2540',shadow:'0 1px 2px rgba(0,0,0,0.4)',mine:'#2A2410'}};
+const GC={light:{camp:'#003C8A',asc:'#15803D',desc:'#B91C1C'},dark:{camp:'#93C5FD',asc:'#4ADE80',desc:'#F87171'}};
+const TEAMS=[['UDEM',16,'74%','>99,9%','0%'],['El Tunel FC',14,'11%','91%','0%'],['La Pampara F.C',13,'7,9%','91%','0,1%'],['Croacia Fútbol Club',13,'6,0%','84%','0,2%'],['Deportivo 29',10,'1,5%','22%','21%'],['La Blanca F.C',9,'0,3%','9,8%','47%'],['Los Poquitos De Siempre FC',7,'<0,1%','2,8%','39%'],['Prado F.C',6,'0%','0%','96%'],['Burmese FC',6,'0%','0%','97%'],['Del Oeste FC',3,'0%','0%','>99,9%']];
+const M=[['Fecha 8','UDEM','Croacia Fútbol Club',60,18,22],['Fecha 8','Prado F.C','Del Oeste FC',52,22,26],['Fecha 8','La Blanca F.C','Deportivo 29',34,24,42],['Fecha 8','El Tunel FC','La Pampara F.C',41,25,34],['Fecha 8','Los Poquitos De Siempre FC','Burmese FC',49,23,28],['Fecha 9','Croacia Fútbol Club','Burmese FC',63,19,18],['Fecha 9','Deportivo 29','UDEM',24,21,55],['Fecha 9','La Pampara F.C','Prado F.C',66,17,17],['Fecha 9','El Tunel FC','La Blanca F.C',54,22,24],['Fecha 9','Del Oeste FC','Los Poquitos De Siempre FC',30,23,47]];
+const DNAV=[['INICIO','InicioDesk.dc.html'],['TABLA Y CHANCES','DivDesk.dc.html'],['PARTIDOS','PartidosDesk.dc.html'],['MI EQUIPO','EquipoDesk.dc.html'],['SIMULAR','SimularDesk.dc.html'],['SANCIONADOS','SancDesk.dc.html']];
+return {T,GC,TEAMS,M,DNAV};
+}
+  renderVals() {
+    const {T,GC,TEAMS,M,DNAV} = this.lp();
+    const m = this.props.dark ? 'dark' : 'light';
+    const t = T[m];
+    const picks = (this.state && this.state.picks) || {};
+    const setPick = (i, o) => { const p = { ...picks }; if (p[i] === o) delete p[i]; else p[i] = o; this.setState({ picks: p }); };
+    const matches = M.map((x, i) => ({
+      f: x[0], a: x[1], b: x[2], fw: (x[1] === 'UDEM' || x[2] === 'UDEM') ? 800 : 600,
+      opts: ['1', 'E', '2'].map(l => { const on = picks[i] === l; return { l, on, aria: l === '1' ? 'Gana ' + x[1] : (l === 'E' ? 'Empate' : 'Gana ' + x[2]), pick: () => setPick(i, l), st: on ? 'background: ' + t.act + '; color: #FFFFFF; border: 1px solid ' + t.act : 'background: ' + t.card + '; color: ' + t.tx + '; border: 1px solid ' + t.line2 }; })
+    }));
+    const pts = {}; TEAMS.forEach(r => { pts[r[0]] = r[1]; });
+    Object.keys(picks).forEach(i => { const x = M[i]; const o = picks[i]; if (o === '1') pts[x[1]] += 3; else if (o === '2') pts[x[2]] += 3; else { pts[x[1]] += 1; pts[x[2]] += 1; } });
+    const sorted = TEAMS.map((r, i) => ({ r, i })).sort((a, b) => (pts[b.r[0]] - pts[a.r[0]]) || (a.i - b.i));
+    const table = sorted.map((s, k) => ({ pos: k + 1, n: s.r[0], pts: pts[s.r[0]], camp: s.r[2], asc: s.r[3], desc: s.r[4], fw: s.r[0] === 'UDEM' ? 800 : 600, bg: s.r[0] === 'UDEM' ? t.mine : (k < 4 ? t.top4 : 'transparent') }));
+    const count = Object.keys(picks).length;
+    const fill = () => { const p = {}; M.forEach((x, i) => { const mx = Math.max(x[3], x[4], x[5]); p[i] = mx === x[3] ? '1' : (mx === x[4] ? 'E' : '2'); }); this.setState({ picks: p }); };
+    const clear = () => this.setState({ picks: {} });
+    const act = 'SIMULAR';
+    const dnav = DNAV.map(([l, href]) => ({ l, href, st: 'color: ' + (l === act ? '#FFFFFF' : t.navTx) + '; font-weight: ' + (l === act ? 800 : 600) + '; border-bottom: 3px solid ' + (l === act ? t.acc : 'transparent') }));
+    return { t, c: GC[m], matches, table, count, status: count === 0 ? 'sin cambios' : count + (count === 1 ? ' resultado elegido' : ' resultados elegidos'), fill, clear, dnav };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Elegir equipo · escritorio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="min-height: 887px; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+  <section style="background: {{t.hero}}; color: {{t.heroTx}}">
+    <header style="max-width: 1180px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; gap: 10px">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+      <span style="font-size: 22px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+      <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+    </header>
+    <div style="max-width: 720px; margin: 0 auto; padding: 40px 24px 48px; text-align: center">
+      <h1 style="margin: 0; font-size: 44px; line-height: 1.05; font-weight: 800; letter-spacing: -1px">¿De qué cuadro sos?</h1>
+      <p style="margin: 12px 0 0; font-size: 17px; line-height: 1.45; color: {{t.heroTx2}}">Elegilo una vez y la calculadora arranca siempre por tu equipo: sus chances, su próximo partido y su tabla.</p>
+      <label style="display: flex; align-items: center; gap: 12px; height: 56px; padding: 0 18px; margin-top: 24px; background: {{t.card}}; border-radius: 10px; border: 2px solid #EAB308; text-align: left">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{t.tx2}}" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Buscá tu cuadro</span>
+        <input type="search" placeholder="Buscá por nombre, ej. Poquitos" style="flex: 1; min-width: 0; border: 0; outline: none; background: transparent; font-size: 17px; color: {{t.tx}}; font-family: inherit">
+      </label>
+    </div>
+  </section>
+
+  <main style="max-width: 1180px; margin: 0 auto; padding: 32px 24px 48px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+    <section style="flex: 999 1 560px; min-width: 0; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+      <div style="display: flex; align-items: baseline; gap: 12px; padding: 18px 20px; border-bottom: 1px solid {{t.line}}">
+        <h2 style="margin: 0; font-size: 18px; font-weight: 800">Serie 9 · Divisional C</h2>
+        <span style="font-size: 13px; color: {{t.tx2}}">10 equipos · Clausura 2026</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr))">
+        <sc-for list="{{teams}}" as="tm" hint-placeholder-count="10">
+          <button style="min-height: 60px; display: flex; align-items: center; gap: 12px; padding: 0 20px; background: none; border: 0; border-bottom: 1px solid {{t.line}}; border-right: 1px solid {{t.line}}; color: {{t.tx}}; font-family: inherit; text-align: left">
+            <span style="width: 34px; height: 34px; border-radius: 50%; background: {{tm.c}}; color: #FFFFFF; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{tm.ab}}</span>
+            <span style="flex: 1; min-width: 0; font-size: 15px; font-weight: 600">{{tm.n}}</span>
+            <span style="font-size: 13px; color: {{t.tx2}}">{{tm.pos}}</span>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+    <aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+      <h2 style="margin: 0 4px; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}">OTRAS SERIES Y DIVISIONALES</h2>
+      <sc-for list="{{series}}" as="s" hint-placeholder-count="3">
+        <div style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px">
+          <div style="font-size: 15px; font-weight: 800">{{s.name}}</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px">
+            <sc-for list="{{s.divs}}" as="d" hint-placeholder-count="2">
+              <button style="height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid {{d.border}}; background: {{d.bg}}; color: {{d.tx}}; font-size: 13px; font-weight: 700; font-family: inherit">{{d.n}}</button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+      <p style="margin: 4px; font-size: 13px; line-height: 1.4; color: {{t.tx2}}">Lo guardamos en este navegador. Lo cambiás cuando quieras desde Mi equipo.</p>
+    </aside>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1280,"height":887}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',sub:'#F3F4F6',line:'#E5E7EB',line2:'#D1D5DB',tx:'#111827',tx2:'#4B5563',hero:'#02224B',heroTx:'#FFFFFF',heroTx2:'#CBD5E1',shadow:'0 1px 2px rgba(2,34,75,0.08)',act:'#003C8A'},
+dark:{bg:'#0B1220',card:'#131C2F',sub:'#1A2540',line:'#1F2A44',line2:'#2C3A5A',tx:'#F1F5F9',tx2:'#A9B4C8',hero:'#0A2A5C',heroTx:'#FFFFFF',heroTx2:'#C3CEE0',shadow:'0 1px 2px rgba(0,0,0,0.4)',act:'#2563EB'}};
+const TEAMS=[['UDEM','U','#312E81'],['El Tunel FC','ET','#0F766E'],['La Pampara F.C','LP','#155E75'],['Croacia Fútbol Club','C','#1E40AF'],['Deportivo 29','D2','#166534'],['La Blanca F.C','LB','#0E7490'],['Los Poquitos De Siempre FC','LP','#6B21A8'],['Prado F.C','P','#991B1B'],['Burmese FC','B','#7E22CE'],['Del Oeste FC','DO','#713F12']];
+return {T,TEAMS};
+}
+  renderVals() {
+    const {T,TEAMS} = this.lp();
+    const t = T[this.props.dark ? 'dark' : 'light'];
+    const teams = TEAMS.map((r, i) => ({ n: r[0], ab: r[1], c: r[2], pos: (i + 1) + 'º' }));
+    const d = (n, on) => ({ n, bg: on ? t.act : t.sub, tx: on ? '#FFFFFF' : t.tx, border: on ? t.act : t.line2 });
+    const series = [
+      { name: 'Serie 9', divs: [d('Divisional A'), d('Divisional B'), d('Divisional C', true)] },
+      { name: 'Serie 6', divs: [d('Divisional A'), d('Divisional B')] },
+      { name: 'Serie 3', divs: [d('Divisional C'), d('Divisional D')] }
+    ];
+    return { t, teams, series };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Divisional · escritorio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="min-height: 1955px; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+
+  <header style="background: {{t.nav}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
+      <div style="display: flex; align-items: center; gap: 10px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+        <span style="color: #FFFFFF; font-size: 22px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+        <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+      </div>
+      <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto">
+        <sc-for list="{{dnav}}" as="n" hint-placeholder-count="6">
+          <a href="{{n.href}}" style="{{n.st}}; height: 64px; box-sizing: border-box; display: flex; align-items: center; padding: 0 12px; font-size: 13px; letter-spacing: 0.4px; text-decoration: none">{{n.l}}</a>
+        </sc-for>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background: {{t.card}}; border-bottom: 1px solid {{t.line2}}">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 20px 24px 0">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+        <div style="width: 48px; height: 48px; border-radius: 8px; background: #EAB308; display: flex; align-items: center; justify-content: center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#02224B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+        </div>
+        <div style="flex: 1; min-width: 260px">
+          <h1 style="margin: 0; font-size: 22px; font-weight: 800; letter-spacing: 0.2px">SERIE 9 / DIVISIONAL C / CLAUSURA 2026</h1>
+          <div style="font-size: 14px; color: {{t.tx2}}; margin-top: 2px">Fecha 7 de 9 jugada · quedan 10 partidos y las copas</div>
+        </div>
+        <button style="height: 44px; padding: 0 14px; border: 1px solid {{t.line2}}; background: {{t.card}}; border-radius: 6px; color: {{t.tx}}; font-size: 14px; font-weight: 600; font-family: inherit; display: flex; align-items: center; gap: 8px">Serie 9 · Divisional C <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+      </div>
+      <nav aria-label="Secciones" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px">
+        <sc-for list="{{secs}}" as="s" hint-placeholder-count="5">
+          <a href="#" style="{{s.st}}; height: 44px; display: flex; align-items: center; padding: 0 12px; font-size: 14px; text-decoration: none">{{s.l}}</a>
+        </sc-for>
+      </nav>
+    </div>
+  </section>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: 24px; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+      <article style="flex: 999 1 560px; min-width: 0; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 18px 20px 6px">
+          <h2 style="margin: 0; font-size: 20px; font-weight: 800">Chances de cada equipo</h2>
+          <span style="font-size: 13px; color: {{t.tx2}}">20.000 simulaciones del resto del torneo</span>
+        </div>
+        <div role="tablist" style="display: flex; flex-wrap: wrap; gap: 4px; padding: 0 12px; border-bottom: 1px solid {{t.line}}">
+          <sc-for list="{{tabs}}" as="tb" hint-placeholder-count="6">
+            <button role="tab" aria-selected="{{tb.on}}" style="{{tb.st}}; height: 44px; padding: 0 12px; background: none; border-left: 0; border-right: 0; border-top: 0; display: flex; align-items: center; gap: 6px; font-size: 14px; font-family: inherit"><span style="{{tb.mk.st}}" aria-hidden="true">{{tb.mk.g}}</span>{{tb.l}}</button>
+          </sc-for>
+        </div>
+        <sc-for list="{{rank}}" as="r" hint-placeholder-count="10">
+          <div style="display: grid; grid-template-columns: 24px 28px minmax(0, 220px) minmax(0, 1fr) 72px; gap: 12px; align-items: center; height: 44px; padding: 0 20px; border-bottom: 1px solid {{t.line}}; background: {{r.bg}}">
+            <span style="font-size: 13px; color: {{t.tx2}}; text-align: center">{{r.i}}</span>
+            <span style="width: 28px; height: 28px; border-radius: 50%; background: {{r.c}}; color: #FFFFFF; font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center">{{r.ab}}</span>
+            <span style="font-size: 14px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+            <div style="height: 10px; background: {{t.track}}; border-radius: 5px; overflow: hidden"><div style="width: {{r.w}}; height: 10px; background: {{r.bar}}"></div></div>
+            <span style="text-align: right; font-size: 16px; font-weight: 800; color: {{r.tx}}">{{r.v}}</span>
+          </div>
+        </sc-for>
+      </article>
+      <article style="flex: 1 1 340px; min-width: 0; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px 20px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Cómo siguen las copas</h2>
+        <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.45; color: {{t.tx2}}">Al terminar la fecha 9, la tabla se parte en tres. Todo es a partido único; si hay empate, penales.</p>
+        <sc-for list="{{cups}}" as="c" hint-placeholder-count="3">
+          <div style="display: flex; gap: 12px; margin-top: 16px">
+            <span style="{{c.mk.st}}; margin-top: 2px" aria-hidden="true">{{c.mk.g}}</span>
+            <div>
+              <div style="font-size: 15px; font-weight: 800; color: {{c.tx}}">{{c.name}} · {{c.who}}</div>
+              <div style="font-size: 14px; line-height: 1.45; margin-top: 2px">{{c.how}}</div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="margin-top: 16px; padding: 10px 12px; background: {{t.accSoft}}; color: {{t.accTx}}; border-radius: 8px; font-size: 13px; font-weight: 600; line-height: 1.4">El 1º de la fase regular tiene lugar asegurado en la final por la divisional.</div>
+        <div style="margin-top: 16px; font-size: 13px; line-height: 1.45; color: {{t.tx2}}">Desempate: diferencia de gol, goles a favor, enfrentamiento directo y, si sigue igual, sorteo.</div>
+      </article>
+    </div>
+
+    <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; padding: 18px 20px 12px">
+        <h2 style="margin: 0; font-size: 20px; font-weight: 800">Posiciones</h2>
+        <span style="font-size: 13px; color: {{t.tx2}}">A la derecha, cómo terminaría en promedio según las simulaciones</span>
+      </div>
+      <div style="overflow-x: auto">
+        <div style="min-width: 1000px">
+          <div style="display: grid; grid-template-columns: 40px minmax(200px, 1fr) 52px repeat(7, 44px) 16px 84px 72px 72px 72px; align-items: end; padding: 0 20px 6px; font-size: 12px; font-weight: 700; color: {{t.tx2}}">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span style="grid-column: span 4; text-align: center; font-size: 11px; letter-spacing: 0.8px; border-bottom: 2px solid {{t.line2}}; padding-bottom: 4px">PROYECTADA</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 40px minmax(200px, 1fr) 52px repeat(7, 44px) 16px 84px 72px 72px 72px; align-items: center; height: 36px; padding: 0 20px; font-size: 12px; font-weight: 700; color: {{t.tx2}}; border-bottom: 1px solid {{t.line}}">
+            <span style="text-align: center">Pos</span><span>Equipo</span>
+            <span style="text-align: center; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">Pts</span>
+            <span style="text-align: center">PJ</span><span style="text-align: center">PG</span><span style="text-align: center">PE</span><span style="text-align: center">PP</span><span style="text-align: center">GF</span><span style="text-align: center">GC</span><span style="text-align: center">DG</span><span></span>
+            <span style="text-align: right">Pts esp.</span>
+            <span style="text-align: right; color: {{c.oro}}">O Oro</span><span style="text-align: right; color: {{c.plata}}">P Plata</span><span style="text-align: right; color: {{c.bronce}}">B Bronce</span>
+          </div>
+          <sc-for list="{{table}}" as="r" hint-placeholder-count="10">
+            <div style="display: grid; grid-template-columns: 40px minmax(200px, 1fr) 52px repeat(7, 44px) 16px 84px 72px 72px 72px; align-items: center; height: 44px; padding: 0 20px; font-size: 14px; border-bottom: 1px solid {{t.line}}; background: {{r.bg}}">
+              <span style="text-align: center; color: {{t.tx2}}">{{r.pos}}</span>
+              <span style="display: flex; align-items: center; gap: 10px; min-width: 0; font-weight: {{r.fw}}"><span style="width: 24px; height: 24px; border-radius: 50%; background: {{r.c}}; color: #FFFFFF; font-size: 9px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{r.ab}}</span><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span></span>
+              <span style="text-align: center; font-weight: 800; font-size: 15px; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+              <span style="text-align: center">{{r.pj}}</span><span style="text-align: center">{{r.pg}}</span><span style="text-align: center">{{r.pe}}</span><span style="text-align: center">{{r.pp}}</span><span style="text-align: center">{{r.gf}}</span><span style="text-align: center">{{r.gc}}</span><span style="text-align: center; font-weight: 700">{{r.dg}}</span><span></span>
+              <span style="text-align: right; font-weight: 700">{{r.proj}}</span>
+              <span style="text-align: right; color: {{c.oro}}; font-weight: 700">{{r.oro}}</span><span style="text-align: right; color: {{c.plata}}; font-weight: 700">{{r.plata}}</span><span style="text-align: right; color: {{c.bronce}}; font-weight: 700">{{r.bronce}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="padding: 12px 20px; font-size: 13px; color: {{t.tx2}}">En celeste, los 4 que hoy van a la Copa de Oro y ascienden. Pts esp. = puntos finales esperados.</div>
+    </article>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+      <article style="flex: 999 1 560px; min-width: 0; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px 10px">
+        <h2 style="margin: 0; font-size: 20px; font-weight: 800">Lo que queda</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 24px">
+          <sc-for list="{{fixtures}}" as="f" hint-placeholder-count="2">
+            <div>
+              <div style="font-size: 12px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}; margin: 16px 0 4px">{{f.title}}</div>
+              <sc-for list="{{f.ms}}" as="p" hint-placeholder-count="5">
+                <div style="padding: 10px 0; border-top: 1px solid {{t.line}}">
+                  <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 14px; font-weight: {{p.fw}}"><span>{{p.a}}</span><span style="text-align: right">{{p.b}}</span></div>
+                  <div style="display: flex; height: 22px; gap: 2px; margin-top: 6px; font-size: 11px; font-weight: 800">
+                    <div style="width: {{p.w1}}; background: {{t.win}}; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 6px">{{p.p1}}</div>
+                    <div style="width: {{p.wx}}; background: {{t.draw}}; color: {{t.drawTx}}; display: flex; align-items: center; justify-content: center">{{p.px}}</div>
+                    <div style="width: {{p.w2}}; background: {{t.lose}}; color: {{t.loseTx}}; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px">{{p.p2}}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+      </article>
+      <article style="flex: 1 1 340px; min-width: 0; background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 18px 20px 6px">
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Resultados · fecha 7</h2>
+          <button style="height: 36px; padding: 0 10px; border: 1px solid {{t.line2}}; background: {{t.card}}; color: {{t.tx}}; border-radius: 6px; font-size: 13px; font-weight: 600; font-family: inherit">Otras fechas</button>
+        </div>
+        <sc-for list="{{results}}" as="r" hint-placeholder-count="5">
+          <div style="padding: 12px 0; border-top: 1px solid {{t.line}}; margin-top: 8px">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: center">
+              <span style="font-size: 14px; font-weight: {{r.fa}}; line-height: 1.2">{{r.a}}</span>
+              <span style="background: {{t.sub}}; padding: 3px 10px; border-radius: 6px; font-size: 15px; font-weight: 800">{{r.s}}</span>
+              <span style="font-size: 14px; font-weight: {{r.fb}}; text-align: right; line-height: 1.2">{{r.b}}</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 6px; font-size: 12px; color: {{t.tx2}}">
+              <span>Antes del partido: {{r.pre}}</span>
+              <sc-if value="{{r.sorpresa}}" hint-placeholder-val="{{false}}">
+                <span style="background: {{t.accSoft}}; color: {{t.accTx}}; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 999px">SORPRESA</span>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </article>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"tab":{"editor":"enum","options":["camp","asc","oro","plata","bronce","desc"],"default":"camp"},"$preview":{"width":1280,"height":1955}}'>
+class Component extends DCLogic {
+lp(){
+const T={
+light:{bg:'#E5E7EB',card:'#FFFFFF',sub:'#F3F4F6',line:'#E5E7EB',line2:'#D1D5DB',tx:'#111827',tx2:'#4B5563',nav:'#02224B',navTx:'#CBD5E1',act:'#003C8A',ink:'#003C8A',acc:'#EAB308',accTx:'#854D0E',accSoft:'#FEF3C7',top4:'#DBEAFE',pts:'#F3F4F6',track:'#EEF2F6',win:'#003C8A',draw:'#CBD5E1',drawTx:'#1F2937',lose:'#64748B',loseTx:'#FFFFFF',shadow:'0 1px 2px rgba(2,34,75,0.08)',mine:'#FEF9C3'},
+dark:{bg:'#0B1220',card:'#131C2F',sub:'#1A2540',line:'#1F2A44',line2:'#2C3A5A',tx:'#F1F5F9',tx2:'#A9B4C8',nav:'#020B1A',navTx:'#A9B4C8',act:'#2563EB',ink:'#93C5FD',acc:'#EAB308',accTx:'#FACC15',accSoft:'#3A2F0B',top4:'#14294D',pts:'#1A2540',track:'#1F2A44',win:'#2563EB',draw:'#475569',drawTx:'#F1F5F9',lose:'#94A3B8',loseTx:'#0B1220',shadow:'0 1px 2px rgba(0,0,0,0.4)',mine:'#2A2410'}};
+const GC={light:{camp:['#003C8A','#003C8A'],asc:['#15803D','#16A34A'],oro:['#854D0E','#EAB308'],plata:['#4B5563','#9CA3AF'],bronce:['#9A3412','#C2410C'],desc:['#B91C1C','#DC2626']},dark:{camp:['#93C5FD','#3B82F6'],asc:['#4ADE80','#22C55E'],oro:['#FACC15','#EAB308'],plata:['#CBD5E1','#94A3B8'],bronce:['#FB923C','#EA580C'],desc:['#F87171','#EF4444']}};
+const GL={camp:'Campeón',asc:'Asciende',oro:'Copa de Oro',plata:'Copa de Plata',bronce:'Copa de Bronce',desc:'Desciende'};
+function mark(k,m){const c=GC[m][k];const b='width: 16px; height: 16px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; line-height: 1; ';
+if(k==='camp')return{g:'1º',st:b+'border-radius: 4px; background: '+c[1]+'; color: #FFFFFF; font-size: 8px'};
+if(k==='asc')return{g:'▲',st:b+'color: '+c[1]+'; font-size: 12px'};
+if(k==='desc')return{g:'▼',st:b+'color: '+c[1]+'; font-size: 12px'};
+const L={oro:['O','#02224B'],plata:['P','#111827'],bronce:['B','#FFFFFF']}[k];
+return{g:L[0],st:b+'border-radius: 50%; background: '+c[1]+'; color: '+L[1]+'; font-size: 9px'};}
+function num(s){if(s[0]==='>')return 100;if(s[0]==='<')return 0.6;return parseFloat(s.replace(',','.'));}
+const TEAMS=[
+['UDEM','U','#312E81',16,7,5,1,1,24,9,['74%','>99,9%','47%','<0,1%','0%','0%'],'18,6'],
+['El Tunel FC','ET','#0F766E',14,7,4,2,1,14,10,['11%','91%','21%','4,0%','0%','0%'],'16,4'],
+['La Pampara F.C','LP','#155E75',13,7,4,1,2,19,14,['7,9%','91%','15%','4,1%','0%','0,1%'],'15,2'],
+['Croacia Fútbol Club','C','#1E40AF',13,7,4,1,2,15,12,['6,0%','84%','13%','6,3%','0%','0,2%'],'15,1'],
+['Deportivo 29','D2','#166534',10,7,3,1,3,18,13,['1,5%','22%','3,1%','31%','5,2%','21%'],'11,9'],
+['La Blanca F.C','LB','#0E7490',9,7,2,3,2,21,20,['0,3%','9,8%','0,6%','27%','10%','47%'],'10,8'],
+['Los Poquitos De Siempre FC','LP','#6B21A8',7,7,2,1,4,14,19,['<0,1%','2,8%','0,2%','22%','18%','39%'],'8,6'],
+['Prado F.C','P','#991B1B',6,7,1,3,3,12,20,['0%','0%','0%','2,9%','20%','96%'],'7,1'],
+['Burmese FC','B','#7E22CE',6,7,1,3,3,9,18,['0%','0%','0%','2,7%','21%','97%'],'7,0'],
+['Del Oeste FC','DO','#713F12',3,7,1,0,6,8,19,['0%','0%','0%','0%','26%','>99,9%'],'3,9']];
+const DNAV=[['INICIO','InicioDesk.dc.html'],['TABLA Y CHANCES','DivDesk.dc.html'],['PARTIDOS','PartidosDesk.dc.html'],['MI EQUIPO','EquipoDesk.dc.html'],['SIMULAR','SimularDesk.dc.html'],['SANCIONADOS','SancDesk.dc.html']];
+const F8=[['UDEM','Croacia Fútbol Club',60,18,22],['Prado F.C','Del Oeste FC',52,22,26],['La Blanca F.C','Deportivo 29',34,24,42],['El Tunel FC','La Pampara F.C',41,25,34],['Los Poquitos De Siempre FC','Burmese FC',49,23,28]];
+const F9=[['Croacia Fútbol Club','Burmese FC',63,19,18],['Deportivo 29','UDEM',24,21,55],['La Pampara F.C','Prado F.C',66,17,17],['El Tunel FC','La Blanca F.C',54,22,24],['Del Oeste FC','Los Poquitos De Siempre FC',30,23,47]];
+const R7=[['UDEM','5 - 0','Burmese FC','71% · E 16% · 13%',false,1],['Del Oeste FC','0 - 1','El Tunel FC','18% · E 22% · 60%',false,2],['Deportivo 29','2 - 0','La Pampara F.C','19% · E 23% · 58%',true,1],['Croacia Fútbol Club','1 - 1','La Blanca F.C','49% · E 27% · 24%',false,0],['Prado F.C','2 - 7','Los Poquitos De Siempre FC','40% · E 24% · 36%',false,2]];
+return {T,GC,GL,mark,num,TEAMS,DNAV,F8,F9,R7};
+}
+  renderVals() {
+    const {T,GC,GL,mark,num,TEAMS,DNAV,F8,F9,R7} = this.lp();
+    const m = this.props.dark ? 'dark' : 'light';
+    const t = T[m];
+    const keys = Object.keys(GL);
+    const tab = this.props.tab ?? 'camp';
+    const ti = keys.indexOf(tab);
+    const tabs = keys.map(k => ({ l: GL[k], on: k === tab, mk: mark(k, m), st: 'color: ' + (k === tab ? GC[m][k][0] : t.tx2) + '; font-weight: ' + (k === tab ? 800 : 600) + '; border-bottom: 3px solid ' + (k === tab ? GC[m][k][1] : 'transparent') }));
+    const rank = TEAMS.map(r => ({ n: r[0], ab: r[1], c: r[2], v: r[10][ti], s: num(r[10][ti]) })).sort((a, b) => b.s - a.s).map((r, i) => ({ ...r, i: i + 1, w: r.s + '%', bar: GC[m][tab][1], tx: GC[m][tab][0], fw: r.n === 'UDEM' ? 800 : 600, bg: r.n === 'UDEM' ? t.mine : 'transparent' }));
+    const table = TEAMS.map((r, i) => { const dg = r[8] - r[9]; return { pos: i + 1, n: r[0], ab: r[1], c: r[2], pts: r[3], pj: r[4], pg: r[5], pe: r[6], pp: r[7], gf: r[8], gc: r[9], dg: (dg > 0 ? '+' : (dg < 0 ? '−' : '')) + Math.abs(dg), proj: r[11], oro: r[10][2], plata: r[10][3], bronce: r[10][4], bg: r[0] === 'UDEM' ? t.mine : (i < 4 ? t.top4 : 'transparent'), fw: r[0] === 'UDEM' ? 800 : 600 }; });
+    const mk = (x) => ({ a: x[0], b: x[1], p1: x[2] + '%', px: x[3] + '%', p2: x[4] + '%', w1: x[2] + '%', wx: x[3] + '%', w2: x[4] + '%', fw: (x[0] === 'UDEM' || x[1] === 'UDEM') ? 800 : 600 });
+    const fixtures = [{ title: 'FECHA 8 · DOM 25 OCT', ms: F8.map(mk) }, { title: 'FECHA 9 · DOM 1 NOV', ms: F9.map(mk) }];
+    const cups = [
+      { mk: mark('oro', m), tx: GC[m].oro[0], name: 'Copa de Oro', who: 'del 1º al 4º', how: 'Semis 1º vs 4º y 2º vs 3º, después la final. Los cuatro ascienden.' },
+      { mk: mark('plata', m), tx: GC[m].plata[0], name: 'Copa de Plata', who: '5º y 6º', how: 'Con 10 equipos quedan dos en el medio: juegan la final directo.' },
+      { mk: mark('bronce', m), tx: GC[m].bronce[0], name: 'Copa de Bronce', who: 'del 7º al 10º', how: 'Semis 7º vs 10º y 8º vs 9º, después la final. Los cuatro descienden.' }
+    ];
+    const results = R7.map(x => ({ a: x[0], s: x[1], b: x[2], pre: x[3], sorpresa: x[4], fa: x[5] === 1 ? 800 : 500, fb: x[5] === 2 ? 800 : 500 }));
+    const act = 'TABLA Y CHANCES';
+    const dnav = DNAV.map(([l, href]) => ({ l, href, st: 'color: ' + (l === act ? '#FFFFFF' : t.navTx) + '; font-weight: ' + (l === act ? 800 : 600) + '; border-bottom: 3px solid ' + (l === act ? t.acc : 'transparent') }));
+    const secs = ['Chances', 'Posiciones', 'Lo que queda', 'Copas', 'Resultados'].map((l, i) => ({ l, st: 'color: ' + (i === 0 ? t.ink : t.tx2) + '; font-weight: ' + (i === 0 ? 800 : 600) + '; border-bottom: 3px solid ' + (i === 0 ? t.ink : 'transparent') }));
+    const c = { oro: GC[m].oro[0], plata: GC[m].plata[0], bronce: GC[m].bronce[0] };
+    return { t, c, tabs, rank, table, fixtures, cups, results, dnav, secs };
+  }
+}
+</script>
+</body>
+</html>

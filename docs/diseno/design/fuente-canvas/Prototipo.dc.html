@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Calculadora Liga Pro · prototipo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: {{t.bg}}; color: {{t.tx}}; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-variant-numeric: tabular-nums">
+<div id="lp-scroll" style="position: absolute; top: 0; left: 0; right: 0; bottom: {{navH}}; overflow-y: auto; overflow-x: hidden">
+
+  <sc-if value="{{showHeader}}" hint-placeholder-val="{{true}}">
+    <section style="background: {{t.hero}}; color: #FFFFFF; padding: 0 16px {{headPad}}">
+      <header style="height: 52px; display: flex; align-items: center; gap: 10px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+        <span style="font-size: 20px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+        <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+        <button onClick="{{toggleDark}}" aria-label="{{darkLabel}}" style="margin-left: auto; width: 44px; height: 44px; margin-right: -10px; background: none; border: 0; color: #CBD5E1; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg></button>
+      </header>
+      <button onClick="{{openSheet}}" style="height: 44px; width: 100%; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: #FFFFFF; text-align: left; font-family: inherit; cursor: pointer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg>
+        <span style="flex: 1; font-size: 12px; font-weight: 800; letter-spacing: 0.4px">{{divTitle}}</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+      </button>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{showEmpty}}" hint-placeholder-val="{{false}}">
+    <div style="padding: 16px 12px">
+      <div style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 28px 18px; text-align: center">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="{{t.tx2}}" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
+        <div style="font-size: 17px; font-weight: 800; margin-top: 10px">Todavía no hay datos de esta divisional</div>
+        <div style="font-size: 14px; line-height: 1.45; color: {{t.tx2}}; margin-top: 6px">Las chances aparecen cuando la Liga publica la primera fecha. En este prototipo solo está cargada la Serie 9 · Divisional C.</div>
+        <button onClick="{{backToC}}" style="height: 48px; width: 100%; margin-top: 18px; border: 0; border-radius: 6px; background: {{t.act}}; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Volver a Serie 9 · Divisional C</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= ELEGIR EQUIPO ================= -->
+  <sc-if value="{{isElegir}}" hint-placeholder-val="{{false}}">
+    <section style="background: {{t.hero}}; color: #FFFFFF; padding: 0 16px 24px">
+      <header style="height: 52px; display: flex; align-items: center; gap: 10px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 17H3z"></path><path d="M12 11l3.5 6h-7z" fill="#EAB308" stroke="none"></path></svg>
+        <span style="font-size: 20px; font-weight: 800; font-style: italic; letter-spacing: -0.5px">LigaPro</span>
+        <span style="background: #EAB308; color: #02224B; font-size: 10px; font-weight: 800; letter-spacing: 1px; padding: 3px 7px; border-radius: 4px">CALCULADORA</span>
+        <sc-if value="{{hasTeam}}" hint-placeholder-val="{{false}}">
+          <button onClick="{{goInicio}}" style="margin-left: auto; height: 44px; padding: 0 4px; background: none; border: 0; color: #FACC15; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Cancelar</button>
+        </sc-if>
+      </header>
+      <h1 style="margin: 20px 0 0; font-size: 32px; line-height: 1.1; font-weight: 800; letter-spacing: -0.5px">¿De qué cuadro sos?</h1>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.4; color: #CBD5E1">Elegilo una vez y la calculadora arranca siempre por tu equipo: sus chances, su próximo partido y su tabla.</p>
+      <label style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 14px; margin-top: 18px; background: {{t.card}}; border-radius: 8px; border: 2px solid #EAB308">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{t.tx2}}" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+        <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Buscá tu cuadro</span>
+        <input type="search" value="{{q}}" onChange="{{onQ}}" placeholder="Buscá por nombre, ej. Poquitos" style="flex: 1; min-width: 0; border: 0; outline: none; background: transparent; font-size: 16px; color: {{t.tx}}; font-family: inherit">
+      </label>
+    </section>
+    <div style="padding: 16px 12px 24px; display: flex; flex-direction: column; gap: 10px">
+      <sc-if value="{{searching}}" hint-placeholder-val="{{false}}">
+        <div style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+          <sc-for list="{{found}}" as="tm" hint-placeholder-count="2">
+            <button onClick="{{tm.pick}}" style="width: 100%; min-height: 60px; display: flex; align-items: center; gap: 12px; padding: 8px 16px; background: none; border: 0; border-bottom: 1px solid {{t.line}}; color: {{t.tx}}; font-family: inherit; text-align: left; cursor: pointer">
+              <span style="width: 32px; height: 32px; border-radius: 50%; background: {{tm.c}}; color: #FFFFFF; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{tm.ab}}</span>
+              <span style="flex: 1; min-width: 0"><span style="display: block; font-size: 15px; font-weight: 700">{{tm.n}}</span><span style="display: block; font-size: 12px; color: {{t.tx2}}">Serie 9 · Divisional C · {{tm.pos}}</span></span>
+            </button>
+          </sc-for>
+          <sc-if value="{{noneFound}}" hint-placeholder-val="{{false}}">
+            <div style="padding: 20px 16px; font-size: 14px; color: {{t.tx2}}">No encontramos ese cuadro. Probá con otra parte del nombre.</div>
+          </sc-if>
+        </div>
+      </sc-if>
+      <sc-if value="{{notSearching}}" hint-placeholder-val="{{true}}">
+        <sc-for list="{{series}}" as="se" hint-placeholder-count="3">
+          <h2 style="margin: 10px 4px 0; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}">{{se.name}}</h2>
+          <sc-for list="{{se.divs}}" as="d" hint-placeholder-count="2">
+            <div style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+              <div style="height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 16px">
+                <span style="flex: 1; font-size: 15px; font-weight: 800">{{d.name}}</span>
+                <span style="font-size: 13px; color: {{t.tx2}}">{{d.meta}}</span>
+              </div>
+              <sc-if value="{{d.open}}" hint-placeholder-val="{{false}}">
+                <sc-for list="{{d.teams}}" as="tm" hint-placeholder-count="10">
+                  <button onClick="{{tm.pick}}" style="width: 100%; min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 6px 16px; background: {{tm.bg}}; border: 0; border-top: 1px solid {{t.line}}; color: {{t.tx}}; font-family: inherit; text-align: left; cursor: pointer">
+                    <span style="width: 30px; height: 30px; border-radius: 50%; background: {{tm.c}}; color: #FFFFFF; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{tm.ab}}</span>
+                    <span style="flex: 1; min-width: 0; font-size: 15px; font-weight: 600; line-height: 1.25">{{tm.n}}</span>
+                    <span style="font-size: 12px; font-weight: 700; color: {{t.accTx}}">{{tm.tag}}</span>
+                    <span style="font-size: 13px; color: {{t.tx2}}; white-space: nowrap">{{tm.pos}}</span>
+                  </button>
+                </sc-for>
+              </sc-if>
+            </div>
+          </sc-for>
+        </sc-for>
+      </sc-if>
+      <p style="margin: 12px 4px 0; font-size: 13px; line-height: 1.4; color: {{t.tx2}}">Lo guardamos en este celular. Lo cambiás cuando quieras desde Mi equipo.</p>
+    </div>
+  </sc-if>
+
+  <!-- ================= INICIO ================= -->
+  <sc-if value="{{isInicio}}" hint-placeholder-val="{{false}}">
+    <section style="background: {{t.hero}}; color: #FFFFFF; padding: 18px 16px 52px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; color: {{vm.c}}; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 14px">{{vm.ab}}</div>
+        <div style="flex: 1; min-width: 0">
+          <div style="font-size: 20px; font-weight: 800; line-height: 1.15">{{vm.n}}</div>
+          <div style="font-size: 13px; color: #CBD5E1">{{vm.sub}}</div>
+        </div>
+        <button onClick="{{goEquipoMine}}" style="height: 44px; padding: 0 4px; background: none; border: 0; font-size: 13px; font-weight: 700; color: #FACC15; font-family: inherit; cursor: pointer; white-space: nowrap">Ver ficha</button>
+      </div>
+      <div style="display: flex; align-items: flex-end; gap: 12px; margin-top: 10px">
+        <div style="font-size: {{vm.bigSize}}; line-height: 0.9; font-weight: 800; letter-spacing: -3px; white-space: nowrap">{{vm.bigNum}}<span style="font-size: 0.54em; letter-spacing: 0; color: #EAB308">%</span></div>
+        <div style="padding-bottom: 6px; display: flex; flex-direction: column; gap: 6px; min-width: 0">
+          <div style="font-size: 15px; font-weight: 700; line-height: 1.2; white-space: pre-line">{{vm.bigLabel}}</div>
+          <div style="font-size: 12px; font-weight: 700; color: {{vm.deltaC}}">{{vm.deltaTxt}}</div>
+        </div>
+      </div>
+    </section>
+    <div style="padding: 0 12px 24px; margin-top: -36px; display: flex; flex-direction: column; gap: 12px">
+      <sc-if value="{{vm.hasNext}}" hint-placeholder-val="{{true}}">
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.raise}}; padding: 14px 16px 16px">
+          <div style="text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 0.8px; color: {{t.tx2}}">PRÓXIMO PARTIDO · {{vm.next.when}}</div>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr); align-items: center; margin-top: 10px">
+            <div style="display: flex; align-items: center; gap: 8px; min-width: 0">
+              <div style="width: 30px; height: 30px; border-radius: 50%; background: {{vm.c}}; color: #FFFFFF; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{vm.ab}}</div>
+              <span style="font-size: 15px; font-weight: 800; line-height: 1.15">{{vm.n}}</span>
+            </div>
+            <span style="text-align: center; font-size: 13px; color: {{t.tx2}}">vs</span>
+            <button onClick="{{vm.next.open}}" style="display: flex; align-items: center; justify-content: flex-end; gap: 8px; min-width: 0; background: none; border: 0; padding: 0; color: {{t.tx}}; font-family: inherit; cursor: pointer">
+              <span style="font-size: 15px; font-weight: 800; text-align: right; line-height: 1.15">{{vm.next.rival}}</span>
+              <div style="width: 30px; height: 30px; border-radius: 50%; background: {{vm.next.rc}}; color: #FFFFFF; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{vm.next.rab}}</div>
+            </button>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px">
+            <div><div style="font-size: 22px; font-weight: 800; color: {{t.ink}}">{{vm.next.pW}}</div><div style="font-size: 12px; color: {{t.tx2}}">Gana {{vm.short}}</div></div>
+            <div style="text-align: center"><div style="font-size: 22px; font-weight: 800">{{vm.next.pD}}</div><div style="font-size: 12px; color: {{t.tx2}}">Empate</div></div>
+            <div style="text-align: right"><div style="font-size: 22px; font-weight: 800; color: {{t.tx2}}">{{vm.next.pL}}</div><div style="font-size: 12px; color: {{t.tx2}}">Gana {{vm.next.rshort}}</div></div>
+          </div>
+          <div style="display: flex; height: 8px; gap: 2px; margin-top: 10px">
+            <div style="width: {{vm.next.pW}}; background: {{t.win}}; border-radius: 4px 0 0 4px"></div>
+            <div style="width: {{vm.next.pD}}; background: {{t.draw}}"></div>
+            <div style="width: {{vm.next.pL}}; background: {{t.lose}}; border-radius: 0 4px 4px 0"></div>
+          </div>
+        </article>
+      </sc-if>
+      <sc-if value="{{vm.noNext}}" hint-placeholder-val="{{false}}">
+        <article style="background: {{t.card}}; border: 1px dashed {{t.line2}}; border-radius: 10px; padding: 16px; text-align: center">
+          <div style="font-size: 15px; font-weight: 800">No le quedan partidos</div>
+          <div style="font-size: 13px; color: {{t.tx2}}; margin-top: 4px">Ya jugó toda la fase regular. Ahora depende de los demás.</div>
+        </article>
+      </sc-if>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 6px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 6px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 800">Tus 6 chances</h2>
+          <span style="font-size: 12px; color: {{t.tx2}}">tocá una para ver más</span>
+        </div>
+        <sc-for list="{{vm.goals}}" as="g" hint-placeholder-count="6">
+          <button onClick="{{g.open}}" style="width: 100%; display: grid; grid-template-columns: 128px minmax(0, 1fr) 64px; align-items: center; gap: 10px; height: 44px; padding: 0; background: none; border: 0; border-top: 1px solid {{t.line}}; font-family: inherit; text-align: left; cursor: pointer">
+            <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: {{g.tx}}"><span style="{{g.mk.st}}" aria-hidden="true">{{g.mk.g}}</span>{{g.l}}</span>
+            <span style="display: block; height: 8px; background: {{t.track}}; border-radius: 4px; overflow: hidden"><span style="display: block; width: {{g.w}}; height: 8px; background: {{g.bar}}; border-radius: 4px"></span></span>
+            <span style="text-align: right; font-size: 15px; font-weight: 800; color: {{g.tx}}">{{g.v}}</span>
+          </button>
+        </sc-for>
+      </article>
+
+      <h2 style="margin: 12px 4px 0; font-size: 17px; font-weight: 800">Lo más picante de la última fecha</h2>
+      <sc-for list="{{hot}}" as="h" hint-placeholder-count="3">
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px">
+            <span style="font-size: 14px; font-weight: 700; line-height: 1.2">{{h.a}}</span>
+            <span style="background: {{t.sub}}; padding: 4px 10px; border-radius: 6px; font-size: 16px; font-weight: 800; white-space: nowrap">{{h.s}}</span>
+            <span style="font-size: 14px; font-weight: 700; text-align: right; line-height: 1.2">{{h.b}}</span>
+          </div>
+          <sc-if value="{{h.sorpresa}}" hint-placeholder-val="{{false}}">
+            <div style="margin-top: 8px"><span style="background: {{t.accSoft}}; color: {{t.accTx}}; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 999px">SORPRESA · el modelo le daba {{h.prob}}</span></div>
+          </sc-if>
+          <sc-for list="{{h.moves}}" as="mv" hint-placeholder-count="2">
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 13px">
+              <span style="{{mv.mk.st}}" aria-hidden="true">{{mv.mk.g}}</span>
+              <span style="flex: 1; min-width: 0"><b>{{mv.team}}</b> {{mv.what}}</span>
+              <span style="white-space: nowrap; color: {{t.tx2}}">{{mv.from}} <span aria-hidden="true">→</span> <b style="color: {{mv.tx}}">{{mv.to}}</b></span>
+            </div>
+          </sc-for>
+        </article>
+      </sc-for>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden; margin-top: 12px">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px 10px">
+          <h2 style="margin: 0; font-size: 15px; font-weight: 800">Así está la tabla</h2>
+          <button onClick="{{goTabla}}" style="height: 32px; background: none; border: 0; padding: 0; font-size: 13px; font-weight: 700; color: {{t.ink}}; font-family: inherit; cursor: pointer">Ver todo</button>
+        </div>
+        <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr) 36px 58px 58px; gap: 8px; padding: 0 12px 6px; font-size: 11px; font-weight: 700; color: {{t.tx2}}">
+          <span></span><span>Equipo</span><span style="text-align: center">Pts</span><span style="text-align: right">▲ Asc.</span><span style="text-align: right">▼ Desc.</span>
+        </div>
+        <sc-for list="{{rows}}" as="r" hint-placeholder-count="10">
+          <button onClick="{{r.open}}" style="width: 100%; display: grid; grid-template-columns: 22px minmax(0, 1fr) 36px 58px 58px; gap: 8px; align-items: center; height: 42px; padding: 0 12px; border: 0; border-top: 1px solid {{t.line}}; background: {{r.bg}}; color: {{t.tx}}; font-family: inherit; text-align: left; cursor: pointer">
+            <span style="font-size: 13px; color: {{t.tx2}}; text-align: center">{{r.pos}}</span>
+            <span style="display: flex; align-items: center; gap: 8px; min-width: 0">
+              <span style="width: 22px; height: 22px; border-radius: 50%; background: {{r.c}}; color: #FFFFFF; font-size: 9px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{r.ab}}</span>
+              <span style="font-size: 13px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+            </span>
+            <span style="font-size: 14px; font-weight: 800; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+            <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.asc}}">{{r.asc}}</span>
+            <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{c.desc}}">{{r.desc}}</span>
+          </button>
+        </sc-for>
+        <div style="padding: 10px 16px; font-size: 12px; color: {{t.tx2}}; border-top: 1px solid {{t.line}}">En celeste, los 4 que hoy juegan la Copa de Oro y ascienden. Tocá un equipo para ver su ficha.</div>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+        <h2 style="margin: 0 0 10px; font-size: 15px; font-weight: 800">Otras divisionales</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <sc-for list="{{otherDivs}}" as="d" hint-placeholder-count="6">
+            <button onClick="{{d.pick}}" style="height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid {{t.line2}}; background: {{t.sub}}; color: {{t.tx}}; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer">{{d.l}}</button>
+          </sc-for>
+        </div>
+      </article>
+    </div>
+  </sc-if>
+
+  <!-- ================= TABLA (DIVISIONAL) ================= -->
+  <sc-if value="{{isTabla}}" hint-placeholder-val="{{false}}">
+    <div style="padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 14px 16px 4px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Chances de cada equipo</h2>
+          <span style="font-size: 12px; color: {{t.tx2}}">fecha 7 de 9</span>
+        </div>
+        <div role="tablist" style="display: flex; overflow-x: auto; gap: 2px; padding: 0 8px; border-bottom: 1px solid {{t.line}}">
+          <sc-for list="{{rankTabs}}" as="tb" hint-placeholder-count="6">
+            <button role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.st}}; height: 44px; padding: 0 10px; background: none; border-left: 0; border-right: 0; border-top: 0; display: flex; align-items: center; gap: 6px; font-size: 13px; white-space: nowrap; font-family: inherit; cursor: pointer"><span style="{{tb.mk.st}}" aria-hidden="true">{{tb.mk.g}}</span>{{tb.l}}</button>
+          </sc-for>
+        </div>
+        <sc-for list="{{rank}}" as="r" hint-placeholder-count="10">
+          <button onClick="{{r.open}}" style="width: 100%; display: grid; grid-template-columns: 26px minmax(0, 1fr) 84px 60px; gap: 10px; align-items: center; min-height: 46px; padding: 4px 16px; border: 0; border-bottom: 1px solid {{t.line}}; background: {{r.bg}}; color: {{t.tx}}; font-family: inherit; text-align: left; cursor: pointer">
+            <span style="width: 26px; height: 26px; border-radius: 50%; background: {{r.c}}; color: #FFFFFF; font-size: 10px; font-weight: 800; display: flex; align-items: center; justify-content: center">{{r.ab}}</span>
+            <span style="font-size: 14px; font-weight: {{r.fw}}; line-height: 1.2">{{r.n}}</span>
+            <span style="display: block; height: 8px; background: {{t.track}}; border-radius: 4px; overflow: hidden"><span style="display: block; width: {{r.w}}; height: 8px; background: {{r.bar}}"></span></span>
+            <span style="text-align: right; font-size: 15px; font-weight: 800; color: {{r.tx}}">{{r.v}}</span>
+          </button>
+        </sc-for>
+        <div style="padding: 10px 16px 12px; font-size: 12px; line-height: 1.4; color: {{t.tx2}}">Son estimaciones: el resto del torneo se simula partido a partido, no son cuotas.</div>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+        <div style="padding: 14px 16px 12px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Posiciones</h2>
+          <div role="tablist" style="display: grid; grid-template-columns: 1fr 1fr; margin-top: 10px; background: {{t.sub}}; border-radius: 8px; padding: 3px">
+            <sc-for list="{{tablaTabs}}" as="tb" hint-placeholder-count="2">
+              <button role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.st}}; height: 40px; border: 0; border-radius: 6px; font-size: 14px; font-family: inherit; cursor: pointer">{{tb.l}}</button>
+            </sc-for>
+          </div>
+        </div>
+        <sc-if value="{{tablaHoy}}" hint-placeholder-val="{{true}}">
+          <div style="overflow-x: auto">
+            <div style="min-width: 392px">
+              <div style="display: grid; grid-template-columns: 128px 36px repeat(6, 30px) 34px; gap: 0 4px; align-items: center; height: 32px; padding-right: 12px; font-size: 11px; font-weight: 700; color: {{t.tx2}}; border-bottom: 1px solid {{t.line}}">
+                <span style="position: sticky; left: 0; background: {{t.card}}; padding-left: 12px; align-self: stretch; display: flex; align-items: center">Equipo</span>
+                <span style="background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">Pts</span>
+                <span style="text-align: center">PJ</span><span style="text-align: center">PG</span><span style="text-align: center">PE</span><span style="text-align: center">PP</span><span style="text-align: center">GF</span><span style="text-align: center">GC</span><span style="text-align: center">DG</span>
+              </div>
+              <sc-for list="{{table}}" as="r" hint-placeholder-count="10">
+                <div style="display: grid; grid-template-columns: 128px 36px repeat(6, 30px) 34px; gap: 0 4px; align-items: center; min-height: 44px; padding-right: 12px; font-size: 13px; border-bottom: 1px solid {{t.line}}; background: {{r.bg}}">
+                  <span style="position: sticky; left: 0; background: {{r.bg}}; padding: 6px 0 6px 12px; align-self: stretch; display: flex; align-items: center; gap: 6px; font-weight: {{r.fw}}; line-height: 1.2"><span style="width: 16px; color: {{t.tx2}}; font-weight: 600; flex-shrink: 0">{{r.pos}}</span>{{r.n}}</span>
+                  <span style="font-weight: 800; font-size: 14px; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+                  <span style="text-align: center">{{r.pj}}</span><span style="text-align: center">{{r.pg}}</span><span style="text-align: center">{{r.pe}}</span><span style="text-align: center">{{r.pp}}</span><span style="text-align: center">{{r.gf}}</span><span style="text-align: center">{{r.gc}}</span><span style="text-align: center; font-weight: 700">{{r.dg}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div style="padding: 10px 16px 14px; font-size: 12px; line-height: 1.4; color: {{t.tx2}}">En celeste, los 4 que hoy van a la Copa de Oro y ascienden. Deslizá la tabla para ver los goles.</div>
+        </sc-if>
+        <sc-if value="{{tablaProy}}" hint-placeholder-val="{{false}}">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 50px 50px 50px 50px; gap: 6px; align-items: center; height: 32px; padding: 0 12px; font-size: 11px; font-weight: 700; color: {{t.tx2}}; border-bottom: 1px solid {{t.line}}">
+            <span>Equipo</span><span style="text-align: right">Pts esp.</span><span style="text-align: right; color: {{c.oro}}">O Oro</span><span style="text-align: right; color: {{c.plata}}">P Plata</span><span style="text-align: right; color: {{c.bronce}}">B Bronce</span>
+          </div>
+          <sc-for list="{{proj}}" as="r" hint-placeholder-count="10">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 50px 50px 50px 50px; gap: 6px; align-items: center; min-height: 44px; padding: 0 12px; font-size: 13px; border-bottom: 1px solid {{t.line}}; background: {{r.bg}}">
+              <span style="font-weight: {{r.fw}}; line-height: 1.2; display: flex; gap: 6px"><span style="width: 16px; color: {{t.tx2}}; font-weight: 600; flex-shrink: 0">{{r.pos}}</span>{{r.n}}</span>
+              <span style="text-align: right; font-weight: 800">{{r.proj}}</span>
+              <span style="text-align: right; font-weight: 700; color: {{c.oro}}">{{r.oro}}</span>
+              <span style="text-align: right; font-weight: 700; color: {{c.plata}}">{{r.plata}}</span>
+              <span style="text-align: right; font-weight: 700; color: {{c.bronce}}">{{r.bronce}}</span>
+            </div>
+          </sc-for>
+          <div style="padding: 10px 16px 14px; font-size: 12px; line-height: 1.4; color: {{t.tx2}}">Pts esp. = puntos con los que terminaría en promedio. Las copas: chance de ganarlas.</div>
+        </sc-if>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 6px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Lo que queda</h2>
+        <sc-for list="{{fixtures}}" as="f" hint-placeholder-count="2">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}; margin: 14px 0 4px">{{f.title}}</div>
+          <sc-for list="{{f.ms}}" as="p" hint-placeholder-count="5">
+            <div style="padding: 10px 0; border-top: 1px solid {{t.line}}">
+              <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 14px; font-weight: {{p.fw}}"><span>{{p.a}}</span><span style="text-align: right">{{p.b}}</span></div>
+              <div style="display: flex; height: 22px; gap: 2px; margin-top: 6px; font-size: 11px; font-weight: 800">
+                <div style="width: {{p.p1}}; background: {{t.win}}; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 6px">{{p.p1}}</div>
+                <div style="width: {{p.px}}; background: {{t.draw}}; color: {{t.drawTx}}; display: flex; align-items: center; justify-content: center">{{p.px}}</div>
+                <div style="width: {{p.p2}}; background: {{t.lose}}; color: {{t.loseTx}}; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px">{{p.p2}}</div>
+              </div>
+            </div>
+          </sc-for>
+        </sc-for>
+        <div style="font-size: 12px; color: {{t.tx2}}; padding: 8px 0 10px; border-top: 1px solid {{t.line}}">Gana el primero · empate · gana el segundo. Sin localía: el orden no importa.</div>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Cómo siguen las copas</h2>
+        <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.45; color: {{t.tx2}}">Al terminar la fecha 9 la tabla se parte en tres. Todo es a partido único; si hay empate, penales.</p>
+        <sc-for list="{{cupsInfo}}" as="cu" hint-placeholder-count="3">
+          <div style="display: flex; gap: 12px; margin-top: 14px">
+            <span style="{{cu.mk.st}}; margin-top: 2px" aria-hidden="true">{{cu.mk.g}}</span>
+            <div>
+              <div style="font-size: 14px; font-weight: 800; color: {{cu.tx}}">{{cu.name}} · {{cu.who}}</div>
+              <div style="font-size: 13px; line-height: 1.45; margin-top: 2px">{{cu.how}}</div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="margin-top: 14px; padding: 10px 12px; background: {{t.accSoft}}; color: {{t.accTx}}; border-radius: 8px; font-size: 13px; font-weight: 600; line-height: 1.4">El 1º de la fase regular tiene lugar asegurado en la final por la divisional.</div>
+      </article>
+    </div>
+  </sc-if>
+
+  <!-- ================= PARTIDOS ================= -->
+  <sc-if value="{{isPartidos}}" hint-placeholder-val="{{false}}">
+    <div role="tablist" style="position: sticky; top: 0; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: {{t.card}}; border-bottom: 1px solid {{t.line2}}">
+      <sc-for list="{{partTabs}}" as="tb" hint-placeholder-count="3">
+        <button role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.st}}; height: 48px; background: none; border-left: 0; border-right: 0; border-top: 0; font-size: 14px; font-family: inherit; cursor: pointer">{{tb.l}}</button>
+      </sc-for>
+    </div>
+    <div style="padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+      <sc-if value="{{partProx}}" hint-placeholder-val="{{true}}">
+        <sc-for list="{{fixtures}}" as="f" hint-placeholder-count="2">
+          <h2 style="margin: 8px 4px 0; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}">{{f.title}}</h2>
+          <sc-for list="{{f.ms}}" as="p" hint-placeholder-count="5">
+            <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 12px 14px; border: {{p.border}}">
+              <sc-if value="{{p.mine}}" hint-placeholder-val="{{false}}">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px"><span style="font-size: 11px; font-weight: 800; letter-spacing: 0.8px; color: {{t.accTx}}">★ TU PARTIDO</span><button onClick="{{goSanc}}" style="height: 28px; background: none; border: 0; padding: 0; color: {{t.ink}}; font-size: 12px; font-weight: 700; font-family: inherit; cursor: pointer">Sancionados</button></div>
+              </sc-if>
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr); gap: 6px; align-items: center; font-size: 15px; font-weight: 700">
+                <span style="line-height: 1.2">{{p.a}}</span>
+                <span style="text-align: center; font-size: 12px; font-weight: 500; color: {{t.tx2}}">vs</span>
+                <span style="line-height: 1.2; text-align: right">{{p.b}}</span>
+              </div>
+              <div style="display: flex; height: 24px; gap: 2px; margin-top: 10px; font-size: 12px; font-weight: 800">
+                <div style="width: {{p.p1}}; background: {{t.win}}; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 8px">{{p.p1}}</div>
+                <div style="width: {{p.px}}; background: {{t.draw}}; color: {{t.drawTx}}; display: flex; align-items: center; justify-content: center">{{p.px}}</div>
+                <div style="width: {{p.p2}}; background: {{t.lose}}; color: {{t.loseTx}}; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px">{{p.p2}}</div>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 4px; font-size: 11px; color: {{t.tx2}}"><span>Gana</span><span>Empate</span><span>Gana</span></div>
+            </article>
+          </sc-for>
+        </sc-for>
+      </sc-if>
+      <sc-if value="{{partCopas}}" hint-placeholder-val="{{false}}">
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Copas y finales</h2>
+          <p style="margin: 6px 0 0; font-size: 13px; line-height: 1.45; color: {{t.tx2}}">Se arman cuando termine la fecha 9. Mientras tanto, así quedarían con la tabla de hoy.</p>
+          <sc-for list="{{cups}}" as="cu" hint-placeholder-count="3">
+            <div style="margin-top: 16px">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 800; color: {{cu.tx}}"><span style="{{cu.mk.st}}" aria-hidden="true">{{cu.mk.g}}</span>{{cu.name}}</div>
+              <sc-for list="{{cu.games}}" as="g" hint-placeholder-count="2">
+                <div style="display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 10px; align-items: center; margin-top: 8px; padding: 10px 12px; border: 1px dashed {{t.line2}}; border-radius: 8px; background: {{g.bg}}">
+                  <span style="font-size: 12px; font-weight: 700; color: {{t.tx2}}">{{g.k}}</span>
+                  <span style="font-size: 13px; font-weight: 600; line-height: 1.3">{{g.v}}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+          <div style="margin-top: 16px; padding: 10px 12px; background: {{t.accSoft}}; color: {{t.accTx}}; border-radius: 8px; font-size: 13px; font-weight: 600; line-height: 1.4">Final por la divisional: el 1º de la fase regular ya tiene su lugar. Hoy sería {{leader}}.</div>
+        </article>
+      </sc-if>
+      <sc-if value="{{partRes}}" hint-placeholder-val="{{false}}">
+        <h2 style="margin: 8px 4px 0; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}">FECHA 7 · DOM 18 OCT</h2>
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 2px 16px">
+          <sc-for list="{{results}}" as="r" hint-placeholder-count="5">
+            <div style="padding: 12px 0; border-bottom: 1px solid {{t.line}}">
+              <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: center">
+                <span style="font-size: 14px; font-weight: {{r.fa}}; line-height: 1.2">{{r.a}}</span>
+                <span style="background: {{t.sub}}; padding: 3px 10px; border-radius: 6px; font-size: 15px; font-weight: 800">{{r.s}}</span>
+                <span style="font-size: 14px; font-weight: {{r.fb}}; text-align: right; line-height: 1.2">{{r.b}}</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 6px; font-size: 12px; color: {{t.tx2}}">
+                <span>Antes del partido: {{r.pre}}</span>
+                <sc-if value="{{r.sorpresa}}" hint-placeholder-val="{{false}}">
+                  <span style="background: {{t.accSoft}}; color: {{t.accTx}}; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 999px">SORPRESA</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+          <div style="padding: 12px 0; font-size: 12px; color: {{t.tx2}}">Sorpresa: el que ganó tenía menos de 25% antes del partido.</div>
+        </article>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <!-- ================= EQUIPO ================= -->
+  <sc-if value="{{isEquipo}}" hint-placeholder-val="{{false}}">
+    <div style="padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+      <sc-if value="{{ev.notMine}}" hint-placeholder-val="{{false}}">
+        <button onClick="{{goBack}}" style="align-self: flex-start; height: 36px; display: flex; align-items: center; gap: 6px; padding: 0 6px; background: none; border: 0; color: {{t.ink}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Volver</button>
+      </sc-if>
+      <article aria-label="Ficha para compartir" style="background: #02224B; color: #FFFFFF; border-radius: 12px; padding: 18px 16px 14px; box-shadow: {{t.raise}}">
+        <div style="font-size: 11px; font-weight: 800; letter-spacing: 1px; color: #CBD5E1">SERIE 9 · DIVISIONAL C · CLAUSURA 2026</div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 12px">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; color: {{ev.c}}; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{ev.ab}}</div>
+          <div style="min-width: 0">
+            <h1 style="margin: 0; font-size: 22px; line-height: 1.15; font-weight: 800">{{ev.n}}</h1>
+            <div style="font-size: 13px; color: #CBD5E1; margin-top: 2px">{{ev.sub}}</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: flex-end; gap: 12px; margin-top: 14px">
+          <div style="font-size: {{ev.bigSize}}; line-height: 0.9; font-weight: 800; letter-spacing: -3px; white-space: nowrap">{{ev.bigNum}}<span style="font-size: 0.54em; letter-spacing: 0; color: #EAB308">%</span></div>
+          <div style="padding-bottom: 6px; font-size: 15px; font-weight: 700; line-height: 1.2; white-space: pre-line">{{ev.bigLabel}}</div>
+        </div>
+        <div role="group" aria-label="Elegí qué chance mostrar en grande" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 16px">
+          <sc-for list="{{ev.tiles}}" as="g" hint-placeholder-count="6">
+            <button aria-pressed="{{g.on}}" onClick="{{g.pick}}" style="{{g.st}}; min-height: 58px; border-radius: 8px; padding: 8px 10px; text-align: left; font-family: inherit; color: #FFFFFF; cursor: pointer">
+              <span style="display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: #E2E8F0; white-space: nowrap"><span style="{{g.mk.st}}" aria-hidden="true">{{g.mk.g}}</span>{{g.l}}</span>
+              <span style="display: block; font-size: 20px; font-weight: 800; color: {{g.tx}}; margin-top: 4px">{{g.v}}</span>
+            </button>
+          </sc-for>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.16); font-size: 11px; color: #CBD5E1">
+          <span style="font-weight: 800; font-style: italic; color: #FFFFFF">LigaPro <span style="font-style: normal; color: #EAB308">· Calculadora</span></span>
+          <span>Después de la fecha 7 · 20/10/2026</span>
+        </div>
+      </article>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px">
+        <button aria-pressed="{{ev.isMine}}" onClick="{{ev.makeMine}}" style="height: 48px; border-radius: 6px; border: 1px solid {{t.line2}}; background: {{t.card}}; color: {{t.tx}}; font-size: 14px; font-weight: 700; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer"><span aria-hidden="true" style="color: #EAB308">★</span> {{ev.mineLabel}}</button>
+        <button onClick="{{ev.copy}}" style="height: 48px; border-radius: 6px; border: 0; background: {{t.act}}; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Copiar para compartir</button>
+      </div>
+
+      <sc-if value="{{ev.hasNext}}" hint-placeholder-val="{{true}}">
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+            <h2 style="margin: 0; font-size: 17px; font-weight: 800">¿Qué pasa si…?</h2>
+            <span style="font-size: 12px; color: {{t.tx2}}; text-align: right">vs {{ev.nextRival}} · fecha {{ev.nextF}}</span>
+          </div>
+          <p style="margin: 4px 0 0; font-size: 13px; color: {{t.tx2}}">{{ev.ifsTitle}}</p>
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px">
+            <sc-for list="{{ev.ifs}}" as="w" hint-placeholder-count="3">
+              <div style="background: {{t.sub}}; border-radius: 8px; padding: 10px 6px; text-align: center; border-top: 4px solid {{w.c}}">
+                <div style="font-size: 12px; font-weight: 800; letter-spacing: 0.6px; color: {{t.tx2}}">{{w.l}}</div>
+                <div style="font-size: 24px; font-weight: 800; color: {{w.tx}}; margin-top: 2px">{{w.v}}</div>
+                <div style="font-size: 12px; font-weight: 700; color: {{w.dc}}">{{w.d}}</div>
+              </div>
+            </sc-for>
+          </div>
+        </article>
+      </sc-if>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">{{ev.ptsTitle}}</h2>
+        <p style="margin: 4px 0 0; font-size: 13px; color: {{t.tx2}}">{{ev.ptsSub}}</p>
+        <div style="margin-top: 12px; display: flex; flex-direction: column; gap: 6px">
+          <sc-for list="{{ev.pts}}" as="p" hint-placeholder-count="6">
+            <div style="display: grid; grid-template-columns: 54px minmax(0, 1fr) 58px; gap: 10px; align-items: center; height: 32px">
+              <span style="font-size: 13px; font-weight: 700">{{p.l}}</span>
+              <div style="height: 20px; background: {{t.track}}; border-radius: 4px; overflow: hidden"><div style="width: {{p.w}}; height: 20px; background: {{p.bar}}"></div></div>
+              <span style="text-align: right; font-size: 14px; font-weight: 800; color: {{p.tx}}">{{p.v}}</span>
+            </div>
+          </sc-for>
+        </div>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 6px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Partidos de otros que más te importan</h2>
+        <p style="margin: 4px 0 6px; font-size: 13px; color: {{t.tx2}}">{{ev.othersSub}}</p>
+        <sc-for list="{{ev.others}}" as="o" hint-placeholder-count="3">
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr) 72px; gap: 12px; align-items: center; padding: 12px 0; border-top: 1px solid {{t.line}}">
+            <div>
+              <div style="font-size: 14px; font-weight: 700; line-height: 1.25">{{o.what}}</div>
+              <div style="font-size: 12px; color: {{t.tx2}}; margin-top: 2px">{{o.when}}</div>
+            </div>
+            <span style="text-align: right; font-size: 18px; font-weight: 800; color: {{o.c}}">{{o.d}}</span>
+          </div>
+        </sc-for>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 6px">
+        <h2 style="margin: 0 0 4px; font-size: 17px; font-weight: 800">Lo que le queda</h2>
+        <sc-for list="{{ev.left}}" as="p" hint-placeholder-count="2">
+          <div style="padding: 12px 0; border-top: 1px solid {{t.line}}">
+            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: {{t.tx2}}"><span>{{p.f}}</span><span>{{p.pos}}</span></div>
+            <div style="font-size: 15px; font-weight: 800; margin-top: 2px">vs {{p.rival}}</div>
+            <div style="display: flex; height: 22px; gap: 2px; margin-top: 8px; font-size: 11px; font-weight: 800">
+              <div style="width: {{p.pW}}; background: {{t.win}}; color: #FFFFFF; border-radius: 4px 0 0 4px; display: flex; align-items: center; padding-left: 6px; white-space: nowrap">{{p.winLab}}</div>
+              <div style="width: {{p.pD}}; background: {{t.draw}}; color: {{t.drawTx}}; display: flex; align-items: center; justify-content: center">{{p.pD}}</div>
+              <div style="width: {{p.pL}}; background: {{t.lose}}; color: {{t.loseTx}}; border-radius: 0 4px 4px 0; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px">{{p.pL}}</div>
+            </div>
+          </div>
+        </sc-for>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 12px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Cómo vino su chance</h2>
+          <span style="font-size: 12px; color: {{t.tx2}}">{{ev.goalName}} · fecha a fecha</span>
+        </div>
+        <svg role="img" aria-label="{{ev.chartAria}}" width="326" height="150" viewBox="0 0 326 150" style="display: block; margin-top: 10px">
+          <line x1="28" y1="20" x2="318" y2="20" stroke="{{t.line}}" stroke-width="1"></line>
+          <line x1="28" y1="70" x2="318" y2="70" stroke="{{t.line}}" stroke-width="1"></line>
+          <line x1="28" y1="120" x2="318" y2="120" stroke="{{t.line2}}" stroke-width="1"></line>
+          <text x="0" y="24" font-size="11" fill="{{t.tx2}}">100</text>
+          <text x="6" y="74" font-size="11" fill="{{t.tx2}}">50</text>
+          <text x="12" y="124" font-size="11" fill="{{t.tx2}}">0</text>
+          <polyline points="{{ev.chart.pts}}" fill="none" stroke="{{ev.chart.c}}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></polyline>
+          <circle cx="310" cy="{{ev.chart.ly}}" r="5" fill="{{ev.chart.c}}"></circle>
+          <text x="300" y="{{ev.chart.ty}}" font-size="13" font-weight="800" fill="{{ev.chart.c}}" text-anchor="end">{{ev.chart.lab}}</text>
+          <text x="40" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F1</text>
+          <text x="86" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F2</text>
+          <text x="132" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F3</text>
+          <text x="178" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F4</text>
+          <text x="224" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F5</text>
+          <text x="270" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F6</text>
+          <text x="310" y="142" font-size="11" fill="{{t.tx2}}" text-anchor="middle">F7</text>
+        </svg>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 6px">
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Sancionados</h2>
+          <button onClick="{{goSanc}}" style="height: 32px; background: none; border: 0; padding: 0; color: {{t.ink}}; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer">Ver todos</button>
+        </div>
+        <sc-for list="{{ev.sanc}}" as="sg" hint-placeholder-count="2">
+          <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}; margin: 12px 0 2px">{{sg.title}}</div>
+          <sc-for list="{{sg.ps}}" as="p" hint-placeholder-count="1">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 10px 0; border-top: 1px solid {{t.line}}">
+              <div>
+                <div style="font-size: 14px; font-weight: 700">{{p.n}}</div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 3px; font-size: 12px; color: {{t.tx2}}"><span style="{{p.cardSt}}" aria-hidden="true"></span>{{p.tipo}} · {{p.fechas}}</div>
+              </div>
+              <span style="font-size: 13px; font-weight: 800; white-space: nowrap">{{p.queda}}</span>
+            </div>
+          </sc-for>
+          <sc-if value="{{sg.empty}}" hint-placeholder-val="{{false}}">
+            <div style="padding: 10px 0; border-top: 1px solid {{t.line}}; font-size: 13px; color: {{t.tx2}}">Nadie suspendido para la próxima fecha.</div>
+          </sc-if>
+        </sc-for>
+      </article>
+
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px 8px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Cerca en la tabla</h2>
+          <button onClick="{{goTabla}}" style="height: 32px; background: none; border: 0; padding: 0; color: {{t.ink}}; font-size: 13px; font-weight: 700; font-family: inherit; cursor: pointer">Tabla completa</button>
+        </div>
+        <sc-for list="{{ev.mini}}" as="r" hint-placeholder-count="5">
+          <button onClick="{{r.open}}" style="width: 100%; display: grid; grid-template-columns: 22px minmax(0, 1fr) 36px 64px; gap: 8px; align-items: center; height: 42px; padding: 0 16px; border: 0; border-top: 1px solid {{t.line}}; background: {{r.bg}}; color: {{t.tx}}; font-family: inherit; text-align: left; cursor: pointer">
+            <span style="font-size: 13px; color: {{t.tx2}}">{{r.pos}}</span>
+            <span style="font-size: 13px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+            <span style="font-size: 14px; font-weight: 800; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+            <span style="text-align: right; font-size: 13px; font-weight: 700; color: {{r.tx}}">{{r.v}}</span>
+          </button>
+        </sc-for>
+      </article>
+      <button onClick="{{goElegir}}" style="height: 44px; border-radius: 6px; border: 1px solid {{t.line2}}; background: {{t.card}}; color: {{t.ink}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Cambiar de equipo</button>
+    </div>
+  </sc-if>
+
+  <!-- ================= SIMULAR ================= -->
+  <sc-if value="{{isSimular}}" hint-placeholder-val="{{false}}">
+    <div style="position: sticky; top: 0; z-index: 2; background: {{t.card}}; border-bottom: 1px solid {{t.line2}}; padding: 10px 16px; display: flex; align-items: center; gap: 10px">
+      <span style="width: 28px; height: 28px; border-radius: 50%; background: {{sim.me.c}}; color: #FFFFFF; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0">{{sim.me.ab}}</span>
+      <span style="flex: 1; font-size: 13px; line-height: 1.3"><b>{{sim.me.n}}</b> quedaría <b>{{sim.me.pos}}º</b> con <b>{{sim.me.pts}} pts</b> · {{sim.me.goalTxt}} <b style="color: {{sim.me.goalC}}">{{sim.me.goalV}}</b></span>
+      <span style="font-size: 12px; font-weight: 700; color: {{t.tx2}}; white-space: nowrap">{{sim.count}}/10</span>
+    </div>
+    <div style="padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 16px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Armá tu escenario</h2>
+        <p style="margin: 4px 0 4px; font-size: 13px; line-height: 1.4; color: {{t.tx2}}">Elegí resultados. Los partidos que no toques los sigue simulando el modelo.</p>
+        <sc-for list="{{sim.matches}}" as="p" hint-placeholder-count="10">
+          <div style="padding: 10px 0; border-top: 1px solid {{t.line}}">
+            <div style="font-size: 11px; font-weight: 700; color: {{t.tx2}}">{{p.f}}</div>
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 10px; align-items: center; margin-top: 2px">
+              <div style="font-size: 14px; font-weight: {{p.fw}}; line-height: 1.25">{{p.a}}<br><span style="font-weight: 500; color: {{t.tx2}}">vs</span> {{p.b}}</div>
+              <div role="radiogroup" aria-label="{{p.aria}}" style="display: grid; grid-template-columns: repeat(3, 44px); gap: 4px">
+                <sc-for list="{{p.opts}}" as="o" hint-placeholder-count="3">
+                  <button role="radio" aria-checked="{{o.on}}" aria-label="{{o.aria}}" onClick="{{o.pick}}" style="{{o.st}}; height: 44px; border-radius: 6px; font-size: 15px; font-weight: 800; font-family: inherit; cursor: pointer">{{o.l}}</button>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="font-size: 12px; color: {{t.tx2}}; padding: 8px 0 12px; border-top: 1px solid {{t.line}}">1 = gana el primero · E = empate · 2 = gana el segundo</div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px">
+          <button onClick="{{sim.fill}}" style="height: 48px; border: 0; border-radius: 6px; background: {{t.act}}; color: #FFFFFF; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Completar con lo más probable</button>
+          <button onClick="{{sim.clear}}" style="height: 48px; padding: 0 16px; border: 1px solid {{t.line2}}; border-radius: 6px; background: {{t.sub}}; color: {{t.tx}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Limpiar</button>
+        </div>
+      </article>
+      <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; overflow: hidden">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; padding: 14px 16px 8px">
+          <h2 style="margin: 0; font-size: 17px; font-weight: 800">Así quedaría</h2>
+          <span style="font-size: 12px; color: {{t.tx2}}">{{sim.status}}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr) 30px 50px 50px 50px; gap: 6px; padding: 0 12px 6px; font-size: 11px; font-weight: 700; color: {{t.tx2}}">
+          <span></span><span>Equipo</span><span style="text-align: center">Pts</span><span style="text-align: right">1º</span><span style="text-align: right">▲ Asc.</span><span style="text-align: right">▼ Desc.</span>
+        </div>
+        <sc-for list="{{sim.table}}" as="r" hint-placeholder-count="10">
+          <div style="display: grid; grid-template-columns: 20px minmax(0, 1fr) 30px 50px 50px 50px; gap: 6px; align-items: center; height: 42px; padding: 0 12px; border-top: 1px solid {{t.line}}; background: {{r.bg}}">
+            <span style="font-size: 13px; color: {{t.tx2}}">{{r.pos}}</span>
+            <span style="font-size: 13px; font-weight: {{r.fw}}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{r.n}}</span>
+            <span style="font-size: 14px; font-weight: 800; background: {{t.pts}}; align-self: stretch; display: flex; align-items: center; justify-content: center">{{r.pts}}</span>
+            <span style="text-align: right; font-size: 12px; font-weight: 700; color: {{c.camp}}">{{r.camp}}</span>
+            <span style="text-align: right; font-size: 12px; font-weight: 700; color: {{c.asc}}">{{r.asc}}</span>
+            <span style="text-align: right; font-size: 12px; font-weight: 700; color: {{c.desc}}">{{r.desc}}</span>
+          </div>
+        </sc-for>
+        <div style="padding: 10px 16px 14px; font-size: 12px; line-height: 1.4; color: {{t.tx2}}">Los puntos suman solo lo que elegiste. Las chances tienen en cuenta todo, incluidos los partidos sin tocar.</div>
+      </article>
+    </div>
+  </sc-if>
+
+  <!-- ================= SANCIONADOS ================= -->
+  <sc-if value="{{isSanc}}" hint-placeholder-val="{{false}}">
+    <div style="padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 12px">
+      <div style="padding: 4px 4px 0">
+        <button onClick="{{goBack}}" style="height: 36px; display: flex; align-items: center; gap: 6px; padding: 0 2px; background: none; border: 0; color: {{t.ink}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>Volver</button>
+        <h1 style="margin: 4px 0 0; font-size: 22px; font-weight: 800">Sancionados</h1>
+        <p style="margin: 4px 0 0; font-size: 13px; color: {{t.tx2}}">Para la fecha 8 · según el informe de la Liga del 20/10/2026.</p>
+      </div>
+      <sc-for list="{{sancGroups}}" as="sg" hint-placeholder-count="3">
+        <article style="background: {{t.card}}; border-radius: 10px; box-shadow: {{t.shadow}}; padding: 14px 16px 4px; border: {{sg.border}}">
+          <h2 style="margin: 0 0 4px; font-size: 13px; font-weight: 800; letter-spacing: 0.8px; color: {{sg.hc}}">{{sg.title}}</h2>
+          <sc-for list="{{sg.ps}}" as="p" hint-placeholder-count="2">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 12px 0; border-top: 1px solid {{t.line}}">
+              <div style="min-width: 0">
+                <div style="font-size: 15px; font-weight: 700">{{p.n}}</div>
+                <div style="font-size: 13px; color: {{t.tx2}}; margin-top: 2px">{{p.team}}</div>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12px; font-weight: 700"><span style="{{p.cardSt}}" aria-hidden="true"></span>{{p.tipo}} · {{p.fechas}}</div>
+              </div>
+              <div style="text-align: right">
+                <div style="font-size: 24px; font-weight: 800; line-height: 1">{{p.q}}</div>
+                <div style="font-size: 12px; color: {{t.tx2}}">{{p.ql}}</div>
+              </div>
+            </div>
+          </sc-for>
+          <sc-if value="{{sg.empty}}" hint-placeholder-val="{{false}}">
+            <div style="display: flex; align-items: center; gap: 10px; padding: 12px 0; border-top: 1px solid {{t.line}}; font-size: 14px">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="{{c.asc}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg>
+              <span>Tiene a todos: nadie suspendido.</span>
+            </div>
+          </sc-if>
+        </article>
+      </sc-for>
+    </div>
+  </sc-if>
+</div>
+
+<sc-if value="{{showNav}}" hint-placeholder-val="{{true}}">
+  <nav aria-label="Principal" style="position: absolute; left: 0; right: 0; bottom: 0; height: 64px; background: {{t.nav}}; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); box-shadow: 0 -2px 8px rgba(2,34,75,0.18)">
+    <sc-for list="{{nav}}" as="n" hint-placeholder-count="5">
+      <button onClick="{{n.go}}" aria-current="{{n.cur}}" style="{{n.st}}; background: none; border-left: 0; border-right: 0; border-bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 11px; font-family: inherit; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{n.d}}"></path></svg>{{n.l}}</button>
+    </sc-for>
+  </nav>
+</sc-if>
+
+<sc-if value="{{sheet}}" hint-placeholder-val="{{false}}">
+  <div style="position: absolute; inset: 0; z-index: 10; display: flex; flex-direction: column; justify-content: flex-end">
+    <button onClick="{{closeSheet}}" aria-label="Cerrar" style="flex: 1; border: 0; background: rgba(2,11,26,0.55); cursor: pointer"></button>
+    <div role="dialog" aria-label="Elegí serie y divisional" style="background: {{t.card}}; border-radius: 16px 16px 0 0; padding: 8px 16px 24px; box-shadow: 0 -8px 24px rgba(0,0,0,0.25)">
+      <div style="width: 40px; height: 4px; border-radius: 2px; background: {{t.line2}}; margin: 0 auto 10px"></div>
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 800">Elegí serie y divisional</h2>
+        <button onClick="{{closeSheet}}" style="height: 44px; padding: 0 4px; background: none; border: 0; color: {{t.ink}}; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">Listo</button>
+      </div>
+      <div style="font-size: 12px; color: {{t.tx2}}; margin-top: 2px">Clausura 2026</div>
+      <sc-for list="{{sheetList}}" as="se" hint-placeholder-count="3">
+        <div style="font-size: 12px; font-weight: 800; letter-spacing: 0.8px; color: {{t.tx2}}; margin: 16px 0 8px">{{se.name}}</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <sc-for list="{{se.divs}}" as="d" hint-placeholder-count="3">
+            <button onClick="{{d.pick}}" aria-pressed="{{d.on}}" style="{{d.st}}; height: 44px; padding: 0 16px; border-radius: 999px; font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer">{{d.l}}</button>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{hasToast}}" hint-placeholder-val="{{false}}">
+  <div role="status" style="position: absolute; left: 16px; right: 16px; bottom: 80px; z-index: 11; background: #111827; color: #FFFFFF; border-radius: 10px; padding: 12px 14px; font-size: 13px; line-height: 1.4; box-shadow: 0 8px 24px rgba(0,0,0,0.3)"><b style="color: #FACC15">Copiado.</b> {{toast}}</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    try { const v = window.localStorage.getItem('lp-calc-team'); if (v !== null && v !== '' && !isNaN(+v)) this.setState({ team: +v, view: +v, screen: 'inicio' }); } catch (e) {}
+  }
+  data() {
+    if (this._d) return this._d;
+    const T = {
+      light: { bg: '#E5E7EB', card: '#FFFFFF', sub: '#F3F4F6', line: '#E5E7EB', line2: '#D1D5DB', tx: '#111827', tx2: '#4B5563', nav: '#02224B', navTx: '#CBD5E1', navOn: '#FACC15', hero: '#02224B', act: '#003C8A', ink: '#003C8A', acc: '#EAB308', accTx: '#854D0E', accSoft: '#FEF3C7', top4: '#DBEAFE', pts: '#F3F4F6', track: '#EEF2F6', win: '#003C8A', draw: '#CBD5E1', drawTx: '#1F2937', lose: '#64748B', loseTx: '#FFFFFF', shadow: '0 1px 2px rgba(2,34,75,0.08)', raise: '0 4px 12px rgba(2,34,75,0.14)', mine: '#FEF9C3', up: '#15803D', down: '#B91C1C' },
+      dark: { bg: '#0B1220', card: '#131C2F', sub: '#1A2540', line: '#1F2A44', line2: '#2C3A5A', tx: '#F1F5F9', tx2: '#A9B4C8', nav: '#020B1A', navTx: '#A9B4C8', navOn: '#FACC15', hero: '#0A2A5C', act: '#2563EB', ink: '#93C5FD', acc: '#EAB308', accTx: '#FACC15', accSoft: '#3A2F0B', top4: '#14294D', pts: '#1A2540', track: '#1F2A44', win: '#2563EB', draw: '#475569', drawTx: '#F1F5F9', lose: '#94A3B8', loseTx: '#0B1220', shadow: '0 1px 2px rgba(0,0,0,0.4)', raise: '0 6px 16px rgba(0,0,0,0.5)', mine: '#2A2410', up: '#4ADE80', down: '#F87171' }
+    };
+    const GC = { light: { camp: ['#003C8A', '#003C8A'], asc: ['#15803D', '#16A34A'], oro: ['#854D0E', '#EAB308'], plata: ['#4B5563', '#9CA3AF'], bronce: ['#9A3412', '#C2410C'], desc: ['#B91C1C', '#DC2626'] }, dark: { camp: ['#93C5FD', '#3B82F6'], asc: ['#4ADE80', '#22C55E'], oro: ['#FACC15', '#EAB308'], plata: ['#CBD5E1', '#94A3B8'], bronce: ['#FB923C', '#EA580C'], desc: ['#F87171', '#EF4444'] } };
+    const GK = ['camp', 'asc', 'oro', 'plata', 'bronce', 'desc'];
+    const GL = { camp: 'Campeón', asc: 'Asciende', oro: 'Copa de Oro', plata: 'Copa de Plata', bronce: 'Copa de Bronce', desc: 'Desciende' };
+    const GS = { camp: 'Campeón', asc: 'Asciende', oro: 'Oro', plata: 'Plata', bronce: 'Bronce', desc: 'Desciende' };
+    const BL = { camp: 'chances de\nsalir campeón', asc: 'chances de\nascender', oro: 'chances de ganar\nla Copa de Oro', plata: 'chances de ganar\nla Copa de Plata', bronce: 'chances de ganar\nla Copa de Bronce', desc: 'chances de\ndescender' };
+    const TEAMS = [
+      ['UDEM', 'UDEM', 'U', '#312E81', 16, 7, 5, 1, 1, 24, 9, '18,6', [74, 99.96, 47, 0.04, 0, 0]],
+      ['El Tunel FC', 'El Tunel', 'ET', '#0F766E', 14, 7, 4, 2, 1, 14, 10, '16,4', [11, 91, 21, 4.0, 0, 0]],
+      ['La Pampara F.C', 'La Pampara', 'LP', '#155E75', 13, 7, 4, 1, 2, 19, 14, '15,2', [7.9, 91, 15, 4.1, 0, 0.1]],
+      ['Croacia Fútbol Club', 'Croacia', 'C', '#1E40AF', 13, 7, 4, 1, 2, 15, 12, '15,1', [6.0, 84, 13, 6.3, 0, 0.2]],
+      ['Deportivo 29', 'Deportivo 29', 'D2', '#166534', 10, 7, 3, 1, 3, 18, 13, '11,9', [1.5, 22, 3.1, 31, 5.2, 21]],
+      ['La Blanca F.C', 'La Blanca', 'LB', '#0E7490', 9, 7, 2, 3, 2, 21, 20, '10,8', [0.3, 9.8, 0.6, 27, 10, 47]],
+      ['Los Poquitos De Siempre FC', 'Los Poquitos', 'LP', '#6B21A8', 7, 7, 2, 1, 4, 14, 19, '8,6', [0.04, 2.8, 0.2, 22, 18, 39]],
+      ['Prado F.C', 'Prado', 'P', '#991B1B', 6, 7, 1, 3, 3, 12, 20, '7,1', [0, 0, 0, 2.9, 20, 96]],
+      ['Burmese FC', 'Burmese', 'B', '#7E22CE', 6, 7, 1, 3, 3, 9, 18, '7,0', [0, 0, 0, 2.7, 21, 97]],
+      ['Del Oeste FC', 'Del Oeste', 'DO', '#713F12', 3, 7, 1, 0, 6, 8, 19, '3,9', [0, 0, 0, 0, 26, 99.96]]
+    ].map(r => ({ n: r[0], short: r[1], ab: r[2], c: r[3], pts: r[4], pj: r[5], pg: r[6], pe: r[7], pp: r[8], gf: r[9], gc: r[10], proj: r[11], B: r[12] }));
+    const M = [
+      [8, 0, 3, 60, 18, 22], [8, 7, 9, 52, 22, 26], [8, 5, 4, 34, 24, 42], [8, 1, 2, 41, 25, 34], [8, 6, 8, 49, 23, 28],
+      [9, 3, 8, 63, 19, 18], [9, 4, 0, 24, 21, 55], [9, 2, 7, 66, 17, 17], [9, 1, 5, 54, 22, 24], [9, 9, 6, 30, 23, 47]
+    ].map(r => ({ f: r[0], a: r[1], b: r[2], p: [r[3], r[4], r[5]], when: r[0] === 8 ? 'DOM 25 OCT' : 'DOM 1 NOV' }));
+    const R7 = [[0, '5 - 0', 8, '71% · E 16% · 13%', false, 1], [9, '0 - 1', 1, '18% · E 22% · 60%', false, 2], [4, '2 - 0', 2, '19% · E 23% · 58%', true, 1], [3, '1 - 1', 5, '49% · E 27% · 24%', false, 0], [7, '2 - 7', 6, '40% · E 24% · 36%', false, 2]];
+    const S = [['M. Silva', 0, 'Roja', '2 fechas', 1], ['F. Rodríguez', 3, 'Roja', '1 fecha', 1], ['L. Pereira', 3, 'Amarilla (5ª)', '1 fecha', 1], ['S. González', 9, 'Roja', '4 fechas', 3], ['J. Martínez', 6, 'Roja', '3 fechas', 2], ['D. Fernández', 7, 'Amarilla (5ª)', '1 fecha', 1]];
+    const NAV = [['inicio', 'Inicio', 'M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z'], ['tabla', 'Tabla', 'M4 6h16M4 12h16M4 18h16'], ['partidos', 'Partidos', 'M21 12a9 9 0 1 1-18 0a9 9 0 1 1 18 0M12 7.5l3.8 2.8-1.4 4.4H9.6l-1.4-4.4z'], ['equipo', 'Mi equipo', 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'], ['simular', 'Simular', 'M6 20V10M12 20V4M18 20v-7']];
+    const DIVS = [['SERIE 9', [['S9A', 'Divisional A'], ['S9B', 'Divisional B'], ['S9C', 'Divisional C']]], ['SERIE 6', [['S6A', 'Divisional A'], ['S6B', 'Divisional B']]], ['SERIE 3', [['S3C', 'Divisional C'], ['S3D', 'Divisional D']]]];
+    const DIVT = { S9A: 'SERIE 9 / DIVISIONAL A', S9B: 'SERIE 9 / DIVISIONAL B', S9C: 'SERIE 9 / DIVISIONAL C', S6A: 'SERIE 6 / DIVISIONAL A', S6B: 'SERIE 6 / DIVISIONAL B', S3C: 'SERIE 3 / DIVISIONAL C', S3D: 'SERIE 3 / DIVISIONAL D' };
+    this._d = { T, GC, GK, GL, GS, BL, TEAMS, M, R7, S, NAV, DIVS, DIVT };
+    return this._d;
+  }
+  fmt(v) {
+    if (v >= 99.95) return v >= 99.9999 ? '100%' : '>99,9%';
+    if (v <= 0.0001) return '0%';
+    if (v < 0.05) return '<0,1%';
+    if (v < 9.95) return v.toFixed(1).replace('.', ',') + '%';
+    return Math.round(v) + '%';
+  }
+  pp(d) { const a = Math.abs(d).toFixed(1).replace('.', ','); return (d >= 0 ? '+' : '−') + a; }
+  mark(k, m) {
+    const c = this.data().GC[m][k]; const b = 'width: 16px; height: 16px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; line-height: 1; ';
+    if (k === 'camp') return { g: '1º', st: b + 'border-radius: 4px; background: ' + c[1] + '; color: #FFFFFF; font-size: 8px' };
+    if (k === 'asc') return { g: '▲', st: b + 'color: ' + c[1] + '; font-size: 12px' };
+    if (k === 'desc') return { g: '▼', st: b + 'color: ' + c[1] + '; font-size: 12px' };
+    const L = { oro: ['O', '#02224B'], plata: ['P', '#111827'], bronce: ['B', '#FFFFFF'] }[k];
+    return { g: L[0], st: b + 'border-radius: 50%; background: ' + c[1] + '; color: ' + L[1] + '; font-size: 9px' };
+  }
+  // Enumerates every combination of the remaining results (3^10) and returns exact frequencies.
+  sim(picks, X) {
+    const key = JSON.stringify(picks) + '|' + X;
+    this._c = this._c || {};
+    if (this._c[key]) return this._c[key];
+    const { TEAMS, M } = this.data();
+    const N = TEAMS.length, NM = M.length;
+    const W4 = [0.34, 0.27, 0.22, 0.17], W2 = [0.55, 0.45];
+    const acc = TEAMS.map(() => [0, 0, 0, 0, 0, 0, 0]);
+    const cm = M.map(() => [0, 0, 0]);
+    const cg = M.map(() => [[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]]);
+    const bp = {};
+    const pts = TEAMS.map(t => t.pts), dg = TEAMS.map(t => t.gf - t.gc), gf = TEAMS.map(t => t.gf);
+    const outs = new Array(NM), idx = TEAMS.map((t, i) => i);
+    const cmp = (a, b) => (pts[b] - pts[a]) || (dg[b] - dg[a]) || (gf[b] - gf[a]) || (a - b);
+    const gx = [0, 0, 0, 0, 0, 0, 0];
+    const leaf = (p) => {
+      const ord = idx.slice().sort(cmp);
+      for (let k = 0; k < N; k++) {
+        const t = ord[k], a = acc[t];
+        if (k === 0) a[0] += p;
+        if (k < 4) { a[1] += p; a[2] += p * W4[k]; } else if (k < 6) { a[3] += p * W2[k - 4]; a[6] += p; } else { a[4] += p * W4[k - 6]; a[5] += p; }
+        if (t === X) {
+          gx[0] = k === 0 ? 1 : 0; gx[1] = k < 4 ? 1 : 0; gx[2] = k < 4 ? W4[k] : 0; gx[3] = (k >= 4 && k < 6) ? W2[k - 4] : 0; gx[4] = k >= 6 ? W4[k - 6] : 0; gx[5] = k >= 6 ? 1 : 0; gx[6] = (k >= 4 && k < 6) ? 1 : 0;
+        }
+      }
+      if (X != null) {
+        for (let i = 0; i < NM; i++) { const o = outs[i]; cm[i][o] += p; const r = cg[i][o]; for (let g = 0; g < 7; g++) r[g] += p * gx[g]; }
+        const f = pts[X]; const e = bp[f] || (bp[f] = { m: 0, g: [0, 0, 0, 0, 0, 0, 0] }); e.m += p; for (let g = 0; g < 7; g++) e.g[g] += p * gx[g];
+      }
+    };
+    const rec = (i, p) => {
+      if (i === NM) { leaf(p); return; }
+      const mt = M[i], pk = picks[i];
+      for (let o = 0; o < 3; o++) {
+        const q = pk == null ? mt.p[o] / 100 : (pk === o ? 1 : 0);
+        if (!q) continue;
+        const da = o === 0 ? 3 : (o === 1 ? 1 : 0), db = o === 2 ? 3 : (o === 1 ? 1 : 0);
+        pts[mt.a] += da; pts[mt.b] += db; outs[i] = o;
+        rec(i + 1, p * q);
+        pts[mt.a] -= da; pts[mt.b] -= db;
+      }
+    };
+    rec(0, 1);
+    const out = { acc, cm, cg, bp };
+    this._c[key] = out;
+    return out;
+  }
+  // Anchors the model's raw frequency to the published chance, so 'no picks' always shows the official number.
+  adj(t, gi, raw) {
+    const { TEAMS } = this.data();
+    if (raw <= 1e-9) return 0;
+    if (raw >= 1 - 1e-9) return 100;
+    if (gi === 6) return raw * 100;
+    const none = this.sim({}, null).acc[t][gi];
+    // shift in log-odds: keeps 0 and 100 fixed and moves the published number in the model's direction
+    const lg = (p) => { const q = Math.min(1 - 1e-6, Math.max(1e-6, p)); return Math.log(q / (1 - q)); };
+    const z = lg(raw) + lg(TEAMS[t].B[gi] / 100) - lg(none);
+    return 100 / (1 + Math.exp(-z));
+  }
+  mainGoal(B) {
+    if (B[0] >= 10) return 'camp';
+    if (B[5] >= 50) return 'desc';
+    if (B[1] >= 10) return 'asc';
+    if (B[5] >= 10) return 'desc';
+    return 'plata';
+  }
+  series(i, gi, B) {
+    if (i === 0 && gi === 0) return [18, 22, 31, 40, 52, 49, 74];
+    const end = B[gi], start = [10, 40, 10, 17, 10, 40][gi];
+    // before-fecha-7 values that appear in "Lo más picante", so every screen tells the same story
+    const PREV = { 0: { camp: 49 }, 2: { camp: 19 }, 3: { asc: 89 }, 4: { desc: 42 }, 5: { desc: 55 }, 6: { desc: 78 }, 7: { desc: 69 }, 8: { desc: 83 } };
+    const pv = PREV[i] && PREV[i][['camp', 'asc', 'oro', 'plata', 'bronce', 'desc'][gi]];
+    const amp = Math.min(9, 3 + Math.abs(end - start) * 0.15);
+    const s5 = pv != null ? pv : null;
+    const from = s5 != null ? s5 : end;
+    return [0, 1, 2, 3, 4, 5, 6].map(k => k === 6 ? end : (k === 5 && s5 != null ? s5 : Math.max(0, Math.min(100, start + (from - start) * (k / 5) + Math.sin(k * 1.9 + i * 1.3) * amp * (k < 5 ? 1 : 0)))));
+  }
+  go(screen, extra) {
+    return () => {
+      this.setState(Object.assign({ screen, sheet: false }, extra || {}));
+      setTimeout(() => { const el = document.getElementById('lp-scroll'); if (el) el.scrollTop = 0; }, 0);
+    };
+  }
+  renderVals() {
+    const D = this.data();
+    const { TEAMS, M, GK, GL, GS, BL } = D;
+    const s = Object.assign({ screen: 'elegir', team: null, view: null, goal: null, rankTab: null, tablaTab: 'hoy', partTab: 'prox', picks: {}, sheet: false, dark: !!this.props.dark, toast: '', div: 'S9C', q: '', prev: 'inicio' }, this.state || {});
+    const m = s.dark ? 'dark' : 'light';
+    const t = D.T[m];
+    const C = D.GC[m];
+    const c = { camp: C.camp[0], asc: C.asc[0], desc: C.desc[0], oro: C.oro[0], plata: C.plata[0], bronce: C.bronce[0] };
+    const mine = s.team == null ? 0 : s.team;
+    const fmt = (v) => this.fmt(v);
+    const scrollTop = () => setTimeout(() => { const el = document.getElementById('lp-scroll'); if (el) el.scrollTop = 0; }, 0);
+    const openTeam = (i, goal) => () => { this.setState({ screen: 'equipo', view: i, goal: goal || null, prev: s.screen, sheet: false }); scrollTop(); };
+    const pickTeam = (i) => () => { try { window.localStorage.setItem('lp-calc-team', String(i)); } catch (e) {} this.setState({ team: i, view: i, goal: null, screen: 'inicio', q: '', picks: {} }); scrollTop(); };
+    const empty = s.div !== 'S9C' && s.screen !== 'elegir';
+    const scr = s.screen;
+
+    // ---------- nav ----------
+    const navCur = scr === 'equipo' && s.view !== mine ? 'tabla' : (scr === 'sanc' ? 'partidos' : scr);
+    const nav = D.NAV.map(([k, l, d]) => ({ l, d, cur: k === navCur ? 'page' : 'false', go: k === 'equipo' ? openTeam(mine) : this.go(k), st: 'color: ' + (k === navCur ? t.navOn : t.navTx) + '; border-top: 3px solid ' + (k === navCur ? t.acc : 'transparent') + '; font-weight: ' + (k === navCur ? 700 : 600) }));
+
+    // ---------- team view model ----------
+    const teamVM = (i, goalSel) => {
+      const T0 = TEAMS[i], B = T0.B;
+      const goal = goalSel || this.mainGoal(B);
+      const gi = GK.indexOf(goal);
+      const big = fmt(B[gi]).replace('%', '');
+      const bigSize = big.length <= 2 ? '104px' : (big.length <= 3 ? '88px' : '64px');
+      const ser = this.series(i, gi, B);
+      const prev = ser[5], diff = B[gi] - ser[5];
+      const bad = goal === 'desc';
+      const good = Math.abs(diff) < 0.5 ? null : ((diff > 0) !== bad);
+      const deltaTxt = Math.abs(diff) < 0.5 ? 'igual que antes de la fecha 7' : ((diff > 0 ? '▲ ' : '▼ ') + 'era ' + fmt(prev) + ' antes de la fecha 7');
+      const deltaC = good == null ? '#CBD5E1' : (good ? '#86EFAC' : '#FCA5A5');
+      const nmi = M.findIndex(x => x.a === i || x.b === i);
+      let next = null;
+      if (nmi >= 0) {
+        const x = M[nmi], isA = x.a === i, r = isA ? x.b : x.a;
+        const pW = isA ? x.p[0] : x.p[2], pL = isA ? x.p[2] : x.p[0];
+        next = { when: 'FECHA ' + x.f + ' · ' + x.when, rival: TEAMS[r].n, rshort: TEAMS[r].short, rc: TEAMS[r].c, rab: TEAMS[r].ab, pW: pW + '%', pD: x.p[1] + '%', pL: pL + '%', open: openTeam(r), mi: nmi, isA, r };
+      }
+      return { i, T0, B, goal, gi, big, bigNum: big, bigLabel: BL[goal], bigSize, ser, deltaTxt, deltaC, next, n: T0.n, ab: T0.ab, c: T0.c, short: T0.short, sub: (i + 1) + 'º · ' + T0.pts + ' pts · ' + 'fecha 7 de 9' };
+    };
+
+    const vals = { t, c, nav, navH: '64px', showNav: true, sheet: s.sheet, toast: s.toast, hasToast: !!s.toast, q: s.q };
+    vals.toggleDark = () => this.setState({ dark: !s.dark });
+    vals.darkLabel = s.dark ? 'Pasar a modo claro' : 'Pasar a modo oscuro';
+    vals.openSheet = () => this.setState({ sheet: true });
+    vals.closeSheet = () => this.setState({ sheet: false });
+    vals.divTitle = D.DIVT[s.div] + ' / CLAUSURA 2026';
+    vals.backToC = () => this.setState({ div: 'S9C' });
+    vals.goInicio = this.go('inicio');
+    vals.goTabla = this.go('tabla');
+    vals.goSanc = () => { this.setState({ screen: 'sanc', prev: s.screen }); scrollTop(); };
+    vals.goElegir = this.go('elegir', { q: '' });
+    vals.goEquipoMine = openTeam(mine);
+    vals.goBack = () => { this.setState({ screen: s.prev && s.prev !== 'equipo' && s.prev !== 'sanc' ? s.prev : 'inicio', view: mine }); scrollTop(); };
+    vals.sheetList = D.DIVS.map(([name, ds]) => ({ name, divs: ds.map(([k, l]) => ({ l, on: k === s.div, pick: () => this.setState({ div: k, sheet: false }), st: k === s.div ? 'background: ' + t.act + '; color: #FFFFFF; border: 1px solid ' + t.act : 'background: ' + t.sub + '; color: ' + t.tx + '; border: 1px solid ' + t.line2 })) }));
+    vals.otherDivs = [['S3C', 'Serie 3 · C'], ['S3D', 'Serie 3 · D'], ['S6A', 'Serie 6 · A'], ['S6B', 'Serie 6 · B'], ['S9A', 'Serie 9 · A'], ['S9B', 'Serie 9 · B']].map(([k, l]) => ({ l, pick: () => { this.setState({ div: k }); scrollTop(); } }));
+
+    vals.isElegir = scr === 'elegir';
+    vals.showHeader = scr !== 'elegir' && scr !== 'inicio' ? true : scr === 'inicio';
+    vals.headPad = scr === 'inicio' && !empty ? '0px' : '16px';
+    vals.showEmpty = empty;
+    vals.isInicio = scr === 'inicio' && !empty;
+    vals.isTabla = scr === 'tabla' && !empty;
+    vals.isPartidos = scr === 'partidos' && !empty;
+    vals.isEquipo = scr === 'equipo' && !empty;
+    vals.isSimular = scr === 'simular' && !empty;
+    vals.isSanc = scr === 'sanc' && !empty;
+    if (scr === 'elegir') { vals.showNav = false; vals.navH = '0px'; }
+
+    // ---------- elegir ----------
+    vals.hasTeam = s.team != null;
+    const q = (s.q || '').trim().toLowerCase();
+    vals.searching = q.length > 0;
+    vals.notSearching = !vals.searching;
+    vals.onQ = (e) => this.setState({ q: e.target.value });
+    vals.found = TEAMS.map((x, i) => ({ n: x.n, ab: x.ab, c: x.c, pos: (i + 1) + 'º', pick: pickTeam(i) })).filter(x => x.n.toLowerCase().indexOf(q) >= 0);
+    vals.noneFound = vals.searching && vals.found.length === 0;
+    const teamRows = TEAMS.map((x, i) => ({ n: x.n, ab: x.ab, c: x.c, pos: (i + 1) + 'º', pick: pickTeam(i), tag: s.team === i ? '★ Tu cuadro' : '', bg: s.team === i ? t.mine : 'transparent' }));
+    const closed = (name) => ({ name, meta: 'sin datos todavía', open: false, teams: [] });
+    vals.series = [
+      { name: 'SERIE 9', divs: [closed('Divisional A'), closed('Divisional B'), { name: 'Divisional C', meta: '10 equipos', open: true, teams: teamRows }] },
+      { name: 'SERIE 6', divs: [closed('Divisional A'), closed('Divisional B')] },
+      { name: 'SERIE 3', divs: [closed('Divisional C'), closed('Divisional D')] }
+    ];
+
+    // ---------- inicio ----------
+    const vm = teamVM(mine, null);
+    vals.vm = Object.assign({}, vm, {
+      hasNext: !!vm.next, noNext: !vm.next,
+      next: vm.next || { when: '', rival: '', rshort: '', rc: '#000', rab: '', pW: '0%', pD: '0%', pL: '0%', open: () => {} },
+      goals: GK.map(k => { const gi = GK.indexOf(k); const v = vm.B[gi]; return { l: GL[k], v: fmt(v), tx: C[k][0], bar: C[k][1], w: (v > 0 ? Math.max(v, 1.5) : 0) + '%', mk: this.mark(k, m), open: openTeam(mine, k) }; })
+    });
+    const mv = (k, team, what, from, to) => ({ team, what, from, to, mk: this.mark(k, m), tx: C[k][0] });
+    vals.hot = [
+      { a: 'Prado F.C', s: '2 - 7', b: 'Los Poquitos De Siempre FC', sorpresa: false, moves: [mv('desc', 'Los Poquitos', 'desciende', '78%', '39%'), mv('desc', 'Prado', 'desciende', '69%', '96%')] },
+      { a: 'UDEM', s: '5 - 0', b: 'Burmese FC', sorpresa: false, moves: [mv('camp', 'UDEM', 'sale campeón', '49%', '74%'), mv('desc', 'Burmese', 'desciende', '83%', '97%')] },
+      { a: 'Deportivo 29', s: '2 - 0', b: 'La Pampara F.C', sorpresa: true, prob: '19%', moves: [mv('desc', 'Deportivo 29', 'desciende', '42%', '21%'), mv('camp', 'La Pampara', 'sale campeón', '19%', '7,9%')] }
+    ];
+    vals.rows = TEAMS.map((x, i) => ({ pos: i + 1, n: x.n, ab: x.ab, c: x.c, pts: x.pts, asc: fmt(x.B[1]), desc: fmt(x.B[5]), fw: i === mine ? 800 : 600, bg: i === mine ? t.mine : (i < 4 ? t.top4 : 'transparent'), open: openTeam(i) }));
+
+    // ---------- tabla ----------
+    const rk = s.rankTab || vm.goal;
+    const rki = GK.indexOf(rk);
+    vals.rankTabs = GK.map(k => ({ l: GL[k], on: k === rk, mk: this.mark(k, m), pick: () => this.setState({ rankTab: k }), st: 'color: ' + (k === rk ? C[k][0] : t.tx2) + '; font-weight: ' + (k === rk ? 800 : 600) + '; border-bottom: 3px solid ' + (k === rk ? C[k][1] : 'transparent') }));
+    vals.rank = TEAMS.map((x, i) => ({ i, n: x.n, ab: x.ab, c: x.c, s: x.B[rki] })).sort((a, b) => (b.s - a.s) || (a.i - b.i)).map(r => ({ n: r.n, ab: r.ab, c: r.c, v: fmt(r.s), w: (r.s > 0 ? Math.max(r.s, 1.5) : 0) + '%', bar: C[rk][1], tx: C[rk][0], fw: r.i === mine ? 800 : 600, bg: r.i === mine ? t.mine : 'transparent', open: openTeam(r.i, rk) }));
+    vals.tablaTabs = [['hoy', 'Hoy'], ['proy', 'Proyectada']].map(([k, l]) => ({ l, on: k === s.tablaTab, pick: () => this.setState({ tablaTab: k }), st: k === s.tablaTab ? 'background: ' + t.card + '; color: ' + t.tx + '; font-weight: 800; box-shadow: ' + t.shadow : 'background: transparent; color: ' + t.tx2 + '; font-weight: 700' }));
+    vals.tablaHoy = s.tablaTab === 'hoy';
+    vals.tablaProy = s.tablaTab === 'proy';
+    vals.table = TEAMS.map((x, i) => { const d = x.gf - x.gc; return { pos: i + 1, n: x.n, pts: x.pts, pj: x.pj, pg: x.pg, pe: x.pe, pp: x.pp, gf: x.gf, gc: x.gc, dg: (d > 0 ? '+' : (d < 0 ? '−' : '')) + Math.abs(d), fw: i === mine ? 800 : 600, bg: i === mine ? t.mine : (i < 4 ? t.top4 : t.card) }; });
+    vals.proj = TEAMS.map((x, i) => ({ pos: i + 1, n: x.n, proj: x.proj, oro: fmt(x.B[2]), plata: fmt(x.B[3]), bronce: fmt(x.B[4]), fw: i === mine ? 800 : 600, bg: i === mine ? t.mine : 'transparent' }));
+    const fx = (x) => { const mineM = x.a === mine || x.b === mine; return { a: TEAMS[x.a].n, b: TEAMS[x.b].n, p1: x.p[0] + '%', px: x.p[1] + '%', p2: x.p[2] + '%', mine: mineM, fw: mineM ? 800 : 600, border: mineM ? '2px solid ' + t.acc : '1px solid transparent' }; };
+    const sortMine = (arr) => arr.slice().sort((a, b) => (b.mine ? 1 : 0) - (a.mine ? 1 : 0));
+    vals.fixtures = [{ title: 'FECHA 8 · DOM 25 OCT', ms: sortMine(M.filter(x => x.f === 8).map(fx)) }, { title: 'FECHA 9 · DOM 1 NOV', ms: sortMine(M.filter(x => x.f === 9).map(fx)) }];
+    vals.cupsInfo = [
+      { mk: this.mark('oro', m), tx: C.oro[0], name: 'Copa de Oro', who: 'del 1º al 4º', how: 'Semis 1º vs 4º y 2º vs 3º, después la final. Los cuatro ascienden.' },
+      { mk: this.mark('plata', m), tx: C.plata[0], name: 'Copa de Plata', who: '5º y 6º', how: 'Con 10 equipos quedan dos en el medio: juegan la final directo.' },
+      { mk: this.mark('bronce', m), tx: C.bronce[0], name: 'Copa de Bronce', who: 'del 7º al 10º', how: 'Semis 7º vs 10º y 8º vs 9º, después la final. Los cuatro descienden.' }
+    ];
+
+    // ---------- partidos ----------
+    vals.partTabs = [['prox', 'Próximos'], ['copas', 'Copas'], ['res', 'Resultados']].map(([k, l]) => ({ l, on: k === s.partTab, pick: () => this.setState({ partTab: k }), st: 'color: ' + (k === s.partTab ? t.ink : t.tx2) + '; font-weight: ' + (k === s.partTab ? 800 : 600) + '; border-bottom: 3px solid ' + (k === s.partTab ? t.ink : 'transparent') }));
+    vals.partProx = s.partTab === 'prox';
+    vals.partCopas = s.partTab === 'copas';
+    vals.partRes = s.partTab === 'res';
+    const nm = (i) => TEAMS[i].n;
+    const gm = (k, a, b) => ({ k, v: nm(a) + ' vs ' + nm(b), bg: (a === mine || b === mine) ? t.mine : 'transparent' });
+    vals.cups = [
+      { name: 'Copa de Oro', mk: this.mark('oro', m), tx: C.oro[0], games: [gm('Semi 1º vs 4º', 0, 3), gm('Semi 2º vs 3º', 1, 2)] },
+      { name: 'Copa de Plata', mk: this.mark('plata', m), tx: C.plata[0], games: [gm('Final 5º vs 6º', 4, 5)] },
+      { name: 'Copa de Bronce', mk: this.mark('bronce', m), tx: C.bronce[0], games: [gm('Semi 7º vs 10º', 6, 9), gm('Semi 8º vs 9º', 7, 8)] }
+    ];
+    vals.leader = TEAMS[0].n;
+    vals.results = D.R7.map(x => ({ a: nm(x[0]), s: x[1], b: nm(x[2]), pre: x[3], sorpresa: x[4], fa: x[5] === 1 ? 800 : 500, fb: x[5] === 2 ? 800 : 500 }));
+
+    // ---------- equipo ----------
+    if (scr === 'equipo' && !empty) {
+      const vi = s.view == null ? mine : s.view;
+      const e = teamVM(vi, s.goal);
+      const sm = this.sim({}, vi);
+      const gi = e.gi, bad = e.goal === 'desc';
+      const ev = { n: e.n, ab: e.ab, c: e.c, sub: (vi + 1) + 'º · ' + e.T0.pts + ' pts · le quedan ' + M.filter(x => x.a === vi || x.b === vi).length + ' partidos', bigNum: e.big, bigSize: e.bigSize === '104px' ? '92px' : e.bigSize, bigLabel: BL[e.goal], goalName: GL[e.goal] };
+      ev.notMine = vi !== mine;
+      ev.isMine = vi === mine;
+      ev.mineLabel = vi === mine ? 'Es tu cuadro' : 'Hacerlo mi equipo';
+      ev.makeMine = vi === mine ? () => {} : pickTeam(vi);
+      ev.tiles = GK.map(k => { const g2 = GK.indexOf(k); return { l: GS[k], v: fmt(e.B[g2]), on: k === e.goal, mk: this.mark(k, 'dark'), tx: D.GC.dark[k][0], pick: () => this.setState({ goal: k }), st: k === e.goal ? 'background: rgba(255,255,255,0.14); border: 2px solid #EAB308' : 'background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18)' }; });
+      const shareTxt = e.n + ' tiene ' + fmt(e.B[gi]) + ' de ' + BL[e.goal].replace('\n', ' ') + ' (Serie 9 · Div. C, después de la fecha 7). Calculadora Liga Pro';
+      ev.copy = () => { try { navigator.clipboard && navigator.clipboard.writeText(shareTxt); } catch (er) {} this.setState({ toast: 'Pegalo en el grupo del cuadro.' }); clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toast: '' }), 2400); };
+      // ¿qué pasa si?
+      const cgi = gi; const goodC = (d) => (d > 0) !== bad ? t.up : t.down;
+      ev.hasNext = !!e.next;
+      if (e.next) {
+        const x = M[e.next.mi];
+        const oW = e.next.isA ? 0 : 2, oL = e.next.isA ? 2 : 0;
+        const cond = (o) => this.adj(vi, cgi, sm.cg[e.next.mi][o][cgi] / sm.cm[e.next.mi][o]);
+        const base = e.B[gi];
+        const mk = (l, o, col) => { const v = cond(o); const d = v - base; return { l, v: fmt(v), d: Math.abs(d) < 0.05 ? 'sin cambio' : ((d > 0 ? '▲ ' : '▼ ') + this.pp(Math.abs(d)).slice(1) + ' pp'), dc: Math.abs(d) < 0.05 ? t.tx2 : goodC(d), c: col, tx: o === oW ? t.ink : t.tx }; };
+        ev.ifs = [mk('GANA', oW, t.win), mk('EMPATA', 1, t.draw), mk('PIERDE', oL, t.lose)];
+        ev.nextRival = e.next.rshort; ev.nextF = x.f;
+        ev.ifsTitle = 'Chances de ' + (e.goal === 'camp' ? 'salir campeón' : BL[e.goal].replace('chances de', '').replace('\n', ' ').trim()) + ' según el resultado.';
+      } else { ev.ifs = []; ev.nextRival = ''; ev.nextF = ''; ev.ifsTitle = ''; }
+      // ¿con cuántos puntos?
+      let pg = 0, ptsTitle = '¿Con cuántos puntos salgo campeón?', inv = false;
+      if (e.goal === 'asc' || e.goal === 'oro') { pg = 1; ptsTitle = '¿Con cuántos puntos asciendo?'; }
+      else if (e.goal === 'desc' || e.goal === 'bronce') { pg = 5; inv = true; ptsTitle = '¿Con cuántos puntos me salvo?'; }
+      else if (e.goal === 'plata') { pg = 6; ptsTitle = '¿Con cuántos puntos llego a la Copa de Plata?'; }
+      const pgKey = ['camp', 'asc', 'oro', 'plata', 'bronce', 'desc', 'asc'][pg];
+      const fs = Object.keys(sm.bp).map(Number).sort((a, b) => a - b);
+      ev.ptsTitle = ptsTitle;
+      ev.ptsSub = 'Hoy tiene ' + e.T0.pts + ' y puede llegar a ' + (fs.length ? fs[fs.length - 1] : e.T0.pts) + '. Chance según con cuántos termine.';
+      ev.pts = fs.map(f => { const en = sm.bp[f]; let raw = en.g[pg] / en.m; let v = this.adj(vi, pg, raw); if (inv) { v = 100 - v; raw = 1 - raw; } return { l: f + ' pts', v: raw >= 1 - 1e-9 ? 'seguro' : (raw <= 1e-9 ? 'no alcanza' : fmt(v)), w: Math.max(v, v > 0 ? 1.5 : 0) + '%', bar: inv ? C.asc[1] : C[pgKey][1], tx: inv ? C.asc[0] : C[pgKey][0] }; });
+      // partidos de otros
+      const cand = [];
+      M.forEach((x, j) => {
+        if (x.a === vi || x.b === vi) return;
+        let best = null;
+        for (let o = 0; o < 3; o++) {
+          if (!sm.cm[j][o]) continue;
+          const v = this.adj(vi, cgi, sm.cg[j][o][cgi] / sm.cm[j][o]);
+          const d = v - e.B[gi];
+          if (!best || Math.abs(d) > Math.abs(best.d)) best = { o, d };
+        }
+        if (best && Math.abs(best.d) >= 0.1) {
+          const what = best.o === 0 ? 'Que gane ' + TEAMS[x.a].short : (best.o === 2 ? 'Que gane ' + TEAMS[x.b].short : 'Que empaten ' + TEAMS[x.a].short + ' y ' + TEAMS[x.b].short);
+          cand.push({ what, when: 'Fecha ' + x.f + ' · ' + TEAMS[x.a].n + ' vs ' + TEAMS[x.b].n, d: this.pp(best.d), c: goodC(best.d), abs: Math.abs(best.d) });
+        }
+      });
+      ev.others = cand.sort((a, b) => b.abs - a.abs).slice(0, 3);
+      ev.othersSub = ev.others.length ? 'Cuánto cambia tu chance de ' + (e.goal === 'camp' ? 'salir campeón' : GL[e.goal].toLowerCase()) + ', en puntos porcentuales.' : 'Ningún otro partido le cambia esta chance: ya está definida.';
+      // lo que le queda
+      ev.left = M.filter(x => x.a === vi || x.b === vi).map(x => { const isA = x.a === vi, r = isA ? x.b : x.a; return { f: 'FECHA ' + x.f + ' · ' + x.when, pos: 'rival ' + (r + 1) + 'º · ' + TEAMS[r].pts + ' pts', rival: TEAMS[r].n, winLab: 'Gana ' + (isA ? x.p[0] : x.p[2]) + '%', pW: (isA ? x.p[0] : x.p[2]) + '%', pD: x.p[1] + '%', pL: (isA ? x.p[2] : x.p[0]) + '%' }; });
+      // evolución
+      const ys = e.ser.map(v => 120 - v);
+      const xs = [40, 86, 132, 178, 224, 270, 310];
+      const ly = ys[6];
+      ev.chart = { pts: ys.map((y, k) => xs[k] + ',' + y.toFixed(1)).join(' '), ly: ly.toFixed(1), ty: (ly < 34 ? ly + 20 : ly - 10).toFixed(1), c: C[e.goal][1], lab: fmt(e.B[gi]) };
+      ev.chartAria = 'Chance por fecha: ' + e.ser.map(v => fmt(v)).join(', ');
+      // sancionados
+      const card = (col) => 'width: 10px; height: 14px; border-radius: 2px; flex-shrink: 0; background: ' + col;
+      const sp = (x) => ({ n: x[0], tipo: x[2], fechas: x[3], queda: x[4] === 1 ? 'Le queda 1' : 'Le quedan ' + x[4], cardSt: card(x[2] === 'Roja' ? '#DC2626' : '#EAB308') });
+      const own = D.S.filter(x => x[1] === vi).map(sp);
+      ev.sanc = [{ title: 'DE ' + e.short.toUpperCase(), ps: own, empty: own.length === 0 }];
+      if (e.next) { const rv = D.S.filter(x => x[1] === e.next.r).map(sp); ev.sanc.push({ title: 'DE ' + e.next.rshort.toUpperCase() + ', SU PRÓXIMO RIVAL', ps: rv, empty: rv.length === 0 }); }
+      // cerca en la tabla
+      const lo = Math.max(0, Math.min(TEAMS.length - 5, vi - 2));
+      ev.mini = TEAMS.slice(lo, lo + 5).map((x, k) => { const i = lo + k; return { pos: i + 1, n: x.n, pts: x.pts, v: fmt(x.B[gi]), tx: C[e.goal][0], fw: i === vi ? 800 : 600, bg: i === vi ? t.mine : (i < 4 ? t.top4 : 'transparent'), open: openTeam(i, e.goal) }; });
+      vals.ev = ev;
+    } else {
+      vals.ev = { tiles: [], ifs: [], pts: [], others: [], left: [], sanc: [], mini: [], chart: { pts: '', ly: 0, ty: 0, c: '#000', lab: '' } };
+    }
+
+    // ---------- simular ----------
+    if (scr === 'simular' && !empty) {
+      const picks = s.picks || {};
+      const sp = this.sim(picks, null);
+      const setPick = (i, o) => { const p = Object.assign({}, picks); if (p[i] === o) delete p[i]; else p[i] = o; this.setState({ picks: p }); };
+      const matches = M.map((x, i) => ({ f: 'Fecha ' + x.f, a: TEAMS[x.a].n, b: TEAMS[x.b].n, aria: 'Resultado de ' + TEAMS[x.a].n + ' contra ' + TEAMS[x.b].n, fw: (x.a === mine || x.b === mine) ? 800 : 600, opts: ['1', 'E', '2'].map((l, o) => { const on = picks[i] === o; return { l, on, aria: o === 0 ? 'Gana ' + TEAMS[x.a].n : (o === 1 ? 'Empate' : 'Gana ' + TEAMS[x.b].n), pick: () => setPick(i, o), st: on ? 'background: ' + t.act + '; color: #FFFFFF; border: 1px solid ' + t.act : 'background: ' + t.card + '; color: ' + t.tx + '; border: 1px solid ' + t.line2 }; }) }));
+      const pts = TEAMS.map(x => x.pts);
+      Object.keys(picks).forEach(k => { const x = M[k], o = picks[k]; if (o === 0) pts[x.a] += 3; else if (o === 2) pts[x.b] += 3; else { pts[x.a] += 1; pts[x.b] += 1; } });
+      const order = TEAMS.map((x, i) => i).sort((a, b) => (pts[b] - pts[a]) || ((TEAMS[b].gf - TEAMS[b].gc) - (TEAMS[a].gf - TEAMS[a].gc)) || (a - b));
+      const table = order.map((i, k) => ({ pos: k + 1, n: TEAMS[i].n, pts: pts[i], camp: fmt(this.adj(i, 0, sp.acc[i][0])), asc: fmt(this.adj(i, 1, sp.acc[i][1])), desc: fmt(this.adj(i, 5, sp.acc[i][5])), fw: i === mine ? 800 : 600, bg: i === mine ? t.mine : (k < 4 ? t.top4 : 'transparent') }));
+      const count = Object.keys(picks).length;
+      const mg = this.mainGoal(TEAMS[mine].B), mgi = GK.indexOf(mg);
+      const myV = this.adj(mine, mgi, sp.acc[mine][mgi]);
+      vals.sim = {
+        matches, table, count,
+        status: count === 0 ? 'sin cambios' : count + (count === 1 ? ' resultado elegido' : ' resultados elegidos'),
+        fill: () => { const p = {}; M.forEach((x, i) => { const mx = Math.max(x.p[0], x.p[1], x.p[2]); p[i] = mx === x.p[0] ? 0 : (mx === x.p[1] ? 1 : 2); }); this.setState({ picks: p }); },
+        clear: () => this.setState({ picks: {} }),
+        me: { n: TEAMS[mine].short, ab: TEAMS[mine].ab, c: TEAMS[mine].c, pos: order.indexOf(mine) + 1, pts: pts[mine], goalTxt: GL[mg].toLowerCase(), goalV: fmt(myV), goalC: C[mg][0] }
+      };
+    } else {
+      vals.sim = { matches: [], table: [], count: 0, status: '', fill: () => {}, clear: () => {}, me: { n: '', ab: '', c: '#000', pos: 0, pts: 0, goalTxt: '', goalV: '', goalC: '#000' } };
+    }
+
+    // ---------- sancionados ----------
+    const card2 = (col) => 'width: 10px; height: 14px; border-radius: 2px; flex-shrink: 0; background: ' + col;
+    const sp2 = (x) => ({ n: x[0], team: TEAMS[x[1]].n, tipo: x[2], fechas: x[3], q: x[4], ql: x[4] === 1 ? 'le queda' : 'le quedan', cardSt: card2(x[2] === 'Roja' ? '#DC2626' : '#EAB308') });
+    const nxt = vm.next ? vm.next.r : -1;
+    const g1 = D.S.filter(x => x[1] === mine).map(sp2), g2 = D.S.filter(x => x[1] === nxt).map(sp2), g3 = D.S.filter(x => x[1] !== mine && x[1] !== nxt).map(sp2);
+    vals.sancGroups = [
+      { title: 'DE TU CUADRO · ' + TEAMS[mine].short.toUpperCase(), ps: g1, empty: g1.length === 0, border: '2px solid ' + t.acc, hc: t.accTx },
+      { title: 'DE TU PRÓXIMO RIVAL · ' + (nxt >= 0 ? TEAMS[nxt].short.toUpperCase() : '—'), ps: g2, empty: g2.length === 0, border: '1px solid transparent', hc: t.tx2 },
+      { title: 'RESTO DE LA DIVISIONAL', ps: g3, empty: g3.length === 0, border: '1px solid transparent', hc: t.tx2 }
+    ];
+    return vals;
+  }
+}
+</script>
+</body>
+</html>
