@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T04:43:50.892Z",
+ "actualizado": "2026-10-20T17:05:12.752Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -11,8 +11,8 @@
    "ultimaJugada": 12,
    "totalFechas": 13,
    "esPrimera": true,
-   "jugados": 66,
-   "restantes": 12,
+   "jugados": 69,
+   "restantes": 9,
    "picantes": [
     {
      "partido": {
@@ -37,10 +37,38 @@
        "equipoId": 936,
        "objetivo": "desciende",
        "de": 0.947,
-       "a": 0.9904
+       "a": 1
       }
      ],
-     "max": 0.043399999999999994
+     "max": 0.05300000000000005
+    },
+    {
+     "partido": {
+      "id": 29016,
+      "fecha": 12,
+      "dia": "2026-10-05",
+      "hora": null,
+      "cancha": "Polideportivo Carrasco",
+      "a": 1026,
+      "b": 889,
+      "golesA": 0,
+      "golesB": 3,
+      "fase": "regular"
+     },
+     "antes": [
+      0.09636734700853045,
+      0.11801372524588992,
+      0.7856189277455796
+     ],
+     "cambios": [
+      {
+       "equipoId": 889,
+       "objetivo": "desciende",
+       "de": 0.03866666666666667,
+       "a": 0
+      }
+     ],
+     "max": 0.03866666666666667
     },
     {
      "partido": {
@@ -85,6 +113,12 @@
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68150ca499ab5.png"
     },
     {
+     "id": 456,
+     "nombre": "La Bea Suelta",
+     "slug": "la-bea-suelta",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9f28464cc1f0c2ed31ff464ce0839ea4.png"
+    },
+    {
      "id": 759,
      "nombre": "La 97",
      "slug": "la-97",
@@ -103,22 +137,16 @@
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2500cf34d9.png"
     },
     {
-     "id": 456,
-     "nombre": "La Bea Suelta",
-     "slug": "la-bea-suelta",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9f28464cc1f0c2ed31ff464ce0839ea4.png"
+     "id": 1027,
+     "nombre": "Frozono",
+     "slug": "frozono",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fe412d4d440.png"
     },
     {
      "id": 1269,
      "nombre": "BlackJack",
      "slug": "blackjack",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b2a96f1875921e4f5d9eab7987458e69.jpg"
-    },
-    {
-     "id": 1027,
-     "nombre": "Frozono",
-     "slug": "frozono",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fe412d4d440.png"
     },
     {
      "id": 889,
@@ -357,9 +385,43 @@
    "ultimaJugada": 12,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 81,
-   "restantes": 10,
+   "jugados": 82,
+   "restantes": 9,
    "picantes": [
+    {
+     "partido": {
+      "id": 29263,
+      "fecha": 12,
+      "dia": "2026-10-19",
+      "hora": null,
+      "cancha": "Polideportivo Carrasco",
+      "a": 1029,
+      "b": 988,
+      "golesA": 1,
+      "golesB": 1,
+      "fase": "regular"
+     },
+     "antes": [
+      0.03720346489058765,
+      0.06450444306667513,
+      0.8982920920427372
+     ],
+     "cambios": [
+      {
+       "equipoId": 988,
+       "objetivo": "asciende",
+       "de": 0.9613333333333334,
+       "a": 0.51315
+      },
+      {
+       "equipoId": 988,
+       "objetivo": "campeon",
+       "de": 0.08033333333333334,
+       "a": 0.0414
+      }
+     ],
+     "max": 0.4481833333333334
+    },
     {
      "partido": {
       "id": 29259,
@@ -389,78 +451,44 @@
        "equipoId": 330,
        "objetivo": "campeon",
        "de": 0.779,
-       "a": 0.74835
+       "a": 0.7487
       }
      ],
      "max": 0.44466666666666665
     },
     {
      "partido": {
-      "id": 29263,
+      "id": 29258,
       "fecha": 12,
       "dia": "2026-10-19",
-      "hora": null,
+      "hora": "20:00",
       "cancha": "Polideportivo Carrasco",
-      "a": 1029,
-      "b": 988,
+      "a": 243,
+      "b": 1148,
       "golesA": 1,
-      "golesB": 1,
+      "golesB": 3,
       "fase": "regular"
      },
      "antes": [
-      0.03720346489058765,
-      0.06450444306667513,
-      0.8982920920427372
+      0.4477388094728688,
+      0.1832460024690176,
+      0.3690151880581136
      ],
      "cambios": [
       {
-       "equipoId": 988,
+       "equipoId": 1148,
        "objetivo": "asciende",
-       "de": 0.9613333333333334,
-       "a": 0.5303
+       "de": 0.27266666666666667,
+       "a": 0.67985
       },
       {
-       "equipoId": 988,
-       "objetivo": "campeon",
-       "de": 0.08033333333333334,
-       "a": 0.0443
-      }
-     ],
-     "max": 0.4310333333333334
-    },
-    {
-     "partido": {
-      "id": 29261,
-      "fecha": 12,
-      "dia": "2026-10-05",
-      "hora": null,
-      "cancha": "Polideportivo Carrasco",
-      "a": 1276,
-      "b": 1078,
-      "golesA": 4,
-      "golesB": 2,
-      "fase": "regular"
-     },
-     "antes": [
-      0.4099641856454616,
-      0.17650147204192282,
-      0.41353434231261554
-     ],
-     "cambios": [
-      {
-       "equipoId": 1078,
-       "objetivo": "asciende",
-       "de": 0.398,
-       "a": 0.00985
-      },
-      {
-       "equipoId": 1276,
+       "equipoId": 243,
        "objetivo": "desciende",
-       "de": 0.12133333333333333,
-       "a": 0.014
+       "de": 0.2763333333333333,
+       "a": 0.67265
       }
      ],
-     "max": 0.38815
+     "max": 0.4071833333333333
     }
    ],
    "equipos": [
@@ -513,6 +541,12 @@
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6785626002709.png"
     },
     {
+     "id": 1203,
+     "nombre": "Sparrow Boys",
+     "slug": "sparrow-boys",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd064a3ab57.png"
+    },
+    {
      "id": 1276,
      "nombre": "By Hormiga",
      "slug": "by-hormiga",
@@ -523,12 +557,6 @@
      "nombre": "Atlético Majuga FC",
      "slug": "atletico-majuga-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984d00e1604a.png"
-    },
-    {
-     "id": 1203,
-     "nombre": "Sparrow Boys",
-     "slug": "sparrow-boys",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd064a3ab57.png"
     },
     {
      "id": 1206,
