@@ -35,9 +35,18 @@ export interface DatosDivisional extends Divisional {
   evolucion: { fecha: number; asciende: number[]; desciende: number[]; campeon: number[] }[];
 }
 
-/** /serie-9/c */
-export const rutaDivisional = (d: { serie: string; divisional: string }) => `/serie-${d.serie}/${d.divisional.toLowerCase()}`;
-export const rutaEquipo = (d: { serie: string; divisional: string }, slug: string) => `${rutaDivisional(d)}/${slug}`;
+/** /s9/c */
+export const rutaDivisional = (d: { serie: string; divisional: string }) => `/s${d.serie}/${d.divisional.toLowerCase()}`;
+/** /s9/c/equipo/udem */
+export const rutaEquipo = (d: { serie: string; divisional: string }, slug: string) => `${rutaDivisional(d)}/equipo/${slug}`;
+export type Seccion = "partidos" | "simular" | "sancionados";
+/** /s9/c/partidos */
+export const rutaSeccion = (d: { serie: string; divisional: string }, s: Seccion) => `${rutaDivisional(d)}/${s}`;
+/** Lee "/s9/c/..." y devuelve serie y divisional, o null. */
+export function divisionalDeRuta(ruta: string): { serie: string; divisional: string } | null {
+  const m = ruta.match(/^\/s(\d+)\/([a-z])(?:\/|$)/i);
+  return m ? { serie: m[1], divisional: m[2].toUpperCase() } : null;
+}
 export const nombreDivisional = (d: { serie: string; divisional: string; categoria: string; anio: number }) =>
   `Serie ${d.serie} / Divisional ${d.divisional} / ${d.categoria} ${d.anio}`;
 

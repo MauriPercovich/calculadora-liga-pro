@@ -1,0 +1,137 @@
+/* ---------- Barra superior ---------- */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--nav);
+  color: #fff;
+}
+.topIn {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.row {
+  height: var(--top-h);
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+.brand { display: inline-flex; text-decoration: none; }
+.links { display: none; }
+.moon {
+  margin-left: auto;
+  width: var(--tap);
+  height: var(--tap);
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--r-control);
+  background: none;
+  color: var(--nav-text);
+  cursor: pointer;
+}
+.moon:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+
+/* Selector de divisional: botón de 44 px con un <select> nativo encima (accesible y sin JS extra). */
+.selWrap { position: relative; padding-bottom: var(--s-3); }
+.selBtn {
+  height: var(--tap);
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 0 var(--s-3);
+  background: var(--hero-fill);
+  border: 1px solid var(--hero-line);
+  border-radius: var(--r-tile);
+  color: #fff;
+}
+.selBtn .trofeo { color: var(--accent); display: grid; }
+.selTxt { flex: 1; min-width: 0; font-size: 12px; font-weight: 800; letter-spacing: 0.4px; text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.selNative {
+  position: absolute;
+  inset: 0 0 var(--s-3) 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 16px; /* evita el zoom de iOS al enfocar */
+}
+.selNative:focus-visible + .selBtn { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+@media (min-width: 768px) {
+  .topIn { padding-left: var(--gutter-desk); padding-right: var(--gutter-desk); }
+  .row { height: var(--nav-h); gap: var(--s-6); }
+  .links { display: flex; flex-wrap: wrap; gap: var(--s-1); margin-left: auto; }
+  .links a {
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--s-3);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--nav-text);
+    border-bottom: 3px solid transparent;
+  }
+  .links a:hover { color: #fff; }
+  .links a[aria-current="page"] { color: #fff; font-weight: 800; border-bottom-color: var(--accent); }
+  .moon { margin-left: 0; }
+  .selWrap { display: none; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .links a { padding: 0 var(--s-2); font-size: 12px; }
+}
+
+/* ---------- Barra inferior (celular) ---------- */
+.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  height: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  background: var(--nav);
+  box-shadow: 0 -2px 8px rgba(2, 34, 75, 0.18);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.bottom a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  color: var(--nav-text);
+  text-decoration: none;
+  border-top: 3px solid transparent;
+}
+.bottom a[aria-current="page"] { color: var(--nav-active); font-weight: 700; border-top-color: var(--accent); }
+@media (min-width: 768px) {
+  .bottom { display: none; }
+}
+
+/* Espacio para que la barra inferior no tape el final de la página */
+.spacer { height: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px)); }
+@media (min-width: 768px) {
+  .spacer { display: none; }
+}
+
+.foot {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--s-6) max(16px, env(safe-area-inset-right, 0px)) var(--s-8) max(16px, env(safe-area-inset-left, 0px));
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+}
+.foot a { color: var(--link); }

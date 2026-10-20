@@ -1,15 +1,15 @@
 "use client";
 import { useRouter } from "next/navigation";
 import type { DivisionalIndice } from "@/lib/datos";
-import { nombreDivisional, rutaDivisional } from "@/lib/datos";
+import { nombreDivisional, rutaDivisional, rutaSeccion, type Seccion } from "@/lib/datos";
 
 /** Banda blanca del campeonato, como en ligapro.uy, con el selector de serie y divisional. */
-export function Banda({ actual, todas, sub, destino = "divisional" }: { actual: DivisionalIndice | null; todas: DivisionalIndice[]; sub?: string; destino?: "divisional" | "partidos" | "simular" | "sancionados" }) {
+export function Banda({ actual, todas, sub, seccion }: { actual: DivisionalIndice | null; todas: DivisionalIndice[]; sub?: string; seccion?: Seccion }) {
   const router = useRouter();
   const ir = (id: number) => {
     const d = todas.find((x) => x.torneoId === id);
     if (!d) return;
-    router.push(destino === "divisional" ? rutaDivisional(d) : `/${destino}?d=${d.torneoId}`);
+    router.push(seccion ? rutaSeccion(d, seccion) : rutaDivisional(d));
   };
   return (
     <section className="band">

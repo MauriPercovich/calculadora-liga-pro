@@ -10,7 +10,7 @@ type Params = { serie: string; div: string; equipo: string };
 
 export async function generateStaticParams(): Promise<Params[]> {
   const i = await leerIndice();
-  return i.divisionales.flatMap((d) => d.equipos.map((e) => ({ serie: `serie-${d.serie}`, div: d.divisional.toLowerCase(), equipo: e.slug })));
+  return i.divisionales.flatMap((d) => d.equipos.map((e) => ({ serie: `s${d.serie}`, div: d.divisional.toLowerCase(), equipo: e.slug })));
 }
 export const dynamicParams = false;
 

@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { BarraInferior, Encabezado } from "@/components/Navegacion";
+import { BottomNav, Pie, TopBar } from "@/components/AppShell/AppShell";
+import { leerIndice } from "@/lib/datos-servidor";
+import { SCRIPT_TEMA } from "@/lib/preferencias";
 
 export const metadata: Metadata = {
   title: { default: "Calculadora Liga Pro", template: "%s · Calculadora Liga Pro" },
   description: "Chances de salir campeón, ascender, ganar las copas de Oro, Plata y Bronce o descender en cada divisional de Liga Pro.",
   applicationName: "Calculadora Liga Pro",
-  appleWebApp: { capable: true, title: "Calculadora Liga Pro", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "Calculadora Liga Pro", statusBarStyle: "black-translucent" },
   openGraph: { siteName: "Calculadora Liga Pro", locale: "es_UY", type: "website" },
 };
 
@@ -17,16 +19,18 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const indice = await leerIndice();
   return (
-    <html lang="es-UY">
+    <html lang="es-UY" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
+      </head>
       <body>
-        <Encabezado />
+        <TopBar todas={indice.divisionales} />
         {children}
-        <footer className="wrap foot">
-          Calculadora Liga Pro. Datos públicos de ligapro.uy. Las probabilidades son estimaciones estadísticas: no son cuotas de apuestas ni garantías.
-        </footer>
-        <BarraInferior />
+        <Pie />
+        <BottomNav todas={indice.divisionales} />
       </body>
     </html>
   );

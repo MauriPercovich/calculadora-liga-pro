@@ -1,0 +1,172 @@
+/*
+ * Calculadora Liga Pro: design tokens
+ * Fuente: Sistema de diseño (design/screenshots/sistema/sistema-de-diseno.png)
+ * Uso: importar una vez en app/globals.css. El tema oscuro se activa con
+ * <html data-theme="dark"> o, si no hay elección guardada, con prefers-color-scheme.
+ * Sin fuentes externas: system-ui.
+ */
+
+:root {
+  /* ---------- Superficies ---------- */
+  --bg: #E5E7EB;            /* fondo de página (gris de ligapro.uy) */
+  --card: #FFFFFF;          /* tarjetas */
+  --surface-2: #F3F4F6;     /* columna Pts, marcadores, chips */
+  --line: #E5E7EB;          /* divisores */
+  --line-strong: #D1D5DB;   /* bordes de controles */
+
+  /* ---------- Texto ---------- */
+  --text: #111827;
+  --text-2: #4B5563;        /* secundario, AA sobre --card */
+
+  /* ---------- Marca Liga Pro ---------- */
+  --nav: #02224B;           /* barra superior e inferior */
+  --nav-text: #CBD5E1;
+  --nav-active: #FACC15;
+  --hero: #02224B;          /* portada con tu equipo y ficha */
+  --hero-text: #FFFFFF;
+  --hero-text-2: #CBD5E1;
+  --hero-fill: rgba(255, 255, 255, 0.08);
+  --hero-line: rgba(255, 255, 255, 0.18);
+  --action: #003C8A;        /* botón primario, selección */
+  --action-hover: #02224B;
+  --action-pressed: #011733;
+  --action-text: #FFFFFF;
+  --link: #003C8A;
+  --accent: #EAB308;        /* amarillo Liga: logo, «%», indicador de nav */
+  --accent-text: #854D0E;   /* amarillo usado como texto (AA) */
+  --accent-soft: #FEF3C7;   /* fondo de Sorpresa y avisos */
+  --focus: #2563EB;
+
+  /* ---------- Tablas ---------- */
+  --row-top4: #DBEAFE;      /* top 4 celeste, como ligapro.uy */
+  --row-mine: #FEF9C3;      /* fila de tu equipo */
+  --col-pts: #F3F4F6;       /* columna Pts sobre gris */
+  --track: #EEF2F6;         /* fondo de barras */
+
+  /* ---------- Barra de partido (3 tramos) ---------- */
+  --match-win: #003C8A;     /* gana el primero / tu equipo */
+  --match-draw: #CBD5E1;
+  --match-draw-text: #1F2937;
+  --match-lose: #64748B;    /* gana el segundo / rival */
+  --match-lose-text: #FFFFFF;
+
+  /* ---------- Variación ---------- */
+  --up: #15803D;
+  --down: #B91C1C;
+  --up-on-hero: #86EFAC;
+  --down-on-hero: #FCA5A5;
+
+  /* ---------- Objetivos: -text para números y etiquetas, -bar para barras y marcas ---------- */
+  --goal-camp-text: #003C8A;    --goal-camp-bar: #003C8A;
+  --goal-asc-text: #15803D;     --goal-asc-bar: #16A34A;
+  --goal-oro-text: #854D0E;     --goal-oro-bar: #EAB308;
+  --goal-plata-text: #4B5563;   --goal-plata-bar: #9CA3AF;
+  --goal-bronce-text: #9A3412;  --goal-bronce-bar: #C2410C;
+  --goal-desc-text: #B91C1C;    --goal-desc-bar: #DC2626;
+
+  /* Sanciones */
+  --card-red: #DC2626;
+  --card-yellow: #EAB308;
+
+  /* ---------- Sombras ---------- */
+  --shadow-card: 0 1px 2px rgba(2, 34, 75, 0.08);
+  --shadow-raise: 0 4px 12px rgba(2, 34, 75, 0.14);
+  --shadow-sheet: 0 -8px 24px rgba(0, 0, 0, 0.25);
+
+  /* ---------- Radios ---------- */
+  --r-mark: 4px;
+  --r-control: 6px;
+  --r-tile: 8px;
+  --r-card: 10px;
+  --r-ficha: 12px;
+  --r-sheet: 16px;
+  --r-pill: 999px;
+
+  /* ---------- Espaciado (base 4) ---------- */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-6: 24px; --s-8: 32px; --s-12: 48px;
+
+  /* ---------- Tipografía ---------- */
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-hero: 104px;      /* cifra principal en celular (88/64 si el número es largo) */
+  --fs-hero-desk: 136px;
+  --fs-h1: 22px;         /* 28–32 en escritorio */
+  --fs-h2: 17px;         /* 20 en escritorio */
+  --fs-num: 15px;        /* cifras de tabla: weight 800 */
+  --fs-body: 15px;
+  --fs-small: 13px;
+  --fs-caption: 11px;    /* sobretítulos: 800, +0.8px, MAYÚSCULAS */
+
+  /* ---------- Layout ---------- */
+  --container: 1180px;
+  --gutter: 12px;        /* celular */
+  --gutter-desk: 24px;
+  --nav-h: 64px;         /* barra inferior celular y superior escritorio */
+  --top-h: 52px;         /* barra superior celular */
+  --tap: 44px;           /* zona táctil mínima */
+}
+
+/* Tema oscuro */
+:root[data-theme="dark"] {
+  --bg: #0B1220;
+  --card: #131C2F;
+  --surface-2: #1A2540;
+  --line: #1F2A44;
+  --line-strong: #2C3A5A;
+  --text: #F1F5F9;
+  --text-2: #A9B4C8;
+  --nav: #020B1A;
+  --nav-text: #A9B4C8;
+  --hero: #0A2A5C;
+  --hero-text-2: #C3CEE0;
+  --hero-line: rgba(255, 255, 255, 0.2);
+  --action: #2563EB;
+  --action-hover: #1D4ED8;
+  --action-pressed: #1E40AF;
+  --link: #93C5FD;
+  --accent-text: #FACC15;
+  --accent-soft: #3A2F0B;
+  --focus: #FACC15;
+  --row-top4: #14294D;
+  --row-mine: #2A2410;
+  --col-pts: #1A2540;
+  --track: #1F2A44;
+  --match-win: #2563EB;
+  --match-draw: #475569;
+  --match-draw-text: #F1F5F9;
+  --match-lose: #94A3B8;
+  --match-lose-text: #0B1220;
+  --up: #4ADE80;
+  --down: #F87171;
+  --goal-camp-text: #93C5FD;    --goal-camp-bar: #3B82F6;
+  --goal-asc-text: #4ADE80;     --goal-asc-bar: #22C55E;
+  --goal-oro-text: #FACC15;     --goal-oro-bar: #EAB308;
+  --goal-plata-text: #CBD5E1;   --goal-plata-bar: #94A3B8;
+  --goal-bronce-text: #FB923C;  --goal-bronce-bar: #EA580C;
+  --goal-desc-text: #F87171;    --goal-desc-bar: #EF4444;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-raise: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Sin elección guardada: seguir al sistema */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --bg: #0B1220; --card: #131C2F; --surface-2: #1A2540; --line: #1F2A44; --line-strong: #2C3A5A;
+    --text: #F1F5F9; --text-2: #A9B4C8; --nav: #020B1A; --nav-text: #A9B4C8; --hero: #0A2A5C;
+    --hero-text-2: #C3CEE0; --hero-line: rgba(255,255,255,0.2); --action: #2563EB; --action-hover: #1D4ED8;
+    --action-pressed: #1E40AF; --link: #93C5FD; --accent-text: #FACC15; --accent-soft: #3A2F0B; --focus: #FACC15;
+    --row-top4: #14294D; --row-mine: #2A2410; --col-pts: #1A2540; --track: #1F2A44; --match-win: #2563EB;
+    --match-draw: #475569; --match-draw-text: #F1F5F9; --match-lose: #94A3B8; --match-lose-text: #0B1220;
+    --up: #4ADE80; --down: #F87171;
+    --goal-camp-text: #93C5FD; --goal-camp-bar: #3B82F6; --goal-asc-text: #4ADE80; --goal-asc-bar: #22C55E;
+    --goal-oro-text: #FACC15; --goal-oro-bar: #EAB308; --goal-plata-text: #CBD5E1; --goal-plata-bar: #94A3B8;
+    --goal-bronce-text: #FB923C; --goal-bronce-bar: #EA580C; --goal-desc-text: #F87171; --goal-desc-bar: #EF4444;
+    --shadow-card: 0 1px 2px rgba(0,0,0,0.4); --shadow-raise: 0 6px 16px rgba(0,0,0,0.5);
+  }
+}
+
+/* Base */
+html { background: var(--bg); color: var(--text); font-family: var(--font); }
+body { margin: 0; font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }

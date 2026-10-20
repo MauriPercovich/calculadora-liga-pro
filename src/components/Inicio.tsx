@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { DatosDivisional, DivisionalIndice, Indice } from "@/lib/datos";
 import { rutaDivisional, rutaEquipo } from "@/lib/datos";
 import { diaCorto, objetivoPrincipal, objetivosDe, OBJETIVOS, pct } from "@/lib/formato";
@@ -10,6 +11,7 @@ import { Chips, EquipoLink, ordenarTabla, Tri, zona } from "./ui";
 
 export function Inicio({ indice }: { indice: Indice }) {
   const fav = useFavorito();
+  const router = useRouter();
   const [datos, setDatos] = useState<DatosDivisional | null>(null);
   const [error, setError] = useState(false);
 
@@ -25,6 +27,11 @@ export function Inicio({ indice }: { indice: Indice }) {
     return null;
   }, [fav, indice]);
 
+  // Sin equipo elegido, la portada es "¿De qué cuadro sos?".
+  useEffect(() => {
+    if (fav !== undefined && !favActual) router.replace("/elegir");
+  }, [fav, favActual, router]);
+
   useEffect(() => {
     if (!favActual) return;
     if (fav && favActual.torneoId !== fav.torneoId) guardarFavorito(favActual);
@@ -36,7 +43,7 @@ export function Inicio({ indice }: { indice: Indice }) {
   }, [favActual, fav]);
 
   if (fav === undefined) return <div className="card"><div className="card-b" style={{ paddingTop: 16 }}><p className="fine">Cargando…</p></div></div>;
-  if (!favActual) return <Elegir indice={indice} />;
+  if (!favActual) return <div className="card"><div className="card-b" style={{ paddingTop: 16 }}><p className="fine">Cargando…</p></div></div>;
 
   const div = indice.divisionales.find((x) => x.torneoId === favActual.torneoId)!;
   const otras = indice.divisionales.filter((x) => x.torneoId !== div.torneoId);
@@ -119,7 +126,7 @@ function TarjetaEquipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
         )}
         <div className="btns" style={{ marginTop: 12 }}>
           <Link className="btn" href={rutaEquipo(d, yo.slug)}>Ver todo de {yo.nombre}</Link>
-          <button className="btn ghost" onClick={() => guardarFavorito(null)}>Cambiar de equipo</button>
+          <Link className="btn ghost" href="/elegir">Cambiar de equipo</Link>
         </div>
       </div>
     </div>
@@ -181,7 +188,9 @@ function MiniTabla({ d, equipoId }: { d: DatosDivisional; equipoId: number }) {
   );
 }
 
-function Elegir({ indice }: { indice: Indice }) {
+export function Elegir({ indice }: { indice: Indice }) {
+  const router = useRouter();
+  const fav = useFavorito();
   const [q, setQ] = useState("");
   const s = q.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   const norm = (x: string) => x.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
@@ -192,7 +201,8 @@ function Elegir({ indice }: { indice: Indice }) {
     <div className="stack">
       <div className="welcome">
         <h2>¿De qué cuadro sos?</h2>
-        <p>Elegí tu equipo y te mostramos sus chances de salir campeón, ascender, ganar una copa o descender, fecha a fecha.</p>
+        <p>Elegilo una vez y la calculadora arranca siempre por tu equipo: sus chances, su próximo partido y su tabla.</p>
+        {fav && <Link href="/" style={{ color: "var(--nav-active)", fontWeight: 700 }}>Cancelar</Link>}
       </div>
       <div className="card">
         <div className="card-b" style={{ paddingTop: 16 }}>
@@ -204,7 +214,13 @@ function Elegir({ indice }: { indice: Indice }) {
               <div className="eyebrow" style={{ marginBottom: 8 }}>Serie {d.serie} · Divisional {d.divisional}</div>
               <div className="pick">
                 {equipos.map((e) => (
-                  <button key={e.id} onClick={() => guardarFavorito({ torneoId: d.torneoId, equipoId: e.id, slug: e.slug, nombre: e.nombre, serie: d.serie, divisional: d.divisional })}>
+                  <button
+                    key={e.id}
+                    onClick={() => {
+                      guardarFavorito({ torneoId: d.torneoId, equipoId: e.id, slug: e.slug, nombre: e.nombre, serie: d.serie, divisional: d.divisional });
+                      router.push("/");
+                    }}
+                  >
                     <Escudo nombre={e.nombre} url={e.escudo} />
                     <span className="nm" style={{ fontWeight: 700 }}>{e.nombre}</span>
                   </button>

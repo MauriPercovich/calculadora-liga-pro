@@ -1,83 +1,40 @@
 /* Paleta y estructura tomadas de ligapro.uy: barra azul marino, banda blanca del campeonato,
    fondo gris con tarjetas blancas y el amarillo como acento. */
+@import "./tokens.css";
+
+/* Nombres viejos apuntando a los tokens del diseño final, mientras se reemplazan las vistas
+   (tickets 4 a 9 del handoff). Al ser var(), siguen al tema claro u oscuro solos. */
 :root {
-  --navy: #02224b;
-  --navy-2: #003c8a;
-  --gold: #eab308;
-  --bg: #e5e7eb;
-  --card: #ffffff;
-  --card-2: #f3f4f6;
-  --line: #d1d5db;
-  --fg: #0b0f19;
-  --muted: #6b7280;
-  --zone-up: #dbeafe;
-  --zone-down: #fee2e2;
-  --zone-mid: #f3f4f6;
-  --c-camp: #003c8a;
-  --c-oro: #ca8a04;
-  --c-plata: #64748b;
-  --c-bronce: #b45309;
-  --c-asc: #15803d;
-  --c-desc: #dc2626;
-  --win: #003c8a;
-  --draw: #9ca3af;
-  --loss: #dc2626;
-  --band: #ffffff;
-  --tab-on: #003c8a;
-  --r: 10px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0a1220;
-    --card: #111c30;
-    --card-2: #17243b;
-    --line: #25324a;
-    --fg: #e6eaf2;
-    --muted: #9aa6ba;
-    --zone-up: #132d55;
-    --zone-down: #3a1820;
-    --zone-mid: #17243b;
-    --c-camp: #7fb0ff;
-    --c-oro: #facc15;
-    --c-plata: #a9b6c9;
-    --c-bronce: #f59e5b;
-    --c-asc: #4ade80;
-    --c-desc: #f87171;
-    --win: #5c9bff;
-    --draw: #6b7890;
-    --loss: #f87171;
-    --band: #0e1a2e;
-    --tab-on: #eab308;
-    color-scheme: dark;
-  }
+  --navy: var(--nav);
+  --navy-2: var(--action);
+  --gold: var(--accent);
+  --card-2: var(--surface-2);
+  --fg: var(--text);
+  --muted: var(--text-2);
+  --zone-up: var(--row-top4);
+  --zone-down: color-mix(in srgb, var(--goal-desc-bar) 14%, var(--card));
+  --zone-mid: var(--surface-2);
+  --c-camp: var(--goal-camp-text);
+  --c-oro: var(--goal-oro-text);
+  --c-plata: var(--goal-plata-text);
+  --c-bronce: var(--goal-bronce-text);
+  --c-asc: var(--goal-asc-text);
+  --c-desc: var(--goal-desc-text);
+  --win: var(--match-win);
+  --draw: var(--match-draw);
+  --loss: var(--match-lose);
+  --band: var(--card);
+  --tab-on: var(--action);
+  --r: var(--r-card);
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  font-size: 14px;
-  line-height: 1.45;
-}
+body { background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.45; }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .num { font-variant-numeric: tabular-nums; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-
-/* barra superior */
-.top { position: sticky; top: 0; z-index: 20; background: var(--navy); color: #fff; }
-.top .wrap { display: flex; align-items: center; gap: 20px; min-height: 52px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-.mark { display: flex; align-items: center; gap: 6px; font-weight: 800; font-style: italic; font-size: 19px; letter-spacing: -0.02em; }
-.tag { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--gold); color: #02224b; padding: 2px 6px; border-radius: 4px; }
-.nav { display: flex; gap: 2px; margin-left: auto; flex-wrap: wrap; }
-.nav a { font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; padding: 8px 10px; border-radius: 6px; opacity: 0.85; }
-.nav a:hover { opacity: 1; background: rgba(255, 255, 255, 0.08); }
-.nav a.on { opacity: 1; box-shadow: inset 0 -2px 0 var(--gold); border-radius: 0; }
 
 /* banda del campeonato */
 .band { background: var(--band); border-bottom: 1px solid var(--line); }
@@ -229,16 +186,9 @@ td.team-cell { max-width: 220px; }
 
 .spark { width: 100%; height: 120px; display: block; }
 
-.bottom { display: none; }
-@media (max-width: 760px) {
-  .nav { display: none; }
-  .bottom { display: grid; grid-template-columns: repeat(5, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--navy); padding-bottom: env(safe-area-inset-bottom, 0px); }
-  .bottom a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 2px 9px; font-size: 10.5px; font-weight: 600; color: #fff; text-decoration: none; opacity: 0.75; }
-  .bottom a.on { opacity: 1; color: var(--gold); }
-  .bottom svg { width: 20px; height: 20px; }
-  .sel { margin-left: 0; width: 100%; }
-  .sel select { flex: 1; }
+@media (max-width: 767px) {
+  .band { display: none; }
 }
-.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(84px + env(safe-area-inset-bottom, 0px)); background: var(--navy); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 13px; z-index: 40; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--nav-h) + 12px + env(safe-area-inset-bottom, 0px)); background: var(--navy); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 13px; z-index: 40; }
 .foot { padding-block: 24px; font-size: 12px; color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .bar span, .hist .col { transition: width 0.4s ease, height 0.4s ease; } }

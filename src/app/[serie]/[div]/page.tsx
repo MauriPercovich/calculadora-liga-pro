@@ -9,7 +9,7 @@ type Params = { serie: string; div: string };
 
 export async function generateStaticParams(): Promise<Params[]> {
   const i = await leerIndice();
-  return i.divisionales.map((d) => ({ serie: `serie-${d.serie}`, div: d.divisional.toLowerCase() }));
+  return i.divisionales.map((d) => ({ serie: `s${d.serie}`, div: d.divisional.toLowerCase() }));
 }
 export const dynamicParams = false;
 
