@@ -221,13 +221,5 @@ details.fecha > .card-b { padding-top: 0; }
 /* En oscuro el dorado va más tenue para que no quede oliva. */
 :root[data-theme="dark"] { --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 13%, var(--card)); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 13%, var(--card)); } }
-/* Simular: 4 columnas de chances entran en un celular de 360 px. */
-.sim-tbl { table-layout: fixed; font-size: 12.5px; }
-.sim-tbl th, .sim-tbl td { padding-inline: 3px; }
-.sim-tbl th.pts, .sim-tbl td.pts { width: 34px; }
-.sim-tbl th:not(.l):not(.pts), .sim-tbl td:not(.l):not(.pts) { width: 50px; }
-.sim-tbl td.team-cell { overflow: hidden; padding-left: 12px; }
-.sim-tbl th.l { padding-left: 12px; }
-.sim-tbl .crest { width: 22px; height: 22px; flex: none; }
-.sim-tbl .team { gap: 6px; }
-@media (min-width: 768px) { .sim-tbl { font-size: 13px; } .sim-tbl th:not(.l):not(.pts), .sim-tbl td:not(.l):not(.pts) { width: 64px; } }
+/* Simular: el nombre completo entra (hasta dos líneas). */
+.sim-eq .team .nm { white-space: normal; overflow: visible; }

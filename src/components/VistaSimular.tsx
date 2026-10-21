@@ -3,10 +3,8 @@ import { useMemo, useState } from "react";
 import type { DatosDivisional } from "@/lib/datos";
 import { rutaEquipo } from "@/lib/datos";
 import { probabilidades, type ModeloGoles } from "@/lib/engine/model";
-import { simular } from "@/lib/engine/simulate";
 import { useFavorito } from "@/lib/favorito";
-import { EquipoLink } from "./ui";
-import { chance, METAS, txtChance, type Meta } from "@/lib/objetivos";
+import { EquipoLink, zona } from "./ui";
 
 /** "Armá tu escenario": fijás resultados y el resto lo sigue simulando el modelo, en el navegador. */
 export function VistaSimular({ d }: { d: DatosDivisional }) {
@@ -20,7 +18,6 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
   );
   const restantes = d.partidos.filter((p) => p.fase === "regular" && p.golesA === null);
   const eligio = Object.keys(fijados).length > 0;
-  const res = useMemo(() => (eligio ? simular(d, d.reglamento, modelo, { n: 8000, semilla: 17, fijados }) : d.simulacion), [d, modelo, fijados, eligio]);
   const eq = (id: number) => d.equipos.find((e) => e.id === id)!;
   const corto = (id: number) => (eq(id).nombre.length > 14 ? eq(id).nombre.slice(0, 12) + "…" : eq(id).nombre);
 
@@ -34,24 +31,12 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
       extra.set(p.b, (extra.get(p.b) ?? 0) + 1);
     }
   }
-  const P = res.prob;
-  // Columnas: en el Clausura importa el 1º y a qué copa va; en el Apertura, campeón, ascenso y descenso.
-  const cols: { m: Meta; titulo: string }[] =
-    d.categoria === "Clausura"
-      ? [{ m: "primero", titulo: "1º" }, { m: "zonaOro", titulo: "Oro" }, { m: "zonaPlata", titulo: "Plata" }, { m: "zonaBronce", titulo: "Bronce" }]
-      : [{ m: "campeon", titulo: "Camp." }, ...(d.esPrimera ? [] : [{ m: "asciende" as Meta, titulo: "Asc." }]), { m: "desciende", titulo: "Desc." }];
-  // Sin escenario valen las certezas exactas; con escenario no se sabe si es seguro: 0 y 1 se muestran como <0,1% / >99,9%.
-  // Con todo fijado la tabla final ya no depende del azar: ahí 0% y 100% sí son seguros.
-  const todo = restantes.every((p) => fijados[p.id] !== undefined);
-  const txt = (m: Meta, i: number) => {
-    if (!eligio) return txtChance(chance(d, m, i));
-    const p = P[m][i];
-    // el campeón del Clausura sale de las copas, que siguen siendo azar
-    return txtChance({ p, seguro: todo && m !== "campeon" && (p === 0 || p === 1) ? (p as 0 | 1) : null });
-  };
   const pts = (i: number) => d.tablaOficial.find((f) => f.equipoId === ids[i])!.pts + (extra.get(ids[i]) ?? 0);
   const dg = (i: number) => { const f = d.tablaOficial.find((x) => x.equipoId === ids[i])!; return f.gf - f.gc; };
-  const orden = [...ids.keys()].sort((a, b) => pts(b) - pts(a) || d.simulacion.puntosEsperados[b] - d.simulacion.puntosEsperados[a] || dg(b) - dg(a));
+  // Posiciones finales con lo elegido: puntos, después diferencia de gol (la que hay hoy) y, si siguen iguales, lo que espera el modelo.
+  const orden = [...ids.keys()].sort((a, b) => pts(b) - pts(a) || dg(b) - dg(a) || d.simulacion.puntosEsperados[b] - d.simulacion.puntosEsperados[a]);
+  const N = ids.length;
+  const clausura = d.categoria === "Clausura";
 
   const elegir = (id: number, v: 0 | 1 | 2) =>
     setFijados((f) => {
@@ -79,7 +64,7 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
         <div className="card">
           <div className="card-h"><h2>Armá tu escenario</h2><span className="hint">{Object.keys(fijados).length} de {restantes.length} elegidos</span></div>
           <div className="card-b">
-            <p className="fine" style={{ margin: "0 0 6px" }}>Elegí resultados. Los partidos que no toques los sigue simulando el modelo.</p>
+            <p className="fine" style={{ margin: "0 0 6px" }}>Elegí resultados y mirá cómo quedaría la tabla al final.</p>
             {restantes.map((p) => (
               <div className="sim-row" key={p.id}>
                 <div style={{ minWidth: 0 }}>
@@ -107,25 +92,39 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
         <div className="card">
           <div className="card-h"><h2>Así quedaría</h2><span className="hint">{eligio ? "con tu escenario" : "sin cambios"}</span></div>
           <div className="tbl-wrap">
-            <table className="sim-tbl">
-              <thead><tr><th className="l">Equipo</th><th className="pts">Pts</th>{cols.map((c) => <th key={c.m}>{c.titulo}</th>)}</tr></thead>
+            <table>
+              <thead><tr><th /><th className="l">Equipo</th><th className="pts">Pts</th></tr></thead>
               <tbody>
-                {orden.map((i) => {
+                {orden.map((i, pos) => {
                   const id = ids[i];
+                  const z = zona(pos, N, d.categoria, d.reglamento.ascensos, d.reglamento.descensos);
                   return (
-                    <tr key={id} className={fav?.torneoId === d.torneoId && fav.equipoId === id ? "fav" : ""}>
-                      <td className="l team-cell"><EquipoLink e={eq(id)} href={rutaEquipo(d, eq(id).slug)} /></td>
+                    <tr key={id} className={`${z} ${fav?.torneoId === d.torneoId && fav.equipoId === id ? "fav" : ""}`}>
+                      <td className="pos">{pos + 1}</td>
+                      <td className="l team-cell sim-eq"><EquipoLink e={eq(id)} href={rutaEquipo(d, eq(id).slug)} /></td>
                       <td className="pts num">{pts(i)}</td>
-                      {cols.map((c) => (
-                        <td key={c.m} className="num" style={{ color: METAS[c.m].texto, fontWeight: 700 }}>{txt(c.m, i)}</td>
-                      ))}
                     </tr>
                   );
                 })}
               </tbody>
             </table>
           </div>
-          <p className="fine" style={{ padding: "8px 16px 14px", margin: 0 }}>Puntos con los resultados que elegiste; los partidos sin tocar todavía no suman, pero sí cuentan en las chances.</p>
+          <div className="legend">
+            {clausura ? (
+              <>
+                <span><i style={{ background: "var(--zone-oro)" }} />Copa de Oro{d.esPrimera ? "" : " · asciende"}</span>
+                <span><i style={{ background: "var(--zone-mid)", border: "1px solid var(--line)" }} />Copa de Plata</span>
+                <span><i style={{ background: "var(--zone-down)" }} />Copa de Bronce · desciende</span>
+              </>
+            ) : (
+              <>
+                <span><i style={{ background: "var(--zone-oro)" }} />{d.esPrimera ? "Campeón" : "Campeón · asciende"}</span>
+                {!d.esPrimera && <span><i style={{ background: "var(--zone-up)" }} />Asciende</span>}
+                <span><i style={{ background: "var(--zone-down)" }} />Desciende</span>
+              </>
+            )}
+          </div>
+          <p className="fine" style={{ padding: "8px 16px 14px", margin: 0 }}>Posiciones con los resultados que elegiste. Los partidos que no elijas todavía no suman puntos.</p>
         </div>
       </div>
     </div>
