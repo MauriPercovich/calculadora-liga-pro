@@ -133,7 +133,7 @@
 .tabla td:first-child { width: 36px; text-align: center; color: var(--text-2); }
 .tabla td:nth-child(2) { max-width: 0; width: 100%; overflow: hidden; text-overflow: ellipsis; font-weight: 700; text-align: left; }
 .tabla td:nth-child(2) a { color: var(--text); text-decoration: none; }
-.tabla td:nth-child(3) { background: var(--col-pts); text-align: center; font-weight: 800; width: 44px; }
+.tabla td:nth-child(3) { text-align: center; font-weight: 800; width: 44px; }
 .tabla td:last-child { text-align: right; font-weight: 800; padding-right: var(--s-4); width: 72px; }
 .tabla .oro td { background: var(--zone-oro); }
 .tabla .up td { background: var(--row-top4); }

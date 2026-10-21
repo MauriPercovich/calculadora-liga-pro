@@ -88,12 +88,11 @@
 .tabla td { padding: 0 6px; height: 42px; text-align: right; border-top: 1px solid var(--line); white-space: nowrap; font-weight: 700; }
 .tabla td:first-child { text-align: center; color: var(--text-2); font-weight: 400; width: 28px; }
 .tabla td:nth-child(2) { text-align: left; max-width: 0; width: 100%; }
-.tabla td:nth-child(3), .tabla th:nth-child(3) { background: var(--col-pts); text-align: center; font-weight: 800; width: 40px; }
+.tabla td:nth-child(3), .tabla th:nth-child(3) { text-align: center; font-weight: 800; width: 40px; }
 .tabla .oro td { background: var(--zone-oro); }
 .tabla .up td { background: var(--row-top4); }
 .tabla .down td { background: var(--zone-down); }
 .tabla .mio td { box-shadow: inset 0 2px 0 var(--gold), inset 0 -2px 0 var(--gold); font-weight: 700; }
-.tabla tr td:nth-child(3) { background: color-mix(in srgb, var(--col-pts) 50%, transparent); }
 .filaEquipo { display: flex; align-items: center; gap: var(--s-2); min-width: 0; color: var(--text); text-decoration: none; }
 .filaEquipo span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tablaWrap { margin: 0 calc(-1 * var(--s-4)); }

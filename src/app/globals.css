@@ -81,13 +81,10 @@ th { font-size: 11.5px; font-weight: 700; color: var(--muted); text-align: cente
 th.l, td.l { text-align: left; }
 td { padding: 9px 6px; text-align: center; border-bottom: 1px solid var(--line); white-space: nowrap; }
 td.pos { width: 28px; font-weight: 700; color: var(--muted); }
-td.pts, th.pts { background: var(--card-2); font-weight: 800; }
+td.pts, th.pts { font-weight: 800; }
 tr.oro td { background: var(--zone-oro); }
-tr.oro td.pts { background: color-mix(in srgb, var(--zone-oro) 70%, var(--line)); }
 tr.up td { background: var(--zone-up); }
-tr.up td.pts { background: color-mix(in srgb, var(--zone-up) 70%, var(--line)); }
 tr.down td { background: var(--zone-down); }
-tr.down td.pts { background: color-mix(in srgb, var(--zone-down) 70%, var(--line)); }
 tr.fav td { box-shadow: inset 0 2px 0 var(--gold), inset 0 -2px 0 var(--gold); }
 td.team-cell { max-width: 220px; }
 /* en la columna angosta los nombres largos se cortan para que entren todas las columnas */
