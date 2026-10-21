@@ -90,7 +90,7 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
           {clausura ? (
             <>
               <span><i style={{ background: "var(--zone-oro)" }} />Copa de Oro{d.esPrimera ? "" : " · asciende"}</span>
-              <span><i style={{ background: "var(--zone-mid)", border: "1px solid var(--line)" }} />Copa de Plata</span>
+              <span><i style={{ background: "var(--zone-plata)" }} />Copa de Plata</span>
               <span><i style={{ background: "var(--zone-down)" }} />Copa de Bronce · desciende</span>
             </>
           ) : (

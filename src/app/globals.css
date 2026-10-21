@@ -13,6 +13,7 @@
   --muted: var(--text-2);
   --zone-up: var(--row-top4);
   --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 22%, var(--card));
+  --zone-plata: color-mix(in srgb, var(--goal-plata-bar) 22%, var(--card));
   --zone-down: color-mix(in srgb, var(--goal-desc-bar) 14%, var(--card));
   --zone-mid: var(--surface-2);
   --c-camp: var(--goal-camp-text);
@@ -83,6 +84,7 @@ td { padding: 9px 6px; text-align: center; border-bottom: 1px solid var(--line);
 td.pos { width: 28px; font-weight: 700; color: var(--muted); }
 td.pts, th.pts { font-weight: 800; }
 tr.oro td { background: var(--zone-oro); }
+tr.plata td { background: var(--zone-plata); }
 tr.up td { background: var(--zone-up); }
 tr.down td { background: var(--zone-down); }
 tr.fav td { box-shadow: inset 0 2px 0 var(--gold), inset 0 -2px 0 var(--gold); }

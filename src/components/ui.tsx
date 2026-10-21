@@ -65,5 +65,5 @@ export function zona(pos: number, n: number, categoria: string, ascensos: number
   if (categoria === "Clausura" ? pos < 4 : pos === 0) return "oro";
   if (pos < ascensos) return "up";
   if (pos >= n - descensos) return "down";
-  return "";
+  return categoria === "Clausura" ? "plata" : "";
 }

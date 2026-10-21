@@ -90,6 +90,7 @@
 .tabla td:nth-child(2) { text-align: left; max-width: 0; width: 100%; }
 .tabla td:nth-child(3), .tabla th:nth-child(3) { text-align: center; font-weight: 800; width: 40px; }
 .tabla .oro td { background: var(--zone-oro); }
+.tabla .plata td { background: var(--zone-plata); }
 .tabla .up td { background: var(--row-top4); }
 .tabla .down td { background: var(--zone-down); }
 .tabla .mio td { box-shadow: inset 0 2px 0 var(--gold), inset 0 -2px 0 var(--gold); font-weight: 700; }
