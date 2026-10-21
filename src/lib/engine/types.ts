@@ -73,6 +73,10 @@ export const reglamentoDe = (d: Pick<Divisional, "categoria" | "esPrimera" | "eq
   plataSinFormato: d.categoria === "Clausura" && d.equipos.length - 8 > 4,
 });
 
+/** Los 6 objetivos que ve la gente, en el orden en que se guardan en porPuntos. */
+export const METAS_VISIBLES = ["campeon", "asciende", "desciende", "copaOro", "copaPlata", "copaBronce"] as const;
+export type MetaVisible = (typeof METAS_VISIBLES)[number];
+
 export type Objetivo = "campeon" | "asciende" | "copaOro" | "copaPlata" | "copaBronce" | "desciende" | "zonaOro" | "zonaPlata" | "zonaBronce" | "desempate";
 
 export interface ResultadoSimulacion {
@@ -82,10 +86,10 @@ export interface ResultadoSimulacion {
   puntosEsperados: number[];
   /** distribución de posición final: pos[equipo][posición] */
   posicion: number[][];
-  /** por puntos finales: [veces, asciende, desciende, campeón] */
-  porPuntos: Record<number, [number, number, number, number]>[];
-  /** por partido restante y resultado (0 gana a, 1 empate, 2 gana b): veces y objetivos */
-  condicional: { n: number; asciende: number[]; desciende: number[]; campeon: number[] }[][];
+  /** por equipo y puntos finales: [veces, y cuántas de esas logró cada META_VISIBLE en ese orden] */
+  porPuntos: Record<number, number[]>[];
+  /** por partido restante y resultado (0 gana a, 1 empate, 2 gana b): veces y, por objetivo, cuántas lo logró cada equipo */
+  condicional: ({ n: number } & Record<MetaVisible, number[]>)[][];
 }
 
 /** 1 = seguro, 0 = imposible, null = depende. Solo con esto la UI muestra "0%", "100%", "seguro" o "no alcanza". */

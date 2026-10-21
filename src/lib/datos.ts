@@ -1,4 +1,4 @@
-import type { Divisional, Partido, Reglamento, ResultadoSimulacion, Seguro } from "./engine/types";
+import type { Divisional, MetaVisible, Partido, Reglamento, ResultadoSimulacion, Seguro } from "./engine/types";
 
 export interface EquipoIndice { id: number; nombre: string; slug: string; escudo: string | null; pos?: number; pts?: number }
 export interface DivisionalIndice {
@@ -36,7 +36,8 @@ export interface DatosDivisional extends Divisional {
   simulacion: ResultadoSimulacion;
   antes: Record<number, [number, number, number]>;
   proximos: Record<number, [number, number, number]>;
-  evolucion: { fecha: number; asciende: number[]; desciende: number[]; campeon: number[] }[];
+  /** chances de los 6 objetivos después de cada fecha (0 = antes de empezar) */
+  evolucion: ({ fecha: number } & Record<MetaVisible, number[]>)[];
 }
 
 /** /s9/c */

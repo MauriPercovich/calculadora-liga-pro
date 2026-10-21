@@ -195,16 +195,19 @@ function calcular(div: Divisional) {
   const proximos = Object.fromEntries(partidosRestantes(div).map((p) => [p.id, probabilidades(modelo, p.a, p.b)]));
 
   // Evolución: cómo estaban las chances después de cada fecha (tabla rearmada con los resultados hasta ahí).
-  const evolucion: { fecha: number; asciende: number[]; desciende: number[]; campeon: number[] }[] = [];
+  // Evolución de los 6 objetivos, redondeada a 0,1 punto para que el archivo no pese de más.
+  const r3 = (xs: number[]) => xs.map((x) => Math.round(x * 1000) / 1000);
+  const fotos = (prob: typeof ahora.prob) => ({ campeon: r3(prob.campeon), asciende: r3(prob.asciende), desciende: r3(prob.desciende), copaOro: r3(prob.copaOro), copaPlata: r3(prob.copaPlata), copaBronce: r3(prob.copaBronce) });
+  const evolucion: ({ fecha: number } & ReturnType<typeof fotos>)[] = [];
   for (let f = 0; f <= ultimaJugada; f++) {
     if (f === ultimaJugada) {
-      evolucion.push({ fecha: f, asciende: ahora.prob.asciende, desciende: ahora.prob.desciende, campeon: ahora.prob.campeon });
+      evolucion.push({ fecha: f, ...fotos(ahora.prob) });
       continue;
     }
     const corte = { ...div, partidos: div.partidos.map((p) => (p.fase === "regular" && p.fecha > f ? { ...p, golesA: null, golesB: null } : p)) };
     corte.tablaOficial = tablaDesde(corte);
     const s = simular(corte, reg, ajustarGoles(jugados.filter((p) => p.fecha <= f), ids), { n: 3000, semilla: 21 + f });
-    evolucion.push({ fecha: f, asciende: s.prob.asciende, desciende: s.prob.desciende, campeon: s.prob.campeon });
+    evolucion.push({ fecha: f, ...fotos(s.prob) });
   }
 
   // Lo más picante: los partidos de la última fecha que más movieron las chances.

@@ -57,7 +57,6 @@ export function metaPrincipal(d: DatosDivisional, i: number): Meta {
 
 /** Valor de la meta después de la fecha anterior (para "▲ era 49% antes de la fecha 7"). */
 export function valorAnterior(d: DatosDivisional, m: Meta, i: number): { p: number; fecha: number } | null {
-  if (m !== "campeon" && m !== "asciende" && m !== "desciende") return null;
   const ev = d.evolucion;
   if (ev.length < 2) return null;
   return { p: ev[ev.length - 2][m][i], fecha: ev[ev.length - 1].fecha };

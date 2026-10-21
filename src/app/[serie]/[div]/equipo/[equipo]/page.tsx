@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Banda } from "@/components/Banda";
-import { VistaEquipo } from "@/components/VistaEquipo";
+import { Suspense } from "react";
+import { Equipo } from "@/components/Equipo/Equipo";
 import { subtituloFecha } from "@/lib/datos";
 import { buscarDivisional, leerIndice } from "@/lib/datos-servidor";
-import { objetivoPrincipal, objetivosDe, OBJETIVOS, pct } from "@/lib/formato";
+import { chance, METAS, metaPrincipal, txtChance } from "@/lib/objetivos";
 
 type Params = { serie: string; div: string; equipo: string };
 
@@ -26,9 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!r) return {};
   const d = r.datos;
   const i = d.equipos.indexOf(r.equipo);
-  const P = d.simulacion.prob as unknown as Record<string, number[]>;
-  const o = objetivoPrincipal(P, i, objetivosDe(d.categoria, d.esPrimera));
-  const titulo = `${r.equipo.nombre}: ${pct(P[o][i])} de chances de ${OBJETIVOS[o].largo}`;
+  const o = metaPrincipal(d, i);
+  const titulo = `${r.equipo.nombre}: ${txtChance(chance(d, o, i))} de chances de ${METAS[o].largo}`;
   return {
     title: titulo,
     description: `Serie ${d.serie} · Divisional ${d.divisional} · ${d.categoria} ${d.anio}. Qué pasa si gana, empata o pierde, y con cuántos puntos le alcanza.`,
@@ -43,9 +43,9 @@ export default async function Pagina({ params }: { params: Promise<Params> }) {
   return (
     <>
       <Banda actual={actual} todas={r.indice.divisionales} sub={subtituloFecha(actual)} />
-      <main className="wrap">
-        <VistaEquipo d={r.datos} equipoId={r.equipo.id} />
-      </main>
+      <Suspense>
+        <Equipo d={r.datos} equipoId={r.equipo.id} />
+      </Suspense>
     </>
   );
 }

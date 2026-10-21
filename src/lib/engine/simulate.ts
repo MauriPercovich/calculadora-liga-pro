@@ -1,5 +1,5 @@
 import { golesEsperados, poisson, rng, type ModeloGoles } from "./model";
-import type { Divisional, Objetivo, Partido, Reglamento, ResultadoSimulacion } from "./types";
+import { METAS_VISIBLES, type Divisional, type MetaVisible, type Objetivo, type Partido, type Reglamento, type ResultadoSimulacion } from "./types";
 
 const OBJETIVOS: Objetivo[] = ["campeon", "asciende", "copaOro", "copaPlata", "copaBronce", "desciende", "zonaOro", "zonaPlata", "zonaBronce", "desempate"];
 
@@ -93,10 +93,10 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
   const cuenta: Record<Objetivo, number[]> = Object.fromEntries(OBJETIVOS.map((o) => [o, new Array(N).fill(0)])) as Record<Objetivo, number[]>;
   const ptsSum = new Array(N).fill(0);
   const posicion = Array.from({ length: N }, () => new Array(N).fill(0));
-  const porPuntos: Record<number, [number, number, number, number]>[] = Array.from({ length: N }, () => ({}));
-  const condicional = restantes.map(() =>
-    [0, 1, 2].map(() => ({ n: 0, asciende: new Array(N).fill(0), desciende: new Array(N).fill(0), campeon: new Array(N).fill(0) })),
-  );
+  // Para "¿qué pasa si…?", "partidos de otros" y "¿con cuántos puntos…?" de los 6 objetivos visibles.
+  const porPuntos: Record<number, number[]>[] = Array.from({ length: N }, () => ({}));
+  const nuevaCond = () => ({ n: 0, ...(Object.fromEntries(METAS_VISIBLES.map((m) => [m, new Array(N).fill(0)])) as Record<MetaVisible, number[]>) });
+  const condicional = restantes.map(() => [nuevaCond(), nuevaCond(), nuevaCond()]);
 
   for (let s = 0; s < op.n; s++) {
     const pts = basePts.slice();
@@ -139,6 +139,9 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
     const sube = orden.slice(0, reg.ascensos);
     const baja = orden.slice(N - reg.descensos);
     let campeon: number;
+    let ganaOro = -1;
+    let ganaPlata = -1;
+    let ganaBronce = -1;
 
     if (div.categoria === "Apertura") {
       // Campeón el 1º; si hay igualdad en puntos por el 1º puesto, final de desempate.
@@ -152,11 +155,11 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
       const oro = orden.slice(0, reg.tamanoCopa);
       const bronce = orden.slice(N - reg.tamanoCopa);
       const plata = orden.slice(reg.tamanoCopa, N - reg.tamanoCopa);
-      const ganaOro = llave4(oro);
+      ganaOro = llave4(oro);
       // El 1º tiene lugar asegurado en la final por la divisional.
       campeon = ganaOro === oro[0] ? oro[0] : unico(ganaOro, oro[0]);
-      const ganaPlata = llave(plata);
-      const ganaBronce = llave4(bronce);
+      ganaPlata = llave(plata);
+      ganaBronce = llave4(bronce);
       cuenta.copaOro[ganaOro]++;
       if (ganaPlata >= 0) cuenta.copaPlata[ganaPlata]++;
       cuenta.copaBronce[ganaBronce]++;
@@ -169,20 +172,23 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
     sube.forEach((t) => cuenta.asciende[t]++);
     baja.forEach((t) => cuenta.desciende[t]++);
 
+    // Por equipo, qué logró en esta simulación (orden de METAS_VISIBLES).
+    const logro = (t: number) => [campeon === t, sube.includes(t), baja.includes(t), ganaOro === t, ganaPlata === t, ganaBronce === t];
     for (let t = 0; t < N; t++) {
       ptsSum[t] += pts[t];
-      const h = (porPuntos[t][pts[t]] ??= [0, 0, 0, 0]);
+      const h = (porPuntos[t][pts[t]] ??= [0, 0, 0, 0, 0, 0, 0]);
       h[0]++;
-      if (sube.includes(t)) h[1]++;
-      if (baja.includes(t)) h[2]++;
-      if (campeon === t) h[3]++;
+      logro(t).forEach((si, k) => si && h[k + 1]++);
     }
     salida.forEach((o, k) => {
       const c = condicional[k][o];
       c.n++;
+      c.campeon[campeon]++;
       sube.forEach((t) => c.asciende[t]++);
       baja.forEach((t) => c.desciende[t]++);
-      c.campeon[campeon]++;
+      if (ganaOro >= 0) c.copaOro[ganaOro]++;
+      if (ganaPlata >= 0) c.copaPlata[ganaPlata]++;
+      if (ganaBronce >= 0) c.copaBronce[ganaBronce]++;
     });
   }
 
