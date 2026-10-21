@@ -37,7 +37,7 @@ npm run dev
 
 Endpoints públicos que usa: `/api/tournaments`, `/api/tournaments/{id}`, `/positions`, `/groupweeks`, `/games?filter[groupweek][0]={fecha}` y `/penalizations`.
 
-La GitHub Action [`actualizar-datos`](.github/workflows/actualizar-datos.yml) corre cada hora, baja solo los campeonatos en curso y sube los datos si cambió algo.
+La GitHub Action [`actualizar-datos`](.github/workflows/actualizar-datos.yml) corre cada 30 minutos, baja solo los campeonatos en curso y sube los datos si cambió algo.
 
 ---
 

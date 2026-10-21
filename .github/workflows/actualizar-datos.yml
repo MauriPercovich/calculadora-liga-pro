@@ -1,12 +1,15 @@
 name: Actualizar datos
 
-# Cada hora de 9:00 a 0:00 (hora de Uruguay, UTC-3): baja los campeonatos en curso
+# Cada 30 minutos de 9:00 a 1:00 (hora de Uruguay, UTC-3): baja los campeonatos en curso
 # de ligapro.uy, recalcula las probabilidades y, si algo cambió, lo sube al repo.
 # Vercel publica solo cada commit nuevo.
+#
+# GitHub demora o saltea corridas programadas cuando tiene carga, sobre todo en los
+# minutos redondos: por eso corre dos veces por hora y en minutos poco usados.
 on:
   schedule:
-    - cron: "5 12-23 * * *"
-    - cron: "5 0-3 * * *"
+    - cron: "17,47 12-23 * * *"
+    - cron: "17,47 0-4 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -21,14 +24,23 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
 
       - run: npm ci
+
+      # El detalle de cada campeonato no cambia: guardarlo entre corridas ahorra
+      # cientos de pedidos (la API permite ~60 por minuto) y acorta la corrida.
+      - name: Recuperar datos ya bajados
+        uses: actions/cache@v4
+        with:
+          path: data/raw/tournaments-detail-cache.json
+          key: ligapro-raw-${{ github.run_id }}
+          restore-keys: ligapro-raw-
 
       - name: Bajar campeonatos en curso
         run: node scripts/import.mjs --desde 2026 --solo-actual
@@ -46,4 +58,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data
           git commit -m "Actualiza datos de Liga Pro"
-          git push
+          # Si mientras corría se subieron otros commits, el push se rechaza:
+          # se integran (los datos solo los toca esta Action) y se reintenta.
+          for intento in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rechazado (intento $intento), integro lo nuevo y reintento…"
+            git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+            sleep $((intento * 5))
+          done
+          echo "No se pudo subir después de 5 intentos."
+          exit 1
