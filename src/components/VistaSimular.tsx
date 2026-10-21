@@ -4,9 +4,9 @@ import type { DatosDivisional } from "@/lib/datos";
 import { rutaEquipo } from "@/lib/datos";
 import { probabilidades, type ModeloGoles } from "@/lib/engine/model";
 import { simular } from "@/lib/engine/simulate";
-import { pct } from "@/lib/formato";
 import { useFavorito } from "@/lib/favorito";
 import { EquipoLink } from "./ui";
+import { chance, METAS, txtChance, type Meta } from "@/lib/objetivos";
 
 /** "Armá tu escenario": fijás resultados y el resto lo sigue simulando el modelo, en el navegador. */
 export function VistaSimular({ d }: { d: DatosDivisional }) {
@@ -35,8 +35,23 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
     }
   }
   const P = res.prob;
-  const principal = d.esPrimera ? P.campeon : P.asciende;
-  const orden = [...ids.keys()].sort((a, b) => principal[b] - principal[a] || P.campeon[b] - P.campeon[a] || P.desciende[a] - P.desciende[b]);
+  // Columnas: en el Clausura importa el 1º y a qué copa va; en el Apertura, campeón, ascenso y descenso.
+  const cols: { m: Meta; titulo: string }[] =
+    d.categoria === "Clausura"
+      ? [{ m: "primero", titulo: "1º" }, { m: "zonaOro", titulo: "Oro" }, { m: "zonaPlata", titulo: "Plata" }, { m: "zonaBronce", titulo: "Bronce" }]
+      : [{ m: "campeon", titulo: "Camp." }, ...(d.esPrimera ? [] : [{ m: "asciende" as Meta, titulo: "Asc." }]), { m: "desciende", titulo: "Desc." }];
+  // Sin escenario valen las certezas exactas; con escenario no se sabe si es seguro: 0 y 1 se muestran como <0,1% / >99,9%.
+  // Con todo fijado la tabla final ya no depende del azar: ahí 0% y 100% sí son seguros.
+  const todo = restantes.every((p) => fijados[p.id] !== undefined);
+  const txt = (m: Meta, i: number) => {
+    if (!eligio) return txtChance(chance(d, m, i));
+    const p = P[m][i];
+    // el campeón del Clausura sale de las copas, que siguen siendo azar
+    return txtChance({ p, seguro: todo && m !== "campeon" && (p === 0 || p === 1) ? (p as 0 | 1) : null });
+  };
+  const pts = (i: number) => d.tablaOficial.find((f) => f.equipoId === ids[i])!.pts + (extra.get(ids[i]) ?? 0);
+  const dg = (i: number) => { const f = d.tablaOficial.find((x) => x.equipoId === ids[i])!; return f.gf - f.gc; };
+  const orden = [...ids.keys()].sort((a, b) => pts(b) - pts(a) || d.simulacion.puntosEsperados[b] - d.simulacion.puntosEsperados[a] || dg(b) - dg(a));
 
   const elegir = (id: number, v: 0 | 1 | 2) =>
     setFijados((f) => {
@@ -92,19 +107,18 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
         <div className="card">
           <div className="card-h"><h2>Así quedaría</h2><span className="hint">{eligio ? "con tu escenario" : "sin cambios"}</span></div>
           <div className="tbl-wrap">
-            <table>
-              <thead><tr><th className="l">Equipo</th><th className="pts">Pts</th><th>Camp.</th>{!d.esPrimera && <th>Asc.</th>}<th>Desc.</th></tr></thead>
+            <table className="sim-tbl">
+              <thead><tr><th className="l">Equipo</th><th className="pts">Pts</th>{cols.map((c) => <th key={c.m}>{c.titulo}</th>)}</tr></thead>
               <tbody>
                 {orden.map((i) => {
                   const id = ids[i];
-                  const base = d.tablaOficial.find((f) => f.equipoId === id)!.pts;
                   return (
                     <tr key={id} className={fav?.torneoId === d.torneoId && fav.equipoId === id ? "fav" : ""}>
                       <td className="l team-cell"><EquipoLink e={eq(id)} href={rutaEquipo(d, eq(id).slug)} /></td>
-                      <td className="pts num">{base + (extra.get(id) ?? 0)}</td>
-                      <td className="num">{pct(P.campeon[i])}</td>
-                      {!d.esPrimera && <td className="num" style={{ color: "var(--c-asc)", fontWeight: 700 }}>{pct(P.asciende[i])}</td>}
-                      <td className="num" style={{ color: "var(--c-desc)", fontWeight: 700 }}>{pct(P.desciende[i])}</td>
+                      <td className="pts num">{pts(i)}</td>
+                      {cols.map((c) => (
+                        <td key={c.m} className="num" style={{ color: METAS[c.m].texto, fontWeight: 700 }}>{txt(c.m, i)}</td>
+                      ))}
                     </tr>
                   );
                 })}

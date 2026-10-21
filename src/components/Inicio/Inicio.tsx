@@ -8,6 +8,7 @@ import { diaCorto, pct } from "@/lib/format";
 import { guardarFavorito, useFavorito, type Favorito } from "@/lib/favorito";
 import { chance, esBueno, implica, largo, METAS, metaPrincipal, metasDe, txtChance, valorAnterior, type Meta } from "@/lib/objetivos";
 import { Escudo } from "../Escudo";
+import { zona } from "../ui";
 import { GoalRow, Marca, MatchBar } from "../Piezas/Piezas";
 import { SelectorDivisional } from "../AppShell/AppShell";
 import css from "./Inicio.module.css";
@@ -264,7 +265,8 @@ function MiniTabla({ d, div, yoId }: { d: DatosDivisional; div: DivisionalIndice
           <tbody>
             {div.equipos.map((e) => {
               const k = ix.get(e.id)!;
-              const clase = e.id === yoId ? css.mio : (e.pos ?? 99) <= 4 ? css.top4 : "";
+              const z = zona((e.pos ?? 99) - 1, div.equipos.length, d.categoria, d.reglamento.ascensos, d.reglamento.descensos);
+              const clase = `${z ? css[z] : ""} ${e.id === yoId ? css.mio : ""}`;
               return (
                 <tr key={e.id} className={clase}>
                   <td>{e.pos}</td>

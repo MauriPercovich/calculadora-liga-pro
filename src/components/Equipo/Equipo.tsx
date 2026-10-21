@@ -8,6 +8,7 @@ import { diaCorto, pct, pp } from "@/lib/format";
 import { guardarFavorito, useFavorito } from "@/lib/favorito";
 import { chance, esBueno, esMalo, implica, largo, METAS, metaPrincipal, metasDe, txtChance, type Meta } from "@/lib/objetivos";
 import { Escudo } from "../Escudo";
+import { zona } from "../ui";
 import { Marca, MatchBar } from "../Piezas/Piezas";
 import css from "./Equipo.module.css";
 
@@ -304,7 +305,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
                 const j = ix.get(f.equipoId)!;
                 const pp_ = tabla.findIndex((t) => t.equipoId === f.equipoId);
                 return (
-                  <tr key={f.equipoId} className={f.equipoId === equipoId ? css.mio : pp_ < 4 ? css.top4 : ""}>
+                  <tr key={f.equipoId} className={`${(() => { const z = zona(pp_, tabla.length, d.categoria, d.reglamento.ascensos, d.reglamento.descensos); return z ? css[z] : ""; })()} ${f.equipoId === equipoId ? css.mio : ""}`}>
                     <td>{pp_ + 1}</td>
                     <td><Link href={rutaEquipo(d, eq(f.equipoId).slug)}>{eq(f.equipoId).nombre}</Link></td>
                     <td>{f.pts}</td>
@@ -332,10 +333,7 @@ function Sanciones({ titulo, lista, vacio }: { titulo: string; lista: DatosDivis
           <div key={s.jugador + s.tipo} className={css.sanc}>
             <div>
               <b>{s.jugador}</b>
-              <small>
-                <span className={css.tarjeta} style={{ background: s.tipo === "Roja" ? "var(--card-red)" : "var(--card-yellow)" }} aria-hidden />
-                {s.tipo} · {s.fechas} {s.fechas === 1 ? "fecha" : "fechas"}
-              </small>
+              <small>Suspendido {s.fechas} {s.fechas === 1 ? "fecha" : "fechas"}</small>
             </div>
             <span className={css.leQueda}>{s.pendientes === 1 ? "Le queda 1" : `Le quedan ${s.pendientes}`}</span>
           </div>

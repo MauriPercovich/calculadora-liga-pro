@@ -21,8 +21,11 @@ function tono(s: string) {
 export function Escudo({ nombre, url, tam = "" }: { nombre: string; url: string | null; tam?: "" | "sm" | "lg" }) {
   const [roto, setRoto] = useState(!url);
   const img = useRef<HTMLImageElement>(null);
-  // Si la imagen falló antes de que React se conectara, onError ya no llega: lo miramos al montar.
+  const montado = useRef(false);
+  // Si la imagen falla antes de que React se conecte, cambiarla en plena hidratación rompe la página:
+  // ese caso se mira recién al montar.
   useEffect(() => {
+    montado.current = true;
     const i = img.current;
     if (i && i.complete && i.naturalWidth === 0) setRoto(true);
   }, []);
@@ -32,7 +35,7 @@ export function Escudo({ nombre, url, tam = "" }: { nombre: string; url: string 
         iniciales(nombre)
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
-        <img ref={img} src={url!} alt="" loading="lazy" onError={() => setRoto(true)} />
+        <img ref={img} src={url!} alt="" loading="lazy" onError={() => montado.current && setRoto(true)} />
       )}
     </span>
   );

@@ -15,13 +15,14 @@ export function VistaSancionados({ d }: { d: DatosDivisional }) {
       {lista.length ? (
         <div className="tbl-wrap">
           <table>
-            <thead><tr><th className="l">Jugador</th><th className="l">Equipo</th><th>Tipo</th><th>Fechas</th><th>Le quedan</th></tr></thead>
+            <thead><tr><th className="l">Jugador</th><th>Duración</th><th>Pendiente</th></tr></thead>
             <tbody>
               {lista.map((s) => (
                 <tr key={s.jugador + s.tipo} className={mio(s.equipoId) ? "fav" : ""}>
-                  <td className="l"><b>{s.jugador}</b></td>
-                  <td className="l team-cell"><EquipoLink e={eq(s.equipoId)} href={rutaEquipo(d, eq(s.equipoId).slug)} /></td>
-                  <td><span className={`pill ${s.tipo === "Roja" ? "red" : "warn"}`}>{s.tipo}</span></td>
+                  <td className="l team-cell sanc-jug">
+                    <b>{s.jugador}</b>
+                    <EquipoLink e={eq(s.equipoId)} href={rutaEquipo(d, eq(s.equipoId).slug)} />
+                  </td>
                   <td className="num">{s.fechas}</td>
                   <td className="num"><b>{s.pendientes}</b></td>
                 </tr>

@@ -12,6 +12,7 @@
   --fg: var(--text);
   --muted: var(--text-2);
   --zone-up: var(--row-top4);
+  --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 22%, var(--card));
   --zone-down: color-mix(in srgb, var(--goal-desc-bar) 14%, var(--card));
   --zone-mid: var(--surface-2);
   --c-camp: var(--goal-camp-text);
@@ -81,6 +82,8 @@ th.l, td.l { text-align: left; }
 td { padding: 9px 6px; text-align: center; border-bottom: 1px solid var(--line); white-space: nowrap; }
 td.pos { width: 28px; font-weight: 700; color: var(--muted); }
 td.pts, th.pts { background: var(--card-2); font-weight: 800; }
+tr.oro td { background: var(--zone-oro); }
+tr.oro td.pts { background: color-mix(in srgb, var(--zone-oro) 70%, var(--line)); }
 tr.up td { background: var(--zone-up); }
 tr.up td.pts { background: color-mix(in srgb, var(--zone-up) 70%, var(--line)); }
 tr.down td { background: var(--zone-down); }
@@ -112,8 +115,19 @@ td.team-cell { max-width: 220px; }
 .tri { display: flex; height: 22px; border-radius: 6px; overflow: hidden; font-size: 11px; font-weight: 700; color: #fff; }
 .tri span { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; white-space: nowrap; }
 .tri .a { background: var(--win); }
-.tri .d { background: var(--draw); }
+.tri .d { background: var(--draw); color: var(--match-draw-text); }
 .tri .b { background: var(--loss); }
+.tri .off { background: var(--track); color: var(--muted); }
+.tri .real { background: var(--win); }
+.tri span + span { box-shadow: inset 1px 0 0 var(--card); }
+details.fecha > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; min-height: 44px; }
+details.fecha > summary::-webkit-details-marker { display: none; }
+details.fecha > summary h2 { font-size: 15px; font-weight: 800; margin: 0; }
+details.fecha > summary .hint { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+details.fecha > summary .hint::after { content: ""; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .2s; }
+details.fecha[open] > summary .hint::after { transform: rotate(-135deg) translateY(-2px); }
+details.fecha > summary:focus-visible { outline: 2px solid var(--focus, #2563eb); outline-offset: -2px; border-radius: 12px; }
+details.fecha > .card-b { padding-top: 0; }
 .m-meta { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
 .pill { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--card-2); color: var(--fg); }
 .pill.warn { background: var(--gold); color: #02224b; }
@@ -204,3 +218,19 @@ td.team-cell { max-width: 220px; }
 .cambiando-tema *::after {
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, fill 0.4s ease, stroke 0.4s ease, box-shadow 0.4s ease !important;
 }
+
+.sanc-jug { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding-block: 10px; }
+.sanc-jug .team { font-size: 13px; color: var(--muted); }
+/* En oscuro el dorado va más tenue para que no quede oliva. */
+:root[data-theme="dark"] { --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 13%, var(--card)); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 13%, var(--card)); } }
+/* Simular: 4 columnas de chances entran en un celular de 360 px. */
+.sim-tbl { table-layout: fixed; font-size: 12.5px; }
+.sim-tbl th, .sim-tbl td { padding-inline: 3px; }
+.sim-tbl th.pts, .sim-tbl td.pts { width: 34px; }
+.sim-tbl th:not(.l):not(.pts), .sim-tbl td:not(.l):not(.pts) { width: 50px; }
+.sim-tbl td.team-cell { overflow: hidden; padding-left: 12px; }
+.sim-tbl th.l { padding-left: 12px; }
+.sim-tbl .crest { width: 22px; height: 22px; flex: none; }
+.sim-tbl .team { gap: 6px; }
+@media (min-width: 768px) { .sim-tbl { font-size: 13px; } .sim-tbl th:not(.l):not(.pts), .sim-tbl td:not(.l):not(.pts) { width: 64px; } }

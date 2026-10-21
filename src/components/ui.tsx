@@ -14,13 +14,20 @@ export function EquipoLink({ e, href, tam = "sm" }: { e: EquipoIndice; href: str
 }
 
 /** Barra de tres tramos: gana el primero, empate, gana el segundo. */
-export function Tri({ p }: { p: [number, number, number] }) {
+/** Barra gana · empate · gana el otro. Con `real`, es un partido jugado: solo lo que pasó va en color. */
+export function Tri({ p, real }: { p: [number, number, number]; real?: 0 | 1 | 2 }) {
   const lab = (x: number) => (x >= 0.12 ? pct(x) : "");
+  const cls = (k: 0 | 1 | 2, base: string) => (real === undefined ? base : real === k ? "real" : "off");
+  const que = ["ganó el primero", "empataron", "ganó el segundo"];
   return (
-    <div className="tri" role="img" aria-label={`Gana el primero ${pct(p[0])}, empate ${pct(p[1])}, gana el segundo ${pct(p[2])}`}>
-      <span className="a" style={{ width: `${p[0] * 100}%` }}>{lab(p[0])}</span>
-      <span className="d" style={{ width: `${p[1] * 100}%` }}>{lab(p[1])}</span>
-      <span className="b" style={{ width: `${p[2] * 100}%` }}>{lab(p[2])}</span>
+    <div
+      className="tri"
+      role="img"
+      aria-label={`${real === undefined ? "" : "Antes del partido: "}gana el primero ${pct(p[0])}, empate ${pct(p[1])}, gana el segundo ${pct(p[2])}${real === undefined ? "" : `; ${que[real]}`}`}
+    >
+      <span className={cls(0, "a")} style={{ width: `${p[0] * 100}%` }}>{lab(p[0])}</span>
+      <span className={cls(1, "d")} style={{ width: `${p[1] * 100}%` }}>{lab(p[1])}</span>
+      <span className={cls(2, "b")} style={{ width: `${p[2] * 100}%` }}>{lab(p[2])}</span>
     </div>
   );
 }
@@ -54,8 +61,9 @@ export const ordenarTabla = (t: FilaTabla[]) => [...t].sort((x, y) => y.pts - x.
 
 /** Zona de color de la fila: arriba = Copa de Oro (Clausura) o ascenso (Apertura); abajo = descenso. */
 export function zona(pos: number, n: number, categoria: string, ascensos: number, descensos: number) {
-  const arriba = categoria === "Clausura" ? 4 : ascensos;
-  if (pos < arriba) return "up";
+  // Clausura: los 4 de arriba van a la Copa de Oro. Apertura: el 1º es campeón (dorado) y 2º–4º ascienden (celeste).
+  if (categoria === "Clausura" ? pos < 4 : pos === 0) return "oro";
+  if (pos < ascensos) return "up";
   if (pos >= n - descensos) return "down";
   return "";
 }

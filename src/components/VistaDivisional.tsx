@@ -2,9 +2,10 @@
 import { useState } from "react";
 import type { DatosDivisional } from "@/lib/datos";
 import { rutaEquipo } from "@/lib/datos";
-import { decimal, diaCorto, objetivosDe, OBJETIVOS, pct, type ObjetivoVisible } from "@/lib/formato";
+import { decimal, objetivosDe, OBJETIVOS, pct, type ObjetivoVisible } from "@/lib/formato";
 import { useFavorito } from "@/lib/favorito";
-import { EquipoLink, ordenarTabla, Tri, zona } from "./ui";
+import { EquipoLink, ordenarTabla, zona } from "./ui";
+import { VistaPartidos } from "./VistaPartidos";
 
 export function VistaDivisional({ d }: { d: DatosDivisional }) {
   const fav = useFavorito();
@@ -22,10 +23,6 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
   const tabla = ordenarTabla(d.tablaOficial);
   const proy = [...Array(N).keys()].sort((a, b) => d.simulacion.puntosEsperados[b] - d.simulacion.puntosEsperados[a]);
   const ptsHoy = new Map(d.tablaOficial.map((f) => [f.equipoId, f.pts]));
-  const regulares = d.partidos.filter((p) => p.fase === "regular");
-  const restantes = regulares.filter((p) => p.golesA === null);
-  const fechasRest = [...new Set(restantes.map((p) => p.fecha))].sort((a, b) => a - b);
-  const fechasJug = [...new Set(regulares.filter((p) => p.golesA !== null).map((p) => p.fecha))].sort((a, b) => b - a);
   const clausura = d.categoria === "Clausura";
 
   return (
@@ -93,12 +90,13 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
         <div className="legend">
           {clausura ? (
             <>
-              <span><i style={{ background: "var(--zone-up)" }} />Copa de Oro{d.esPrimera ? "" : " · asciende"}</span>
+              <span><i style={{ background: "var(--zone-oro)" }} />Copa de Oro{d.esPrimera ? "" : " · asciende"}</span>
               <span><i style={{ background: "var(--zone-mid)", border: "1px solid var(--line)" }} />Copa de Plata</span>
               <span><i style={{ background: "var(--zone-down)" }} />Copa de Bronce · desciende</span>
             </>
           ) : (
             <>
+              <span><i style={{ background: "var(--zone-oro)" }} />{d.esPrimera ? "Campeón" : "Campeón · asciende"}</span>
               {!d.esPrimera && <span><i style={{ background: "var(--zone-up)" }} />Asciende</span>}
               <span><i style={{ background: "var(--zone-down)" }} />Desciende</span>
             </>
@@ -138,20 +136,6 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
         </div>
       </div>
 
-      {fechasRest.map((f) => (
-        <div className="card" key={`r${f}`}>
-          <div className="card-h"><h2>Fecha {f}</h2><span className="hint">{diaCorto(restantes.find((p) => p.fecha === f)?.dia ?? null)}</span></div>
-          <div className="card-b">
-            {restantes.filter((p) => p.fecha === f).map((p) => (
-              <div className="match" key={p.id}>
-                <div className="m-top"><EquipoLink e={eq(p.a)} href={href(p.a)} /><span className="vs">{p.hora ?? "vs"}</span><EquipoLink e={eq(p.b)} href={href(p.b)} /></div>
-                <Tri p={d.proximos[p.id]} />
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-
       {clausura && (
         <div className="card">
           <div className="card-h"><h2>Cómo sigue el Clausura</h2></div>
@@ -163,29 +147,8 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
         </div>
       )}
 
-      <h2 className="section-title">Resultados</h2>
-      {fechasJug.map((f) => (
-        <div className="card" key={`j${f}`}>
-          <div className="card-h"><h2>Fecha {f}</h2><span className="hint">{diaCorto(regulares.find((p) => p.fecha === f)?.dia ?? null)}</span></div>
-          <div className="card-b">
-            {regulares.filter((p) => p.fecha === f && p.golesA !== null).map((p) => {
-              const pre = d.antes[p.id];
-              const sal = p.golesA! > p.golesB! ? 0 : p.golesA === p.golesB ? 1 : 2;
-              return (
-                <div className="match" key={p.id}>
-                  <div className="m-top"><EquipoLink e={eq(p.a)} href={href(p.a)} /><span className="score">{p.golesA} - {p.golesB}</span><EquipoLink e={eq(p.b)} href={href(p.b)} /></div>
-                  {pre && (
-                    <div className="m-meta">
-                      <span>Antes del partido: {pct(pre[0])} · E {pct(pre[1])} · {pct(pre[2])}</span>
-                      {pre[sal] < 0.25 && <span className="pill warn">Sorpresa</span>}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ))}
+      <h2 className="section-title">Partidos</h2>
+      <VistaPartidos d={d} />
     </div>
   );
 }
