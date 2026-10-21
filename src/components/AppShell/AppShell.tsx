@@ -42,18 +42,39 @@ function useNavegacion(todas: DivisionalIndice[]) {
   };
 }
 
-export function TopBar({ todas }: { todas: DivisionalIndice[] }) {
+/** Botón de 44 px "SERIE 9 / DIVISIONAL C / CLAUSURA 2026" con un <select> nativo encima. Cambiar mantiene la sección. */
+export function SelectorDivisional({ todas, className }: { todas: DivisionalIndice[]; className?: string }) {
   const router = useRouter();
-  const [tema, alternar] = useTema();
-  const { ruta, actual, activa, links } = useNavegacion(todas);
-
-  // Cambiar de divisional mantiene la sección (tabla, partidos, simular o sancionados).
+  const ruta = usePathname();
+  const actual = useDivisionalActual(todas);
   const cambiar = (id: number) => {
     const d = todas.find((x) => x.torneoId === id);
     if (!d) return;
     const seccion = ruta.match(/\/(partidos|simular|sancionados)$/)?.[1] as "partidos" | "simular" | "sancionados" | undefined;
     router.push(seccion ? rutaSeccion(d, seccion) : rutaDivisional(d));
   };
+  return (
+    <div className={`${css.selector} ${className ?? ""}`}>
+      <select className={css.selNative} aria-label="Elegí serie y divisional" value={actual?.torneoId ?? ""} onChange={(e) => cambiar(Number(e.target.value))}>
+        {!actual && <option value="">Elegí serie y divisional</option>}
+        {todas.map((d) => (
+          <option key={d.torneoId} value={d.torneoId}>
+            Serie {d.serie} · Divisional {d.divisional}
+          </option>
+        ))}
+      </select>
+      <div className={css.selBtn} aria-hidden>
+        <span className={css.trofeo}><IcoTrofeo /></span>
+        <span className={css.selTxt}>{actual ? nombreDivisional(actual) : "Elegí serie y divisional"}</span>
+        <IcoFlecha />
+      </div>
+    </div>
+  );
+}
+
+export function TopBar({ todas }: { todas: DivisionalIndice[] }) {
+  const [tema, alternar] = useTema();
+  const { ruta, activa, links } = useNavegacion(todas);
 
   const items: [Exclude<Clave, null>, string][] = [
     ["inicio", "Inicio"],
@@ -84,19 +105,7 @@ export function TopBar({ todas }: { todas: DivisionalIndice[] }) {
         </div>
         {ruta !== "/elegir" && (
           <div className={css.selWrap}>
-            <select className={css.selNative} aria-label="Elegí serie y divisional" value={actual?.torneoId ?? ""} onChange={(e) => cambiar(Number(e.target.value))}>
-              {!actual && <option value="">Elegí serie y divisional</option>}
-              {todas.map((d) => (
-                <option key={d.torneoId} value={d.torneoId}>
-                  Serie {d.serie} · Divisional {d.divisional}
-                </option>
-              ))}
-            </select>
-            <div className={css.selBtn} aria-hidden>
-              <span className={css.trofeo}><IcoTrofeo /></span>
-              <span className={css.selTxt}>{actual ? nombreDivisional(actual) : "Elegí serie y divisional"}</span>
-              <IcoFlecha />
-            </div>
+            <SelectorDivisional todas={todas} />
           </div>
         )}
       </div>

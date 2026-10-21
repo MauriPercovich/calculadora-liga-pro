@@ -35,7 +35,8 @@
 .moon:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
 
 /* Selector de divisional: botón de 44 px con un <select> nativo encima (accesible y sin JS extra). */
-.selWrap { position: relative; padding-bottom: var(--s-3); }
+.selWrap { padding-bottom: var(--s-3); }
+.selector { position: relative; }
 .selBtn {
   height: var(--tap);
   display: flex;
@@ -51,7 +52,7 @@
 .selTxt { flex: 1; min-width: 0; font-size: 12px; font-weight: 800; letter-spacing: 0.4px; text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .selNative {
   position: absolute;
-  inset: 0 0 var(--s-3) 0;
+  inset: 0;
   width: 100%;
   opacity: 0;
   cursor: pointer;

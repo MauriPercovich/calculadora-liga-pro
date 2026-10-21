@@ -219,6 +219,8 @@ function calcular(div: Divisional) {
         .flatMap((eqId) => objetivos.map((o) => ({ equipoId: eqId, objetivo: o, de: antesEv[o][ixDe.get(eqId)!], a: ahoraEv[o][ixDe.get(eqId)!] })))
         .filter((c) => Math.abs(c.a - c.de) >= 0.01)
         .sort((x, y) => Math.abs(y.a - y.de) - Math.abs(x.a - x.de))
+        // un movimiento por equipo: el más grande de cada uno
+        .filter((c, k, arr) => arr.findIndex((z) => z.equipoId === c.equipoId) === k)
         .slice(0, 2);
       if (cambios.length) picantes.push({ partido: p, antes: antes[p.id] ?? null, cambios, max: Math.abs(cambios[0].a - cambios[0].de) });
     }
@@ -310,7 +312,7 @@ async function main() {
       esPrimera: div.esPrimera,
       jugados: div.partidos.filter((p) => p.fase === "regular" && p.golesA !== null).length,
       restantes: div.partidos.filter((p) => p.fase === "regular" && p.golesA === null).length,
-      picantes: calc.picantes.slice(0, 3),
+      picantes: calc.picantes.slice(0, 4),
       // en el orden de la tabla oficial: pos = puesto de hoy
       equipos: [...div.tablaOficial]
         .sort((x, y) => y.pts - x.pts || y.gf - y.gc - (x.gf - x.gc) || y.gf - x.gf)
