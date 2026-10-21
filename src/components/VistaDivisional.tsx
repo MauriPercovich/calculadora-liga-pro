@@ -30,33 +30,6 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
 
   return (
     <div className="stack">
-      <div className="card">
-        <div className="card-h">
-          <h2>Chances de cada equipo</h2>
-          <span className="hint num">{d.simulacion.n.toLocaleString("es-UY")} simulaciones</span>
-        </div>
-        <div className="tabs" role="tablist">
-          {posibles.map((o) => (
-            <button key={o} role="tab" aria-selected={o === obj} className={o === obj ? "on" : ""} onClick={() => setObj(o)}>
-              {OBJETIVOS[o].corto}
-            </button>
-          ))}
-        </div>
-        <div className="card-b rank">
-          {orden.map((i) => (
-            <div className="rank-row" key={d.equipos[i].id}>
-              <EquipoLink e={d.equipos[i]} href={href(d.equipos[i].id)} />
-              <div className="bar">
-                <span style={{ width: `${(P[obj][i] / max) * 100}%`, background: OBJETIVOS[obj].color }} />
-              </div>
-              <div className="pct" style={{ color: OBJETIVOS[obj].color }}>
-                {pct(P[obj][i])}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="card" id="tabla">
         <div className="card-h">
           <h2>Así está la tabla</h2>
@@ -136,6 +109,33 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
             ? "Tabla oficial de la Liga. Desempate: diferencia de gol, goles a favor, enfrentamiento directo y sorteo."
             : "Puntos finales esperados: el promedio de todas las simulaciones. Es lo más probable, no lo seguro."}
         </p>
+      </div>
+
+      <div className="card">
+        <div className="card-h">
+          <h2>Chances de cada equipo</h2>
+          <span className="hint num">{d.simulacion.n.toLocaleString("es-UY")} simulaciones</span>
+        </div>
+        <div className="tabs" role="tablist">
+          {posibles.map((o) => (
+            <button key={o} role="tab" aria-selected={o === obj} className={o === obj ? "on" : ""} onClick={() => setObj(o)}>
+              {OBJETIVOS[o].corto}
+            </button>
+          ))}
+        </div>
+        <div className="card-b rank">
+          {orden.map((i) => (
+            <div className="rank-row" key={d.equipos[i].id}>
+              <EquipoLink e={d.equipos[i]} href={href(d.equipos[i].id)} />
+              <div className="bar">
+                <span style={{ width: `${(P[obj][i] / max) * 100}%`, background: OBJETIVOS[obj].color }} />
+              </div>
+              <div className="pct" style={{ color: OBJETIVOS[obj].color }}>
+                {pct(P[obj][i])}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {fechasRest.map((f) => (
