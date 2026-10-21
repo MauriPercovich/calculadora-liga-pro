@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Banda } from "@/components/Banda";
-import { Suspense } from "react";
 import { Equipo } from "@/components/Equipo/Equipo";
 import { subtituloFecha } from "@/lib/datos";
 import { buscarDivisional, leerIndice } from "@/lib/datos-servidor";
@@ -43,9 +42,7 @@ export default async function Pagina({ params }: { params: Promise<Params> }) {
   return (
     <>
       <Banda actual={actual} todas={r.indice.divisionales} sub={subtituloFecha(actual)} />
-      <Suspense>
-        <Equipo d={r.datos} equipoId={r.equipo.id} />
-      </Suspense>
+      <Equipo d={r.datos} equipoId={r.equipo.id} />
     </>
   );
 }

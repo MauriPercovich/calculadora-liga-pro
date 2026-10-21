@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import type { DatosDivisional } from "@/lib/datos";
 import { rutaDivisional, rutaEquipo, rutaSeccion } from "@/lib/datos";
 import { METAS_VISIBLES } from "@/lib/engine/types";
@@ -36,16 +35,16 @@ const PREGUNTA: Record<Meta, string> = {
 
 export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }) {
   const fav = useFavorito();
-  const params = useSearchParams();
   const i = d.equipos.findIndex((e) => e.id === equipoId);
   const yo = d.equipos[i];
   const metas = metasDe(d);
-  const pedido = params.get("objetivo") as Meta | null;
-  const [m, setM] = useState<Meta>(() => (pedido && metas.includes(pedido) ? pedido : metaPrincipal(d, i)));
+  const [m, setM] = useState<Meta>(() => metaPrincipal(d, i));
+  // ?objetivo=asciende en el link: se lee después de cargar para que la página siga siendo estática
   useEffect(() => {
+    const pedido = new URLSearchParams(location.search).get("objetivo") as Meta | null;
     if (pedido && metas.includes(pedido)) setM(pedido);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pedido]);
+  }, []);
   const [aviso, setAviso] = useState<string | null>(null);
 
   const esMio = fav?.torneoId === d.torneoId && fav.equipoId === equipoId;
@@ -119,8 +118,9 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
 
   const sanc = (id: number) => d.sanciones.filter((s) => s.equipoId === id && s.pendientes > 0);
   const cerca = tabla.slice(Math.max(0, Math.min(pos - 2, tabla.length - 5)), Math.max(0, Math.min(pos - 2, tabla.length - 5)) + 5);
-  const hoy = new Date();
-  const fechaHoy = `${String(hoy.getDate()).padStart(2, "0")}/${String(hoy.getMonth() + 1).padStart(2, "0")}/${hoy.getFullYear()}`;
+  // fecha del último partido jugado de la fase regular (no el reloj de quien mira)
+  const ultimoDia = d.partidos.filter((p) => p.fase === "regular" && p.golesA !== null && p.dia).map((p) => p.dia!).sort().at(-1);
+  const fechaHoy = ultimoDia ? ultimoDia.split("-").reverse().join("/") : "";
 
   return (
     <main className={css.cuerpo}>
