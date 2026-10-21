@@ -169,7 +169,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
                 const cc = chance(d, mm, i);
                 return (
                   <button key={mm} type="button" className={css.tile} aria-pressed={mm === m} onClick={() => setM(mm)}>
-                    <span className={css.tileK}><Marca m={mm} />{METAS[mm].tile}</span>
+                    <span className={css.tileK}><Marca m={mm} color={METAS[mm].enHero} tam={18} />{METAS[mm].tile}</span>
                     {implica(d, mm) && <span className={css.tileX}>y {implica(d, mm)}</span>}
                     <span className={`${css.tileV} ${cc.aDefinir ? css.aDef : ""}`} style={cc.aDefinir ? undefined : { color: METAS[mm].enHero }}>
                       {txtChance(cc)}

@@ -1,29 +1,60 @@
 import Link from "next/link";
+import type React from "react";
 import { pct } from "@/lib/format";
 import { METAS, type Meta } from "@/lib/objetivos";
 import css from "./Piezas.module.css";
 
-/** Marca de 16 px por objetivo (decorativa: siempre va con texto). */
-export function Marca({ m }: { m: Meta }) {
-  const o = METAS[m];
-  if (o.marca === "trofeo")
-    return (
-      <svg className={css.marca} viewBox="0 0 16 16" aria-hidden>
-        <rect width="16" height="16" rx="4" fill={o.barra} />
-        <path d="M5 4h6v2.2a3 3 0 0 1-6 0zM8 9.2v2M6 12.2h4" stroke="#fff" strokeWidth="1.4" fill="none" strokeLinecap="round" />
-      </svg>
-    );
-  if (o.marca === "sube" || o.marca === "baja")
-    return (
-      <svg className={css.marca} viewBox="0 0 16 16" aria-hidden>
-        <path d={o.marca === "sube" ? "M8 2.5 14.5 13.5h-13z" : "M8 13.5 1.5 2.5h13z"} fill={o.barra} />
-      </svg>
-    );
-  return (
-    <span className={`${css.marca} ${o.marca === "cuadro" ? css.cuadro : css.circulo} ${m === "zonaOro" ? css.oro : ""}`} style={{ background: o.barra }} aria-hidden>
-      {o.letra}
-    </span>
+/**
+ * Ícono de cada objetivo (decorativo: siempre va con texto). Trofeo = campeón, podio = 1º puesto,
+ * medalla del metal de la copa = Copa de Oro / Plata / Bronce, flecha = asciende / desciende.
+ * `color` lo pisa cuando va sobre fondo oscuro (la ficha).
+ */
+export function Marca({ m, color, tam = 16 }: { m: Meta; color?: string; tam?: number }) {
+  const c = color ?? METAS[m].barra;
+  const svg = (hijos: React.ReactNode) => (
+    <svg className={css.marca} width={tam} height={tam} viewBox="0 0 24 24" aria-hidden style={{ color: c }}>
+      {hijos}
+    </svg>
   );
+  switch (METAS[m].marca) {
+    case "trofeo":
+      return svg(
+        <>
+          <path d="M7 5H4.6a.6.6 0 0 0-.6.6V7a3.5 3.5 0 0 0 3.6 3.5M17 5h2.4a.6.6 0 0 1 .6.6V7a3.5 3.5 0 0 1-3.6 3.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M6.5 2.5h11V8a5.5 5.5 0 0 1-11 0z" fill="currentColor" />
+          <path d="m12 4.6.8 1.6 1.7.2-1.3 1.2.4 1.7L12 8.4l-1.6.9.4-1.7-1.3-1.2 1.7-.2z" fill="#fff" fillOpacity=".9" />
+          <path d="M10.8 13.2h2.4l.5 3.8h-3.4z" fill="currentColor" />
+          <rect x="7" y="17" width="10" height="4.5" rx="1.2" fill="currentColor" />
+        </>,
+      );
+    case "cuadro": // 1º puesto: podio con estrella sobre el escalón más alto
+      return svg(
+        <>
+          <path d="m12 1.8 1.1 2.2 2.4.3-1.8 1.7.5 2.4L12 7.2l-2.2 1.2.5-2.4-1.8-1.7 2.4-.3z" fill="currentColor" />
+          <rect x="8.5" y="10" width="7" height="12" rx="1.2" fill="currentColor" />
+          <rect x="1.5" y="14" width="6.2" height="8" rx="1.2" fill="currentColor" fillOpacity=".55" />
+          <rect x="16.3" y="16.5" width="6.2" height="5.5" rx="1.2" fill="currentColor" fillOpacity=".55" />
+          <path d="M11.2 13.4 12.6 12.4v6.4" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </>,
+      );
+    case "sube":
+    case "baja":
+      return svg(
+        <>
+          <circle cx="12" cy="12" r="10.5" fill="currentColor" />
+          <path d={METAS[m].marca === "sube" ? "M12 17.5v-11M7 11.5l5-5 5 5" : "M12 6.5v11M7 12.5l5 5 5-5"} fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+        </>,
+      );
+    default: // copas: medalla con cinta, del color del metal
+      return svg(
+        <>
+          <path d="M6.5 1.5h4.2l2.4 7H8.9z" fill="currentColor" fillOpacity=".6" />
+          <path d="M17.5 1.5h-4.2l-2.4 7h4.2z" fill="currentColor" fillOpacity=".8" />
+          <circle cx="12" cy="15.2" r="7.3" fill="currentColor" />
+          <circle cx="12" cy="15.2" r="4.6" fill="none" stroke="#fff" strokeOpacity=".75" strokeWidth="1.4" />
+        </>,
+      );
+  }
 }
 
 /** Barra gana · empate · gana el otro, proporcional. Nunca en rojo: el rojo es de Desciende. */
