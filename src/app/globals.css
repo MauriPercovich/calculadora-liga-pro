@@ -225,3 +225,23 @@ details.fecha > .card-b { padding-top: 0; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --zone-oro: color-mix(in srgb, var(--goal-oro-bar) 13%, var(--card)); } }
 /* Simular: el nombre completo entra (hasta dos líneas). */
 .sim-eq .team .nm { white-space: normal; overflow: visible; }
+
+/* Simular: la tabla queda siempre a la vista mientras elegís resultados. */
+.sim-lado { position: sticky; top: calc(var(--top-alto, 108px) + 8px); z-index: 5; }
+.sim-lado .tbl-wrap { max-height: 34vh; overflow-y: auto; }
+.grid > .sim-lado td.team-cell .nm { max-width: none; white-space: normal; }
+@media (max-width: 900px) {
+  .grid:has(> .sim-lado) { display: flex; flex-direction: column-reverse; align-items: stretch; }
+  .sim-lado { box-shadow: 0 6px 16px rgba(2, 34, 75, 0.12); border-radius: var(--r); }
+  .sim-lado .card > .fine, .sim-lado .legend { display: none; }
+}
+@media (min-width: 901px) {
+  .sim-lado { top: calc(var(--top-alto, 64px) + 16px); }
+  .sim-lado .tbl-wrap { max-height: calc(100vh - var(--top-alto, 64px) - 210px); }
+}
+
+/* Monitores grandes (2K, 4K): todo se agranda en proporción en vez de quedar chiquito en el medio. */
+@media (min-width: 1700px) { html { zoom: 1.15; } }
+@media (min-width: 2000px) { html { zoom: 1.3; } }
+@media (min-width: 2400px) { html { zoom: 1.5; } }
+@media (min-width: 3200px) { html { zoom: 2; } }

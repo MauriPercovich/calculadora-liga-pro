@@ -33,8 +33,10 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
   }
   const pts = (i: number) => d.tablaOficial.find((f) => f.equipoId === ids[i])!.pts + (extra.get(ids[i]) ?? 0);
   const dg = (i: number) => { const f = d.tablaOficial.find((x) => x.equipoId === ids[i])!; return f.gf - f.gc; };
-  // Posiciones finales con lo elegido: puntos, después diferencia de gol (la que hay hoy) y, si siguen iguales, lo que espera el modelo.
-  const orden = [...ids.keys()].sort((a, b) => pts(b) - pts(a) || dg(b) - dg(a) || d.simulacion.puntosEsperados[b] - d.simulacion.puntosEsperados[a]);
+  // Posiciones finales con lo elegido: puntos, después diferencia de gol (la que hay hoy).
+  const pos0 = (i: number) => d.tablaOficial.findIndex((x) => x.equipoId === ids[i]);
+  // a igual puntos y diferencia de gol, manda el orden de la tabla oficial (goles a favor, cruce directo…)
+  const orden = [...ids.keys()].sort((a, b) => pts(b) - pts(a) || dg(b) - dg(a) || pos0(a) - pos0(b));
   const N = ids.length;
   const clausura = d.categoria === "Clausura";
 
@@ -88,7 +90,7 @@ export function VistaSimular({ d }: { d: DatosDivisional }) {
           </div>
         </div>
       </div>
-      <div className="stack">
+      <div className="stack sim-lado">
         <div className="card">
           <div className="card-h"><h2>Así quedaría</h2><span className="hint">{eligio ? "con tu escenario" : "sin cambios"}</span></div>
           <div className="tbl-wrap">
