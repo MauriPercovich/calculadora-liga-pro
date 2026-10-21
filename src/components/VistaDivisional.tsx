@@ -5,7 +5,6 @@ import { rutaEquipo } from "@/lib/datos";
 import { decimal, objetivosDe, OBJETIVOS, pct, type ObjetivoVisible } from "@/lib/formato";
 import { useFavorito } from "@/lib/favorito";
 import { EquipoLink, ordenarTabla, zona } from "./ui";
-import { VistaPartidos } from "./VistaPartidos";
 
 export function VistaDivisional({ d }: { d: DatosDivisional }) {
   const fav = useFavorito();
@@ -147,8 +146,6 @@ export function VistaDivisional({ d }: { d: DatosDivisional }) {
         </div>
       )}
 
-      <h2 className="section-title">Partidos</h2>
-      <VistaPartidos d={d} />
     </div>
   );
 }
