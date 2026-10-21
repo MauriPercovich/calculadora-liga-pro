@@ -192,3 +192,5 @@ td.team-cell { max-width: 220px; }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(var(--nav-h) + 12px + env(safe-area-inset-bottom, 0px)); background: var(--navy); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 13px; z-index: 40; }
 .foot { padding-block: 24px; font-size: 12px; color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .bar span, .hist .col { transition: width 0.4s ease, height 0.4s ease; } }
+
+[hidden] { display: none !important; }

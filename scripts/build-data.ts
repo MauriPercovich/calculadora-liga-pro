@@ -311,7 +311,13 @@ async function main() {
       jugados: div.partidos.filter((p) => p.fase === "regular" && p.golesA !== null).length,
       restantes: div.partidos.filter((p) => p.fase === "regular" && p.golesA === null).length,
       picantes: calc.picantes.slice(0, 3),
-      equipos: div.equipos.map((e) => ({ id: e.id, nombre: e.nombre, slug: e.slug, escudo: e.escudo })),
+      // en el orden de la tabla oficial: pos = puesto de hoy
+      equipos: [...div.tablaOficial]
+        .sort((x, y) => y.pts - x.pts || y.gf - y.gc - (x.gf - x.gc) || y.gf - x.gf)
+        .map((f, k) => {
+          const e = div.equipos.find((q) => q.id === f.equipoId)!;
+          return { id: e.id, nombre: e.nombre, slug: e.slug, escudo: e.escudo, pos: k + 1, pts: f.pts };
+        }),
     });
     console.log(`Serie ${div.serie} · Div ${div.divisional}: ${div.equipos.length} equipos, fecha ${calc.ultimaJugada}/${calc.totalFechas} (${Date.now() - t0} ms)`);
   }

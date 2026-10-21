@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T00:02:04.745Z",
+ "actualizado": "2026-10-21T00:21:18.873Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -88,79 +88,105 @@
      "id": 661,
      "nombre": "CN La Coa",
      "slug": "cn-la-coa",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f24eb33360e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f24eb33360e.png",
+     "pos": 1,
+     "pts": 27
     },
     {
      "id": 759,
      "nombre": "La 97",
      "slug": "la-97",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642468f708d48.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642468f708d48.png",
+     "pos": 2,
+     "pts": 19
     },
     {
      "id": 756,
      "nombre": "CSY Hamburguesero",
      "slug": "csy-hamburguesero",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68150ca499ab5.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68150ca499ab5.png",
+     "pos": 3,
+     "pts": 19
     },
     {
      "id": 996,
      "nombre": "F.C. Barril",
      "slug": "fc-barril",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2500cf34d9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2500cf34d9.png",
+     "pos": 4,
+     "pts": 18
     },
     {
      "id": 456,
      "nombre": "La Bea Suelta",
      "slug": "la-bea-suelta",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9f28464cc1f0c2ed31ff464ce0839ea4.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9f28464cc1f0c2ed31ff464ce0839ea4.png",
+     "pos": 5,
+     "pts": 17
     },
     {
      "id": 831,
      "nombre": "CA Perez Castellanos",
      "slug": "ca-perez-castellanos",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f256fb69fc1.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f256fb69fc1.png",
+     "pos": 6,
+     "pts": 16
     },
     {
      "id": 1269,
      "nombre": "BlackJack",
      "slug": "blackjack",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b2a96f1875921e4f5d9eab7987458e69.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b2a96f1875921e4f5d9eab7987458e69.jpg",
+     "pos": 7,
+     "pts": 15
     },
     {
      "id": 1027,
      "nombre": "Frozono",
      "slug": "frozono",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fe412d4d440.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fe412d4d440.png",
+     "pos": 8,
+     "pts": 13
     },
     {
      "id": 889,
      "nombre": "Atala F.C",
      "slug": "atala-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f25dbca2d41.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f25dbca2d41.png",
+     "pos": 9,
+     "pts": 11
     },
     {
      "id": 936,
      "nombre": "Deportivo Makelele",
      "slug": "deportivo-makelele",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f3881bf0658.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f3881bf0658.png",
+     "pos": 10,
+     "pts": 10
     },
     {
      "id": 953,
      "nombre": "Intratables Futbol Club",
      "slug": "intratables-futbol-club",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66c4d58559a5f.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66c4d58559a5f.png",
+     "pos": 11,
+     "pts": 7
     },
     {
      "id": 1063,
      "nombre": "Castillo F.C",
      "slug": "castillo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcfcffa10a9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcfcffa10a9.png",
+     "pos": 12,
+     "pts": 5
     },
     {
      "id": 1026,
      "nombre": "La Junta FC",
      "slug": "la-junta-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcfc1b859f1.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcfc1b859f1.png",
+     "pos": 13,
+     "pts": 3
     }
    ]
   },
@@ -284,85 +310,113 @@
      "id": 1042,
      "nombre": "Tenka FC",
      "slug": "tenka-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810e322e5e00.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810e322e5e00.png",
+     "pos": 1,
+     "pts": 26
     },
     {
      "id": 1060,
      "nombre": "La Covacha",
      "slug": "la-covacha",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68471753e7962.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68471753e7962.png",
+     "pos": 2,
+     "pts": 24
     },
     {
      "id": 955,
      "nombre": "La Coloña FC.",
      "slug": "la-colona-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f3890591b41.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f3890591b41.png",
+     "pos": 3,
+     "pts": 23
     },
     {
      "id": 1118,
      "nombre": "Guineas F.C",
      "slug": "guineas-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68a89cfbab96c.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68a89cfbab96c.jpeg",
+     "pos": 4,
+     "pts": 22
     },
     {
      "id": 891,
      "nombre": "Azzurra",
      "slug": "azzurra",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f386ac59be8.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f386ac59be8.png",
+     "pos": 5,
+     "pts": 19
     },
     {
      "id": 88,
      "nombre": "Sportivo Postiglione",
      "slug": "sportivo-postiglione",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2552e7841c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2552e7841c.png",
+     "pos": 6,
+     "pts": 17
     },
     {
      "id": 548,
      "nombre": "Alpargatas FC",
      "slug": "alpargatas-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/625d9f34366f2.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/625d9f34366f2.png",
+     "pos": 7,
+     "pts": 15
     },
     {
      "id": 952,
      "nombre": "El Noso",
      "slug": "el-noso",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f38aec37d33.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f38aec37d33.png",
+     "pos": 8,
+     "pts": 15
     },
     {
      "id": 653,
      "nombre": "Humble FC",
      "slug": "humble-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67dc61e1aa2bc.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67dc61e1aa2bc.png",
+     "pos": 9,
+     "pts": 14
     },
     {
      "id": 959,
      "nombre": "La Barber FC.",
      "slug": "la-barber-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f384125d0e0.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f384125d0e0.png",
+     "pos": 10,
+     "pts": 11
     },
     {
      "id": 830,
      "nombre": "El Tomillo Fc",
      "slug": "el-tomillo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fafdf0d90c4.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fafdf0d90c4.png",
+     "pos": 11,
+     "pts": 10
     },
     {
      "id": 305,
      "nombre": "Kraken F.C",
      "slug": "kraken-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f073d956b1cc.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f073d956b1cc.png",
+     "pos": 12,
+     "pts": 10
     },
     {
      "id": 521,
      "nombre": "Inter Nados FC",
      "slug": "inter-nados-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a0610bb0dd45.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a0610bb0dd45.png",
+     "pos": 13,
+     "pts": 8
     },
     {
      "id": 1062,
      "nombre": "Rusticidad F.C",
      "slug": "rusticidad-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/684718a16f4b6.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/684718a16f4b6.jpeg",
+     "pos": 14,
+     "pts": 4
     }
    ]
   },
@@ -480,85 +534,113 @@
      "id": 330,
      "nombre": "San Marino",
      "slug": "san-marino",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cd2c6c12cbc.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cd2c6c12cbc.jpeg",
+     "pos": 1,
+     "pts": 28
     },
     {
      "id": 988,
      "nombre": "Champortuario",
      "slug": "champortuario",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f389ef0b3c4.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f389ef0b3c4.png",
+     "pos": 2,
+     "pts": 21
     },
     {
      "id": 933,
      "nombre": "Elerlin FC.",
      "slug": "elerlin-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd0b6caf1cd.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd0b6caf1cd.png",
+     "pos": 3,
+     "pts": 20
     },
     {
      "id": 1078,
      "nombre": "La Cachimba",
      "slug": "la-cachimba",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68544c1b22c52.PNG"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68544c1b22c52.PNG",
+     "pos": 4,
+     "pts": 19
     },
     {
      "id": 1148,
      "nombre": "Inside Lecce",
      "slug": "inside-lecce",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69399a0a58dde.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69399a0a58dde.jpeg",
+     "pos": 5,
+     "pts": 18
     },
     {
      "id": 990,
      "nombre": "La Acadé",
      "slug": "la-acade",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6785626002709.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6785626002709.png",
+     "pos": 6,
+     "pts": 18
     },
     {
      "id": 1032,
      "nombre": "FULLMINE F.C",
      "slug": "fullmine-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd076ed3099.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd076ed3099.png",
+     "pos": 7,
+     "pts": 17
     },
     {
      "id": 1046,
      "nombre": "Celta de Vivo",
      "slug": "celta-de-vivo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/681b923b08177.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/681b923b08177.jpeg",
+     "pos": 8,
+     "pts": 15
     },
     {
      "id": 243,
      "nombre": "Atlético Majuga FC",
      "slug": "atletico-majuga-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984d00e1604a.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984d00e1604a.png",
+     "pos": 9,
+     "pts": 14
     },
     {
      "id": 1203,
      "nombre": "Sparrow Boys",
      "slug": "sparrow-boys",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd064a3ab57.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd064a3ab57.png",
+     "pos": 10,
+     "pts": 14
     },
     {
      "id": 1276,
      "nombre": "By Hormiga",
      "slug": "by-hormiga",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png",
+     "pos": 11,
+     "pts": 13
     },
     {
      "id": 1206,
      "nombre": "Fauno F.C",
      "slug": "fauno-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c2b1830ce82.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c2b1830ce82.jpeg",
+     "pos": 12,
+     "pts": 13
     },
     {
      "id": 998,
      "nombre": "La Dinastía",
      "slug": "la-dinastia",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679d0ae9c99f6.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679d0ae9c99f6.png",
+     "pos": 13,
+     "pts": 3
     },
     {
      "id": 1029,
      "nombre": "Real Viñedo",
      "slug": "real-vinedo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcdaf866805.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcdaf866805.png",
+     "pos": 14,
+     "pts": 0
     }
    ]
   },
@@ -676,85 +758,113 @@
      "id": 1271,
      "nombre": "Los Pillos FC",
      "slug": "los-pillos-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/0c2778049753a98d8246c503af0a4773.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/0c2778049753a98d8246c503af0a4773.jpg",
+     "pos": 1,
+     "pts": 29
     },
     {
      "id": 1262,
      "nombre": "Los Bolly FC",
      "slug": "los-bolly-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/996821cc776c29e174f243eddea3ea87.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/996821cc776c29e174f243eddea3ea87.jpg",
+     "pos": 2,
+     "pts": 26
     },
     {
      "id": 1207,
      "nombre": "Montevideo City F.C",
      "slug": "montevideo-city-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c2c25a616cc.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c2c25a616cc.jpeg",
+     "pos": 3,
+     "pts": 26
     },
     {
      "id": 1220,
      "nombre": "Acariciala FC",
      "slug": "acariciala-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ca478c75e9d1267ac0a342cbbceb14e5.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ca478c75e9d1267ac0a342cbbceb14e5.jpg",
+     "pos": 4,
+     "pts": 23
     },
     {
      "id": 559,
      "nombre": "De Garrón Duro FC",
      "slug": "de-garron-duro-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a6c4f16141c1509b9756a326836e084d.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a6c4f16141c1509b9756a326836e084d.jpg",
+     "pos": 5,
+     "pts": 17
     },
     {
      "id": 1270,
      "nombre": "SLM FC",
      "slug": "slm-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c0a79baa78996d63d21a90344f441e83.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c0a79baa78996d63d21a90344f441e83.jpg",
+     "pos": 6,
+     "pts": 17
     },
     {
      "id": 715,
      "nombre": "Callejeros FC",
      "slug": "callejeros-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/660bf931b0344.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/660bf931b0344.jpeg",
+     "pos": 7,
+     "pts": 16
     },
     {
      "id": 1173,
      "nombre": "Backys FC",
      "slug": "backys-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcff99161c2.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcff99161c2.png",
+     "pos": 8,
+     "pts": 14
     },
     {
      "id": 1222,
      "nombre": "SA Duros (L)",
      "slug": "sa-duros-l",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cd20231af66.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cd20231af66.png",
+     "pos": 9,
+     "pts": 13
     },
     {
      "id": 1175,
      "nombre": "C.A son pibitos",
      "slug": "ca-son-pibitos",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6980bdfb1e3e6.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6980bdfb1e3e6.jpeg",
+     "pos": 10,
+     "pts": 11
     },
     {
      "id": 1153,
      "nombre": "Gesell FC",
      "slug": "gesell-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69402a29e2e8f.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69402a29e2e8f.jpeg",
+     "pos": 11,
+     "pts": 11
     },
     {
      "id": 1273,
      "nombre": "NAUMELO FC",
      "slug": "naumelo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/375050d24a5e32f53569bae72609cfb2.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/375050d24a5e32f53569bae72609cfb2.jpg",
+     "pos": 12,
+     "pts": 8
     },
     {
      "id": 1205,
      "nombre": "Juanpa Storm",
      "slug": "juanpa-storm",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c17bfa8ce32.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c17bfa8ce32.jpeg",
+     "pos": 13,
+     "pts": 4
     },
     {
      "id": 379,
      "nombre": "Toronja Mecánica FC",
      "slug": "toronja-mecanica-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/160b39e69c654e3c17136a5d9b971df5.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/160b39e69c654e3c17136a5d9b971df5.jpg",
+     "pos": 14,
+     "pts": 3
     }
    ]
   },
@@ -872,79 +982,105 @@
      "id": 1201,
      "nombre": "Auriverde F.C",
      "slug": "auriverde-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b6f4d1561d8a19acb5bf9a8bba253d7c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b6f4d1561d8a19acb5bf9a8bba253d7c.png",
+     "pos": 1,
+     "pts": 19
     },
     {
      "id": 1087,
      "nombre": "Estivao ATR (M)",
      "slug": "estivao-atr-m",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd119f78943.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd119f78943.png",
+     "pos": 2,
+     "pts": 18
     },
     {
      "id": 1157,
      "nombre": "Los Fuleros FC.",
      "slug": "los-fuleros-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd10786a73c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd10786a73c.png",
+     "pos": 3,
+     "pts": 18
     },
     {
      "id": 1230,
      "nombre": "Malashunta",
      "slug": "malashunta",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f25c45a6244.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f25c45a6244.png",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 110,
      "nombre": "De las Chapas Fc",
      "slug": "de-las-chapas-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6134c25fa19c7.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6134c25fa19c7.png",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 1165,
      "nombre": "Chiche FC",
      "slug": "chiche-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd121bd1955.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd121bd1955.png",
+     "pos": 6,
+     "pts": 12
     },
     {
      "id": 1199,
      "nombre": "Dynamo de Kief",
      "slug": "dynamo-de-kief",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69a9d1e093afc.svg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69a9d1e093afc.svg",
+     "pos": 7,
+     "pts": 10
     },
     {
      "id": 1083,
      "nombre": "Real Merengual FC M",
      "slug": "real-merengual-fc-m",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68adda19d3d70.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68adda19d3d70.png",
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 1006,
      "nombre": "Estrella Blanca",
      "slug": "estrella-blanca",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67aa1e7b89768.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67aa1e7b89768.jpeg",
+     "pos": 9,
+     "pts": 8
     },
     {
      "id": 288,
      "nombre": "BVC La Belen",
      "slug": "bvc-la-belen",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0c83097c50a.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0c83097c50a.png",
+     "pos": 10,
+     "pts": 7
     },
     {
      "id": 1260,
      "nombre": "kizuna fc",
      "slug": "kizuna-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/80f6e77cbfdeb799a11d383055cfd562.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/80f6e77cbfdeb799a11d383055cfd562.png",
+     "pos": 11,
+     "pts": 3
     },
     {
      "id": 1236,
      "nombre": "Los d siempre",
      "slug": "los-d-siempre",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b4c0358c6d56cc3c5a9a781285583c34.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b4c0358c6d56cc3c5a9a781285583c34.jpg",
+     "pos": 12,
+     "pts": 1
     },
     {
      "id": 639,
      "nombre": "La 32 FC",
      "slug": "la-32-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd10f5a1555.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd10f5a1555.png",
+     "pos": 13,
+     "pts": 0
     }
    ]
   },
@@ -1068,85 +1204,113 @@
      "id": 1278,
      "nombre": "Maños Fc",
      "slug": "manos-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/805b52cd9eea3bab905cc583f2fb143c.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/805b52cd9eea3bab905cc583f2fb143c.jpg",
+     "pos": 1,
+     "pts": 22
     },
     {
      "id": 1000,
      "nombre": "Aston Montevideo",
      "slug": "aston-montevideo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67a4dd4479758.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67a4dd4479758.jpeg",
+     "pos": 2,
+     "pts": 16
     },
     {
      "id": 1288,
      "nombre": "Hasta el filtro FC",
      "slug": "hasta-el-filtro-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/aff473f53151d8e24e193fe0f23804b3.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/aff473f53151d8e24e193fe0f23804b3.png",
+     "pos": 3,
+     "pts": 16
     },
     {
      "id": 1204,
      "nombre": "Seupo F.C",
      "slug": "seupo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c167d5e3acd.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c167d5e3acd.jpeg",
+     "pos": 4,
+     "pts": 15
     },
     {
      "id": 1279,
      "nombre": "Bauza FC",
      "slug": "bauza-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b4bc989283b5b529f990be6e1685e684.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b4bc989283b5b529f990be6e1685e684.jpg",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 837,
      "nombre": "Vagabanda",
      "slug": "vagabanda",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65d4a306f1725.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65d4a306f1725.png",
+     "pos": 6,
+     "pts": 13
     },
     {
      "id": 1276,
      "nombre": "By Hormiga",
      "slug": "by-hormiga",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png",
+     "pos": 7,
+     "pts": 11
     },
     {
      "id": 1037,
      "nombre": "Con Carpeta FC",
      "slug": "con-carpeta-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/26ae4bf4f3411aeed90877a3cd9e5abb.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/26ae4bf4f3411aeed90877a3cd9e5abb.jpg",
+     "pos": 8,
+     "pts": 11
     },
     {
      "id": 991,
      "nombre": "Fenerbahce United",
      "slug": "fenerbahce-united",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6798de7949514.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6798de7949514.jpeg",
+     "pos": 9,
+     "pts": 10
     },
     {
      "id": 168,
      "nombre": "Sporting Baroffio",
      "slug": "sporting-baroffio",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162945581f4.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162945581f4.png",
+     "pos": 10,
+     "pts": 10
     },
     {
      "id": 1190,
      "nombre": "Mala Fama",
      "slug": "mala-fama",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd18ec2f0f9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd18ec2f0f9.png",
+     "pos": 11,
+     "pts": 5
     },
     {
      "id": 1123,
      "nombre": "Bresca FC",
      "slug": "bresca-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1808f0319.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1808f0319.png",
+     "pos": 12,
+     "pts": 5
     },
     {
      "id": 1186,
      "nombre": "Juve City",
      "slug": "juve-city",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698f702e4c4b4.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698f702e4c4b4.jpeg",
+     "pos": 13,
+     "pts": 3
     },
     {
      "id": 1277,
      "nombre": "CA Athletic Club",
      "slug": "ca-athletic-club",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4079730afbf9ad6b17b7c9b8ca205138.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4079730afbf9ad6b17b7c9b8ca205138.jpg",
+     "pos": 14,
+     "pts": 1
     }
    ]
   },
@@ -1264,85 +1428,113 @@
      "id": 159,
      "nombre": "Salto Fc",
      "slug": "salto-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0259a5d570e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0259a5d570e.png",
+     "pos": 1,
+     "pts": 19
     },
     {
      "id": 171,
      "nombre": "Schalke 0420",
      "slug": "schalke-0420",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb6daa977c3.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb6daa977c3.png",
+     "pos": 2,
+     "pts": 18
     },
     {
      "id": 706,
      "nombre": "C.S y D La U",
      "slug": "cs-y-d-la-u",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63e4d82c80275.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63e4d82c80275.jpg",
+     "pos": 3,
+     "pts": 16
     },
     {
      "id": 145,
      "nombre": "Bassel FC",
      "slug": "bassel-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ef4f342dc6d9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ef4f342dc6d9.png",
+     "pos": 4,
+     "pts": 15
     },
     {
      "id": 866,
      "nombre": "Caligrafía",
      "slug": "caligrafia",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65faf90206414.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65faf90206414.jpg",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 627,
      "nombre": "Bilardo FC",
      "slug": "bilardo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/636bc84b50463.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/636bc84b50463.png",
+     "pos": 6,
+     "pts": 14
     },
     {
      "id": 620,
      "nombre": "Real Merengual FC",
      "slug": "real-merengual-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68adda2c75859.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68adda2c75859.png",
+     "pos": 7,
+     "pts": 13
     },
     {
      "id": 2,
      "nombre": "Aston Birra",
      "slug": "aston-birra",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ed5882b4572a.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ed5882b4572a.png",
+     "pos": 8,
+     "pts": 13
     },
     {
      "id": 562,
      "nombre": "Aluvion FC",
      "slug": "aluvion-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66d1fe5cd62f4.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66d1fe5cd62f4.jpg",
+     "pos": 9,
+     "pts": 11
     },
     {
      "id": 852,
      "nombre": "Sensei FC",
      "slug": "sensei-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcdd489e078.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcdd489e078.png",
+     "pos": 10,
+     "pts": 9
     },
     {
      "id": 44,
      "nombre": "Cachengue",
      "slug": "cachengue",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fc2fb5937f7.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fc2fb5937f7.jpg",
+     "pos": 11,
+     "pts": 7
     },
     {
      "id": 433,
      "nombre": "Higuaines FC",
      "slug": "higuaines-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60498a9121652.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60498a9121652.png",
+     "pos": 12,
+     "pts": 6
     },
     {
      "id": 567,
      "nombre": "Choricheddar FC",
      "slug": "choricheddar-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642098a32b70c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642098a32b70c.png",
+     "pos": 13,
+     "pts": 4
     },
     {
      "id": 1039,
      "nombre": "De Las Chapas FC (S)",
      "slug": "de-las-chapas-fc-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e5618403992.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e5618403992.png",
+     "pos": 14,
+     "pts": 3
     }
    ]
   },
@@ -1466,85 +1658,113 @@
      "id": 740,
      "nombre": "Mengao FC",
      "slug": "mengao-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b1fc3ba750bda4c56e19aec674d6ea59.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b1fc3ba750bda4c56e19aec674d6ea59.jpg",
+     "pos": 1,
+     "pts": 18
     },
     {
      "id": 918,
      "nombre": "Cimarrón FC (S)",
      "slug": "cimarron-fc-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b043b159530.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b043b159530.jpg",
+     "pos": 2,
+     "pts": 16
     },
     {
      "id": 922,
      "nombre": "Barkai",
      "slug": "barkai",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/664b888f0f653.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/664b888f0f653.png",
+     "pos": 3,
+     "pts": 15
     },
     {
      "id": 544,
      "nombre": "El Scratch",
      "slug": "el-scratch",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/621fd573c3a74.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/621fd573c3a74.png",
+     "pos": 4,
+     "pts": 14
     },
     {
      "id": 749,
      "nombre": "Pata de Palo",
      "slug": "pata-de-palo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6423088d342c5.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6423088d342c5.png",
+     "pos": 5,
+     "pts": 14
     },
     {
      "id": 860,
      "nombre": "Doble Fibra",
      "slug": "doble-fibra",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66d0c84a950e0.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66d0c84a950e0.png",
+     "pos": 6,
+     "pts": 13
     },
     {
      "id": 993,
      "nombre": "Independiente Bigote",
      "slug": "independiente-bigote",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67acd288398d1.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67acd288398d1.jpeg",
+     "pos": 7,
+     "pts": 11
     },
     {
      "id": 1177,
      "nombre": "Deportivo Pilze",
      "slug": "deportivo-pilze",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698382cb3e139.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698382cb3e139.jpeg",
+     "pos": 8,
+     "pts": 11
     },
     {
      "id": 435,
      "nombre": "Klub Polonio",
      "slug": "klub-polonio",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68110159c2237.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68110159c2237.jpeg",
+     "pos": 9,
+     "pts": 11
     },
     {
      "id": 526,
      "nombre": "Falta Envido FC",
      "slug": "falta-envido-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fb0e3dd4a4d.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fb0e3dd4a4d.jpg",
+     "pos": 10,
+     "pts": 10
     },
     {
      "id": 555,
      "nombre": "Fratelli FC",
      "slug": "fratelli-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/624a0cb32ef16.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/624a0cb32ef16.png",
+     "pos": 11,
+     "pts": 9
     },
     {
      "id": 732,
      "nombre": "Atlético Pekadores",
      "slug": "atletico-pekadores",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65f99e8f90adb.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65f99e8f90adb.png",
+     "pos": 12,
+     "pts": 6
     },
     {
      "id": 747,
      "nombre": "COVIMT 10",
      "slug": "covimt-10",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/645e549fd15e0.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/645e549fd15e0.png",
+     "pos": 13,
+     "pts": 6
     },
     {
      "id": 157,
      "nombre": "Black 4",
      "slug": "black-4",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6049877f4e596.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6049877f4e596.png",
+     "pos": 14,
+     "pts": 3
     }
    ]
   },
@@ -1668,85 +1888,113 @@
      "id": 999,
      "nombre": "Berges FC (S)",
      "slug": "berges-fc-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6998ae042a3e6.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6998ae042a3e6.jpg",
+     "pos": 1,
+     "pts": 24
     },
     {
      "id": 21,
      "nombre": "La Ley del Ex",
      "slug": "la-ley-del-ex",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb84c10bd2a.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb84c10bd2a.png",
+     "pos": 2,
+     "pts": 22
     },
     {
      "id": 282,
      "nombre": "Bolke F.C.",
      "slug": "bolke-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ec535a69f23.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ec535a69f23.png",
+     "pos": 3,
+     "pts": 21
     },
     {
      "id": 1103,
      "nombre": "Viagua",
      "slug": "viagua",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/688a66c0b38e6.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/688a66c0b38e6.jpeg",
+     "pos": 4,
+     "pts": 12
     },
     {
      "id": 1183,
      "nombre": "La Maplera Fc",
      "slug": "la-maplera-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cca6e6932d.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cca6e6932d.jpeg",
+     "pos": 5,
+     "pts": 12
     },
     {
      "id": 739,
      "nombre": "Puchineta",
      "slug": "puchineta",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642308b2c1b15.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/642308b2c1b15.png",
+     "pos": 6,
+     "pts": 12
     },
     {
      "id": 274,
      "nombre": "Cristal Palas FC",
      "slug": "cristal-palas-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ee1881daeaf3.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ee1881daeaf3.png",
+     "pos": 7,
+     "pts": 11
     },
     {
      "id": 604,
      "nombre": "Esfinter de Milan",
      "slug": "esfinter-de-milan",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6248d3ea26e3e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6248d3ea26e3e.png",
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 877,
      "nombre": "Real Viñedo (S)",
      "slug": "real-vinedo-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcda4464a73.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcda4464a73.png",
+     "pos": 9,
+     "pts": 9
     },
     {
      "id": 1089,
      "nombre": "Deportivo Marivent",
      "slug": "deportivo-marivent",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcd9c7d68a1.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcd9c7d68a1.png",
+     "pos": 10,
+     "pts": 9
     },
     {
      "id": 147,
      "nombre": "CSD La Pavota",
      "slug": "csd-la-pavota",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69aad226d730247014e6abb6702f618c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69aad226d730247014e6abb6702f618c.png",
+     "pos": 11,
+     "pts": 9
     },
     {
      "id": 1218,
      "nombre": "Bidon SAD",
      "slug": "bidon-sad",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cbe625835a1.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cbe625835a1.jpeg",
+     "pos": 12,
+     "pts": 5
     },
     {
      "id": 960,
      "nombre": "La Diosa FC.",
      "slug": "la-diosa-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66cc7eed9c6d9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66cc7eed9c6d9.png",
+     "pos": 13,
+     "pts": 4
     },
     {
      "id": 489,
      "nombre": "Celta de Vino FC",
      "slug": "celta-de-vino-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/641dc1ec0cc38.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/641dc1ec0cc38.png",
+     "pos": 14,
+     "pts": 0
     }
    ]
   },
@@ -1870,79 +2118,105 @@
      "id": 1286,
      "nombre": "M.F.C City",
      "slug": "mfc-city",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/fef9b6b5943761f15a2dfb968af9be1b.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/fef9b6b5943761f15a2dfb968af9be1b.jpg",
+     "pos": 1,
+     "pts": 20
     },
     {
      "id": 1226,
      "nombre": "Sporting La Costa",
      "slug": "sporting-la-costa",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e66d47919d3.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e66d47919d3.png",
+     "pos": 2,
+     "pts": 17
     },
     {
      "id": 125,
      "nombre": "Deportivo Guarani",
      "slug": "deportivo-guarani",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f1b0c851cc63.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f1b0c851cc63.png",
+     "pos": 3,
+     "pts": 16
     },
     {
      "id": 1225,
      "nombre": "La Ambulancia",
      "slug": "la-ambulancia",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3a388c76a80823004d7286bfd49dcbf.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3a388c76a80823004d7286bfd49dcbf.jpg",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 184,
      "nombre": "Sportivo Yapa",
      "slug": "sportivo-yapa",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5eea79e417702.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5eea79e417702.png",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 1151,
      "nombre": "Velero Fc",
      "slug": "velero-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b22ccc7671adb32a3b3fc311c118af48.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b22ccc7671adb32a3b3fc311c118af48.jpg",
+     "pos": 6,
+     "pts": 14
     },
     {
      "id": 931,
      "nombre": "Aston Montevideo (S)",
      "slug": "aston-montevideo-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6679a0002a433.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6679a0002a433.png",
+     "pos": 7,
+     "pts": 11
     },
     {
      "id": 1170,
      "nombre": "Old Harwood",
      "slug": "old-harwood",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6972403a1feed.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6972403a1feed.jpeg",
+     "pos": 8,
+     "pts": 7
     },
     {
      "id": 86,
      "nombre": "Biorn FC",
      "slug": "biorn-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f54ad6735c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f54ad6735c.png",
+     "pos": 9,
+     "pts": 5
     },
     {
      "id": 1295,
      "nombre": "El Clan (S3)",
      "slug": "el-clan-s3",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/1a00bd9dad69f8936cf5d99c12c9212e.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/1a00bd9dad69f8936cf5d99c12c9212e.jpg",
+     "pos": 10,
+     "pts": 4
     },
     {
      "id": 1287,
      "nombre": "SV FC",
      "slug": "sv-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/186769275550e43ae60311e9465b18fb.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/186769275550e43ae60311e9465b18fb.jpg",
+     "pos": 11,
+     "pts": 3
     },
     {
      "id": 1232,
      "nombre": "Tifón FC",
      "slug": "tifon-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e04085e94a3.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e04085e94a3.jpeg",
+     "pos": 12,
+     "pts": 3
     },
     {
      "id": 1095,
      "nombre": "Sabalito Sabale",
      "slug": "sabalito-sabale",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68714d4ce4b89.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68714d4ce4b89.jpeg",
+     "pos": 13,
+     "pts": 3
     }
    ]
   },
@@ -2066,73 +2340,97 @@
      "id": 744,
      "nombre": "Venta F.C",
      "slug": "venta-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59abc2475c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59abc2475c.png",
+     "pos": 1,
+     "pts": 21
     },
     {
      "id": 1065,
      "nombre": "Canaima City FC",
      "slug": "canaima-city-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68471b67667b1.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68471b67667b1.jpeg",
+     "pos": 2,
+     "pts": 19
     },
     {
      "id": 1176,
      "nombre": "Sol Oriental",
      "slug": "sol-oriental",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69837f9cab75d.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69837f9cab75d.jpeg",
+     "pos": 3,
+     "pts": 17
     },
     {
      "id": 1001,
      "nombre": "Funebreros FC",
      "slug": "funebreros-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67a4fdc0e7c74.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67a4fdc0e7c74.jpeg",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 858,
      "nombre": "San Diego FC",
      "slug": "san-diego-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/661d2ea38de16.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/661d2ea38de16.jpeg",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 662,
      "nombre": "F.C. Barril (S)",
      "slug": "fc-barril-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2505135595.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2505135595.png",
+     "pos": 6,
+     "pts": 14
     },
     {
      "id": 868,
      "nombre": "Costanero FC",
      "slug": "costanero-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd19ff23542.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd19ff23542.png",
+     "pos": 7,
+     "pts": 12
     },
     {
      "id": 718,
      "nombre": "Caleruega FC",
      "slug": "caleruega-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/64793a05a001a.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/64793a05a001a.png",
+     "pos": 8,
+     "pts": 12
     },
     {
      "id": 192,
      "nombre": "Nos Obligan a Jugar",
      "slug": "nos-obligan-a-jugar",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3a6a5575db.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3a6a5575db.png",
+     "pos": 9,
+     "pts": 11
     },
     {
      "id": 788,
      "nombre": "Intrepidos fc",
      "slug": "intrepidos-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67b6173ea8bf0.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67b6173ea8bf0.jpg",
+     "pos": 10,
+     "pts": 6
     },
     {
      "id": 467,
      "nombre": "Birra Fratelli FC",
      "slug": "birra-fratelli-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6050c7875eee5.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6050c7875eee5.png",
+     "pos": 11,
+     "pts": 6
     },
     {
      "id": 1257,
      "nombre": "Santa cruz de montevideo",
      "slug": "santa-cruz-de-montevideo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/53301af554292763ed06c8498e693aae.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/53301af554292763ed06c8498e693aae.jpg",
+     "pos": 12,
+     "pts": 3
     }
    ]
   },
@@ -2256,91 +2554,121 @@
      "id": 1256,
      "nombre": "DELTA FC",
      "slug": "delta-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9585f3afeff47fe21dd4ac86188ff9a8.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9585f3afeff47fe21dd4ac86188ff9a8.jpg",
+     "pos": 1,
+     "pts": 20
     },
     {
      "id": 987,
      "nombre": "Inter Mitente FC",
      "slug": "inter-mitente-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/677ff52526e3b.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/677ff52526e3b.jpg",
+     "pos": 2,
+     "pts": 20
     },
     {
      "id": 571,
      "nombre": "C.A.Ankara",
      "slug": "caankara",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62616c8f30254.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62616c8f30254.png",
+     "pos": 3,
+     "pts": 20
     },
     {
      "id": 211,
      "nombre": "Real Rejunte",
      "slug": "real-rejunte",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f073d27cf37c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f073d27cf37c.png",
+     "pos": 4,
+     "pts": 19
     },
     {
      "id": 275,
      "nombre": "TFC",
      "slug": "tfc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efbd8d050d20.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efbd8d050d20.png",
+     "pos": 5,
+     "pts": 18
     },
     {
      "id": 997,
      "nombre": "Universidad ORT Uruguay",
      "slug": "universidad-ort-uruguay",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679d06d6b897f.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679d06d6b897f.png",
+     "pos": 6,
+     "pts": 14
     },
     {
      "id": 1258,
      "nombre": "Sportivo Malvin",
      "slug": "sportivo-malvin",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/20df960c5e61321cddda76dfb97bf3d9.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/20df960c5e61321cddda76dfb97bf3d9.jpg",
+     "pos": 7,
+     "pts": 14
     },
     {
      "id": 857,
      "nombre": "Cesar Nabia FC",
      "slug": "cesar-nabia-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59f6da624e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59f6da624e.png",
+     "pos": 8,
+     "pts": 13
     },
     {
      "id": 1096,
      "nombre": "Chacal F.C",
      "slug": "chacal-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f23b9d519ba.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f23b9d519ba.png",
+     "pos": 9,
+     "pts": 11
     },
     {
      "id": 1283,
      "nombre": "Montevinas FC",
      "slug": "montevinas-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/87b41383364d4480487828c91248adb9.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/87b41383364d4480487828c91248adb9.jpg",
+     "pos": 10,
+     "pts": 10
     },
     {
      "id": 704,
      "nombre": "Carechimba FC",
      "slug": "carechimba-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/647943b7e747f.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/647943b7e747f.png",
+     "pos": 11,
+     "pts": 9
     },
     {
      "id": 941,
      "nombre": "Ligamentos Cruzeiro",
      "slug": "ligamentos-cruzeiro",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/668fe1a6814cf.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/668fe1a6814cf.jpeg",
+     "pos": 12,
+     "pts": 7
     },
     {
      "id": 1162,
      "nombre": "Juana Chard",
      "slug": "juana-chard",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69690704354b0.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69690704354b0.png",
+     "pos": 13,
+     "pts": 1
     },
     {
      "id": 1285,
      "nombre": "La Axioneta",
      "slug": "la-axioneta",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4bd7c197dbfb2568aa1b4876fd5a5c3d.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4bd7c197dbfb2568aa1b4876fd5a5c3d.jpg",
+     "pos": 14,
+     "pts": 1
     },
     {
      "id": 893,
      "nombre": "Babacar FC",
      "slug": "babacar-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59f538a932.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59f538a932.png",
+     "pos": 15,
+     "pts": 0
     }
    ]
   },
@@ -2458,73 +2786,97 @@
      "id": 158,
      "nombre": "Regum Fc",
      "slug": "regum-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a6dbe721e49bf45f682c5b4006053a3e.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a6dbe721e49bf45f682c5b4006053a3e.jpg",
+     "pos": 1,
+     "pts": 24
     },
     {
      "id": 63,
      "nombre": "Cimarrón FC",
      "slug": "cimarron-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66cdd0beadce8.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66cdd0beadce8.jpg",
+     "pos": 2,
+     "pts": 22
     },
     {
      "id": 1040,
      "nombre": "La Cuadra FC.",
      "slug": "la-cuadra-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b066d13a4d1.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b066d13a4d1.jpeg",
+     "pos": 3,
+     "pts": 16
     },
     {
      "id": 1171,
      "nombre": "Asgard FC",
      "slug": "asgard-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/697790589b834.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/697790589b834.png",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 50,
      "nombre": "Chula FC",
      "slug": "chula-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f5222b6dad.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f5222b6dad.png",
+     "pos": 5,
+     "pts": 16
     },
     {
      "id": 1021,
      "nombre": "Porfiados FC",
      "slug": "porfiados-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d9a5dea8256.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d9a5dea8256.jpeg",
+     "pos": 6,
+     "pts": 13
     },
     {
      "id": 1091,
      "nombre": "Chalachela",
      "slug": "chalachela",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/686411ab77356.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/686411ab77356.jpeg",
+     "pos": 7,
+     "pts": 12
     },
     {
      "id": 1163,
      "nombre": "La jauria",
      "slug": "la-jauria",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6967e39d8d890.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6967e39d8d890.png",
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 5,
      "nombre": "La Estaca FC",
      "slug": "la-estaca-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5eea7e54428f4.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5eea7e54428f4.png",
+     "pos": 9,
+     "pts": 8
     },
     {
      "id": 285,
      "nombre": "Tunguele",
      "slug": "tunguele",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62a35d7e24042.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62a35d7e24042.png",
+     "pos": 10,
+     "pts": 7
     },
     {
      "id": 423,
      "nombre": "Habana FC",
      "slug": "habana-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60141e41dd84e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60141e41dd84e.png",
+     "pos": 11,
+     "pts": 7
     },
     {
      "id": 729,
      "nombre": "Polo Bamba F.C.",
      "slug": "polo-bamba-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810ee937dcd0.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810ee937dcd0.png",
+     "pos": 12,
+     "pts": 1
     }
    ]
   },
@@ -2648,73 +3000,97 @@
      "id": 646,
      "nombre": "Larrobla FC",
      "slug": "larrobla-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc717ab6920.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc717ab6920.png",
+     "pos": 1,
+     "pts": 24
     },
     {
      "id": 940,
      "nombre": "Lyon Fc",
      "slug": "lyon-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/669ff61cde3c8.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/669ff61cde3c8.png",
+     "pos": 2,
+     "pts": 23
     },
     {
      "id": 945,
      "nombre": "Rivera Park",
      "slug": "rivera-park",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd2004dbcbb.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd2004dbcbb.png",
+     "pos": 3,
+     "pts": 17
     },
     {
      "id": 1234,
      "nombre": "Liverpool",
      "slug": "liverpool",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e248d382e71.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e248d382e71.jpeg",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 983,
      "nombre": "Niubeel",
      "slug": "niubeel",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1c505bb5c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1c505bb5c.png",
+     "pos": 5,
+     "pts": 14
     },
     {
      "id": 1168,
      "nombre": "La Hermandad",
      "slug": "la-hermandad",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/696fac807c75b.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/696fac807c75b.jpeg",
+     "pos": 6,
+     "pts": 11
     },
     {
      "id": 1180,
      "nombre": "La Plaza FC",
      "slug": "la-plaza-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984e0c769f8e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984e0c769f8e.png",
+     "pos": 7,
+     "pts": 11
     },
     {
      "id": 1090,
      "nombre": "La Nueva Real",
      "slug": "la-nueva-real",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/689b7b9034a83.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/689b7b9034a83.jpeg",
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 129,
      "nombre": "zeppelin",
      "slug": "zeppelin",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f5b8c7b7bf.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0f5b8c7b7bf.png",
+     "pos": 9,
+     "pts": 10
     },
     {
      "id": 1077,
      "nombre": "La fabrica",
      "slug": "la-fabrica",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1df8d2953.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1df8d2953.png",
+     "pos": 10,
+     "pts": 7
     },
     {
      "id": 496,
      "nombre": "Buitres FC",
      "slug": "buitres-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60ec609f53da8.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60ec609f53da8.png",
+     "pos": 11,
+     "pts": 6
     },
     {
      "id": 752,
      "nombre": "Santa Ana FC",
      "slug": "santa-ana-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1d72e90ac.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1d72e90ac.png",
+     "pos": 12,
+     "pts": 6
     }
    ]
   },
@@ -2832,61 +3208,81 @@
      "id": 1282,
      "nombre": "Carlos magno fc",
      "slug": "carlos-magno-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/53cfa6b14c3b4a7d4ebe843ebe5a53aa.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/53cfa6b14c3b4a7d4ebe843ebe5a53aa.jpg",
+     "pos": 1,
+     "pts": 27
     },
     {
      "id": 1274,
      "nombre": "dinamo palermo",
      "slug": "dinamo-palermo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/77c5103e83aba0be9298edbfee85074b.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/77c5103e83aba0be9298edbfee85074b.jpg",
+     "pos": 2,
+     "pts": 19
     },
     {
      "id": 1161,
      "nombre": "SA Duros",
      "slug": "sa-duros",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6966723784de9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6966723784de9.png",
+     "pos": 3,
+     "pts": 16
     },
     {
      "id": 1196,
      "nombre": "Ipa FC.",
      "slug": "ipa-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e9196ca4f2c.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e9196ca4f2c.jpeg",
+     "pos": 4,
+     "pts": 15
     },
     {
      "id": 133,
      "nombre": "Capisce F.C.",
      "slug": "capisce-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fafc9844def.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fafc9844def.png",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 155,
      "nombre": "Malanga fc",
      "slug": "malanga-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f161b0e8565b.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f161b0e8565b.png",
+     "pos": 6,
+     "pts": 12
     },
     {
      "id": 1233,
      "nombre": "Saint Higadoff",
      "slug": "saint-higadoff",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e0fa46bd5d6.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e0fa46bd5d6.jpeg",
+     "pos": 7,
+     "pts": 12
     },
     {
      "id": 1292,
      "nombre": "Mala Racha FC",
      "slug": "mala-racha-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3fc49add5c87f67fab17d7e4fd91820.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3fc49add5c87f67fab17d7e4fd91820.jpg",
+     "pos": 8,
+     "pts": 9
     },
     {
      "id": 42,
      "nombre": "Juventud",
      "slug": "juventud",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f16252665a72.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f16252665a72.png",
+     "pos": 9,
+     "pts": 6
     },
     {
      "id": 1275,
      "nombre": "Hipocampo FC",
      "slug": "hipocampo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c6919d7cc5df428703b4ad6a560f10a9.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c6919d7cc5df428703b4ad6a560f10a9.jpg",
+     "pos": 10,
+     "pts": 3
     }
    ]
   },
@@ -2936,73 +3332,97 @@
      "id": 1084,
      "nombre": "Porte FC (D)",
      "slug": "porte-fc-d",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/685ae68ee1605.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/685ae68ee1605.jpg",
+     "pos": 1,
+     "pts": 21
     },
     {
      "id": 397,
      "nombre": "La Costa FC",
      "slug": "la-costa-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3a81bb2f55.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3a81bb2f55.png",
+     "pos": 2,
+     "pts": 17
     },
     {
      "id": 879,
      "nombre": "Academia FC",
      "slug": "academia-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d1a090c60e3.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d1a090c60e3.jpeg",
+     "pos": 3,
+     "pts": 16
     },
     {
      "id": 1045,
      "nombre": "FC Fernetbache (D)",
      "slug": "fc-fernetbache-d",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810de7501106.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810de7501106.png",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 707,
      "nombre": "Berges FC (D)",
      "slug": "berges-fc-d",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63e0dadc82e3b.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63e0dadc82e3b.png",
+     "pos": 5,
+     "pts": 13
     },
     {
      "id": 452,
      "nombre": "La Bufarra",
      "slug": "la-bufarra",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3aab26deb9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/60e3aab26deb9.png",
+     "pos": 6,
+     "pts": 10
     },
     {
      "id": 1178,
      "nombre": "La Calidad FC",
      "slug": "la-calidad-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984c52039f01.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984c52039f01.jpeg",
+     "pos": 7,
+     "pts": 10
     },
     {
      "id": 1184,
      "nombre": "ENFUGEIRA FC",
      "slug": "enfugeira-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cd2f86f939.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cd2f86f939.jpeg",
+     "pos": 8,
+     "pts": 7
     },
     {
      "id": 61,
      "nombre": "Porvenir FC",
      "slug": "porvenir-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162808bfcb1.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162808bfcb1.png",
+     "pos": 9,
+     "pts": 6
     },
     {
      "id": 1164,
      "nombre": "Prestcold FC",
      "slug": "prestcold-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/696904977571d.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/696904977571d.png",
+     "pos": 10,
+     "pts": 6
     },
     {
      "id": 1200,
      "nombre": "Falta Envido (D)",
      "slug": "falta-envido-d",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69aadb3feb51a.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69aadb3feb51a.jpeg",
+     "pos": 11,
+     "pts": 3
     },
     {
      "id": 1069,
      "nombre": "La Bomba",
      "slug": "la-bomba",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6848579867054.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6848579867054.png",
+     "pos": 12,
+     "pts": 0
     }
    ]
   },
@@ -3126,79 +3546,105 @@
      "id": 1289,
      "nombre": "LF Buceo",
      "slug": "lf-buceo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/dcfb6f2b157df6fa3e924dd57c336072.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/dcfb6f2b157df6fa3e924dd57c336072.jpg",
+     "pos": 1,
+     "pts": 16
     },
     {
      "id": 698,
      "nombre": "1987 FUNF",
      "slug": "1987-funf",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/660d57f222148.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/660d57f222148.jpg",
+     "pos": 2,
+     "pts": 15
     },
     {
      "id": 1291,
      "nombre": "Pata de palo (D)",
      "slug": "pata-de-palo-d",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/f57475b2b1fc9c9d4c540211c87c4911.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/f57475b2b1fc9c9d4c540211c87c4911.png",
+     "pos": 3,
+     "pts": 14
     },
     {
      "id": 873,
      "nombre": "El Vapa",
      "slug": "el-vapa",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6642059a1cd14.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6642059a1cd14.jpeg",
+     "pos": 4,
+     "pts": 13
     },
     {
      "id": 1147,
      "nombre": "Parque Guarani",
      "slug": "parque-guarani",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcf38992603.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fcf38992603.png",
+     "pos": 5,
+     "pts": 13
     },
     {
      "id": 121,
      "nombre": "MFC Montevideo",
      "slug": "mfc-montevideo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/beaca04cba4fc2046d631dd8e5af0f8d.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/beaca04cba4fc2046d631dd8e5af0f8d.jpg",
+     "pos": 6,
+     "pts": 11
     },
     {
      "id": 888,
      "nombre": "Keloke Futbol Club",
      "slug": "keloke-futbol-club",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cc107b295d3.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69cc107b295d3.jpeg",
+     "pos": 7,
+     "pts": 10
     },
     {
      "id": 1193,
      "nombre": "Alta Gama F.C",
      "slug": "alta-gama-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f24c5562be6.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f24c5562be6.png",
+     "pos": 8,
+     "pts": 9
     },
     {
      "id": 1197,
      "nombre": "EduSkol",
      "slug": "eduskol",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69a07b90bec4b.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69a07b90bec4b.jpeg",
+     "pos": 9,
+     "pts": 8
     },
     {
      "id": 925,
      "nombre": "Safaera FC.",
      "slug": "safaera-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6661dc8a9cb19.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6661dc8a9cb19.png",
+     "pos": 10,
+     "pts": 4
     },
     {
      "id": 549,
      "nombre": "Club Atletico Parenaese",
      "slug": "club-atletico-parenaese",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6256e315d5521.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6256e315d5521.png",
+     "pos": 11,
+     "pts": 1
     },
     {
      "id": 1202,
      "nombre": "Eltekadisco",
      "slug": "eltekadisco",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b066918d612.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b066918d612.jpeg",
+     "pos": 12,
+     "pts": 1
     },
     {
      "id": 1109,
      "nombre": "Real Envido",
      "slug": "real-envido",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68cd812203c0c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68cd812203c0c.png",
+     "pos": 13,
+     "pts": 1
     }
    ]
   },
@@ -3316,79 +3762,105 @@
      "id": 169,
      "nombre": "Union",
      "slug": "union",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68c1bde6397fb.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68c1bde6397fb.jpeg",
+     "pos": 1,
+     "pts": 21
     },
     {
      "id": 699,
      "nombre": "La Barraca FC",
      "slug": "la-barraca-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/64234aa2a8637.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/64234aa2a8637.png",
+     "pos": 2,
+     "pts": 19
     },
     {
      "id": 1155,
      "nombre": "El Monte",
      "slug": "el-monte",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21188c6b9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21188c6b9.png",
+     "pos": 3,
+     "pts": 19
     },
     {
      "id": 630,
      "nombre": "Nueva Escuela FC",
      "slug": "nueva-escuela-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc6def48be7.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc6def48be7.png",
+     "pos": 4,
+     "pts": 15
     },
     {
      "id": 772,
      "nombre": "Olympique de Lyrón",
      "slug": "olympique-de-lyron",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66103b8ef0190.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66103b8ef0190.jpeg",
+     "pos": 5,
+     "pts": 13
     },
     {
      "id": 848,
      "nombre": "Juanca Magic",
      "slug": "juanca-magic",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679e21de15f0c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679e21de15f0c.png",
+     "pos": 6,
+     "pts": 12
     },
     {
      "id": 710,
      "nombre": "Fraternidad",
      "slug": "fraternidad",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ea44ff5d19f.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ea44ff5d19f.png",
+     "pos": 7,
+     "pts": 10
     },
     {
      "id": 1227,
      "nombre": "La Rata f.c",
      "slug": "la-rata-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69d945564e1c5.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69d945564e1c5.jpeg",
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 954,
      "nombre": "Fecha Libre",
      "slug": "fecha-libre",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66c38c5d4922f.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66c38c5d4922f.jpeg",
+     "pos": 9,
+     "pts": 10
     },
     {
      "id": 1152,
      "nombre": "Tmf Sporting Club",
      "slug": "tmf-sporting-club",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/694026efca5fc.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/694026efca5fc.jpg",
+     "pos": 10,
+     "pts": 9
     },
     {
      "id": 1035,
      "nombre": "Manchester FC Mie",
      "slug": "manchester-fc-mie",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e1894c4ae76.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e1894c4ae76.jpeg",
+     "pos": 11,
+     "pts": 7
     },
     {
      "id": 1290,
      "nombre": "Turquia Fc",
      "slug": "turquia-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/2.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/2.png",
+     "pos": 12,
+     "pts": 5
     },
     {
      "id": 787,
      "nombre": "Koba",
      "slug": "koba",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/653bcbf1954d0.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/653bcbf1954d0.png",
+     "pos": 13,
+     "pts": 0
     }
    ]
   },
@@ -3512,79 +3984,105 @@
      "id": 536,
      "nombre": "Full House FC",
      "slug": "full-house-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ad5b7e9ab780bd9d2fb4ccce78fba0ab.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ad5b7e9ab780bd9d2fb4ccce78fba0ab.png",
+     "pos": 1,
+     "pts": 24
     },
     {
      "id": 1261,
      "nombre": "buff fc",
      "slug": "buff-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9a847172e100bfb206273652f5470193.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9a847172e100bfb206273652f5470193.jpg",
+     "pos": 2,
+     "pts": 21
     },
     {
      "id": 1281,
      "nombre": "Univ ORT",
      "slug": "univ-ort",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6442755133170b1e7dc39448d9e5b406.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6442755133170b1e7dc39448d9e5b406.png",
+     "pos": 3,
+     "pts": 20
     },
     {
      "id": 1182,
      "nombre": "Mala Junta FC",
      "slug": "mala-junta-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cb05fac434.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cb05fac434.jpeg",
+     "pos": 4,
+     "pts": 16
     },
     {
      "id": 1099,
      "nombre": "Atlético Helamán",
      "slug": "atletico-helaman",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd23366bc40.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd23366bc40.png",
+     "pos": 5,
+     "pts": 15
     },
     {
      "id": 1284,
      "nombre": "Pompeyo FC",
      "slug": "pompeyo-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/13b9b6024f8374255d5f5d7911784f3b.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/13b9b6024f8374255d5f5d7911784f3b.png",
+     "pos": 6,
+     "pts": 15
     },
     {
      "id": 1198,
      "nombre": "SD EL BALDE",
      "slug": "sd-el-balde",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd238b6986d.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd238b6986d.png",
+     "pos": 7,
+     "pts": 11
     },
     {
      "id": 1055,
      "nombre": "Sociedad Anónima",
      "slug": "sociedad-anonima",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21afddd88.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21afddd88.png",
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 1255,
      "nombre": "Plan C FC",
      "slug": "plan-c-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/34007afd2c7ce3c040601a4d0017bc77.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/34007afd2c7ce3c040601a4d0017bc77.jpg",
+     "pos": 9,
+     "pts": 9
     },
     {
      "id": 1265,
      "nombre": "Forza Fc",
      "slug": "forza-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/145d867c3ea3302e214568a11ebfbaf9.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/145d867c3ea3302e214568a11ebfbaf9.png",
+     "pos": 10,
+     "pts": 7
     },
     {
      "id": 1280,
      "nombre": "Classtudio FC",
      "slug": "classtudio-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5270377aafe112f0ef7228b806efaf86.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5270377aafe112f0ef7228b806efaf86.jpg",
+     "pos": 11,
+     "pts": 7
     },
     {
      "id": 1057,
      "nombre": "Colonia Sporting",
      "slug": "colonia-sporting",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/684476829fbd6.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/684476829fbd6.jpeg",
+     "pos": 12,
+     "pts": 3
     },
     {
      "id": 1216,
      "nombre": "Alive BBC",
      "slug": "alive-bbc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69caa5afd39cb.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69caa5afd39cb.png",
+     "pos": 13,
+     "pts": 0
     }
    ]
   },
@@ -3708,61 +4206,81 @@
      "id": 771,
      "nombre": "AS Rústicos",
      "slug": "as-rusticos",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/64fcfaf417dbb.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/64fcfaf417dbb.png",
+     "pos": 1,
+     "pts": 18
     },
     {
      "id": 332,
      "nombre": "Deportivo Casavalle FC",
      "slug": "deportivo-casavalle-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0258d81f386.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f0258d81f386.png",
+     "pos": 2,
+     "pts": 16
     },
     {
      "id": 1167,
      "nombre": "Zorzales FC",
      "slug": "zorzales-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb94172b7d2.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb94172b7d2.png",
+     "pos": 3,
+     "pts": 14
     },
     {
      "id": 1160,
      "nombre": "La Petro FC",
      "slug": "la-petro-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/1f79565f056504930671906159a00a18.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/1f79565f056504930671906159a00a18.jpg",
+     "pos": 4,
+     "pts": 13
     },
     {
      "id": 1068,
      "nombre": "Elite FC",
      "slug": "elite-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb936105844.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb936105844.png",
+     "pos": 5,
+     "pts": 11
     },
     {
      "id": 1159,
      "nombre": "Oeste FC",
      "slug": "oeste-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6954113ea4a2f.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6954113ea4a2f.jpeg",
+     "pos": 6,
+     "pts": 10
     },
     {
      "id": 820,
      "nombre": "Arsenal FC Dom.",
      "slug": "arsenal-fc-dom",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6613f253186d2.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6613f253186d2.png",
+     "pos": 7,
+     "pts": 7
     },
     {
      "id": 862,
      "nombre": "Colón FC",
      "slug": "colon-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66103ac863be9.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66103ac863be9.jpeg",
+     "pos": 8,
+     "pts": 6
     },
     {
      "id": 716,
      "nombre": "Gordos FC",
      "slug": "gordos-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6420a1856d943.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6420a1856d943.png",
+     "pos": 9,
+     "pts": 6
     },
     {
      "id": 823,
      "nombre": "AKD",
      "slug": "akd",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65faf04b6a8f7.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65faf04b6a8f7.png",
+     "pos": 10,
+     "pts": 0
     }
    ]
   },
@@ -3886,61 +4404,81 @@
      "id": 1181,
      "nombre": "Team Casoni",
      "slug": "team-casoni",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb973588098.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb973588098.png",
+     "pos": 1,
+     "pts": 16
     },
     {
      "id": 1120,
      "nombre": "Sportivo Ponzi",
      "slug": "sportivo-ponzi",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68af434a77619.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68af434a77619.jpeg",
+     "pos": 2,
+     "pts": 16
     },
     {
      "id": 695,
      "nombre": "Macedonia",
      "slug": "macedonia",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/635b06bc2e6ff.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/635b06bc2e6ff.png",
+     "pos": 3,
+     "pts": 13
     },
     {
      "id": 1122,
      "nombre": "Galácticos V (Nasazzi)",
      "slug": "galacticos-v-nasazzi",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68b07bf15456c.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68b07bf15456c.png",
+     "pos": 4,
+     "pts": 13
     },
     {
      "id": 671,
      "nombre": "Estrella de Galicia",
      "slug": "estrella-de-galicia",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62f900c1d13bc.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62f900c1d13bc.png",
+     "pos": 5,
+     "pts": 11
     },
     {
      "id": 949,
      "nombre": "Club Atlético NPC",
      "slug": "club-atletico-npc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6888fbdb0624c.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6888fbdb0624c.jpg",
+     "pos": 6,
+     "pts": 10
     },
     {
      "id": 822,
      "nombre": "Madridismo",
      "slug": "madridismo",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fb007b12429.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fb007b12429.jpg",
+     "pos": 7,
+     "pts": 9
     },
     {
      "id": 1150,
      "nombre": "Garrufa F.C",
      "slug": "garrufa-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb96d415051.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb96d415051.png",
+     "pos": 8,
+     "pts": 7
     },
     {
      "id": 899,
      "nombre": "Man Red",
      "slug": "man-red",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66bf68b8da26c.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66bf68b8da26c.jpg",
+     "pos": 9,
+     "pts": 3
     },
     {
      "id": 1117,
      "nombre": "Piroca FC",
      "slug": "piroca-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68a611548ccdd.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68a611548ccdd.png",
+     "pos": 10,
+     "pts": 1
     }
    ]
   },
@@ -4064,61 +4602,81 @@
      "id": 1293,
      "nombre": "UDEM",
      "slug": "udem",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4096ae78eadda171a0f08337f30b62b7.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/4096ae78eadda171a0f08337f30b62b7.jpg",
+     "pos": 1,
+     "pts": 16
     },
     {
      "id": 1254,
      "nombre": "El Tunel FC",
      "slug": "el-tunel-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/d698adc38708173dcabb30add82a1e44.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/d698adc38708173dcabb30add82a1e44.png",
+     "pos": 2,
+     "pts": 14
     },
     {
      "id": 1253,
      "nombre": "La Pampara F.C",
      "slug": "la-pampara-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a120107ad41d326ae4c5f54a427958c5.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/a120107ad41d326ae4c5f54a427958c5.png",
+     "pos": 3,
+     "pts": 13
     },
     {
      "id": 1243,
      "nombre": "Croacia Fútbol Club",
      "slug": "croacia-futbol-club",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a04b99c66e56.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a04b99c66e56.png",
+     "pos": 4,
+     "pts": 13
     },
     {
      "id": 1020,
      "nombre": "Deportivo 29",
      "slug": "deportivo-29",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d862b0826fb.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67d862b0826fb.jpeg",
+     "pos": 5,
+     "pts": 10
     },
     {
      "id": 1169,
      "nombre": "La Blanca F.C",
      "slug": "la-blanca-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb97a8a561e.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb97a8a561e.png",
+     "pos": 6,
+     "pts": 9
     },
     {
      "id": 1294,
      "nombre": "Los Poquitos De Siempre FC",
      "slug": "los-poquitos-de-siempre-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/bc7d202a400272cec2365981b4bc263d.jpg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/bc7d202a400272cec2365981b4bc263d.jpg",
+     "pos": 7,
+     "pts": 7
     },
     {
      "id": 1154,
      "nombre": "Prado F.C",
      "slug": "prado-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb95132c7e1.png"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fb95132c7e1.png",
+     "pos": 8,
+     "pts": 6
     },
     {
      "id": 1100,
      "nombre": "Burmese FC",
      "slug": "burmese-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6882808ae74b6.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6882808ae74b6.jpeg",
+     "pos": 9,
+     "pts": 6
     },
     {
      "id": 805,
      "nombre": "Del Oeste FC",
      "slug": "del-oeste-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6613f2140b19d.jpeg"
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6613f2140b19d.jpeg",
+     "pos": 10,
+     "pts": 3
     }
    ]
   }

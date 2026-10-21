@@ -1,6 +1,6 @@
 import type { Divisional, Partido, Reglamento, ResultadoSimulacion, Seguro } from "./engine/types";
 
-export interface EquipoIndice { id: number; nombre: string; slug: string; escudo: string | null }
+export interface EquipoIndice { id: number; nombre: string; slug: string; escudo: string | null; pos?: number; pts?: number }
 export interface DivisionalIndice {
   torneoId: number;
   serie: string;

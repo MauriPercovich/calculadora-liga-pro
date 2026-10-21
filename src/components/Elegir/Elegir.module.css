@@ -1,0 +1,145 @@
+.hero {
+  background: var(--hero);
+  color: var(--hero-text);
+}
+.heroIn {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--s-4) max(16px, env(safe-area-inset-right, 0px)) var(--s-6) max(16px, env(safe-area-inset-left, 0px));
+}
+.hero h1 { font-size: 32px; line-height: 1.1; font-weight: 800; margin: 0; letter-spacing: -0.5px; text-wrap: balance; }
+.hero p { margin: var(--s-2) 0 0; font-size: var(--fs-body); color: var(--hero-text-2); max-width: 60ch; }
+.cancelar { display: inline-flex; align-items: center; min-height: var(--tap); margin-top: var(--s-1); color: var(--nav-active); font-weight: 700; }
+
+.buscar { position: relative; margin-top: var(--s-4); }
+.buscar input {
+  width: 100%;
+  height: 56px;
+  padding: 0 52px 0 48px;
+  border: 2px solid var(--accent);
+  border-radius: var(--r-card);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+.buscar input::placeholder { color: var(--text-2); }
+.buscar input::-webkit-search-cancel-button { display: none; }
+.lupa { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-2); display: grid; }
+.limpiar {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--tap);
+  height: var(--tap);
+  border: 0;
+  background: none;
+  color: var(--link);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-control);
+}
+
+.cuerpo {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--s-4) max(12px, env(safe-area-inset-right, 0px)) var(--s-6) max(12px, env(safe-area-inset-left, 0px));
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4) var(--s-6);
+  align-items: flex-start;
+}
+.principal { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: var(--s-3); }
+.lateral { flex: 1 1 320px; min-width: 0; display: none; flex-direction: column; gap: var(--s-3); }
+
+.serie { font-size: var(--fs-caption); font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-2); margin: var(--s-2) var(--s-1) 0; }
+
+/* acordeón de divisionales (celular) */
+.div { background: var(--card); border-radius: var(--r-card); box-shadow: var(--shadow-card); overflow: hidden; }
+.divBtn {
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 0 var(--s-4);
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: var(--fs-body);
+  font-weight: 800;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.divBtn .cuantos { margin-left: auto; font-size: var(--fs-small); font-weight: 400; color: var(--text-2); }
+.flecha { color: var(--text-2); display: grid; transition: transform 0.15s; }
+.abierta .flecha { transform: rotate(180deg); }
+
+.equipos { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.equipo {
+  width: 100%;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-2) var(--s-4);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  font: inherit;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.equipos li:last-child .equipo { border-bottom: 0; }
+.equipo:hover { background: var(--surface-2); }
+.nombre { flex: 1; min-width: 0; font-size: var(--fs-body); font-weight: 700; line-height: 1.2; }
+.donde { display: block; font-size: var(--fs-small); font-weight: 400; color: var(--text-2); margin-top: 2px; }
+.pos { font-size: var(--fs-small); color: var(--text-2); }
+.esTuyo { background: var(--row-mine); }
+
+/* resultados de búsqueda */
+.resultados { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--s-2); }
+.resultados .equipo { border-radius: var(--r-card); background: var(--card); box-shadow: var(--shadow-card); border-bottom: 0; min-height: 64px; }
+.vacio { background: var(--card); border-radius: var(--r-card); padding: var(--s-4); color: var(--text-2); }
+
+.nota { font-size: var(--fs-small); color: var(--text-2); margin: var(--s-2) var(--s-1) 0; }
+
+/* escritorio: tarjeta de la divisional elegida + chips laterales */
+.tarjetaDiv { display: none; }
+@media (min-width: 1024px) {
+  .heroIn { text-align: center; padding-top: var(--s-8); padding-bottom: var(--s-12); }
+  .hero h1 { font-size: 44px; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .buscar { max-width: 720px; margin: var(--s-6) auto 0; }
+  .cuerpo { padding-left: var(--gutter-desk); padding-right: var(--gutter-desk); padding-top: var(--s-8); }
+  .lateral { display: flex; }
+  .acordeon { display: none; }
+  .tarjetaDiv { display: block; background: var(--card); border-radius: var(--r-card); box-shadow: var(--shadow-card); overflow: hidden; }
+  .tarjetaDiv h2 { font-size: var(--fs-h2); margin: 0; }
+  .tarjetaDivH { display: flex; align-items: baseline; gap: var(--s-3); padding: var(--s-4) var(--s-5, 20px); border-bottom: 1px solid var(--line); }
+  .tarjetaDivH span { font-size: var(--fs-small); color: var(--text-2); }
+  .grilla { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+  .grilla li { border-bottom: 1px solid var(--line); }
+  .grilla li:nth-child(odd) { border-right: 1px solid var(--line); }
+  .grilla .equipo { border-bottom: 0; min-height: 60px; }
+  .chipsSerie { background: var(--card); border-radius: var(--r-card); box-shadow: var(--shadow-card); padding: var(--s-4); }
+  .chipsSerie h3 { margin: 0 0 var(--s-2); font-size: var(--fs-body); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+  .chip {
+    min-height: var(--tap);
+    padding: 0 var(--s-4);
+    border-radius: var(--r-pill);
+    border: 1px solid var(--line-strong);
+    background: var(--surface-2);
+    color: var(--text);
+    font: inherit;
+    font-size: var(--fs-small);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .chip[aria-pressed="true"] { background: var(--action); border-color: var(--action); color: var(--action-text); }
+}

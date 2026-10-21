@@ -71,7 +71,7 @@ export function TopBar({ todas }: { todas: DivisionalIndice[] }) {
           <Link className={css.brand} href="/" aria-label="Calculadora Liga Pro, inicio">
             <Logo />
           </Link>
-          <nav className={css.links} aria-label="Principal">
+          <nav className={css.links} aria-label="Principal" hidden={ruta === "/elegir"}>
             {items.map(([k, txt]) => (
               <Link key={k} href={links[k]} aria-current={activa === k ? "page" : undefined}>
                 {txt}
