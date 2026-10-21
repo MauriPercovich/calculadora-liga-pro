@@ -6,7 +6,7 @@ import { rutaDivisional, rutaEquipo, rutaSeccion } from "@/lib/datos";
 import { METAS_VISIBLES } from "@/lib/engine/types";
 import { diaCorto, pct, pp } from "@/lib/format";
 import { guardarFavorito, useFavorito } from "@/lib/favorito";
-import { chance, esBueno, METAS, metaPrincipal, metasDe, txtChance, type Meta } from "@/lib/objetivos";
+import { chance, esBueno, esMalo, implica, largo, METAS, metaPrincipal, metasDe, txtChance, type Meta } from "@/lib/objetivos";
 import { Escudo } from "../Escudo";
 import { Marca, MatchBar } from "../Piezas/Piezas";
 import css from "./Equipo.module.css";
@@ -28,10 +28,27 @@ const PREGUNTA: Record<Meta, string> = {
   campeon: "¿Con cuántos puntos salgo campeón?",
   asciende: "¿Con cuántos puntos asciendo?",
   desciende: "¿Con cuántos puntos me salvo?",
-  copaOro: "¿Con cuántos puntos gano la Copa de Oro?",
-  copaPlata: "¿Con cuántos puntos gano la Copa de Plata?",
-  copaBronce: "¿Con cuántos puntos gano la Copa de Bronce?",
+  primero: "¿Con cuántos puntos termino 1º?",
+  zonaOro: "¿Con cuántos puntos llego a la Copa de Oro?",
+  zonaPlata: "¿Con cuántos puntos llego a la Copa de Plata?",
+  zonaBronce: "¿Con cuántos puntos me salvo de la Copa de Bronce?",
 };
+
+/** "seguro" (1) o "no alcanza" (0) de la enumeración exacta, para cada objetivo. */
+function exactoDe(d: DatosDivisional, m: Meta, cz: { arriba: 0 | 1 | null; asciende: 0 | 1 | null; desciende: 0 | 1 | null; primero: 0 | 1 | null } | undefined): 0 | 1 | null {
+  if (!cz) return null;
+  switch (m) {
+    case "asciende": return cz.asciende;
+    case "desciende": return cz.desciende;
+    case "primero": return cz.primero;
+    case "zonaOro": return cz.arriba;
+    case "zonaBronce": return cz.desciende;
+    case "zonaPlata": return cz.arriba === 1 || cz.desciende === 1 ? 0 : cz.arriba === 0 && cz.desciende === 0 ? 1 : null;
+    case "campeon":
+      if (d.categoria === "Apertura") return d.reglamento.finalDesempatePrimero ? (cz.primero === 0 ? 0 : null) : cz.primero;
+      return cz.arriba === 0 ? 0 : null; // en el Clausura se define en las copas
+  }
+}
 
 export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }) {
   const fav = useFavorito();
@@ -79,7 +96,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
     .map(([kpts, v]) => {
       const p = Number(kpts);
       const cz = exacta?.[p];
-      const ex = cz ? (m === "asciende" ? cz.asciende : m === "desciende" ? cz.desciende : m === "campeon" ? (d.categoria === "Apertura" && !d.reglamento.finalDesempatePrimero ? cz.primero : cz.arriba === 0 ? 0 : null) : cz.arriba === 0 && m === "copaOro" ? 0 : null) : null;
+      const ex = exactoDe(d, m, cz);
       return { p, veces: v[0], v: v[k + 1] / v[0], ex };
     })
     .filter((r) => r.veces / d.simulacion.n >= 0.002)
@@ -101,7 +118,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
     .slice(0, 3);
 
   const compartir = async () => {
-    const txt = `${yo.nombre} tiene ${txtChance(chance(d, m, i))} de chances de ${o.largo} (Serie ${d.serie} · Div. ${d.divisional}, después de la fecha ${d.ultimaJugada}). Calculadora Liga Pro`;
+    const txt = `${yo.nombre} tiene ${txtChance(chance(d, m, i))} de chances de ${largo(d, m)} (Serie ${d.serie} · Div. ${d.divisional}, después de la fecha ${d.ultimaJugada}). Calculadora Liga Pro`;
     const url = `${location.origin}${rutaEquipo(d, yo.slug)}?objetivo=${m}`;
     try {
       if (navigator.share && matchMedia("(pointer: coarse)").matches) {
@@ -144,7 +161,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
           <div className={css.fichaCuerpo}>
             <div className={css.cifra}>
               <Cifra txt={txtChance(c)} />
-              <span className={css.etiqueta}>chances de<br />{o.largo}</span>
+              <span className={css.etiqueta}>chances de<br />{largo(d, m)}</span>
             </div>
             <div className={css.tiles} role="group" aria-label="Elegí qué chance mirar">
               {metas.map((mm) => {
@@ -152,7 +169,8 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
                 return (
                   <button key={mm} type="button" className={css.tile} aria-pressed={mm === m} onClick={() => setM(mm)}>
                     <span className={css.tileK}><Marca m={mm} />{METAS[mm].tile}</span>
-                    <span className={`${css.tileV} ${cc.aDefinir ? css.aDef : ""}`} style={cc.aDefinir ? undefined : { color: mm === "campeon" ? "#93C5FD" : mm === "asciende" ? "#4ADE80" : mm === "copaOro" ? "#FACC15" : mm === "copaPlata" ? "#CBD5E1" : mm === "copaBronce" ? "#FB923C" : "#F87171" }}>
+                    {implica(d, mm) && <span className={css.tileX}>y {implica(d, mm)}</span>}
+                    <span className={`${css.tileV} ${cc.aDefinir ? css.aDef : ""}`} style={cc.aDefinir ? undefined : { color: METAS[mm].enHero }}>
                       {txtChance(cc)}
                     </span>
                   </button>
@@ -181,7 +199,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
           {prox && rival && (
             <section className={css.card}>
               <div className={css.cardH}><h2>¿Qué pasa si…?</h2><span>vs {corto(rival.nombre)} · fecha {prox.fecha}</span></div>
-              <p className={css.bajada}>Chances de {o.largo} según el resultado.</p>
+              <p className={css.bajada}>Chances de {largo(d, m)} según el resultado.</p>
               <div className={css.what}>
                 {what.map((w) => (
                   <div key={w.lab} style={{ borderTopColor: w.color }}>
@@ -205,16 +223,16 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
               <div className={css.puntos}>
                 {filasPts.map((r) => {
                   // en Desciende, la barra es la chance de salvarse
-                  const v = m === "desciende" ? 1 - r.v : r.v;
-                  const seguro = m === "desciende" ? r.ex === 0 : r.ex === 1;
-                  const nunca = m === "desciende" ? r.ex === 1 : r.ex === 0;
+                  const v = esMalo(m) ? 1 - r.v : r.v;
+                  const seguro = esMalo(m) ? r.ex === 0 : r.ex === 1;
+                  const nunca = esMalo(m) ? r.ex === 1 : r.ex === 0;
                   const txt = seguro ? "seguro" : nunca ? "no alcanza" : txtChance({ p: v, seguro: null });
-                  const color = m === "desciende" ? METAS.asciende.barra : o.barra;
+                  const color = esMalo(m) ? METAS.asciende.barra : o.barra;
                   return (
                     <div key={r.p} className={css.punto}>
                       <b>{r.p} pts</b>
                       <span className={css.track}><span style={{ width: `${v * 100}%`, background: color }} /></span>
-                      <span style={{ color: m === "desciende" ? METAS.asciende.texto : o.texto, fontWeight: seguro || nunca ? 700 : 800 }}>{txt}</span>
+                      <span style={{ color: esMalo(m) ? METAS.asciende.texto : o.texto, fontWeight: seguro || nunca ? 700 : 800 }}>{txt}</span>
                     </div>
                   );
                 })}
@@ -253,7 +271,7 @@ export function Equipo({ d, equipoId }: { d: DatosDivisional; equipoId: number }
 
         <section className={css.card}>
           <div className={css.cardH}><h2>Partidos de otros que más te importan</h2></div>
-          <p className={css.bajada}>Cuánto cambia la chance de {o.largo}, en puntos porcentuales.</p>
+          <p className={css.bajada}>Cuánto cambia la chance de {largo(d, m)}, en puntos porcentuales.</p>
           {otros.length ? (
             otros.map(({ p, z, delta }) => {
               const que = z === 0 ? `Que gane ${corto(eq(p.a).nombre)}` : z === 2 ? `Que gane ${corto(eq(p.b).nombre)}` : `Que empaten ${corto(eq(p.a).nombre)} y ${corto(eq(p.b).nombre)}`;
@@ -331,7 +349,7 @@ function Sanciones({ titulo, lista, vacio }: { titulo: string; lista: DatosDivis
 
 function Evolucion({ d, i, m }: { d: DatosDivisional; i: number; m: Meta }) {
   const ev = d.evolucion.filter((e) => e.fecha > 0);
-  if (ev.length < 2 || (m === "copaPlata" && d.reglamento.plataSinFormato)) return null;
+  if (ev.length < 2) return null;
   const o = METAS[m];
   return (
     <section className={css.card}>
@@ -353,7 +371,7 @@ function Grafico({ d, i, m, W, H }: { d: DatosDivisional; i: number; m: Meta; W:
   const ult = ev[ev.length - 1][m][i];
   const paso = Math.ceil(ev.length / (W < 500 ? 7 : 10));
   return (
-      <svg className={css.grafico} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Chance de ${o.largo} después de cada fecha: ${ev.map((e) => `fecha ${e.fecha} ${pct(e[m][i] * 100)}`).join(", ")}`}>
+      <svg className={css.grafico} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Chance de ${largo(d, m)} después de cada fecha: ${ev.map((e) => `fecha ${e.fecha} ${pct(e[m][i] * 100)}`).join(", ")}`}>
         {[0, 0.5, 1].map((v) => (
           <g key={v}>
             <line x1={pl} x2={W - pr} y1={ys(v)} y2={ys(v)} stroke="var(--line)" strokeWidth="1" />

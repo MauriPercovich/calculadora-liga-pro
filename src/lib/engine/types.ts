@@ -74,10 +74,11 @@ export const reglamentoDe = (d: Pick<Divisional, "categoria" | "esPrimera" | "eq
 });
 
 /** Los 6 objetivos que ve la gente, en el orden en que se guardan en porPuntos. */
-export const METAS_VISIBLES = ["campeon", "asciende", "desciende", "copaOro", "copaPlata", "copaBronce"] as const;
+/** Copa de Oro / Plata / Bronce = a qué copa va (zona de la tabla), no si la gana. */
+export const METAS_VISIBLES = ["campeon", "primero", "asciende", "desciende", "zonaOro", "zonaPlata", "zonaBronce"] as const;
 export type MetaVisible = (typeof METAS_VISIBLES)[number];
 
-export type Objetivo = "campeon" | "asciende" | "copaOro" | "copaPlata" | "copaBronce" | "desciende" | "zonaOro" | "zonaPlata" | "zonaBronce" | "desempate";
+export type Objetivo = "campeon" | "primero" | "asciende" | "copaOro" | "copaPlata" | "copaBronce" | "desciende" | "zonaOro" | "zonaPlata" | "zonaBronce" | "desempate";
 
 export interface ResultadoSimulacion {
   n: number;

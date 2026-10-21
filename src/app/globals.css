@@ -194,3 +194,13 @@ td.team-cell { max-width: 220px; }
 @media (prefers-reduced-motion: no-preference) { .bar span, .hist .col { transition: width 0.4s ease, height 0.4s ease; } }
 
 [hidden] { display: none !important; }
+
+/* Cambio de tema: fundido suave en vez de un golpe */
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 0.45s; animation-timing-function: ease-in-out; }
+.cambiando-tema,
+.cambiando-tema *,
+.cambiando-tema *::before,
+.cambiando-tema *::after {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, fill 0.4s ease, stroke 0.4s ease, box-shadow 0.4s ease !important;
+}

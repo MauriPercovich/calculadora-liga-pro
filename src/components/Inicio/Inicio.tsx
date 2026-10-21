@@ -6,7 +6,7 @@ import type { DatosDivisional, DivisionalIndice, Indice, Picante } from "@/lib/d
 import { rutaDivisional, rutaEquipo, rutaSeccion } from "@/lib/datos";
 import { diaCorto, pct } from "@/lib/format";
 import { guardarFavorito, useFavorito, type Favorito } from "@/lib/favorito";
-import { chance, esBueno, METAS, metaPrincipal, metasDe, txtChance, valorAnterior, type Meta } from "@/lib/objetivos";
+import { chance, esBueno, implica, largo, METAS, metaPrincipal, metasDe, txtChance, valorAnterior, type Meta } from "@/lib/objetivos";
 import { Escudo } from "../Escudo";
 import { GoalRow, Marca, MatchBar } from "../Piezas/Piezas";
 import { SelectorDivisional } from "../AppShell/AppShell";
@@ -119,7 +119,7 @@ function Portada({ d, i, div, indice }: { d: DatosDivisional; i: number; div: Di
               <b>
                 chances de
                 <br />
-                {METAS[m].largo}
+                {largo(d, m)}
               </b>
               {antes && Math.abs(delta) >= 0.005 && (
                 <span className={`${css.variacion} ${esBueno(m, delta) ? css.sube : css.baja}`}>
@@ -175,7 +175,7 @@ function Portada({ d, i, div, indice }: { d: DatosDivisional; i: number; div: Di
             <div className={css.filas}>
               {metas.map((k) => {
                 const ck = chance(d, k, i);
-                return <GoalRow key={k} m={k} p={ck.p} txt={txtChance(ck)} href={href(yo.slug, k)} aDefinir={ck.aDefinir} />;
+                return <GoalRow key={k} m={k} p={ck.p} txt={txtChance(ck)} href={href(yo.slug, k)} aDefinir={ck.aDefinir} extra={implica(d, k)} />;
               })}
             </div>
             <div className={css.mosaicos}>
@@ -184,7 +184,7 @@ function Portada({ d, i, div, indice }: { d: DatosDivisional; i: number; div: Di
                 const o = METAS[k];
                 return (
                   <Link key={k} href={href(yo.slug, k)} className={`${css.mosaico} ${k === m ? css.principalM : ""}`} style={{ color: o.texto }}>
-                    <span className={css.mosaicoK}><Marca m={k} />{o.corto}</span>
+                    <span className={css.mosaicoK}><Marca m={k} />{o.corto}{implica(d, k) && <small style={{ fontWeight: 600, color: "var(--text-2)" }}>· {implica(d, k)}</small>}</span>
                     <span className={`${css.mosaicoV} ${ck.aDefinir ? css.aDef : ""}`}>{txtChance(ck)}</span>
                     <span style={{ height: 6, borderRadius: 3, background: "var(--track)", overflow: "hidden", display: "block" }}>
                       {!ck.aDefinir && <span style={{ display: "block", height: "100%", width: `${ck.p > 0 ? Math.max(ck.p * 100, 1.5) : 0}%`, background: o.barra }} />}
@@ -250,14 +250,16 @@ function TarjetaPicante({ p, d }: { p: Picante; d: DivisionalIndice }) {
 
 function MiniTabla({ d, div, yoId }: { d: DatosDivisional; div: DivisionalIndice; yoId: number }) {
   const ix = new Map(d.equipos.map((e, k) => [e.id, k]));
-  const col: Meta = d.esPrimera ? "campeon" : "asciende";
+  const cl = d.categoria === "Clausura";
+  const col: Meta = cl ? "zonaOro" : d.esPrimera ? "campeon" : "asciende";
+  const col2: Meta = cl ? "zonaBronce" : "desciende";
   return (
     <section className={css.card}>
       <div className={css.cardH}><h2>Así está la tabla</h2><Link href={rutaDivisional(d)}>Ver todo</Link></div>
       <div className={css.tablaWrap}>
         <table className={css.tabla}>
           <thead>
-            <tr><th /><th>Equipo</th><th>Pts</th><th>{d.esPrimera ? "1º Camp." : "▲ Asc."}</th><th>▼ Desc.</th></tr>
+            <tr><th /><th>Equipo</th><th>Pts</th><th>{cl ? "Oro" : d.esPrimera ? "Camp." : "▲ Asc."}</th><th>{cl ? "Bronce" : "▼ Desc."}</th></tr>
           </thead>
           <tbody>
             {div.equipos.map((e) => {
@@ -274,14 +276,14 @@ function MiniTabla({ d, div, yoId }: { d: DatosDivisional; div: DivisionalIndice
                   </td>
                   <td>{e.pts}</td>
                   <td style={{ color: METAS[col].texto }}>{txtChance(chance(d, col, k))}</td>
-                  <td style={{ color: METAS.desciende.texto }}>{txtChance(chance(d, "desciende", k))}</td>
+                  <td style={{ color: METAS[col2].texto }}>{txtChance(chance(d, col2, k))}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
       </div>
-      <p className={css.nota}>{d.categoria === "Clausura" ? "En celeste, los 4 que hoy juegan la Copa de Oro" + (d.esPrimera ? "." : " y ascienden.") : "En celeste, los 4 primeros de hoy."} Tocá un equipo para ver su ficha.</p>
+      <p className={css.nota}>{cl ? `En celeste, los 4 que hoy van a la Copa de Oro${d.esPrimera ? "" : " y ascienden"}. Oro y Bronce: chance de terminar en esa copa${d.esPrimera ? "" : " (Oro = asciende, Bronce = desciende)"}.` : "En celeste, los 4 primeros de hoy."} Tocá un equipo para ver su ficha.</p>
     </section>
   );
 }

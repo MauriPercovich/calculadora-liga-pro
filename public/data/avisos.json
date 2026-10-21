@@ -215,16 +215,6 @@
   "detalle": "08/10/2023 -> 29/05/2024 (Vieja Escuela FC vs Hacha y Tiza Nasazzi)"
  },
  {
-  "torneoId": 337,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 21/03/2024 (Leones vs Inter de Milanga FC)"
- },
- {
-  "torneoId": 337,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 28/03/2024 (Leones vs Los Que Estamos )"
- },
- {
   "torneoId": 339,
   "tipo": "anio-corregido",
   "detalle": "02/09/2023 -> 14/04/2024 (Sin Talento vs Los Rancios FC)"
@@ -255,64 +245,49 @@
   "detalle": "02/09/2023 -> 19/05/2024 (Bundesliga FC vs Los Rancios FC)"
  },
  {
+  "torneoId": 337,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 21/03/2024 (Leones vs Inter de Milanga FC)"
+ },
+ {
+  "torneoId": 337,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 28/03/2024 (Leones vs Los Que Estamos )"
+ },
+ {
+  "torneoId": 365,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Naranja Mecánica Fútbol Club: oficial 31, por resultados 28"
+ },
+ {
+  "torneoId": 365,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Birra Fratelli FC: oficial 28, por resultados 25"
+ },
+ {
+  "torneoId": 365,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Antisiesta: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 365,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Nos Obligan a Jugar: oficial 20, por resultados 16"
+ },
+ {
+  "torneoId": 365,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Babacar FC: oficial 16, por resultados 15"
+ },
+ {
+  "torneoId": 365,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Carechimba FC: oficial 10, por resultados 7"
+ },
+ {
   "torneoId": 340,
   "tipo": "equipo-desconocido",
   "detalle": "Liverbeach vs La Colmena FC"
- },
- {
-  "torneoId": 364,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Platea FC: oficial 28, por resultados 24"
- },
- {
-  "torneoId": 364,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "F.C. Barril (S): oficial 26, por resultados 22"
- },
- {
-  "torneoId": 364,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Inter Nados FC: oficial 21, por resultados 15"
- },
- {
-  "torneoId": 364,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "TFC: oficial 16, por resultados 13"
- },
- {
-  "torneoId": 364,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Intrepidos fc: oficial 14, por resultados 10"
- },
- {
-  "torneoId": 364,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Kraken F.C: oficial 13, por resultados 9"
- },
- {
-  "torneoId": 366,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Regum Fc: oficial 34, por resultados 31"
- },
- {
-  "torneoId": 366,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Fray Bentos F.C. (Mar): oficial 27, por resultados 21"
- },
- {
-  "torneoId": 366,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Real Suciedad: oficial 26, por resultados 23"
- },
- {
-  "torneoId": 366,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "zeppelin: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 366,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Defensa Y Amézaga FC: oficial 16, por resultados 13"
  },
  {
   "torneoId": 367,
@@ -343,6 +318,61 @@
   "torneoId": 367,
   "tipo": "ajuste-de-puntos",
   "detalle": "Polo Bamba F.C.: oficial 16, por resultados 10"
+ },
+ {
+  "torneoId": 369,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Juve: oficial 25, por resultados 22"
+ },
+ {
+  "torneoId": 369,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Costanero FC: oficial 18, por resultados 15"
+ },
+ {
+  "torneoId": 369,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "1987 FUNF: oficial 13, por resultados 10"
+ },
+ {
+  "torneoId": 369,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Club Tiburon: oficial 13, por resultados 10"
+ },
+ {
+  "torneoId": 369,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Del Vamos Fc: oficial 7, por resultados 4"
+ },
+ {
+  "torneoId": 370,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Bufarra: oficial 29, por resultados 26"
+ },
+ {
+  "torneoId": 370,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Constantinopla Futbol Club: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 370,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Atlético Tankench: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 370,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Combo FC: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 370,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Real Pachucaso: oficial 10, por resultados 6"
+ },
+ {
+  "torneoId": 370,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Mistik FC: oficial 3, por resultados 2"
  },
  {
   "torneoId": 368,
@@ -390,159 +420,29 @@
   "detalle": "Capisce F.C.: oficial 2, por resultados 1"
  },
  {
-  "torneoId": 369,
+  "torneoId": 366,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Juve: oficial 25, por resultados 22"
+  "detalle": "Regum Fc: oficial 34, por resultados 31"
  },
  {
-  "torneoId": 369,
+  "torneoId": 366,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Costanero FC: oficial 18, por resultados 15"
+  "detalle": "Fray Bentos F.C. (Mar): oficial 27, por resultados 21"
  },
  {
-  "torneoId": 369,
+  "torneoId": 366,
   "tipo": "ajuste-de-puntos",
-  "detalle": "1987 FUNF: oficial 13, por resultados 10"
+  "detalle": "Real Suciedad: oficial 26, por resultados 23"
  },
  {
-  "torneoId": 369,
+  "torneoId": 366,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Club Tiburon: oficial 13, por resultados 10"
+  "detalle": "zeppelin: oficial 17, por resultados 14"
  },
  {
-  "torneoId": 369,
+  "torneoId": 366,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Del Vamos Fc: oficial 7, por resultados 4"
- },
- {
-  "torneoId": 373,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (Club Deportivo Leónes vs Colón FC)"
- },
- {
-  "torneoId": 373,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (180 FC vs AKD)"
- },
- {
-  "torneoId": 373,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (Jotitas FC vs Macedonia)"
- },
- {
-  "torneoId": 373,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (Club Deportivo Leónes vs AKD)"
- },
- {
-  "torneoId": 373,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (AKD vs Club Deportivo Leónes)"
- },
- {
-  "torneoId": 370,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Bufarra: oficial 29, por resultados 26"
- },
- {
-  "torneoId": 370,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Constantinopla Futbol Club: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 370,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Atlético Tankench: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 370,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Combo FC: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 370,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Real Pachucaso: oficial 10, por resultados 6"
- },
- {
-  "torneoId": 370,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Mistik FC: oficial 3, por resultados 2"
- },
- {
-  "torneoId": 374,
-  "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 08/09/2024 (Dynamo L A vs La Filial)"
- },
- {
-  "torneoId": 374,
-  "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 22/09/2024 (Arsenal FC Dom. vs La Filial)"
- },
- {
-  "torneoId": 374,
-  "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 29/09/2024 (Mersa FC vs La Filial)"
- },
- {
-  "torneoId": 374,
-  "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 06/10/2024 (La Filial vs Pueblo Victoria)"
- },
- {
-  "torneoId": 374,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (Tatanka FC vs Arsenal FC Dom.)"
- },
- {
-  "torneoId": 374,
-  "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 13/10/2024 (Dynamo L A vs La Filial)"
- },
- {
-  "torneoId": 375,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Fray Bentos F.C. (Mar): oficial 38, por resultados 34"
- },
- {
-  "torneoId": 375,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Nunca de cara: oficial 35, por resultados 32"
- },
- {
-  "torneoId": 375,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "CA Perez Castellanos: oficial 31, por resultados 30"
- },
- {
-  "torneoId": 376,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Fernetbahce Fútbol Club: oficial 35, por resultados 31"
- },
- {
-  "torneoId": 376,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "C.A. Ciclon: oficial 32, por resultados 28"
- },
- {
-  "torneoId": 376,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Tuerca FC: oficial 19, por resultados 15"
- },
- {
-  "torneoId": 376,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Vargas Guillemette: oficial 16, por resultados 13"
- },
- {
-  "torneoId": 376,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "A mimir FC: oficial 14, por resultados 13"
- },
- {
-  "torneoId": 376,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Armenio: oficial 9, por resultados 6"
+  "detalle": "Defensa Y Amézaga FC: oficial 16, por resultados 13"
  },
  {
   "torneoId": 379,
@@ -580,114 +480,89 @@
   "detalle": "Alpargatas FC: oficial 11, por resultados 10"
  },
  {
-  "torneoId": 380,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Atala F.C: oficial 36, por resultados 30"
- },
- {
-  "torneoId": 380,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Carneros Fc: oficial 31, por resultados 25"
- },
- {
-  "torneoId": 380,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Notti: oficial 25, por resultados 19"
- },
- {
-  "torneoId": 380,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Azzurra: oficial 24, por resultados 21"
- },
- {
-  "torneoId": 383,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Barber FC.: oficial 26, por resultados 25"
- },
- {
-  "torneoId": 383,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Real Snichi: oficial 25, por resultados 21"
- },
- {
-  "torneoId": 383,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Cimarrón FC (S): oficial 20, por resultados 18"
- },
- {
-  "torneoId": 383,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Makelele: oficial 15, por resultados 12"
- },
- {
-  "torneoId": 383,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Olimpia: oficial 13, por resultados 7"
- },
- {
-  "torneoId": 383,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Concepción FC: oficial 3, por resultados 0"
- },
- {
-  "torneoId": 385,
+  "torneoId": 373,
   "tipo": "anio-corregido",
-  "detalle": "01/10/2023 -> 09/11/2024 (Martingalas vs Fratelli FC)"
+  "detalle": "21/10/2023 -> 13/10/2024 (Club Deportivo Leónes vs Colón FC)"
  },
  {
-  "torneoId": 385,
+  "torneoId": 373,
   "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 09/11/2024 (C.S y D La U  vs Cristal Palas FC)"
+  "detalle": "21/10/2023 -> 13/10/2024 (180 FC vs AKD)"
  },
  {
-  "torneoId": 385,
+  "torneoId": 373,
   "tipo": "anio-corregido",
-  "detalle": "08/10/2023 -> 09/11/2024 (Salto Fc  vs Higuaines FC)"
+  "detalle": "21/10/2023 -> 13/10/2024 (Jotitas FC vs Macedonia)"
  },
  {
-  "torneoId": 385,
+  "torneoId": 373,
   "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 09/11/2024 (Martingalas vs Higuaines FC)"
+  "detalle": "21/10/2023 -> 13/10/2024 (Club Deportivo Leónes vs AKD)"
  },
  {
-  "torneoId": 385,
+  "torneoId": 373,
   "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 09/11/2024 (C.S y D La U  vs Choricheddar FC)"
+  "detalle": "21/10/2023 -> 13/10/2024 (AKD vs Club Deportivo Leónes)"
  },
  {
-  "torneoId": 385,
+  "torneoId": 376,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Fernetbahce Fútbol Club: oficial 35, por resultados 31"
+ },
+ {
+  "torneoId": 376,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "C.A. Ciclon: oficial 32, por resultados 28"
+ },
+ {
+  "torneoId": 376,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Tuerca FC: oficial 19, por resultados 15"
+ },
+ {
+  "torneoId": 376,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo Vargas Guillemette: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 376,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "A mimir FC: oficial 14, por resultados 13"
+ },
+ {
+  "torneoId": 376,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo Armenio: oficial 9, por resultados 6"
+ },
+ {
+  "torneoId": 374,
   "tipo": "anio-corregido",
-  "detalle": "21/10/2023 -> 09/11/2024 (Salto Fc  vs Higuaines FC)"
+  "detalle": "08/10/2023 -> 08/09/2024 (Dynamo L A vs La Filial)"
  },
  {
-  "torneoId": 365,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Naranja Mecánica Fútbol Club: oficial 31, por resultados 28"
+  "torneoId": 374,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 22/09/2024 (Arsenal FC Dom. vs La Filial)"
  },
  {
-  "torneoId": 365,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Birra Fratelli FC: oficial 28, por resultados 25"
+  "torneoId": 374,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 29/09/2024 (Mersa FC vs La Filial)"
  },
  {
-  "torneoId": 365,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Antisiesta: oficial 23, por resultados 20"
+  "torneoId": 374,
+  "tipo": "anio-corregido",
+  "detalle": "08/10/2023 -> 06/10/2024 (La Filial vs Pueblo Victoria)"
  },
  {
-  "torneoId": 365,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Nos Obligan a Jugar: oficial 20, por resultados 16"
+  "torneoId": 374,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 13/10/2024 (Tatanka FC vs Arsenal FC Dom.)"
  },
  {
-  "torneoId": 365,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Babacar FC: oficial 16, por resultados 15"
- },
- {
-  "torneoId": 365,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Carechimba FC: oficial 10, por resultados 7"
+  "torneoId": 374,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 13/10/2024 (Dynamo L A vs La Filial)"
  },
  {
   "torneoId": 381,
@@ -718,6 +593,36 @@
   "torneoId": 381,
   "tipo": "ajuste-de-puntos",
   "detalle": "Paraolympiacos: oficial 9, por resultados 6"
+ },
+ {
+  "torneoId": 383,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Barber FC.: oficial 26, por resultados 25"
+ },
+ {
+  "torneoId": 383,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Real Snichi: oficial 25, por resultados 21"
+ },
+ {
+  "torneoId": 383,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Cimarrón FC (S): oficial 20, por resultados 18"
+ },
+ {
+  "torneoId": 383,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo Makelele: oficial 15, por resultados 12"
+ },
+ {
+  "torneoId": 383,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Olimpia: oficial 13, por resultados 7"
+ },
+ {
+  "torneoId": 383,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Concepción FC: oficial 3, por resultados 0"
  },
  {
   "torneoId": 386,
@@ -800,6 +705,71 @@
   "detalle": "21/10/2023 -> 09/11/2024 (Cachengue vs C.S. Desprolijo 3720)"
  },
  {
+  "torneoId": 380,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Atala F.C: oficial 36, por resultados 30"
+ },
+ {
+  "torneoId": 380,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Carneros Fc: oficial 31, por resultados 25"
+ },
+ {
+  "torneoId": 380,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Notti: oficial 25, por resultados 19"
+ },
+ {
+  "torneoId": 380,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Azzurra: oficial 24, por resultados 21"
+ },
+ {
+  "torneoId": 375,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Fray Bentos F.C. (Mar): oficial 38, por resultados 34"
+ },
+ {
+  "torneoId": 375,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Nunca de cara: oficial 35, por resultados 32"
+ },
+ {
+  "torneoId": 375,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "CA Perez Castellanos: oficial 31, por resultados 30"
+ },
+ {
+  "torneoId": 385,
+  "tipo": "anio-corregido",
+  "detalle": "01/10/2023 -> 09/11/2024 (Martingalas vs Fratelli FC)"
+ },
+ {
+  "torneoId": 385,
+  "tipo": "anio-corregido",
+  "detalle": "08/10/2023 -> 09/11/2024 (C.S y D La U  vs Cristal Palas FC)"
+ },
+ {
+  "torneoId": 385,
+  "tipo": "anio-corregido",
+  "detalle": "08/10/2023 -> 09/11/2024 (Salto Fc  vs Higuaines FC)"
+ },
+ {
+  "torneoId": 385,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 09/11/2024 (Martingalas vs Higuaines FC)"
+ },
+ {
+  "torneoId": 385,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 09/11/2024 (C.S y D La U  vs Choricheddar FC)"
+ },
+ {
+  "torneoId": 385,
+  "tipo": "anio-corregido",
+  "detalle": "21/10/2023 -> 09/11/2024 (Salto Fc  vs Higuaines FC)"
+ },
+ {
   "torneoId": 388,
   "tipo": "anio-corregido",
   "detalle": "24/09/2023 -> 31/08/2024 (Pata de Palo vs Los Pitufos FC)"
@@ -855,6 +825,16 @@
   "detalle": "21/10/2023 -> 09/11/2024 (Mengao FC vs Atlético Pekadores)"
  },
  {
+  "torneoId": 397,
+  "tipo": "equipo-desconocido",
+  "detalle": "Equipo a Confirmar vs Catania FC"
+ },
+ {
+  "torneoId": 420,
+  "tipo": "equipo-desconocido",
+  "detalle": "Villa Serratosa FC (Lun) vs La Acadé"
+ },
+ {
   "torneoId": 389,
   "tipo": "anio-corregido",
   "detalle": "02/09/2023 -> 07/09/2024 (La Diosa FC. vs La Junta FC. (Sab))"
@@ -905,14 +885,79 @@
   "detalle": "21/10/2023 -> 26/10/2024 (Sin Códigos  vs Barkai )"
  },
  {
-  "torneoId": 397,
-  "tipo": "equipo-desconocido",
-  "detalle": "Equipo a Confirmar vs Catania FC"
+  "torneoId": 447,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Regum Fc: oficial 28, por resultados 27"
  },
  {
-  "torneoId": 420,
-  "tipo": "equipo-desconocido",
-  "detalle": "Villa Serratosa FC (Lun) vs La Acadé"
+  "torneoId": 447,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Cerri FC: oficial 28, por resultados 27"
+ },
+ {
+  "torneoId": 447,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Fray Bentos F.C. (Dom): oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 447,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Black List FC: oficial 25, por resultados 24"
+ },
+ {
+  "torneoId": 447,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Chula FC: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 447,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Porfiados FC: oficial 16, por resultados 15"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Ferro FC: oficial 35, por resultados 31"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Nuevo City: oficial 30, por resultados 29"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Union: oficial 24, por resultados 18"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Vieja Escuela FC: oficial 23, por resultados 22"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo Cerrense: oficial 23, por resultados 22"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Lyon Fc (Mie): oficial 22, por resultados 21"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Koba: oficial 19, por resultados 16"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Inter (Mie. Nasazzi): oficial 17, por resultados 16"
+ },
+ {
+  "torneoId": 453,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Atlético Helamán: oficial 13, por resultados 7"
  },
  {
   "torneoId": 435,
@@ -975,191 +1020,6 @@
   "detalle": "01/10/2023 -> 21/06/2025 (Biorn FC vs Black 4)"
  },
  {
-  "torneoId": 447,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Regum Fc: oficial 28, por resultados 27"
- },
- {
-  "torneoId": 447,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Cerri FC: oficial 28, por resultados 27"
- },
- {
-  "torneoId": 447,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Fray Bentos F.C. (Dom): oficial 27, por resultados 24"
- },
- {
-  "torneoId": 447,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Black List FC: oficial 25, por resultados 24"
- },
- {
-  "torneoId": 447,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Chula FC: oficial 22, por resultados 19"
- },
- {
-  "torneoId": 447,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Porfiados FC: oficial 16, por resultados 15"
- },
- {
-  "torneoId": 449,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Nueva Real: oficial 26, por resultados 25"
- },
- {
-  "torneoId": 449,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Chalachela: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 449,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La fabrica: oficial 23, por resultados 22"
- },
- {
-  "torneoId": 449,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Malanga fc: oficial 16, por resultados 13"
- },
- {
-  "torneoId": 449,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Miamiveo FC: oficial 15, por resultados 12"
- },
- {
-  "torneoId": 449,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Capisce F.C.: oficial 7, por resultados 4"
- },
- {
-  "torneoId": 450,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Cuadra FC.: oficial 31, por resultados 28"
- },
- {
-  "torneoId": 450,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Lyon Fc: oficial 28, por resultados 25"
- },
- {
-  "torneoId": 450,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Cerro City FC: oficial 20, por resultados 19"
- },
- {
-  "torneoId": 450,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Niubeel: oficial 18, por resultados 15"
- },
- {
-  "torneoId": 450,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Cimarrón FC: oficial 14, por resultados 13"
- },
- {
-  "torneoId": 450,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Estaca FC: oficial 13, por resultados 10"
- },
- {
-  "torneoId": 452,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Barraca FC: oficial 37, por resultados 34"
- },
- {
-  "torneoId": 452,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Nueva Escuela FC: oficial 33, por resultados 27"
- },
- {
-  "torneoId": 452,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "A Fuego Lento: oficial 21, por resultados 15"
- },
- {
-  "torneoId": 452,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Fecha Libre: oficial 19, por resultados 16"
- },
- {
-  "torneoId": 452,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Manchester FC Mie: oficial 16, por resultados 13"
- },
- {
-  "torneoId": 452,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Nuevo América F.C: oficial 14, por resultados 11"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Ferro FC: oficial 35, por resultados 31"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Nuevo City: oficial 30, por resultados 29"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Union: oficial 24, por resultados 18"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Vieja Escuela FC: oficial 23, por resultados 22"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Cerrense: oficial 23, por resultados 22"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Lyon Fc (Mie): oficial 22, por resultados 21"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Koba: oficial 19, por resultados 16"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Inter (Mie. Nasazzi): oficial 17, por resultados 16"
- },
- {
-  "torneoId": 453,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Atlético Helamán: oficial 13, por resultados 7"
- },
- {
-  "torneoId": 454,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Schalke 0420: oficial 28, por resultados 25"
- },
- {
-  "torneoId": 454,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "De Las Chapas FC (S): oficial 27, por resultados 24"
- },
- {
-  "torneoId": 454,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Cachengue: oficial 19, por resultados 16"
- },
- {
-  "torneoId": 454,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Choricheddar FC: oficial 13, por resultados 10"
- },
- {
   "torneoId": 455,
   "tipo": "ajuste-de-puntos",
   "detalle": "Real Merengual FC: oficial 28, por resultados 27"
@@ -1195,74 +1055,34 @@
   "detalle": "CSD La Pavota: oficial 11, por resultados 10"
  },
  {
-  "torneoId": 456,
+  "torneoId": 452,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Sensei FC: oficial 29, por resultados 26"
+  "detalle": "La Barraca FC: oficial 37, por resultados 34"
  },
  {
-  "torneoId": 456,
+  "torneoId": 452,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Falta Envido FC: oficial 25, por resultados 22"
+  "detalle": "Nueva Escuela FC: oficial 33, por resultados 27"
  },
  {
-  "torneoId": 456,
+  "torneoId": 452,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Playaco FC: oficial 16, por resultados 13"
+  "detalle": "A Fuego Lento: oficial 21, por resultados 15"
  },
  {
-  "torneoId": 458,
+  "torneoId": 452,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Puppo City: oficial 31, por resultados 28"
+  "detalle": "Fecha Libre: oficial 19, por resultados 16"
  },
  {
-  "torneoId": 458,
+  "torneoId": 452,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Aston Montevideo (S): oficial 28, por resultados 25"
+  "detalle": "Manchester FC Mie: oficial 16, por resultados 13"
  },
  {
-  "torneoId": 458,
+  "torneoId": 452,
   "tipo": "ajuste-de-puntos",
-  "detalle": "El Cote: oficial 18, por resultados 15"
- },
- {
-  "torneoId": 458,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Esfinter de Milan: oficial 7, por resultados 4"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Canaima City FC: oficial 42, por resultados 36"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Caleruega FC: oficial 34, por resultados 31"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Foca Juniors FC: oficial 31, por resultados 25"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "TFC: oficial 26, por resultados 25"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Chacal F.C: oficial 20, por resultados 14"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "C.A.Ankara: oficial 18, por resultados 17"
- },
- {
-  "torneoId": 461,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Kraken F.C: oficial 18, por resultados 15"
+  "detalle": "Nuevo América F.C: oficial 14, por resultados 11"
  },
  {
   "torneoId": 459,
@@ -1295,24 +1115,149 @@
   "detalle": "Bávaros FC: oficial 11, por resultados 10"
  },
  {
-  "torneoId": 462,
+  "torneoId": 449,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Costa FC: oficial 28, por resultados 22"
+  "detalle": "La Nueva Real: oficial 26, por resultados 25"
  },
  {
-  "torneoId": 462,
+  "torneoId": 449,
   "tipo": "ajuste-de-puntos",
-  "detalle": "El Vapa: oficial 25, por resultados 22"
+  "detalle": "Chalachela: oficial 23, por resultados 20"
  },
  {
-  "torneoId": 462,
+  "torneoId": 449,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Bufarra: oficial 13, por resultados 10"
+  "detalle": "La fabrica: oficial 23, por resultados 22"
  },
  {
-  "torneoId": 462,
+  "torneoId": 449,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Mistik FC: oficial 9, por resultados 6"
+  "detalle": "Malanga fc: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 449,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Miamiveo FC: oficial 15, por resultados 12"
+ },
+ {
+  "torneoId": 449,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Capisce F.C.: oficial 7, por resultados 4"
+ },
+ {
+  "torneoId": 456,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sensei FC: oficial 29, por resultados 26"
+ },
+ {
+  "torneoId": 456,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Falta Envido FC: oficial 25, por resultados 22"
+ },
+ {
+  "torneoId": 456,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Playaco FC: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 450,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Cuadra FC.: oficial 31, por resultados 28"
+ },
+ {
+  "torneoId": 450,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Lyon Fc: oficial 28, por resultados 25"
+ },
+ {
+  "torneoId": 450,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Cerro City FC: oficial 20, por resultados 19"
+ },
+ {
+  "torneoId": 450,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Niubeel: oficial 18, por resultados 15"
+ },
+ {
+  "torneoId": 450,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Cimarrón FC: oficial 14, por resultados 13"
+ },
+ {
+  "torneoId": 450,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Estaca FC: oficial 13, por resultados 10"
+ },
+ {
+  "torneoId": 454,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Schalke 0420: oficial 28, por resultados 25"
+ },
+ {
+  "torneoId": 454,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "De Las Chapas FC (S): oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 454,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Cachengue: oficial 19, por resultados 16"
+ },
+ {
+  "torneoId": 454,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Choricheddar FC: oficial 13, por resultados 10"
+ },
+ {
+  "torneoId": 464,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "CSY Hamburguesero: oficial 26, por resultados 25"
+ },
+ {
+  "torneoId": 464,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "CN La Coa: oficial 25, por resultados 22"
+ },
+ {
+  "torneoId": 464,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Bea Suelta: oficial 19, por resultados 18"
+ },
+ {
+  "torneoId": 464,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sportivo Postiglione: oficial 18, por resultados 15"
+ },
+ {
+  "torneoId": 464,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Fernetbahce Fútbol Club: oficial 13, por resultados 12"
+ },
+ {
+  "torneoId": 464,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "F.C. Barril: oficial 13, por resultados 12"
+ },
+ {
+  "torneoId": 458,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Puppo City: oficial 31, por resultados 28"
+ },
+ {
+  "torneoId": 458,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Aston Montevideo (S): oficial 28, por resultados 25"
+ },
+ {
+  "torneoId": 458,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Cote: oficial 18, por resultados 15"
+ },
+ {
+  "torneoId": 458,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Esfinter de Milan: oficial 7, por resultados 4"
  },
  {
   "torneoId": 465,
@@ -1350,34 +1295,149 @@
   "detalle": "Los Pibes FC: oficial 15, por resultados 9"
  },
  {
-  "torneoId": 464,
+  "torneoId": 462,
   "tipo": "ajuste-de-puntos",
-  "detalle": "CSY Hamburguesero: oficial 26, por resultados 25"
+  "detalle": "La Costa FC: oficial 28, por resultados 22"
  },
  {
-  "torneoId": 464,
+  "torneoId": 462,
   "tipo": "ajuste-de-puntos",
-  "detalle": "CN La Coa: oficial 25, por resultados 22"
+  "detalle": "El Vapa: oficial 25, por resultados 22"
  },
  {
-  "torneoId": 464,
+  "torneoId": 462,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Bea Suelta: oficial 19, por resultados 18"
+  "detalle": "La Bufarra: oficial 13, por resultados 10"
  },
  {
-  "torneoId": 464,
+  "torneoId": 462,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Sportivo Postiglione: oficial 18, por resultados 15"
+  "detalle": "Mistik FC: oficial 9, por resultados 6"
  },
  {
-  "torneoId": 464,
+  "torneoId": 461,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Fernetbahce Fútbol Club: oficial 13, por resultados 12"
+  "detalle": "Canaima City FC: oficial 42, por resultados 36"
  },
  {
-  "torneoId": 464,
+  "torneoId": 461,
   "tipo": "ajuste-de-puntos",
-  "detalle": "F.C. Barril: oficial 13, por resultados 12"
+  "detalle": "Caleruega FC: oficial 34, por resultados 31"
+ },
+ {
+  "torneoId": 461,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Foca Juniors FC: oficial 31, por resultados 25"
+ },
+ {
+  "torneoId": 461,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "TFC: oficial 26, por resultados 25"
+ },
+ {
+  "torneoId": 461,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Chacal F.C: oficial 20, por resultados 14"
+ },
+ {
+  "torneoId": 461,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "C.A.Ankara: oficial 18, por resultados 17"
+ },
+ {
+  "torneoId": 461,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Kraken F.C: oficial 18, por resultados 15"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Praga FC: oficial 25, por resultados 20"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Galácticos V (Nasazzi): oficial 22, por resultados 21"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "AKD: oficial 21, por resultados 18"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Exiliados: oficial 21, por resultados 17"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Elite FC: oficial 20, por resultados 19"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Piroca FC: oficial 11, por resultados 8"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Aslan: oficial 8, por resultados 5"
+ },
+ {
+  "torneoId": 477,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Burmese FC: oficial 8, por resultados 7"
+ },
+ {
+  "torneoId": 463,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Porte FC (D): oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 463,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Inter (Dom Pro): oficial 22, por resultados 15"
+ },
+ {
+  "torneoId": 463,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Safaera FC.: oficial 16, por resultados 15"
+ },
+ {
+  "torneoId": 463,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Bomba: oficial 11, por resultados 8"
+ },
+ {
+  "torneoId": 463,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Zenit 74 fc: oficial 7, por resultados 4"
+ },
+ {
+  "torneoId": 467,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Castillo F.C: oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 467,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "CSyD Mandragora: oficial 21, por resultados 20"
+ },
+ {
+  "torneoId": 467,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Covacha: oficial 21, por resultados 20"
+ },
+ {
+  "torneoId": 467,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Guineas F.C: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 467,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Gallego Bruto F.C: oficial 11, por resultados 14"
  },
  {
   "torneoId": 466,
@@ -1435,29 +1495,34 @@
   "detalle": "01/10/2023 -> 23/05/2024 (Cimarrón FC (S) vs Estrella FC)"
  },
  {
-  "torneoId": 467,
+  "torneoId": 475,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Castillo F.C: oficial 27, por resultados 24"
+  "detalle": "Dynamo: oficial 28, por resultados 21"
  },
  {
-  "torneoId": 467,
+  "torneoId": 475,
   "tipo": "ajuste-de-puntos",
-  "detalle": "CSyD Mandragora: oficial 21, por resultados 20"
+  "detalle": "Macedonia: oficial 22, por resultados 21"
  },
  {
-  "torneoId": 467,
+  "torneoId": 475,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Covacha: oficial 21, por resultados 20"
+  "detalle": "Arsenal FC Dom.: oficial 21, por resultados 18"
  },
  {
-  "torneoId": 467,
+  "torneoId": 475,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Guineas F.C: oficial 16, por resultados 13"
+  "detalle": "Estrella de Galicia: oficial 19, por resultados 16"
  },
  {
-  "torneoId": 467,
+  "torneoId": 475,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Gallego Bruto F.C: oficial 11, por resultados 14"
+  "detalle": "Madridismo: oficial 14, por resultados 13"
+ },
+ {
+  "torneoId": 475,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo 29: oficial 13, por resultados 9"
  },
  {
   "torneoId": 460,
@@ -1505,6 +1570,81 @@
   "detalle": "Inter Mitente FC: oficial 8, por resultados 5"
  },
  {
+  "torneoId": 364,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Platea FC: oficial 28, por resultados 24"
+ },
+ {
+  "torneoId": 364,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "F.C. Barril (S): oficial 26, por resultados 22"
+ },
+ {
+  "torneoId": 364,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Inter Nados FC: oficial 21, por resultados 15"
+ },
+ {
+  "torneoId": 364,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "TFC: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 364,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Intrepidos fc: oficial 14, por resultados 10"
+ },
+ {
+  "torneoId": 364,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Kraken F.C: oficial 13, por resultados 9"
+ },
+ {
+  "torneoId": 513,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Barraca FC: oficial 25, por resultados 19"
+ },
+ {
+  "torneoId": 513,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Nueva Escuela FC: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 513,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Manchester FC Mie: oficial 15, por resultados 9"
+ },
+ {
+  "torneoId": 513,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Rata f.c: oficial 9, por resultados 6"
+ },
+ {
+  "torneoId": 474,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Vodka Jrs: oficial 26, por resultados 19"
+ },
+ {
+  "torneoId": 474,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "AS Rústicos: oficial 25, por resultados 21"
+ },
+ {
+  "torneoId": 474,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Tatanka FC: oficial 19, por resultados 13"
+ },
+ {
+  "torneoId": 474,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Larrobla FC: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "anio-corregido",
+  "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
+ },
+ {
   "torneoId": 470,
   "tipo": "ajuste-de-puntos",
   "detalle": "Real Merengual FC M: oficial 25, por resultados 22"
@@ -1528,145 +1668,5 @@
   "torneoId": 470,
   "tipo": "ajuste-de-puntos",
   "detalle": "Campito F.c +30: oficial 11, por resultados 8"
- },
- {
-  "torneoId": 463,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Porte FC (D): oficial 22, por resultados 19"
- },
- {
-  "torneoId": 463,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Inter (Dom Pro): oficial 22, por resultados 15"
- },
- {
-  "torneoId": 463,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Safaera FC.: oficial 16, por resultados 15"
- },
- {
-  "torneoId": 463,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Bomba: oficial 11, por resultados 8"
- },
- {
-  "torneoId": 463,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Zenit 74 fc: oficial 7, por resultados 4"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Praga FC: oficial 25, por resultados 20"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Galácticos V (Nasazzi): oficial 22, por resultados 21"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "AKD: oficial 21, por resultados 18"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Exiliados: oficial 21, por resultados 17"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Elite FC: oficial 20, por resultados 19"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Piroca FC: oficial 11, por resultados 8"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Aslan: oficial 8, por resultados 5"
- },
- {
-  "torneoId": 477,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Burmese FC: oficial 8, por resultados 7"
- },
- {
-  "torneoId": 475,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Dynamo: oficial 28, por resultados 21"
- },
- {
-  "torneoId": 475,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Macedonia: oficial 22, por resultados 21"
- },
- {
-  "torneoId": 475,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Arsenal FC Dom.: oficial 21, por resultados 18"
- },
- {
-  "torneoId": 475,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Estrella de Galicia: oficial 19, por resultados 16"
- },
- {
-  "torneoId": 475,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Madridismo: oficial 14, por resultados 13"
- },
- {
-  "torneoId": 475,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo 29: oficial 13, por resultados 9"
- },
- {
-  "torneoId": 513,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Barraca FC: oficial 25, por resultados 19"
- },
- {
-  "torneoId": 513,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Nueva Escuela FC: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 513,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Manchester FC Mie: oficial 15, por resultados 9"
- },
- {
-  "torneoId": 513,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Rata f.c: oficial 9, por resultados 6"
- },
- {
-  "torneoId": 558,
-  "tipo": "anio-corregido",
-  "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
- },
- {
-  "torneoId": 474,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Vodka Jrs: oficial 26, por resultados 19"
- },
- {
-  "torneoId": 474,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "AS Rústicos: oficial 25, por resultados 21"
- },
- {
-  "torneoId": 474,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Tatanka FC: oficial 19, por resultados 13"
- },
- {
-  "torneoId": 474,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Larrobla FC: oficial 16, por resultados 13"
  }
 ]

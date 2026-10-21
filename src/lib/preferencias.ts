@@ -19,13 +19,28 @@ export function useTema(): [Tema | null, () => void] {
   useEffect(() => setTema(temaActual()), []);
   const alternar = () => {
     const nuevo: Tema = temaActual() === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = nuevo;
-    try {
-      localStorage.setItem(CLAVE_TEMA, nuevo);
-    } catch {
-      /* sin almacenamiento: dura lo que dure la pestaña */
+    const aplicar = () => {
+      document.documentElement.dataset.theme = nuevo;
+      try {
+        localStorage.setItem(CLAVE_TEMA, nuevo);
+      } catch {
+        /* sin almacenamiento: dura lo que dure la pestaña */
+      }
+      setTema(nuevo);
+    };
+    const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const doc = document as Document & { startViewTransition?: (cb: () => void) => unknown };
+    if (sinMovimiento) return aplicar();
+    if (doc.startViewTransition) {
+      // fundido de toda la página de un tema al otro
+      doc.startViewTransition(aplicar);
+      return;
     }
-    setTema(nuevo);
+    // navegadores sin View Transitions: los colores cambian con una transición suave
+    const raiz = document.documentElement;
+    raiz.classList.add("cambiando-tema");
+    aplicar();
+    window.setTimeout(() => raiz.classList.remove("cambiando-tema"), 450);
   };
   return [tema, alternar];
 }

@@ -166,17 +166,9 @@ function calcular(div: Divisional) {
   const seguro: Seguro = {
     asciende: reg.ascensos > 0 ? cz.asciende : ids.map(() => 0),
     desciende: cz.desciende,
+    primero: cz.primero,
     campeon: clausura ? cz.arriba.map(no) : cz.primero.map((c) => (c === 0 ? 0 : c === 1 && !reg.finalDesempatePrimero ? 1 : null)),
-    ...(clausura
-      ? {
-          zonaOro: cz.arriba,
-          zonaBronce: cz.desciende,
-          zonaPlata,
-          copaOro: cz.arriba.map(no),
-          copaBronce: cz.desciende.map(no),
-          copaPlata: reg.plataSinFormato ? ids.map(() => null) : zonaPlata.map(no),
-        }
-      : {}),
+    ...(clausura ? { zonaOro: cz.arriba, zonaBronce: cz.desciende, zonaPlata } : {}),
   };
   // Las simulaciones nunca contradicen lo seguro.
   for (const [o, lista] of Object.entries(seguro) as [keyof typeof ahora.prob, (0 | 1 | null)[]][]) {
@@ -197,7 +189,7 @@ function calcular(div: Divisional) {
   // Evolución: cómo estaban las chances después de cada fecha (tabla rearmada con los resultados hasta ahí).
   // Evolución de los 6 objetivos, redondeada a 0,1 punto para que el archivo no pese de más.
   const r3 = (xs: number[]) => xs.map((x) => Math.round(x * 1000) / 1000);
-  const fotos = (prob: typeof ahora.prob) => ({ campeon: r3(prob.campeon), asciende: r3(prob.asciende), desciende: r3(prob.desciende), copaOro: r3(prob.copaOro), copaPlata: r3(prob.copaPlata), copaBronce: r3(prob.copaBronce) });
+  const fotos = (prob: typeof ahora.prob) => ({ campeon: r3(prob.campeon), primero: r3(prob.primero), asciende: r3(prob.asciende), desciende: r3(prob.desciende), zonaOro: r3(prob.zonaOro), zonaPlata: r3(prob.zonaPlata), zonaBronce: r3(prob.zonaBronce) });
   const evolucion: ({ fecha: number } & ReturnType<typeof fotos>)[] = [];
   for (let f = 0; f <= ultimaJugada; f++) {
     if (f === ultimaJugada) {

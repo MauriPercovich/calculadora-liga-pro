@@ -58,6 +58,7 @@
 
   /* ---------- Objetivos: -text para números y etiquetas, -bar para barras y marcas ---------- */
   --goal-camp-text: #003C8A;    --goal-camp-bar: #003C8A;
+  --goal-primero-text: #6D28D9; --goal-primero-bar: #7C3AED;
   --goal-asc-text: #15803D;     --goal-asc-bar: #16A34A;
   --goal-oro-text: #854D0E;     --goal-oro-bar: #EAB308;
   --goal-plata-text: #4B5563;   --goal-plata-bar: #9CA3AF;
@@ -139,6 +140,7 @@
   --up: #4ADE80;
   --down: #F87171;
   --goal-camp-text: #93C5FD;    --goal-camp-bar: #3B82F6;
+  --goal-primero-text: #C4B5FD; --goal-primero-bar: #8B5CF6;
   --goal-asc-text: #4ADE80;     --goal-asc-bar: #22C55E;
   --goal-oro-text: #FACC15;     --goal-oro-bar: #EAB308;
   --goal-plata-text: #CBD5E1;   --goal-plata-bar: #94A3B8;
@@ -158,7 +160,7 @@
     --row-top4: #14294D; --row-mine: #2A2410; --col-pts: #1A2540; --track: #1F2A44; --match-win: #2563EB;
     --match-draw: #475569; --match-draw-text: #F1F5F9; --match-lose: #94A3B8; --match-lose-text: #0B1220;
     --up: #4ADE80; --down: #F87171;
-    --goal-camp-text: #93C5FD; --goal-camp-bar: #3B82F6; --goal-asc-text: #4ADE80; --goal-asc-bar: #22C55E;
+    --goal-camp-text: #93C5FD; --goal-camp-bar: #3B82F6; --goal-primero-text: #C4B5FD; --goal-primero-bar: #8B5CF6; --goal-asc-text: #4ADE80; --goal-asc-bar: #22C55E;
     --goal-oro-text: #FACC15; --goal-oro-bar: #EAB308; --goal-plata-text: #CBD5E1; --goal-plata-bar: #94A3B8;
     --goal-bronce-text: #FB923C; --goal-bronce-bar: #EA580C; --goal-desc-text: #F87171; --goal-desc-bar: #EF4444;
     --shadow-card: 0 1px 2px rgba(0,0,0,0.4); --shadow-raise: 0 6px 16px rgba(0,0,0,0.5);

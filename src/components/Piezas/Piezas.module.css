@@ -24,7 +24,7 @@
   width: 100%;
   min-height: var(--tap);
   display: grid;
-  grid-template-columns: minmax(0, 144px) minmax(0, 1fr) 64px;
+  grid-template-columns: minmax(0, 190px) minmax(0, 1fr) 64px;
   align-items: center;
   gap: var(--s-3);
   border: 0;
@@ -46,3 +46,5 @@
 .aDefinir { font-size: var(--fs-small); font-weight: 600; color: var(--text-2); }
 
 .escudoAro { border-radius: 50%; box-shadow: 0 0 0 2px #fff; display: inline-grid; }
+
+.extra { display: block; font-size: 12px; font-weight: 600; color: var(--text-2); line-height: 1.2; }

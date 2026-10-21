@@ -12,20 +12,21 @@ export function pct(p: number): string {
 
 export const decimal = (x: number, d = 1) => x.toFixed(d).replace(".", ",");
 
-export type ObjetivoVisible = Extract<Objetivo, "campeon" | "asciende" | "copaOro" | "copaPlata" | "copaBronce" | "desciende">;
+export type ObjetivoVisible = Extract<Objetivo, "campeon" | "primero" | "asciende" | "zonaOro" | "zonaPlata" | "zonaBronce" | "desciende">;
 
 export const OBJETIVOS: Record<ObjetivoVisible, { corto: string; largo: string; color: string }> = {
   campeon: { corto: "Campeón", largo: "salir campeón", color: "var(--c-camp)" },
   asciende: { corto: "Asciende", largo: "ascender", color: "var(--c-asc)" },
-  copaOro: { corto: "Copa de Oro", largo: "ganar la Copa de Oro", color: "var(--c-oro)" },
-  copaPlata: { corto: "Copa de Plata", largo: "ganar la Copa de Plata", color: "var(--c-plata)" },
-  copaBronce: { corto: "Copa de Bronce", largo: "ganar la Copa de Bronce", color: "var(--c-bronce)" },
+  primero: { corto: "1º puesto", largo: "terminar 1º", color: "var(--goal-primero-text)" },
+  zonaOro: { corto: "Copa de Oro", largo: "jugar la Copa de Oro", color: "var(--c-oro)" },
+  zonaPlata: { corto: "Copa de Plata", largo: "jugar la Copa de Plata", color: "var(--c-plata)" },
+  zonaBronce: { corto: "Copa de Bronce", largo: "jugar la Copa de Bronce", color: "var(--c-bronce)" },
   desciende: { corto: "Desciende", largo: "descender", color: "var(--c-desc)" },
 };
 
 /** Objetivos que aplican: el Apertura no tiene copas; la divisional A no tiene ascenso. */
 export function objetivosDe(categoria: string, esPrimera: boolean): ObjetivoVisible[] {
-  const base: ObjetivoVisible[] = categoria === "Clausura" ? ["campeon", "asciende", "copaOro", "copaPlata", "copaBronce", "desciende"] : ["campeon", "asciende", "desciende"];
+  const base: ObjetivoVisible[] = categoria === "Clausura" ? ["campeon", "primero", "zonaOro", "zonaPlata", "zonaBronce"] : ["campeon", "asciende", "desciende"];
   return esPrimera ? base.filter((o) => o !== "asciende") : base;
 }
 
@@ -35,9 +36,9 @@ export function objetivoPrincipal(prob: Record<string, number[]>, i: number, pos
   if (posibles.includes("campeon") && prob.campeon[i] >= 0.05) return "campeon";
   if (vivo("asciende")) return "asciende";
   if (vivo("desciende")) return "desciende";
-  if (posibles.includes("asciende") && prob.asciende[i] > 0.98) return posibles.includes("copaOro") ? "copaOro" : "asciende";
-  if (posibles.includes("desciende") && prob.desciende[i] > 0.98) return posibles.includes("copaBronce") ? "copaBronce" : "desciende";
-  return posibles.includes("copaPlata") ? "copaPlata" : "campeon";
+  if (posibles.includes("zonaOro") && prob.zonaOro[i] >= 0.1) return "zonaOro";
+  if (posibles.includes("zonaBronce") && prob.zonaBronce[i] >= 0.1) return "zonaBronce";
+  return posibles.includes("zonaPlata") ? "zonaPlata" : "campeon";
 }
 
 const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "set", "oct", "nov", "dic"];

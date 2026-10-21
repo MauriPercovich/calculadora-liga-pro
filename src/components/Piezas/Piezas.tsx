@@ -6,6 +6,13 @@ import css from "./Piezas.module.css";
 /** Marca de 16 px por objetivo (decorativa: siempre va con texto). */
 export function Marca({ m }: { m: Meta }) {
   const o = METAS[m];
+  if (o.marca === "trofeo")
+    return (
+      <svg className={css.marca} viewBox="0 0 16 16" aria-hidden>
+        <rect width="16" height="16" rx="4" fill={o.barra} />
+        <path d="M5 4h6v2.2a3 3 0 0 1-6 0zM8 9.2v2M6 12.2h4" stroke="#fff" strokeWidth="1.4" fill="none" strokeLinecap="round" />
+      </svg>
+    );
   if (o.marca === "sube" || o.marca === "baja")
     return (
       <svg className={css.marca} viewBox="0 0 16 16" aria-hidden>
@@ -13,7 +20,7 @@ export function Marca({ m }: { m: Meta }) {
       </svg>
     );
   return (
-    <span className={`${css.marca} ${o.marca === "cuadro" ? css.cuadro : css.circulo} ${m === "copaOro" ? css.oro : ""}`} style={{ background: o.barra }} aria-hidden>
+    <span className={`${css.marca} ${o.marca === "cuadro" ? css.cuadro : css.circulo} ${m === "zonaOro" ? css.oro : ""}`} style={{ background: o.barra }} aria-hidden>
       {o.letra}
     </span>
   );
@@ -42,14 +49,17 @@ export function MatchBar({ p, numeros = false, etiquetas }: { p: [number, number
 }
 
 /** Fila de 44 px: marca + nombre · barra · cifra. Tocar lleva a la ficha con ese objetivo. */
-export function GoalRow({ m, p, txt, href, aDefinir = false }: { m: Meta; p: number; txt: string; href: string; aDefinir?: boolean }) {
+export function GoalRow({ m, p, txt, href, aDefinir = false, extra }: { m: Meta; p: number; txt: string; href: string; aDefinir?: boolean; extra?: string | null }) {
   const o = METAS[m];
   const ancho = p > 0 ? Math.max(p * 100, 1.5) : 0; // barra mínima visible si la chance es > 0
   return (
     <Link className={css.goalRow} href={href}>
       <span className={css.goalNombre} style={{ color: o.texto }}>
         <Marca m={m} />
-        <span>{o.corto}</span>
+        <span>
+          {o.corto}
+          {extra && <small className={css.extra}>y {extra}</small>}
+        </span>
       </span>
       <span className={css.track} aria-hidden>
         {!aDefinir && <span style={{ width: `${ancho}%`, background: o.barra }} />}

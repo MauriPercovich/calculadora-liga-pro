@@ -1,6 +1,6 @@
 # Calculadora Liga Pro
 
-Chances de salir campeón, ascender, ganar las copas de Oro, Plata y Bronce o descender para cada equipo de [Liga Pro](https://www.ligapro.uy) (fútbol 8, Montevideo), actualizadas después de cada fecha.
+Chances de salir campeón, terminar 1º, ascender, descender y a qué copa va (Oro, Plata o Bronce) para cada equipo de [Liga Pro](https://www.ligapro.uy) (fútbol 8, Montevideo), actualizadas después de cada fecha.
 
 **En vivo: [calculadora-liga-pro-five.vercel.app](https://calculadora-liga-pro-five.vercel.app)**
 
@@ -9,7 +9,7 @@ Proyecto independiente. Los datos son los que la Liga publica en su web.
 ## Qué hace
 
 - **Tu equipo primero**: elegís tu cuadro y la portada abre con sus chances y su próximo partido.
-- **Chances por divisional**: campeón, ascenso, descenso y copas, con tabla oficial y tabla proyectada.
+- **Chances por divisional**: campeón, 1º puesto, ascenso, descenso y a qué copa va, con tabla oficial y tabla proyectada.
 - **Ficha de equipo**: qué pasa si gana, empata o pierde; con cuántos puntos le alcanza; qué partidos de otros le importan; cómo cambiaron sus chances fecha a fecha; sancionados propios y del rival.
 - **Partidos**: probabilidad de cada resultado en lo que viene, y en lo jugado, lo que el modelo esperaba antes (con las sorpresas marcadas).
 - **Simular**: elegís resultados de los partidos que faltan y se recalcula todo en el navegador.

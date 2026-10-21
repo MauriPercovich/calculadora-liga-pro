@@ -1,7 +1,7 @@
 import { golesEsperados, poisson, rng, type ModeloGoles } from "./model";
 import { METAS_VISIBLES, type Divisional, type MetaVisible, type Objetivo, type Partido, type Reglamento, type ResultadoSimulacion } from "./types";
 
-const OBJETIVOS: Objetivo[] = ["campeon", "asciende", "copaOro", "copaPlata", "copaBronce", "desciende", "zonaOro", "zonaPlata", "zonaBronce", "desempate"];
+const OBJETIVOS: Objetivo[] = ["campeon", "primero", "asciende", "copaOro", "copaPlata", "copaBronce", "desciende", "zonaOro", "zonaPlata", "zonaBronce", "desempate"];
 
 export interface OpcionesSimulacion {
   n: number;
@@ -90,6 +90,7 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
     return llave4(t);
   };
 
+  const clausura = div.categoria === "Clausura";
   const cuenta: Record<Objetivo, number[]> = Object.fromEntries(OBJETIVOS.map((o) => [o, new Array(N).fill(0)])) as Record<Objetivo, number[]>;
   const ptsSum = new Array(N).fill(0);
   const posicion = Array.from({ length: N }, () => new Array(N).fill(0));
@@ -173,10 +174,13 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
     baja.forEach((t) => cuenta.desciende[t]++);
 
     // Por equipo, qué logró en esta simulación (orden de METAS_VISIBLES).
-    const logro = (t: number) => [campeon === t, sube.includes(t), baja.includes(t), ganaOro === t, ganaPlata === t, ganaBronce === t];
+    const enOro = clausura ? orden.slice(0, reg.tamanoCopa) : [];
+    const enBronce = clausura ? orden.slice(N - reg.tamanoCopa) : [];
+    const logro = (t: number) => [campeon === t, orden[0] === t, sube.includes(t), baja.includes(t), enOro.includes(t), clausura && !enOro.includes(t) && !enBronce.includes(t), enBronce.includes(t)];
+    cuenta.primero[orden[0]]++;
     for (let t = 0; t < N; t++) {
       ptsSum[t] += pts[t];
-      const h = (porPuntos[t][pts[t]] ??= [0, 0, 0, 0, 0, 0, 0]);
+      const h = (porPuntos[t][pts[t]] ??= [0, 0, 0, 0, 0, 0, 0, 0]);
       h[0]++;
       logro(t).forEach((si, k) => si && h[k + 1]++);
     }
@@ -186,9 +190,10 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
       c.campeon[campeon]++;
       sube.forEach((t) => c.asciende[t]++);
       baja.forEach((t) => c.desciende[t]++);
-      if (ganaOro >= 0) c.copaOro[ganaOro]++;
-      if (ganaPlata >= 0) c.copaPlata[ganaPlata]++;
-      if (ganaBronce >= 0) c.copaBronce[ganaBronce]++;
+      c.primero[orden[0]]++;
+      enOro.forEach((t) => c.zonaOro[t]++);
+      enBronce.forEach((t) => c.zonaBronce[t]++);
+      if (clausura) orden.forEach((t) => !enOro.includes(t) && !enBronce.includes(t) && c.zonaPlata[t]++);
     });
   }
 

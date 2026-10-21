@@ -48,6 +48,7 @@
 }
 .tile[aria-pressed="true"] { border: 2px solid var(--accent); padding: 7px 9px; background: rgba(255, 255, 255, 0.14); }
 .tileK { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--hero-text); }
+.tileX { font-size: 11px; color: var(--hero-text-2); margin-top: -2px; }
 .tileV { font-size: 20px; font-weight: 800; }
 .tileV.aDef { font-size: 13px; font-weight: 600; color: var(--hero-text-2); }
 .fichaPie { display: flex; justify-content: space-between; gap: var(--s-2); flex-wrap: wrap; font-size: 12px; color: var(--hero-text-2); border-top: 1px solid var(--hero-line); padding-top: var(--s-3); }
