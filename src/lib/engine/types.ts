@@ -61,13 +61,16 @@ export interface Reglamento {
   descensos: number; // 4
   tamanoCopa: number; // 4 en Oro y en Bronce; el resto va a Plata
   finalDesempatePrimero: boolean; // Apertura: sí; Clausura: no
+  /** Con más de 4 equipos en el medio el formato de la Copa de Plata está a definir. */
+  plataSinFormato: boolean;
 }
 
-export const reglamentoDe = (d: Pick<Divisional, "categoria" | "esPrimera">): Reglamento => ({
+export const reglamentoDe = (d: Pick<Divisional, "categoria" | "esPrimera" | "equipos">): Reglamento => ({
   ascensos: d.esPrimera ? 0 : 4,
   descensos: 4,
   tamanoCopa: 4,
   finalDesempatePrimero: d.categoria === "Apertura",
+  plataSinFormato: d.categoria === "Clausura" && d.equipos.length - 8 > 4,
 });
 
 export type Objetivo = "campeon" | "asciende" | "copaOro" | "copaPlata" | "copaBronce" | "desciende" | "zonaOro" | "zonaPlata" | "zonaBronce" | "desempate";
@@ -84,3 +87,6 @@ export interface ResultadoSimulacion {
   /** por partido restante y resultado (0 gana a, 1 empate, 2 gana b): veces y objetivos */
   condicional: { n: number; asciende: number[]; desciende: number[]; campeon: number[] }[][];
 }
+
+/** 1 = seguro, 0 = imposible, null = depende. Solo con esto la UI muestra "0%", "100%", "seguro" o "no alcanza". */
+export type Seguro = Partial<Record<Objetivo, (0 | 1 | null)[]>>;

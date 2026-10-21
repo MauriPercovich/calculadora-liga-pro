@@ -49,19 +49,45 @@ export function simular(div: Divisional, reg: Reglamento, modelo: ModeloGoles, o
   const L = restantes.map((p) => [golesEsperados(modelo, p.a, p.b), golesEsperados(modelo, p.b, p.a)] as const);
   const lam = (a: number, b: number) => golesEsperados(modelo, ids[a], ids[b]);
 
+  // Partidos de copa que la Liga ya cargó: si ese cruce se jugó, manda el resultado real.
+  // La API no trae los penales: si terminó empatado, pasó el que aparece en un partido posterior.
+  const copa = div.partidos.filter((p) => p.fase !== "regular");
+  const clavePar = (a: number, b: number) => (a < b ? `${a}-${b}` : `${b}-${a}`);
+  const realDe = new Map<string, number | null>(); // ganador (índice) o null si se juega pero no tiene resultado
+  for (const p of copa) {
+    const a = ix.get(p.a);
+    const b = ix.get(p.b);
+    if (a === undefined || b === undefined) continue;
+    let ganador: number | null = null;
+    if (p.golesA !== null && p.golesB !== null) {
+      if (p.golesA > p.golesB) ganador = a;
+      else if (p.golesB > p.golesA) ganador = b;
+      else {
+        const despues = copa.filter((q) => q.fecha > p.fecha);
+        const siguio = (id: number) => despues.some((q) => q.a === id || q.b === id);
+        ganador = siguio(p.a) && !siguio(p.b) ? a : siguio(p.b) && !siguio(p.a) ? b : null;
+      }
+    }
+    realDe.set(clavePar(a, b), ganador);
+  }
+
   // Partido único con penales (50 y 50) si termina igualado.
   const unico = (a: number, b: number) => {
+    const real = realDe.get(clavePar(a, b));
+    if (real !== undefined && real !== null) return real;
     const x = poisson(lam(a, b), r);
     const y = poisson(lam(b, a), r);
     return x > y ? a : x < y ? b : r() < 0.5 ? a : b;
   };
   const llave4 = (t: number[]) => unico(unico(t[0], t[3]), unico(t[1], t[2]));
+  // Llave de la Copa de Plata según cuántos quedan en el medio. Con más de 4 la Liga todavía
+  // no definió el formato: van a Plata pero no simulamos un ganador (-1).
   const llave = (t: number[]) => {
-    if (t.length === 0) return -1;
+    if (t.length === 0 || t.length > 4) return -1;
     if (t.length === 1) return t[0];
     if (t.length === 2) return unico(t[0], t[1]);
     if (t.length === 3) return unico(t[0], unico(t[1], t[2]));
-    return llave4(t.slice(0, 4));
+    return llave4(t);
   };
 
   const cuenta: Record<Objetivo, number[]> = Object.fromEntries(OBJETIVOS.map((o) => [o, new Array(N).fill(0)])) as Record<Objetivo, number[]>;

@@ -8,7 +8,8 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { ajustarGoles, probabilidades } from "../src/lib/engine/model";
 import { simular, partidosRestantes } from "../src/lib/engine/simulate";
-import { reglamentoDe, type Categoria, type Divisional, type Equipo, type FilaTabla, type Partido, type Sancion } from "../src/lib/engine/types";
+import { calcularCertezas } from "../src/lib/engine/certeza";
+import { reglamentoDe, type Categoria, type Divisional, type Equipo, type FilaTabla, type Partido, type Sancion, type Seguro } from "../src/lib/engine/types";
 
 const RAW = path.resolve("data/raw");
 const OUT = path.resolve("public/data");
@@ -157,6 +158,34 @@ function calcular(div: Divisional) {
   const modelo = ajustarGoles(jugados, ids);
   const ahora = simular(div, reg, modelo, { n: N_SIM, semilla: 11 });
 
+  // Lo que ya está definido de verdad (no por redondeo de las simulaciones).
+  const cz = calcularCertezas(div, reg);
+  const clausura = div.categoria === "Clausura";
+  const no = (c: 0 | 1 | null) => (c === 0 ? 0 : null);
+  const zonaPlata = ids.map((_, t) => (cz.arriba[t] === 1 || cz.desciende[t] === 1 ? 0 : cz.arriba[t] === 0 && cz.desciende[t] === 0 ? 1 : null));
+  const seguro: Seguro = {
+    asciende: reg.ascensos > 0 ? cz.asciende : ids.map(() => 0),
+    desciende: cz.desciende,
+    campeon: clausura ? cz.arriba.map(no) : cz.primero.map((c) => (c === 0 ? 0 : c === 1 && !reg.finalDesempatePrimero ? 1 : null)),
+    ...(clausura
+      ? {
+          zonaOro: cz.arriba,
+          zonaBronce: cz.desciende,
+          zonaPlata,
+          copaOro: cz.arriba.map(no),
+          copaBronce: cz.desciende.map(no),
+          copaPlata: reg.plataSinFormato ? ids.map(() => null) : zonaPlata.map(no),
+        }
+      : {}),
+  };
+  // Las simulaciones nunca contradicen lo seguro.
+  for (const [o, lista] of Object.entries(seguro) as [keyof typeof ahora.prob, (0 | 1 | null)[]][]) {
+    lista.forEach((c, t) => {
+      if (c === 0) ahora.prob[o][t] = 0;
+      if (c === 1) ahora.prob[o][t] = 1;
+    });
+  }
+
   // Probabilidad "antes del partido": modelo con lo jugado hasta la fecha anterior.
   const antes: Record<number, [number, number, number]> = {};
   for (let f = 1; f <= ultimaJugada; f++) {
@@ -198,6 +227,8 @@ function calcular(div: Divisional) {
 
   return {
     reglamento: reg,
+    seguro,
+    certezaPuntos: cz.porPuntos,
     picantes,
     ultimaJugada,
     totalFechas,

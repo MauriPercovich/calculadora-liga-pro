@@ -1,4 +1,4 @@
-import type { Divisional, Partido, Reglamento, ResultadoSimulacion } from "./engine/types";
+import type { Divisional, Partido, Reglamento, ResultadoSimulacion, Seguro } from "./engine/types";
 
 export interface EquipoIndice { id: number; nombre: string; slug: string; escudo: string | null }
 export interface DivisionalIndice {
@@ -26,6 +26,10 @@ export interface Indice { actualizado: string; torneo: string; divisionales: Div
 /** Todo lo que la web necesita de una divisional (lo genera scripts/build-data.ts). */
 export interface DatosDivisional extends Divisional {
   reglamento: Reglamento;
+  /** Qué está definido de verdad: 1 seguro, 0 imposible, null depende. */
+  seguro: Seguro;
+  /** Con 12 partidos o menos: por equipo y puntaje final, si el objetivo pasa seguro o nunca. */
+  certezaPuntos: Record<number, { arriba: 0 | 1 | null; asciende: 0 | 1 | null; desciende: 0 | 1 | null; primero: 0 | 1 | null }>[] | null;
   ultimaJugada: number;
   totalFechas: number;
   modelo: { mu: number; ataque: number[]; defensa: number[] };
