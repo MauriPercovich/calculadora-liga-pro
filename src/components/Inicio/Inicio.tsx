@@ -285,7 +285,10 @@ function MiniTabla({ d, div, yoId }: { d: DatosDivisional; div: DivisionalIndice
           </tbody>
         </table>
       </div>
-      <p className={css.nota}>{cl ? `En celeste, los 4 que hoy van a la Copa de Oro${d.esPrimera ? "" : " y ascienden"}. Oro y Bronce: chance de terminar en esa copa${d.esPrimera ? "" : " (Oro = asciende, Bronce = desciende)"}.` : "En celeste, los 4 primeros de hoy."} Tocá un equipo para ver su ficha.</p>
+      <p className={css.nota}>{cl
+          ? `Colores según la tabla de hoy: dorado, Copa de Oro${d.esPrimera ? "" : " (ascienden)"}; plateado, Copa de Plata; rojo, Copa de Bronce (descienden). Las columnas son la chance de jugar esa copa.`
+          : `Colores según la tabla de hoy: dorado, el 1º${d.esPrimera ? "" : "; celeste, ascenso"}; rojo, descenso.`}{" "}
+        Tocá un equipo para ver su ficha.</p>
     </section>
   );
 }
