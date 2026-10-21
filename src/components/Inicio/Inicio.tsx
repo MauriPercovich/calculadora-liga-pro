@@ -197,7 +197,7 @@ function Portada({ d, i, div, indice }: { d: DatosDivisional; i: number; div: Di
 
           {picantes.length > 0 && (
             <>
-              <h2 className={css.titulo}>Lo más picante de la última fecha</h2>
+              <h2 className={css.titulo}>Lo destacado de la última fecha</h2>
               <div className={css.hot}>
                 {picantes.map(({ p, d: dx }) => <TarjetaPicante key={p.partido.id} p={p} d={dx} />)}
               </div>
