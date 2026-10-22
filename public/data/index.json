@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T20:44:38.957Z",
+ "actualizado": "2026-10-22T05:03:48.456Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -4104,159 +4104,159 @@
    "divisional": "A",
    "categoria": "Clausura",
    "anio": 2026,
-   "ultimaJugada": 9,
+   "ultimaJugada": 10,
    "totalFechas": 13,
    "esPrimera": true,
-   "jugados": 52,
-   "restantes": 26,
+   "jugados": 58,
+   "restantes": 20,
    "picantes": [
     {
      "partido": {
-      "id": 29706,
-      "fecha": 9,
-      "dia": "2026-10-14",
+      "id": 29713,
+      "fecha": 10,
+      "dia": "2026-10-21",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 1227,
-      "b": 954,
-      "golesA": 1,
-      "golesB": 2,
+      "a": 954,
+      "b": 772,
+      "golesA": 4,
+      "golesB": 1,
       "fase": "regular"
      },
      "antes": [
-      0.561231783739497,
-      0.15125252253815896,
-      0.28751569372234403
+      0.221638227918583,
+      0.1407082582932726,
+      0.6376535137881443
      ],
      "cambios": [
       {
        "equipoId": 954,
        "objetivo": "desciende",
-       "de": 0.789,
-       "a": 0.345
+       "de": 0.374,
+       "a": 0.096
       },
       {
-       "equipoId": 1227,
+       "equipoId": 772,
        "objetivo": "desciende",
-       "de": 0.117,
-       "a": 0.157
+       "de": 0.006,
+       "a": 0.028
       }
      ],
-     "max": 0.44400000000000006
+     "max": 0.278
     },
     {
      "partido": {
-      "id": 29703,
-      "fecha": 9,
-      "dia": "2026-10-14",
+      "id": 29709,
+      "fecha": 10,
+      "dia": "2026-10-21",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 699,
-      "b": 1152,
-      "golesA": 13,
-      "golesB": 1,
+      "a": 1152,
+      "b": 630,
+      "golesA": 4,
+      "golesB": 8,
       "fase": "regular"
      },
      "antes": [
-      0.5601647730992427,
-      0.19710882910434727,
-      0.24272639779641006
+      0.1478797328185353,
+      0.12421500812995605,
+      0.7279052590515087
      ],
      "cambios": [
       {
        "equipoId": 1152,
        "objetivo": "desciende",
-       "de": 0.26,
-       "a": 0.674
+       "de": 0.662,
+       "a": 0.835
       },
       {
-       "equipoId": 699,
+       "equipoId": 630,
        "objetivo": "campeon",
-       "de": 0.199,
-       "a": 0.499
+       "de": 0.153,
+       "a": 0.228
       }
      ],
-     "max": 0.41400000000000003
+     "max": 0.17299999999999993
     },
     {
      "partido": {
-      "id": 29704,
-      "fecha": 9,
-      "dia": "2026-10-14",
+      "id": 29711,
+      "fecha": 10,
+      "dia": "2026-10-21",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 710,
-      "b": 1155,
-      "golesA": 2,
+      "a": 1155,
+      "b": 1227,
+      "golesA": 3,
       "golesB": 3,
       "fase": "regular"
      },
      "antes": [
-      0.26999144404555725,
-      0.14383152148271236,
-      0.5861770344717304
+      0.6864444293657074,
+      0.1332429988153716,
+      0.1803125718189209
      ],
      "cambios": [
       {
        "equipoId": 1155,
        "objetivo": "campeon",
-       "de": 0.361,
-       "a": 0.235
+       "de": 0.23,
+       "a": 0.113
+      },
+      {
+       "equipoId": 1227,
+       "objetivo": "desciende",
+       "de": 0.152,
+       "a": 0.127
       }
      ],
-     "max": 0.126
+     "max": 0.117
     },
     {
      "partido": {
-      "id": 29707,
-      "fecha": 9,
-      "dia": "2026-10-14",
+      "id": 29712,
+      "fecha": 10,
+      "dia": "2026-10-21",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 1035,
-      "b": 1290,
-      "golesA": 3,
-      "golesB": 1,
+      "a": 848,
+      "b": 1035,
+      "golesA": 4,
+      "golesB": 2,
       "fase": "regular"
      },
      "antes": [
-      0.3774849743900606,
-      0.2127208382130494,
-      0.40979418739689
+      0.511377665444558,
+      0.19163398820236355,
+      0.2969883463530784
      ],
      "cambios": [
       {
-       "equipoId": 1290,
-       "objetivo": "desciende",
-       "de": 0.763,
-       "a": 0.88
-      },
-      {
        "equipoId": 1035,
        "objetivo": "desciende",
-       "de": 0.975,
-       "a": 0.89
+       "de": 0.884,
+       "a": 0.99
       }
      ],
-     "max": 0.11699999999999999
+     "max": 0.10599999999999998
     }
    ],
    "equipos": [
-    {
-     "id": 169,
-     "nombre": "Union",
-     "slug": "union",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68c1bde6397fb.jpeg",
-     "pos": 1,
-     "pts": 21
-    },
     {
      "id": 699,
      "nombre": "La Barraca FC",
      "slug": "la-barraca-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/64234aa2a8637.png",
+     "pos": 1,
+     "pts": 22
+    },
+    {
+     "id": 169,
+     "nombre": "Union",
+     "slug": "union",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68c1bde6397fb.jpeg",
      "pos": 2,
-     "pts": 19
+     "pts": 21
     },
     {
      "id": 1155,
@@ -4264,7 +4264,7 @@
      "slug": "el-monte",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21188c6b9.png",
      "pos": 3,
-     "pts": 19
+     "pts": 20
     },
     {
      "id": 630,
@@ -4272,6 +4272,14 @@
      "slug": "nueva-escuela-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc6def48be7.png",
      "pos": 4,
+     "pts": 18
+    },
+    {
+     "id": 848,
+     "nombre": "Juanca Magic",
+     "slug": "juanca-magic",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679e21de15f0c.png",
+     "pos": 5,
      "pts": 15
     },
     {
@@ -4279,24 +4287,16 @@
      "nombre": "Olympique de Lyrón",
      "slug": "olympique-de-lyron",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66103b8ef0190.jpeg",
-     "pos": 5,
+     "pos": 6,
      "pts": 13
     },
     {
-     "id": 848,
-     "nombre": "Juanca Magic",
-     "slug": "juanca-magic",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679e21de15f0c.png",
-     "pos": 6,
-     "pts": 12
-    },
-    {
-     "id": 710,
-     "nombre": "Fraternidad",
-     "slug": "fraternidad",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ea44ff5d19f.png",
+     "id": 954,
+     "nombre": "Fecha Libre",
+     "slug": "fecha-libre",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66c38c5d4922f.jpeg",
      "pos": 7,
-     "pts": 10
+     "pts": 13
     },
     {
      "id": 1227,
@@ -4304,13 +4304,13 @@
      "slug": "la-rata-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69d945564e1c5.jpeg",
      "pos": 8,
-     "pts": 10
+     "pts": 11
     },
     {
-     "id": 954,
-     "nombre": "Fecha Libre",
-     "slug": "fecha-libre",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66c38c5d4922f.jpeg",
+     "id": 710,
+     "nombre": "Fraternidad",
+     "slug": "fraternidad",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ea44ff5d19f.png",
      "pos": 9,
      "pts": 10
     },
@@ -4323,20 +4323,20 @@
      "pts": 9
     },
     {
-     "id": 1035,
-     "nombre": "Manchester FC Mie",
-     "slug": "manchester-fc-mie",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e1894c4ae76.jpeg",
-     "pos": 11,
-     "pts": 7
-    },
-    {
      "id": 1290,
      "nombre": "Turquia Fc",
      "slug": "turquia-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/2.png",
+     "pos": 11,
+     "pts": 8
+    },
+    {
+     "id": 1035,
+     "nombre": "Manchester FC Mie",
+     "slug": "manchester-fc-mie",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e1894c4ae76.jpeg",
      "pos": 12,
-     "pts": 5
+     "pts": 7
     },
     {
      "id": 787,
@@ -4354,165 +4354,165 @@
    "divisional": "B",
    "categoria": "Clausura",
    "anio": 2026,
-   "ultimaJugada": 9,
+   "ultimaJugada": 10,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 54,
-   "restantes": 24,
+   "jugados": 59,
+   "restantes": 19,
    "picantes": [
     {
      "partido": {
-      "id": 29785,
-      "fecha": 9,
-      "dia": "2026-10-07",
+      "id": 29792,
+      "fecha": 10,
+      "dia": "2026-10-14",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 1057,
-      "b": 1055,
-      "golesA": 0,
-      "golesB": 3,
+      "a": 1055,
+      "b": 1280,
+      "golesA": 2,
+      "golesB": 4,
       "fase": "regular"
      },
      "antes": [
-      0.3249399083613019,
-      0.21653282854790745,
-      0.4585272630907907
+      0.4391293070153534,
+      0.18617807432145717,
+      0.3746926186631895
      ],
      "cambios": [
       {
        "equipoId": 1055,
        "objetivo": "desciende",
-       "de": 0.502,
-       "a": 0.283
+       "de": 0.273,
+       "a": 0.59
       },
-      {
-       "equipoId": 1057,
-       "objetivo": "desciende",
-       "de": 0.971,
-       "a": 0.999
-      }
-     ],
-     "max": 0.21900000000000003
-    },
-    {
-     "partido": {
-      "id": 29783,
-      "fecha": 9,
-      "dia": "2026-10-07",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1099,
-      "b": 1281,
-      "golesA": 5,
-      "golesB": 6,
-      "fase": "regular"
-     },
-     "antes": [
-      0.24297634579962032,
-      0.24360938035025734,
-      0.5134142738501223
-     ],
-     "cambios": [
-      {
-       "equipoId": 1281,
-       "objetivo": "asciende",
-       "de": 0.818,
-       "a": 0.975
-      },
-      {
-       "equipoId": 1099,
-       "objetivo": "asciende",
-       "de": 0.149,
-       "a": 0.075
-      }
-     ],
-     "max": 0.15700000000000003
-    },
-    {
-     "partido": {
-      "id": 29786,
-      "fecha": 9,
-      "dia": "2026-10-07",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1198,
-      "b": 1280,
-      "golesA": 2,
-      "golesB": 2,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5733946633255401,
-      0.15327595201617333,
-      0.2733293846582865
-     ],
-     "cambios": [
       {
        "equipoId": 1280,
        "objetivo": "desciende",
-       "de": 0.767,
-       "a": 0.857
+       "de": 0.865,
+       "a": 0.612
+      }
+     ],
+     "max": 0.31699999999999995
+    },
+    {
+     "partido": {
+      "id": 29789,
+      "fecha": 10,
+      "dia": "2026-10-14",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 1284,
+      "b": 1099,
+      "golesA": 3,
+      "golesB": 4,
+      "fase": "regular"
+     },
+     "antes": [
+      0.2701382308415183,
+      0.16057255646179436,
+      0.5692892126966873
+     ],
+     "cambios": [
+      {
+       "equipoId": 1099,
+       "objetivo": "asciende",
+       "de": 0.075,
+       "a": 0.333
+      },
+      {
+       "equipoId": 1284,
+       "objetivo": "asciende",
+       "de": 0.131,
+       "a": 0.102
+      }
+     ],
+     "max": 0.258
+    },
+    {
+     "partido": {
+      "id": 29791,
+      "fecha": 10,
+      "dia": "2026-10-14",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 1182,
+      "b": 1198,
+      "golesA": 2,
+      "golesB": 4,
+      "fase": "regular"
+     },
+     "antes": [
+      0.73176833811375,
+      0.11084121858106011,
+      0.15739044330518986
+     ],
+     "cambios": [
+      {
+       "equipoId": 1182,
+       "objetivo": "asciende",
+       "de": 0.818,
+       "a": 0.58
       },
       {
        "equipoId": 1198,
        "objetivo": "desciende",
-       "de": 0.037,
-       "a": 0.052
+       "de": 0.048,
+       "a": 0
       }
      ],
-     "max": 0.08999999999999997
+     "max": 0.238
     },
     {
      "partido": {
-      "id": 29781,
-      "fecha": 9,
-      "dia": "2026-10-07",
+      "id": 29787,
+      "fecha": 10,
+      "dia": "2026-10-14",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 1255,
-      "b": 1261,
-      "golesA": 1,
-      "golesB": 5,
+      "a": 1261,
+      "b": 536,
+      "golesA": 4,
+      "golesB": 2,
       "fase": "regular"
      },
      "antes": [
-      0.03746806429983673,
-      0.05286882632584162,
-      0.9096631093743216
+      0.5736741449387895,
+      0.16449352293797845,
+      0.26183233212323204
      ],
      "cambios": [
       {
-       "equipoId": 1255,
-       "objetivo": "desciende",
-       "de": 0.041,
-       "a": 0.123
+       "equipoId": 536,
+       "objetivo": "campeon",
+       "de": 0.342,
+       "a": 0.144
       },
       {
        "equipoId": 1261,
        "objetivo": "campeon",
-       "de": 0.636,
-       "a": 0.609
+       "de": 0.613,
+       "a": 0.803
       }
      ],
-     "max": 0.08199999999999999
+     "max": 0.19800000000000004
     }
    ],
    "equipos": [
-    {
-     "id": 536,
-     "nombre": "Full House FC",
-     "slug": "full-house-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ad5b7e9ab780bd9d2fb4ccce78fba0ab.png",
-     "pos": 1,
-     "pts": 24
-    },
     {
      "id": 1261,
      "nombre": "buff fc",
      "slug": "buff-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9a847172e100bfb206273652f5470193.jpg",
+     "pos": 1,
+     "pts": 24
+    },
+    {
+     "id": 536,
+     "nombre": "Full House FC",
+     "slug": "full-house-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ad5b7e9ab780bd9d2fb4ccce78fba0ab.png",
      "pos": 2,
-     "pts": 21
+     "pts": 24
     },
     {
      "id": 1281,
@@ -4523,20 +4523,20 @@
      "pts": 20
     },
     {
-     "id": 1182,
-     "nombre": "Mala Junta FC",
-     "slug": "mala-junta-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cb05fac434.jpeg",
-     "pos": 4,
-     "pts": 16
-    },
-    {
      "id": 1099,
      "nombre": "Atlético Helamán",
      "slug": "atletico-helaman",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd23366bc40.png",
+     "pos": 4,
+     "pts": 18
+    },
+    {
+     "id": 1182,
+     "nombre": "Mala Junta FC",
+     "slug": "mala-junta-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cb05fac434.jpeg",
      "pos": 5,
-     "pts": 15
+     "pts": 16
     },
     {
      "id": 1284,
@@ -4552,37 +4552,37 @@
      "slug": "sd-el-balde",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd238b6986d.png",
      "pos": 7,
-     "pts": 11
-    },
-    {
-     "id": 1055,
-     "nombre": "Sociedad Anónima",
-     "slug": "sociedad-anonima",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21afddd88.png",
-     "pos": 8,
-     "pts": 10
+     "pts": 14
     },
     {
      "id": 1255,
      "nombre": "Plan C FC",
      "slug": "plan-c-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/34007afd2c7ce3c040601a4d0017bc77.jpg",
-     "pos": 9,
-     "pts": 9
-    },
-    {
-     "id": 1265,
-     "nombre": "Forza Fc",
-     "slug": "forza-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/145d867c3ea3302e214568a11ebfbaf9.png",
-     "pos": 10,
-     "pts": 7
+     "pos": 8,
+     "pts": 10
     },
     {
      "id": 1280,
      "nombre": "Classtudio FC",
      "slug": "classtudio-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5270377aafe112f0ef7228b806efaf86.jpg",
+     "pos": 9,
+     "pts": 10
+    },
+    {
+     "id": 1055,
+     "nombre": "Sociedad Anónima",
+     "slug": "sociedad-anonima",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21afddd88.png",
+     "pos": 10,
+     "pts": 10
+    },
+    {
+     "id": 1265,
+     "nombre": "Forza Fc",
+     "slug": "forza-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/145d867c3ea3302e214568a11ebfbaf9.png",
      "pos": 11,
      "pts": 7
     },
@@ -4600,7 +4600,7 @@
      "slug": "alive-bbc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69caa5afd39cb.png",
      "pos": 13,
-     "pts": 0
+     "pts": 1
     }
    ]
   },
