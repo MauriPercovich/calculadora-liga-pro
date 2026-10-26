@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T22:01:05.091Z",
+ "actualizado": "2026-10-26T18:49:11.723Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -2044,7 +2044,7 @@
       "a": 877,
       "b": 604,
       "golesA": 0,
-      "golesB": 1,
+      "golesB": 2,
       "fase": "regular"
      },
      "antes": [
@@ -2057,16 +2057,16 @@
        "equipoId": 604,
        "objetivo": "desciende",
        "de": 0.37,
-       "a": 0.07
+       "a": 0.059
       },
       {
        "equipoId": 877,
        "objetivo": "desciende",
        "de": 0.09,
-       "a": 0.236
+       "a": 0.26
       }
      ],
-     "max": 0.3
+     "max": 0.311
     },
     {
      "partido": {
@@ -2091,16 +2091,16 @@
        "equipoId": 147,
        "objetivo": "desciende",
        "de": 0.391,
-       "a": 0.689
+       "a": 0.677
       },
       {
        "equipoId": 1218,
        "objetivo": "desciende",
        "de": 0.93,
-       "a": 0.843
+       "a": 0.841
       }
      ],
-     "max": 0.29799999999999993
+     "max": 0.28600000000000003
     },
     {
      "partido": {
@@ -2125,7 +2125,7 @@
        "equipoId": 1089,
        "objetivo": "desciende",
        "de": 0.286,
-       "a": 0.078
+       "a": 0.08
       },
       {
        "equipoId": 739,
@@ -2134,7 +2134,7 @@
        "a": 0.014
       }
      ],
-     "max": 0.20799999999999996
+     "max": 0.20599999999999996
     },
     {
      "partido": {
@@ -2159,16 +2159,16 @@
        "equipoId": 1103,
        "objetivo": "asciende",
        "de": 0.443,
-       "a": 0.603
+       "a": 0.608
       },
       {
        "equipoId": 960,
        "objetivo": "desciende",
        "de": 0.827,
-       "a": 0.907
+       "a": 0.906
       }
      ],
-     "max": 0.15999999999999998
+     "max": 0.16499999999999998
     }
    ],
    "equipos": [
