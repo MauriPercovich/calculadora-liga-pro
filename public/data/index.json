@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T05:19:05.608Z",
+ "actualizado": "2026-10-27T18:09:21.952Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -417,8 +417,8 @@
    "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 87,
-   "restantes": 4,
+   "jugados": 89,
+   "restantes": 2,
    "picantes": [
     {
      "partido": {
@@ -442,17 +442,17 @@
       {
        "equipoId": 988,
        "objetivo": "asciende",
-       "de": 0.485,
+       "de": 0.472,
        "a": 1
       },
       {
        "equipoId": 1276,
        "objetivo": "asciende",
-       "de": 0.281,
+       "de": 0.294,
        "a": 0
       }
      ],
-     "max": 0.515
+     "max": 0.528
     },
     {
      "partido": {
@@ -476,17 +476,51 @@
       {
        "equipoId": 933,
        "objetivo": "asciende",
-       "de": 0.688,
-       "a": 0.235
+       "de": 0.679,
+       "a": 0.24
       },
       {
        "equipoId": 243,
        "objetivo": "desciende",
-       "de": 0.684,
-       "a": 0.349
+       "de": 0.677,
+       "a": 1
       }
      ],
-     "max": 0.45299999999999996
+     "max": 0.43900000000000006
+    },
+    {
+     "partido": {
+      "id": 29265,
+      "fecha": 13,
+      "dia": "2026-10-26",
+      "hora": "22:00",
+      "cancha": "Polideportivo Carrasco",
+      "a": 330,
+      "b": 1203,
+      "golesA": 1,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.6545735837844961,
+      0.1557994551132024,
+      0.18962696110230146
+     ],
+     "cambios": [
+      {
+       "equipoId": 1203,
+       "objetivo": "desciende",
+       "de": 0.323,
+       "a": 0
+      },
+      {
+       "equipoId": 330,
+       "objetivo": "campeon",
+       "de": 0.743,
+       "a": 0.709
+      }
+     ],
+     "max": 0.323
     },
     {
      "partido": {
@@ -510,11 +544,11 @@
       {
        "equipoId": 1032,
        "objetivo": "asciende",
-       "de": 0.864,
+       "de": 0.86,
        "a": 1
       }
      ],
-     "max": 0.136
+     "max": 0.14
     }
    ],
    "equipos": [
@@ -551,27 +585,35 @@
      "pts": 23
     },
     {
+     "id": 1078,
+     "nombre": "La Cachimba",
+     "slug": "la-cachimba",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68544c1b22c52.PNG",
+     "pos": 5,
+     "pts": 22
+    },
+    {
      "id": 1148,
      "nombre": "Inside Lecce",
      "slug": "inside-lecce",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69399a0a58dde.jpeg",
-     "pos": 5,
+     "pos": 6,
      "pts": 21
+    },
+    {
+     "id": 1203,
+     "nombre": "Sparrow Boys",
+     "slug": "sparrow-boys",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd064a3ab57.png",
+     "pos": 7,
+     "pts": 20
     },
     {
      "id": 1276,
      "nombre": "By Hormiga",
      "slug": "by-hormiga",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png",
-     "pos": 6,
-     "pts": 19
-    },
-    {
-     "id": 1078,
-     "nombre": "La Cachimba",
-     "slug": "la-cachimba",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68544c1b22c52.PNG",
-     "pos": 7,
+     "pos": 8,
      "pts": 19
     },
     {
@@ -579,7 +621,7 @@
      "nombre": "Celta de Vivo",
      "slug": "celta-de-vivo",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/681b923b08177.jpeg",
-     "pos": 8,
+     "pos": 9,
      "pts": 18
     },
     {
@@ -587,7 +629,7 @@
      "nombre": "La Acadé",
      "slug": "la-acade",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6785626002709.png",
-     "pos": 9,
+     "pos": 10,
      "pts": 18
     },
     {
@@ -595,14 +637,6 @@
      "nombre": "Atlético Majuga FC",
      "slug": "atletico-majuga-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6984d00e1604a.png",
-     "pos": 10,
-     "pts": 17
-    },
-    {
-     "id": 1203,
-     "nombre": "Sparrow Boys",
-     "slug": "sparrow-boys",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd064a3ab57.png",
      "pos": 11,
      "pts": 17
     },
