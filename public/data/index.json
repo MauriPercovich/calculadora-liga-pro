@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T18:09:21.952Z",
+ "actualizado": "2026-10-27T22:23:36.929Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -1172,42 +1172,8 @@
    "totalFechas": 11,
    "esPrimera": false,
    "jugados": 61,
-   "restantes": 14,
+   "restantes": 15,
    "picantes": [
-    {
-     "partido": {
-      "id": 30962,
-      "fecha": 10,
-      "dia": "2026-10-20",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 1288,
-      "b": 1279,
-      "golesA": 3,
-      "golesB": 2,
-      "fase": "regular"
-     },
-     "antes": [
-      0.44538147747946,
-      0.15921688437262174,
-      0.3954016381479183
-     ],
-     "cambios": [
-      {
-       "equipoId": 1288,
-       "objetivo": "asciende",
-       "de": 0.399,
-       "a": 0.69
-      },
-      {
-       "equipoId": 1279,
-       "objetivo": "asciende",
-       "de": 0.335,
-       "a": 0.079
-      }
-     ],
-     "max": 0.2909999999999999
-    },
     {
      "partido": {
       "id": 30133,
@@ -1230,17 +1196,51 @@
       {
        "equipoId": 1204,
        "objetivo": "asciende",
-       "de": 0.742,
-       "a": 0.93
+       "de": 0.714,
+       "a": 0.942
       },
       {
        "equipoId": 837,
        "objetivo": "asciende",
-       "de": 0.199,
-       "a": 0.034
+       "de": 0.202,
+       "a": 0.016
       }
      ],
-     "max": 0.18800000000000006
+     "max": 0.22799999999999998
+    },
+    {
+     "partido": {
+      "id": 30962,
+      "fecha": 10,
+      "dia": "2026-10-20",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 1288,
+      "b": 1279,
+      "golesA": 3,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.44538147747946,
+      0.15921688437262174,
+      0.3954016381479183
+     ],
+     "cambios": [
+      {
+       "equipoId": 1279,
+       "objetivo": "asciende",
+       "de": 0.269,
+       "a": 0.053
+      },
+      {
+       "equipoId": 1288,
+       "objetivo": "asciende",
+       "de": 0.602,
+       "a": 0.818
+      }
+     ],
+     "max": 0.21600000000000003
     },
     {
      "partido": {
@@ -1264,17 +1264,17 @@
       {
        "equipoId": 991,
        "objetivo": "desciende",
-       "de": 0.218,
-       "a": 0.043
+       "de": 0.259,
+       "a": 0.069
       },
       {
        "equipoId": 1186,
        "objetivo": "desciende",
-       "de": 0.916,
+       "de": 0.924,
        "a": 1
       }
      ],
-     "max": 0.175
+     "max": 0.19
     },
     {
      "partido": {
@@ -1298,17 +1298,17 @@
       {
        "equipoId": 1123,
        "objetivo": "desciende",
-       "de": 0.839,
-       "a": 0.946
+       "de": 0.841,
+       "a": 0.947
       },
       {
        "equipoId": 1278,
        "objetivo": "campeon",
-       "de": 0.747,
-       "a": 0.792
+       "de": 0.751,
+       "a": 0.786
       }
      ],
-     "max": 0.10699999999999998
+     "max": 0.10599999999999998
     }
    ],
    "equipos": [
