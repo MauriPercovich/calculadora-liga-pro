@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T02:17:08.737Z",
+ "actualizado": "2026-10-27T05:19:05.608Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -156,141 +156,141 @@
    "divisional": "B",
    "categoria": "Clausura",
    "anio": 2026,
-   "ultimaJugada": 12,
+   "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 83,
-   "restantes": 8,
+   "jugados": 90,
+   "restantes": 1,
    "picantes": [
     {
      "partido": {
-      "id": 29166,
-      "fecha": 12,
-      "dia": "2026-10-05",
+      "id": 29175,
+      "fecha": 13,
+      "dia": "2026-10-26",
       "hora": null,
       "cancha": "Polideportivo Carrasco",
-      "a": 1062,
+      "a": 653,
+      "b": 955,
+      "golesA": 1,
+      "golesB": 4,
+      "fase": "regular"
+     },
+     "antes": [
+      0.0840720292419817,
+      0.0975570017191677,
+      0.8183709690388506
+     ],
+     "cambios": [
+      {
+       "equipoId": 653,
+       "objetivo": "desciende",
+       "de": 0.294,
+       "a": 1
+      },
+      {
+       "equipoId": 955,
+       "objetivo": "campeon",
+       "de": 0.141,
+       "a": 0.059
+      }
+     ],
+     "max": 0.706
+    },
+    {
+     "partido": {
+      "id": 29178,
+      "fecha": 13,
+      "dia": "2026-10-26",
+      "hora": null,
+      "cancha": "Polideportivo Carrasco",
+      "a": 305,
+      "b": 891,
+      "golesA": 3,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.3390454856163585,
+      0.21376441800215706,
+      0.4471900963814845
+     ],
+     "cambios": [
+      {
+       "equipoId": 305,
+       "objetivo": "desciende",
+       "de": 0.583,
+       "a": 0
+      }
+     ],
+     "max": 0.583
+    },
+    {
+     "partido": {
+      "id": 29174,
+      "fecha": 13,
+      "dia": "2026-10-12",
+      "hora": null,
+      "cancha": "Polideportivo Carrasco",
+      "a": 830,
       "b": 959,
       "golesA": 3,
       "golesB": 0,
       "fase": "regular"
      },
      "antes": [
-      0.23933038523256508,
-      0.19065826026459629,
-      0.5700113545028386
-     ],
-     "cambios": [
-      {
-       "equipoId": 959,
-       "objetivo": "desciende",
-       "de": 0.35,
-       "a": 0.689
-      }
-     ],
-     "max": 0.33899999999999997
-    },
-    {
-     "partido": {
-      "id": 29168,
-      "fecha": 12,
-      "dia": "2026-10-19",
-      "hora": null,
-      "cancha": "Polideportivo Carrasco",
-      "a": 1118,
-      "b": 830,
-      "golesA": 1,
-      "golesB": 1,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5838322866936171,
-      0.17977695967357352,
-      0.23639075363280934
+      0.4662796597812969,
+      0.20320408906031512,
+      0.330516251158388
      ],
      "cambios": [
       {
        "equipoId": 830,
        "objetivo": "desciende",
-       "de": 0.719,
-       "a": 0.439
+       "de": 0.448,
+       "a": 0
       },
       {
-       "equipoId": 1118,
-       "objetivo": "asciende",
-       "de": 0.93,
+       "equipoId": 959,
+       "objetivo": "desciende",
+       "de": 0.675,
        "a": 1
       }
      ],
-     "max": 0.27999999999999997
+     "max": 0.448
     },
     {
      "partido": {
-      "id": 29172,
-      "fecha": 12,
-      "dia": "2026-10-19",
+      "id": 29176,
+      "fecha": 13,
+      "dia": "2026-10-26",
       "hora": null,
       "cancha": "Polideportivo Carrasco",
-      "a": 88,
-      "b": 305,
-      "golesA": 1,
-      "golesB": 1,
+      "a": 1042,
+      "b": 1118,
+      "golesA": 7,
+      "golesB": 3,
       "fase": "regular"
      },
      "antes": [
-      0.5150336866203077,
-      0.2119653760595521,
-      0.2730009373201403
+      0.6454286902415001,
+      0.15616201431621318,
+      0.19840929544228686
      ],
      "cambios": [
       {
-       "equipoId": 305,
-       "objetivo": "desciende",
-       "de": 0.7,
-       "a": 0.591
-      },
-      {
-       "equipoId": 88,
-       "objetivo": "asciende",
-       "de": 0.048,
-       "a": 0
-      }
-     ],
-     "max": 0.10899999999999999
-    },
-    {
-     "partido": {
-      "id": 29169,
-      "fecha": 12,
-      "dia": "2026-10-19",
-      "hora": null,
-      "cancha": "Polideportivo Carrasco",
-      "a": 1060,
-      "b": 653,
-      "golesA": 4,
-      "golesB": 0,
-      "fase": "regular"
-     },
-     "antes": [
-      0.7894143156401033,
-      0.11657322610339137,
-      0.09401245825650534
-     ],
-     "cambios": [
-      {
-       "equipoId": 653,
-       "objetivo": "desciende",
-       "de": 0.233,
-       "a": 0.281
-      },
-      {
-       "equipoId": 1060,
+       "equipoId": 1042,
        "objetivo": "campeon",
-       "de": 0.159,
-       "a": 0.169
+       "de": 0.651,
+       "a": 0.808
+      },
+      {
+       "equipoId": 1118,
+       "objetivo": "campeon",
+       "de": 0.031,
+       "a": 0.013
       }
      ],
-     "max": 0.048000000000000015
+     "max": 0.15700000000000003
     }
    ],
    "equipos": [
@@ -300,7 +300,7 @@
      "slug": "tenka-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6810e322e5e00.png",
      "pos": 1,
-     "pts": 29
+     "pts": 32
     },
     {
      "id": 1060,
@@ -308,7 +308,7 @@
      "slug": "la-covacha",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68471753e7962.png",
      "pos": 2,
-     "pts": 27
+     "pts": 30
     },
     {
      "id": 955,
@@ -316,7 +316,7 @@
      "slug": "la-colona-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f3890591b41.png",
      "pos": 3,
-     "pts": 26
+     "pts": 29
     },
     {
      "id": 1118,
@@ -327,20 +327,20 @@
      "pts": 23
     },
     {
-     "id": 891,
-     "nombre": "Azzurra",
-     "slug": "azzurra",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f386ac59be8.png",
-     "pos": 5,
-     "pts": 19
-    },
-    {
      "id": 88,
      "nombre": "Sportivo Postiglione",
      "slug": "sportivo-postiglione",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2552e7841c.png",
+     "pos": 5,
+     "pts": 21
+    },
+    {
+     "id": 891,
+     "nombre": "Azzurra",
+     "slug": "azzurra",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f386ac59be8.png",
      "pos": 6,
-     "pts": 18
+     "pts": 19
     },
     {
      "id": 952,
@@ -359,28 +359,28 @@
      "pts": 15
     },
     {
-     "id": 653,
-     "nombre": "Humble FC",
-     "slug": "humble-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67dc61e1aa2bc.png",
-     "pos": 9,
-     "pts": 14
-    },
-    {
      "id": 830,
      "nombre": "El Tomillo Fc",
      "slug": "el-tomillo-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fafdf0d90c4.png",
-     "pos": 10,
-     "pts": 11
+     "pos": 9,
+     "pts": 14
     },
     {
      "id": 305,
      "nombre": "Kraken F.C",
      "slug": "kraken-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f073d956b1cc.png",
+     "pos": 10,
+     "pts": 14
+    },
+    {
+     "id": 653,
+     "nombre": "Humble FC",
+     "slug": "humble-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67dc61e1aa2bc.png",
      "pos": 11,
-     "pts": 11
+     "pts": 14
     },
     {
      "id": 959,
@@ -391,20 +391,20 @@
      "pts": 11
     },
     {
-     "id": 521,
-     "nombre": "Inter Nados FC",
-     "slug": "inter-nados-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a0610bb0dd45.png",
-     "pos": 13,
-     "pts": 8
-    },
-    {
      "id": 1062,
      "nombre": "Rusticidad F.C",
      "slug": "rusticidad-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/684718a16f4b6.jpeg",
+     "pos": 13,
+     "pts": 10
+    },
+    {
+     "id": 521,
+     "nombre": "Inter Nados FC",
+     "slug": "inter-nados-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6a0610bb0dd45.png",
      "pos": 14,
-     "pts": 7
+     "pts": 8
     }
    ]
   },
@@ -417,8 +417,8 @@
    "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 86,
-   "restantes": 5,
+   "jugados": 87,
+   "restantes": 4,
    "picantes": [
     {
      "partido": {
@@ -477,16 +477,16 @@
        "equipoId": 933,
        "objetivo": "asciende",
        "de": 0.688,
-       "a": 0.239
+       "a": 0.235
       },
       {
        "equipoId": 243,
        "objetivo": "desciende",
        "de": 0.684,
-       "a": 0.352
+       "a": 0.349
       }
      ],
-     "max": 0.44899999999999995
+     "max": 0.45299999999999996
     },
     {
      "partido": {
@@ -612,7 +612,7 @@
      "slug": "fauno-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69c2b1830ce82.jpeg",
      "pos": 12,
-     "pts": 13
+     "pts": 16
     },
     {
      "id": 998,
@@ -641,8 +641,8 @@
    "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 89,
-   "restantes": 2,
+   "jugados": 90,
+   "restantes": 1,
    "picantes": [
     {
      "partido": {
@@ -666,11 +666,11 @@
       {
        "equipoId": 1153,
        "objetivo": "desciende",
-       "de": 0.524,
+       "de": 0.525,
        "a": 0
       }
      ],
-     "max": 0.524
+     "max": 0.525
     },
     {
      "partido": {
@@ -694,17 +694,17 @@
       {
        "equipoId": 1222,
        "objetivo": "desciende",
-       "de": 0.38,
-       "a": 0.853
+       "de": 0.367,
+       "a": 0.851
       },
       {
        "equipoId": 1262,
        "objetivo": "campeon",
-       "de": 0.333,
-       "a": 0.202
+       "de": 0.331,
+       "a": 0.204
       }
      ],
-     "max": 0.473
+     "max": 0.484
     },
     {
      "partido": {
@@ -728,11 +728,39 @@
       {
        "equipoId": 1271,
        "objetivo": "campeon",
-       "de": 0.509,
-       "a": 0.677
+       "de": 0.498,
+       "a": 0.68
       }
      ],
-     "max": 0.16800000000000004
+     "max": 0.18200000000000005
+    },
+    {
+     "partido": {
+      "id": 29355,
+      "fecha": 13,
+      "dia": "2026-10-26",
+      "hora": null,
+      "cancha": "Polideportivo Carrasco",
+      "a": 1207,
+      "b": 1220,
+      "golesA": 0,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.48295703803882956,
+      0.17404475918088955,
+      0.34299820278028087
+     ],
+     "cambios": [
+      {
+       "equipoId": 1207,
+       "objetivo": "campeon",
+       "de": 0.113,
+       "a": 0.058
+      }
+     ],
+     "max": 0.055
     }
    ],
    "equipos": [
@@ -766,23 +794,23 @@
      "slug": "acariciala-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ca478c75e9d1267ac0a342cbbceb14e5.jpg",
      "pos": 4,
-     "pts": 26
-    },
-    {
-     "id": 1270,
-     "nombre": "SLM FC",
-     "slug": "slm-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c0a79baa78996d63d21a90344f441e83.jpg",
-     "pos": 5,
-     "pts": 21
+     "pts": 29
     },
     {
      "id": 715,
      "nombre": "Callejeros FC",
      "slug": "callejeros-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/660bf931b0344.jpeg",
+     "pos": 5,
+     "pts": 22
+    },
+    {
+     "id": 1270,
+     "nombre": "SLM FC",
+     "slug": "slm-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c0a79baa78996d63d21a90344f441e83.jpg",
      "pos": 6,
-     "pts": 19
+     "pts": 21
     },
     {
      "id": 559,
