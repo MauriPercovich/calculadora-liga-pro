@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T23:06:44.060Z",
+ "actualizado": "2026-10-30T18:06:09.099Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -11,38 +11,9 @@
    "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": true,
-   "jugados": 75,
-   "restantes": 3,
-   "picantes": [
-    {
-     "partido": {
-      "id": 29018,
-      "fecha": 13,
-      "dia": "2026-10-12",
-      "hora": null,
-      "cancha": "Polideportivo Carrasco",
-      "a": 456,
-      "b": 996,
-      "golesA": 3,
-      "golesB": 0,
-      "fase": "regular"
-     },
-     "antes": [
-      0.3866561690032267,
-      0.18578738606135906,
-      0.4275564449354142
-     ],
-     "cambios": [
-      {
-       "equipoId": 456,
-       "objetivo": "campeon",
-       "de": 0.007,
-       "a": 0.019
-      }
-     ],
-     "max": 0.012
-    }
-   ],
+   "jugados": 76,
+   "restantes": 2,
+   "picantes": [],
    "equipos": [
     {
      "id": 661,
@@ -50,7 +21,7 @@
      "slug": "cn-la-coa",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f24eb33360e.png",
      "pos": 1,
-     "pts": 33
+     "pts": 36
     },
     {
      "id": 456,
@@ -4457,16 +4428,50 @@
        "equipoId": 1182,
        "objetivo": "asciende",
        "de": 0.556,
-       "a": 0.016
+       "a": 0.014
       },
       {
        "equipoId": 1055,
        "objetivo": "desciende",
        "de": 0.564,
-       "a": 0.166
+       "a": 0.04
       }
      ],
-     "max": 0.54
+     "max": 0.542
+    },
+    {
+     "partido": {
+      "id": 29797,
+      "fecha": 11,
+      "dia": "2026-10-21",
+      "hora": null,
+      "cancha": "Nasazzi",
+      "a": 1280,
+      "b": 1281,
+      "golesA": 0,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.09686388065684408,
+      0.12365204724198961,
+      0.7794840721011663
+     ],
+     "cambios": [
+      {
+       "equipoId": 1280,
+       "objetivo": "desciende",
+       "de": 0.608,
+       "a": 0.861
+      },
+      {
+       "equipoId": 1281,
+       "objetivo": "campeon",
+       "de": 0.053,
+       "a": 0.075
+      }
+     ],
+     "max": 0.253
     },
     {
      "partido": {
@@ -4491,50 +4496,16 @@
        "equipoId": 1265,
        "objetivo": "desciende",
        "de": 0.69,
-       "a": 0.942
+       "a": 0.93
       },
       {
        "equipoId": 1255,
        "objetivo": "desciende",
        "de": 0.148,
-       "a": 0.211
+       "a": 0.168
       }
      ],
-     "max": 0.252
-    },
-    {
-     "partido": {
-      "id": 29793,
-      "fecha": 11,
-      "dia": "2026-10-21",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1216,
-      "b": 1261,
-      "golesA": 3,
-      "golesB": 7,
-      "fase": "regular"
-     },
-     "antes": [
-      0.02294527011788753,
-      0.03985640241186245,
-      0.93719832747025
-     ],
-     "cambios": [
-      {
-       "equipoId": 1261,
-       "objetivo": "campeon",
-       "de": 0.778,
-       "a": 0.899
-      },
-      {
-       "equipoId": 1216,
-       "objetivo": "desciende",
-       "de": 0.989,
-       "a": 1
-      }
-     ],
-     "max": 0.121
+     "max": 0.2400000000000001
     }
    ],
    "equipos": [
@@ -4547,18 +4518,18 @@
      "pts": 27
     },
     {
-     "id": 536,
-     "nombre": "Full House FC",
-     "slug": "full-house-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ad5b7e9ab780bd9d2fb4ccce78fba0ab.png",
-     "pos": 2,
-     "pts": 24
-    },
-    {
      "id": 1281,
      "nombre": "Univ ORT",
      "slug": "univ-ort",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6442755133170b1e7dc39448d9e5b406.png",
+     "pos": 2,
+     "pts": 26
+    },
+    {
+     "id": 536,
+     "nombre": "Full House FC",
+     "slug": "full-house-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/ad5b7e9ab780bd9d2fb4ccce78fba0ab.png",
      "pos": 3,
      "pts": 24
     },
@@ -4616,7 +4587,7 @@
      "slug": "classtudio-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5270377aafe112f0ef7228b806efaf86.jpg",
      "pos": 10,
-     "pts": 11
+     "pts": 10
     },
     {
      "id": 1265,
