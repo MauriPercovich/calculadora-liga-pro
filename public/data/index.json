@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-31T20:36:39.860Z",
+ "actualizado": "2026-10-31T23:52:55.497Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -1400,42 +1400,42 @@
    "ultimaJugada": 10,
    "totalFechas": 13,
    "esPrimera": true,
-   "jugados": 68,
-   "restantes": 23,
+   "jugados": 70,
+   "restantes": 21,
    "picantes": [
     {
      "partido": {
-      "id": 30410,
+      "id": 30409,
       "fecha": 10,
       "dia": "2026-10-24",
       "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 562,
-      "b": 567,
-      "golesA": 3,
-      "golesB": 2,
+      "cancha": "Complejo LigaSiete",
+      "a": 852,
+      "b": 2,
+      "golesA": 2,
+      "golesB": 3,
       "fase": "regular"
      },
      "antes": [
-      0.44387611080975464,
-      0.20187959222382118,
-      0.3542442969664242
+      0.4545993158353089,
+      0.18459260171720793,
+      0.3608080824474831
      ],
      "cambios": [
       {
-       "equipoId": 567,
+       "equipoId": 2,
        "objetivo": "desciende",
-       "de": 0.786,
-       "a": 0.934
+       "de": 0.342,
+       "a": 0.068
       },
       {
-       "equipoId": 562,
+       "equipoId": 852,
        "objetivo": "desciende",
-       "de": 0.035,
-       "a": 0.001
+       "de": 0.275,
+       "a": 0.499
       }
      ],
-     "max": 0.14800000000000002
+     "max": 0.274
     },
     {
      "partido": {
@@ -1460,16 +1460,50 @@
        "equipoId": 627,
        "objetivo": "campeon",
        "de": 0.134,
-       "a": 0.273
+       "a": 0.279
       },
       {
        "equipoId": 145,
        "objetivo": "campeon",
        "de": 0.061,
-       "a": 0.034
+       "a": 0.033
       }
      ],
-     "max": 0.139
+     "max": 0.14500000000000002
+    },
+    {
+     "partido": {
+      "id": 30410,
+      "fecha": 10,
+      "dia": "2026-10-24",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 562,
+      "b": 567,
+      "golesA": 3,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.44387611080975464,
+      0.20187959222382118,
+      0.3542442969664242
+     ],
+     "cambios": [
+      {
+       "equipoId": 567,
+       "objetivo": "desciende",
+       "de": 0.786,
+       "a": 0.924
+      },
+      {
+       "equipoId": 562,
+       "objetivo": "desciende",
+       "de": 0.035,
+       "a": 0.001
+      }
+     ],
+     "max": 0.138
     },
     {
      "partido": {
@@ -1494,44 +1528,16 @@
        "equipoId": 159,
        "objetivo": "campeon",
        "de": 0.3,
-       "a": 0.209
+       "a": 0.202
       },
       {
        "equipoId": 866,
        "objetivo": "campeon",
        "de": 0.007,
-       "a": 0.019
+       "a": 0.022
       }
      ],
-     "max": 0.091
-    },
-    {
-     "partido": {
-      "id": 30408,
-      "fecha": 10,
-      "dia": "2026-10-24",
-      "hora": null,
-      "cancha": "Complejo LigaSiete",
-      "a": 171,
-      "b": 433,
-      "golesA": 1,
-      "golesB": 1,
-      "fase": "regular"
-     },
-     "antes": [
-      0.7438225290963477,
-      0.1262833062851126,
-      0.1298941646185397
-     ],
-     "cambios": [
-      {
-       "equipoId": 433,
-       "objetivo": "desciende",
-       "de": 0.708,
-       "a": 0.63
-      }
-     ],
-     "max": 0.07799999999999996
+     "max": 0.09799999999999998
     }
    ],
    "equipos": [
@@ -1584,20 +1590,20 @@
      "pts": 18
     },
     {
-     "id": 562,
-     "nombre": "Aluvion FC",
-     "slug": "aluvion-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66d1fe5cd62f4.jpg",
-     "pos": 7,
-     "pts": 15
-    },
-    {
      "id": 620,
      "nombre": "Real Merengual FC",
      "slug": "real-merengual-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68adda2c75859.png",
+     "pos": 7,
+     "pts": 16
+    },
+    {
+     "id": 562,
+     "nombre": "Aluvion FC",
+     "slug": "aluvion-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/66d1fe5cd62f4.jpg",
      "pos": 8,
-     "pts": 13
+     "pts": 15
     },
     {
      "id": 2,
@@ -1605,7 +1611,7 @@
      "slug": "aston-birra",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ed5882b4572a.png",
      "pos": 9,
-     "pts": 10
+     "pts": 13
     },
     {
      "id": 852,
@@ -1632,18 +1638,18 @@
      "pts": 7
     },
     {
-     "id": 44,
-     "nombre": "Cachengue",
-     "slug": "cachengue",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fc2fb5937f7.jpg",
-     "pos": 13,
-     "pts": 7
-    },
-    {
      "id": 1039,
      "nombre": "De Las Chapas FC (S)",
      "slug": "de-las-chapas-fc-s",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e5618403992.png",
+     "pos": 13,
+     "pts": 7
+    },
+    {
+     "id": 44,
+     "nombre": "Cachengue",
+     "slug": "cachengue",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65fc2fb5937f7.jpg",
      "pos": 14,
      "pts": 7
     }
@@ -1658,8 +1664,8 @@
    "ultimaJugada": 10,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 68,
-   "restantes": 23,
+   "jugados": 70,
+   "restantes": 21,
    "picantes": [
     {
      "partido": {
@@ -1675,25 +1681,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.4528665354820901,
-      0.17918499942423208,
-      0.3679484650936778
+      0.45300896810441565,
+      0.17903405263357067,
+      0.3679569792620137
      ],
      "cambios": [
       {
        "equipoId": 435,
        "objetivo": "asciende",
-       "de": 0.223,
-       "a": 0.632
+       "de": 0.231,
+       "a": 0.62
       },
       {
        "equipoId": 749,
        "objetivo": "asciende",
-       "de": 0.54,
-       "a": 0.187
+       "de": 0.529,
+       "a": 0.194
       }
      ],
-     "max": 0.40900000000000003
+     "max": 0.389
     },
     {
      "partido": {
@@ -1709,59 +1715,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.3583468853287389,
-      0.18271380230437517,
-      0.45893931236688595
+      0.35833742681653374,
+      0.1825614115262655,
+      0.45910116165720066
      ],
      "cambios": [
       {
        "equipoId": 544,
        "objetivo": "asciende",
-       "de": 0.47,
-       "a": 0.76
+       "de": 0.468,
+       "a": 0.752
       },
       {
        "equipoId": 860,
        "objetivo": "asciende",
-       "de": 0.375,
-       "a": 0.139
+       "de": 0.361,
+       "a": 0.143
       }
      ],
-     "max": 0.29000000000000004
-    },
-    {
-     "partido": {
-      "id": 30501,
-      "fecha": 10,
-      "dia": "2026-10-24",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 993,
-      "b": 922,
-      "golesA": 3,
-      "golesB": 3,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5936020866057415,
-      0.1595753779111723,
-      0.2468225354830861
-     ],
-     "cambios": [
-      {
-       "equipoId": 993,
-       "objetivo": "asciende",
-       "de": 0.22,
-       "a": 0.116
-      },
-      {
-       "equipoId": 922,
-       "objetivo": "desciende",
-       "de": 0.059,
-       "a": 0.025
-      }
-     ],
-     "max": 0.104
+     "max": 0.284
     },
     {
      "partido": {
@@ -1777,43 +1749,77 @@
       "fase": "regular"
      },
      "antes": [
-      0.2333204129909392,
-      0.16709429396318795,
-      0.5995852930458728
+      0.2438332713893289,
+      0.1711805855477721,
+      0.584986143062899
      ],
      "cambios": [
       {
        "equipoId": 740,
        "objetivo": "campeon",
-       "de": 0.465,
-       "a": 0.398
+       "de": 0.452,
+       "a": 0.307
       },
       {
        "equipoId": 1177,
        "objetivo": "desciende",
-       "de": 0.424,
-       "a": 0.367
+       "de": 0.398,
+       "a": 0.33
       }
      ],
-     "max": 0.067
+     "max": 0.14500000000000002
+    },
+    {
+     "partido": {
+      "id": 30497,
+      "fecha": 10,
+      "dia": "2026-10-24",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 732,
+      "b": 918,
+      "golesA": 2,
+      "golesB": 4,
+      "fase": "regular"
+     },
+     "antes": [
+      0.18621914646977705,
+      0.18420054717441534,
+      0.6295803063558076
+     ],
+     "cambios": [
+      {
+       "equipoId": 918,
+       "objetivo": "campeon",
+       "de": 0.39,
+       "a": 0.528
+      },
+      {
+       "equipoId": 732,
+       "objetivo": "desciende",
+       "de": 0.944,
+       "a": 0.976
+      }
+     ],
+     "max": 0.138
     }
    ],
    "equipos": [
-    {
-     "id": 740,
-     "nombre": "Mengao FC",
-     "slug": "mengao-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b1fc3ba750bda4c56e19aec674d6ea59.jpg",
-     "pos": 1,
-     "pts": 22
-    },
     {
      "id": 918,
      "nombre": "Cimarrón FC (S)",
      "slug": "cimarron-fc-s",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69b043b159530.jpg",
+     "pos": 1,
+     "pts": 22
+    },
+    {
+     "id": 740,
+     "nombre": "Mengao FC",
+     "slug": "mengao-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b1fc3ba750bda4c56e19aec674d6ea59.jpg",
      "pos": 2,
-     "pts": 19
+     "pts": 22
     },
     {
      "id": 544,
@@ -1864,18 +1870,18 @@
      "pts": 13
     },
     {
-     "id": 1177,
-     "nombre": "Deportivo Pilze",
-     "slug": "deportivo-pilze",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698382cb3e139.jpeg",
-     "pos": 9,
-     "pts": 12
-    },
-    {
      "id": 555,
      "nombre": "Fratelli FC",
      "slug": "fratelli-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/624a0cb32ef16.png",
+     "pos": 9,
+     "pts": 13
+    },
+    {
+     "id": 1177,
+     "nombre": "Deportivo Pilze",
+     "slug": "deportivo-pilze",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698382cb3e139.jpeg",
      "pos": 10,
      "pts": 12
     },
@@ -1909,7 +1915,7 @@
      "slug": "black-4",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6049877f4e596.png",
      "pos": 14,
-     "pts": 3
+     "pts": 4
     }
    ]
   },
@@ -1922,8 +1928,8 @@
    "ultimaJugada": 10,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 67,
-   "restantes": 24,
+   "jugados": 69,
+   "restantes": 22,
    "picantes": [
     {
      "partido": {
@@ -1945,19 +1951,47 @@
      ],
      "cambios": [
       {
-       "equipoId": 877,
-       "objetivo": "desciende",
-       "de": 0.243,
-       "a": 0.478
-      },
-      {
        "equipoId": 960,
        "objetivo": "desciende",
-       "de": 0.907,
-       "a": 0.703
+       "de": 0.9,
+       "a": 0.714
+      },
+      {
+       "equipoId": 877,
+       "objetivo": "desciende",
+       "de": 0.264,
+       "a": 0.44
       }
      ],
-     "max": 0.235
+     "max": 0.18600000000000005
+    },
+    {
+     "partido": {
+      "id": 30590,
+      "fecha": 10,
+      "dia": "2026-10-31",
+      "hora": "16:30",
+      "cancha": "Pro Fútbol",
+      "a": 282,
+      "b": 274,
+      "golesA": 3,
+      "golesB": 1,
+      "fase": "regular"
+     },
+     "antes": [
+      0.6312249780607971,
+      0.1640633017994458,
+      0.2047117201397571
+     ],
+     "cambios": [
+      {
+       "equipoId": 274,
+       "objetivo": "asciende",
+       "de": 0.186,
+       "a": 0.051
+      }
+     ],
+     "max": 0.135
     },
     {
      "partido": {
@@ -1981,85 +2015,51 @@
       {
        "equipoId": 1103,
        "objetivo": "asciende",
-       "de": 0.607,
-       "a": 0.725
+       "de": 0.595,
+       "a": 0.726
       },
       {
        "equipoId": 147,
        "objetivo": "desciende",
-       "de": 0.684,
-       "a": 0.771
+       "de": 0.701,
+       "a": 0.746
       }
      ],
-     "max": 0.118
+     "max": 0.131
     },
     {
      "partido": {
-      "id": 30591,
+      "id": 30588,
       "fecha": 10,
       "dia": "2026-10-24",
       "hora": null,
       "cancha": "Complejo LigaSiete",
-      "a": 604,
-      "b": 1089,
-      "golesA": 0,
-      "golesB": 3,
-      "fase": "regular"
-     },
-     "antes": [
-      0.31492974497873294,
-      0.19479018874331708,
-      0.49028006627795007
-     ],
-     "cambios": [
-      {
-       "equipoId": 1089,
-       "objetivo": "desciende",
-       "de": 0.075,
-       "a": 0.007
-      },
-      {
-       "equipoId": 604,
-       "objetivo": "asciende",
-       "de": 0.029,
-       "a": 0.001
-      }
-     ],
-     "max": 0.06799999999999999
-    },
-    {
-     "partido": {
-      "id": 30593,
-      "fecha": 10,
-      "dia": "2026-10-24",
-      "hora": null,
-      "cancha": "Complejo LigaSiete",
-      "a": 739,
-      "b": 21,
+      "a": 1218,
+      "b": 1183,
       "golesA": 2,
-      "golesB": 7,
+      "golesB": 4,
       "fase": "regular"
      },
      "antes": [
-      0.1311995960838969,
-      0.1257002795826729,
-      0.7431001243334302
+      0.30261891652122724,
+      0.22820154342480983,
+      0.46917954005396295
      ],
      "cambios": [
       {
-       "equipoId": 739,
+       "equipoId": 1218,
        "objetivo": "desciende",
-       "de": 0.104,
-       "a": 0.12
+       "de": 0.84,
+       "a": 0.91
       },
       {
-       "equipoId": 21,
-       "objetivo": "campeon",
-       "de": 0.043,
-       "a": 0.054
+       "equipoId": 1183,
+       "objetivo": "desciende",
+       "de": 0.064,
+       "a": 0.003
       }
      ],
-     "max": 0.016
+     "max": 0.07000000000000006
     }
    ],
    "equipos": [
@@ -2072,20 +2072,20 @@
      "pts": 30
     },
     {
-     "id": 21,
-     "nombre": "La Ley del Ex",
-     "slug": "la-ley-del-ex",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb84c10bd2a.png",
-     "pos": 2,
-     "pts": 25
-    },
-    {
      "id": 282,
      "nombre": "Bolke F.C.",
      "slug": "bolke-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/63ec535a69f23.png",
+     "pos": 2,
+     "pts": 27
+    },
+    {
+     "id": 21,
+     "nombre": "La Ley del Ex",
+     "slug": "la-ley-del-ex",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efb84c10bd2a.png",
      "pos": 3,
-     "pts": 24
+     "pts": 25
     },
     {
      "id": 1103,
@@ -2104,11 +2104,19 @@
      "pts": 15
     },
     {
+     "id": 1183,
+     "nombre": "La Maplera Fc",
+     "slug": "la-maplera-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cca6e6932d.jpeg",
+     "pos": 6,
+     "pts": 15
+    },
+    {
      "id": 274,
      "nombre": "Cristal Palas FC",
      "slug": "cristal-palas-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5ee1881daeaf3.png",
-     "pos": 6,
+     "pos": 7,
      "pts": 14
     },
     {
@@ -2116,16 +2124,8 @@
      "nombre": "Esfinter de Milan",
      "slug": "esfinter-de-milan",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6248d3ea26e3e.png",
-     "pos": 7,
-     "pts": 13
-    },
-    {
-     "id": 1183,
-     "nombre": "La Maplera Fc",
-     "slug": "la-maplera-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/698cca6e6932d.jpeg",
      "pos": 8,
-     "pts": 12
+     "pts": 13
     },
     {
      "id": 739,
@@ -2186,8 +2186,8 @@
    "ultimaJugada": 10,
    "totalFechas": 11,
    "esPrimera": false,
-   "jugados": 57,
-   "restantes": 9,
+   "jugados": 59,
+   "restantes": 7,
    "picantes": [
     {
      "partido": {
@@ -2212,16 +2212,50 @@
        "equipoId": 1295,
        "objetivo": "desciende",
        "de": 0.875,
-       "a": 0.972
+       "a": 0.959
       },
       {
        "equipoId": 1151,
        "objetivo": "asciende",
        "de": 0.293,
-       "a": 0.34
+       "a": 0.31
       }
      ],
-     "max": 0.09699999999999998
+     "max": 0.08399999999999996
+    },
+    {
+     "partido": {
+      "id": 30674,
+      "fecha": 10,
+      "dia": "2026-10-24",
+      "hora": null,
+      "cancha": "Complejo LigaSiete",
+      "a": 1225,
+      "b": 86,
+      "golesA": 6,
+      "golesB": 2,
+      "fase": "regular"
+     },
+     "antes": [
+      0.6025384994549645,
+      0.15367236103697002,
+      0.24378913950806544
+     ],
+     "cambios": [
+      {
+       "equipoId": 86,
+       "objetivo": "desciende",
+       "de": 0.274,
+       "a": 0.331
+      },
+      {
+       "equipoId": 1225,
+       "objetivo": "asciende",
+       "de": 0.975,
+       "a": 0.992
+      }
+     ],
+     "max": 0.056999999999999995
     },
     {
      "partido": {
@@ -2243,47 +2277,53 @@
      ],
      "cambios": [
       {
-       "equipoId": 125,
-       "objetivo": "asciende",
-       "de": 0.748,
-       "a": 0.812
-      },
-      {
        "equipoId": 184,
        "objetivo": "asciende",
        "de": 0.051,
        "a": 0
+      },
+      {
+       "equipoId": 125,
+       "objetivo": "campeon",
+       "de": 0.006,
+       "a": 0.019
       }
      ],
-     "max": 0.06400000000000006
+     "max": 0.051
     },
     {
      "partido": {
-      "id": 30672,
+      "id": 30671,
       "fecha": 10,
       "dia": "2026-10-24",
       "hora": null,
       "cancha": "Complejo LigaSiete",
-      "a": 1232,
-      "b": 931,
-      "golesA": 0,
+      "a": 1286,
+      "b": 1226,
+      "golesA": 3,
       "golesB": 3,
       "fase": "regular"
      },
      "antes": [
-      0.06408764025946988,
-      0.09897052980729261,
-      0.8369418299332376
+      0.6706166911545591,
+      0.14513314838112637,
+      0.18425016046431456
      ],
      "cambios": [
       {
-       "equipoId": 1232,
-       "objetivo": "desciende",
-       "de": 0.971,
-       "a": 0.993
+       "equipoId": 1286,
+       "objetivo": "campeon",
+       "de": 0.937,
+       "a": 0.912
+      },
+      {
+       "equipoId": 1226,
+       "objetivo": "asciende",
+       "de": 0.932,
+       "a": 0.946
       }
      ],
-     "max": 0.02200000000000002
+     "max": 0.025000000000000022
     }
    ],
    "equipos": [
@@ -2293,7 +2333,7 @@
      "slug": "mfc-city",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/fef9b6b5943761f15a2dfb968af9be1b.jpg",
      "pos": 1,
-     "pts": 23
+     "pts": 24
     },
     {
      "id": 125,
@@ -2304,28 +2344,28 @@
      "pts": 22
     },
     {
+     "id": 1225,
+     "nombre": "La Ambulancia",
+     "slug": "la-ambulancia",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3a388c76a80823004d7286bfd49dcbf.jpg",
+     "pos": 3,
+     "pts": 22
+    },
+    {
      "id": 1226,
      "nombre": "Sporting La Costa",
      "slug": "sporting-la-costa",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69e66d47919d3.png",
-     "pos": 3,
-     "pts": 20
+     "pos": 4,
+     "pts": 21
     },
     {
      "id": 1151,
      "nombre": "Velero Fc",
      "slug": "velero-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b22ccc7671adb32a3b3fc311c118af48.jpg",
-     "pos": 4,
-     "pts": 20
-    },
-    {
-     "id": 1225,
-     "nombre": "La Ambulancia",
-     "slug": "la-ambulancia",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3a388c76a80823004d7286bfd49dcbf.jpg",
      "pos": 5,
-     "pts": 19
+     "pts": 20
     },
     {
      "id": 184,
