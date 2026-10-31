@@ -1,5 +1,15 @@
 [
  {
+  "torneoId": 549,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Inter Mitente FC: oficial 21, por resultados 24"
+ },
+ {
+  "torneoId": 549,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sportivo Malvin: oficial 17, por resultados 20"
+ },
+ {
   "torneoId": 558,
   "tipo": "anio-corregido",
   "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
