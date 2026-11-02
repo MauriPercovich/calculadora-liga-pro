@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-01T22:15:17.073Z",
+ "actualizado": "2026-11-02T01:36:33.414Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -3230,7 +3230,7 @@
       "cancha": "Complejo LigaSiete",
       "a": 940,
       "b": 646,
-      "golesA": 5,
+      "golesA": 6,
       "golesB": 1,
       "fase": "regular"
      },
@@ -3244,16 +3244,16 @@
        "equipoId": 646,
        "objetivo": "campeon",
        "de": 0.102,
-       "a": 0.02
+       "a": 0.015
       },
       {
        "equipoId": 940,
        "objetivo": "campeon",
        "de": 0.841,
-       "a": 0.91
+       "a": 0.916
       }
      ],
-     "max": 0.08199999999999999
+     "max": 0.087
     },
     {
      "partido": {
