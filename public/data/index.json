@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T01:36:33.414Z",
+ "actualizado": "2026-11-02T21:49:08.683Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -3423,7 +3423,7 @@
       {
        "equipoId": 133,
        "objetivo": "desciende",
-       "de": 0.113,
+       "de": 0.122,
        "a": 0
       }
      ],
@@ -3451,11 +3451,11 @@
       {
        "equipoId": 1233,
        "objetivo": "desciende",
-       "de": 0.882,
+       "de": 0.874,
        "a": 0
       }
      ],
-     "max": 0.882
+     "max": 0.874
     },
     {
      "partido": {
@@ -3479,11 +3479,11 @@
       {
        "equipoId": 1196,
        "objetivo": "asciende",
-       "de": 0.415,
+       "de": 0.41,
        "a": 1
       }
      ],
-     "max": 0.585
+     "max": 0.5900000000000001
     }
    ],
    "equipos": [
@@ -3549,7 +3549,7 @@
      "slug": "mala-racha-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/c3fc49add5c87f67fab17d7e4fd91820.jpg",
      "pos": 8,
-     "pts": 9
+     "pts": 12
     },
     {
      "id": 42,
