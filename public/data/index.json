@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T00:19:43.769Z",
+ "actualizado": "2026-11-04T06:42:38.980Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -892,8 +892,8 @@
    "ultimaJugada": 12,
    "totalFechas": 13,
    "esPrimera": true,
-   "jugados": 59,
-   "restantes": 19,
+   "jugados": 60,
+   "restantes": 18,
    "picantes": [
     {
      "partido": {
@@ -909,25 +909,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.7734658933179087,
-      0.12798074426927672,
-      0.09855336241281451
+      0.7325507742016962,
+      0.14278117554156503,
+      0.12466805025673874
      ],
      "cambios": [
       {
        "equipoId": 288,
        "objetivo": "desciende",
-       "de": 0.631,
-       "a": 0.763
-      },
-      {
-       "equipoId": 1087,
-       "objetivo": "campeon",
-       "de": 0.839,
-       "a": 0.86
+       "de": 0.621,
+       "a": 0.761
       }
      ],
-     "max": 0.132
+     "max": 0.14
     },
     {
      "partido": {
@@ -943,25 +937,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.309443756558322,
-      0.1998053695046831,
-      0.4907508739369949
+      0.3094495935041408,
+      0.1998199330081108,
+      0.4907304734877484
      ],
      "cambios": [
       {
        "equipoId": 1006,
        "objetivo": "desciende",
-       "de": 0.065,
-       "a": 0.003
+       "de": 0.07,
+       "a": 0.004
       },
       {
        "equipoId": 1165,
        "objetivo": "desciende",
-       "de": 0.134,
-       "a": 0.122
+       "de": 0.156,
+       "a": 0.119
       }
      ],
-     "max": 0.062
+     "max": 0.066
     },
     {
      "partido": {
@@ -977,19 +971,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.6299421986856871,
-      0.13753241696664967,
-      0.23252538434766318
+      0.6299078036271162,
+      0.1375486409665005,
+      0.2325435554063833
      ],
      "cambios": [
       {
        "equipoId": 1236,
        "objetivo": "desciende",
-       "de": 0.944,
-       "a": 0.992
+       "de": 0.931,
+       "a": 0.991
+      },
+      {
+       "equipoId": 1157,
+       "objetivo": "campeon",
+       "de": 0.057,
+       "a": 0.077
       }
      ],
-     "max": 0.04800000000000004
+     "max": 0.05999999999999994
     },
     {
      "partido": {
@@ -1005,37 +1005,37 @@
       "fase": "regular"
      },
      "antes": [
-      0.43783311478521564,
-      0.16340657193838234,
-      0.398760313276402
+      0.43782608090948955,
+      0.16341883266085144,
+      0.39875508642965896
      ],
      "cambios": [
       {
        "equipoId": 1230,
        "objetivo": "desciende",
-       "de": 0.041,
+       "de": 0.042,
        "a": 0
       }
      ],
-     "max": 0.041
+     "max": 0.042
     }
    ],
    "equipos": [
-    {
-     "id": 1087,
-     "nombre": "Estivao ATR (M)",
-     "slug": "estivao-atr-m",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd119f78943.png",
-     "pos": 1,
-     "pts": 24
-    },
     {
      "id": 1201,
      "nombre": "Auriverde F.C",
      "slug": "auriverde-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b6f4d1561d8a19acb5bf9a8bba253d7c.png",
+     "pos": 1,
+     "pts": 25
+    },
+    {
+     "id": 1087,
+     "nombre": "Estivao ATR (M)",
+     "slug": "estivao-atr-m",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd119f78943.png",
      "pos": 2,
-     "pts": 22
+     "pts": 24
     },
     {
      "id": 1157,
@@ -1136,8 +1136,8 @@
    "ultimaJugada": 10,
    "totalFechas": 11,
    "esPrimera": false,
-   "jugados": 68,
-   "restantes": 8,
+   "jugados": 70,
+   "restantes": 6,
    "picantes": [
     {
      "partido": {
@@ -1153,25 +1153,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.3392734186069036,
-      0.2045924174333763,
-      0.45613416395972006
+      0.33927979839977285,
+      0.20442200031208144,
+      0.45629820128814563
      ],
      "cambios": [
       {
        "equipoId": 837,
        "objetivo": "asciende",
-       "de": 0.532,
-       "a": 0.106
+       "de": 0.615,
+       "a": 0.083
       },
       {
        "equipoId": 1204,
        "objetivo": "asciende",
-       "de": 0.4,
-       "a": 0.792
+       "de": 0.44,
+       "a": 0.789
       }
      ],
-     "max": 0.42600000000000005
+     "max": 0.532
     },
     {
      "partido": {
@@ -1187,25 +1187,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.4484973103349572,
-      0.1557559244900466,
-      0.39574676517499613
+      0.4110306023662174,
+      0.15806794481087202,
+      0.4309014528229105
      ],
      "cambios": [
       {
        "equipoId": 1288,
        "objetivo": "asciende",
-       "de": 0.617,
-       "a": 0.911
+       "de": 0.272,
+       "a": 0.6
       },
       {
        "equipoId": 1279,
        "objetivo": "asciende",
-       "de": 0.104,
+       "de": 0.139,
        "a": 0
       }
      ],
-     "max": 0.29400000000000004
+     "max": 0.32799999999999996
     },
     {
      "partido": {
@@ -1221,59 +1221,59 @@
       "fase": "regular"
      },
      "antes": [
-      0.2939037452808847,
-      0.16476709962161962,
-      0.5413291550974957
+      0.2937918791837496,
+      0.16458721009423347,
+      0.5416209107220169
      ],
      "cambios": [
       {
        "equipoId": 991,
        "objetivo": "desciende",
-       "de": 0.245,
-       "a": 0.016
+       "de": 0.25,
+       "a": 0
       },
       {
        "equipoId": 1186,
        "objetivo": "desciende",
-       "de": 0.943,
+       "de": 0.932,
        "a": 1
       }
      ],
-     "max": 0.22899999999999998
+     "max": 0.25
     },
     {
      "partido": {
-      "id": 30130,
+      "id": 30131,
       "fecha": 10,
       "dia": "2026-10-20",
       "hora": null,
       "cancha": "Pro Fútbol",
-      "a": 1278,
-      "b": 1123,
-      "golesA": 4,
-      "golesB": 0,
+      "a": 1190,
+      "b": 1276,
+      "golesA": 2,
+      "golesB": 3,
       "fase": "regular"
      },
      "antes": [
-      0.9167874197220084,
-      0.05038260110609383,
-      0.03282997917189767
+      0.17120909198368336,
+      0.14123930003471574,
+      0.6875516079816009
      ],
      "cambios": [
       {
-       "equipoId": 1123,
-       "objetivo": "desciende",
-       "de": 0.893,
-       "a": 1
+       "equipoId": 1276,
+       "objetivo": "asciende",
+       "de": 0.379,
+       "a": 0.506
       },
       {
-       "equipoId": 1278,
-       "objetivo": "campeon",
-       "de": 0.799,
-       "a": 0.828
+       "equipoId": 1190,
+       "objetivo": "desciende",
+       "de": 0.908,
+       "a": 1
       }
      ],
-     "max": 0.10699999999999998
+     "max": 0.127
     }
    ],
    "equipos": [
@@ -1310,11 +1310,19 @@
      "pts": 18
     },
     {
+     "id": 1276,
+     "nombre": "By Hormiga",
+     "slug": "by-hormiga",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png",
+     "pos": 5,
+     "pts": 18
+    },
+    {
      "id": 837,
      "nombre": "Vagabanda",
      "slug": "vagabanda",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65d4a306f1725.png",
-     "pos": 5,
+     "pos": 6,
      "pts": 17
     },
     {
@@ -1322,32 +1330,24 @@
      "nombre": "Con Carpeta FC",
      "slug": "con-carpeta-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/26ae4bf4f3411aeed90877a3cd9e5abb.jpg",
-     "pos": 6,
-     "pts": 17
-    },
-    {
-     "id": 1279,
-     "nombre": "Bauza FC",
-     "slug": "bauza-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b4bc989283b5b529f990be6e1685e684.jpg",
      "pos": 7,
-     "pts": 15
-    },
-    {
-     "id": 1276,
-     "nombre": "By Hormiga",
-     "slug": "by-hormiga",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png",
-     "pos": 8,
-     "pts": 15
+     "pts": 17
     },
     {
      "id": 168,
      "nombre": "Sporting Baroffio",
      "slug": "sporting-baroffio",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162945581f4.png",
+     "pos": 8,
+     "pts": 16
+    },
+    {
+     "id": 1279,
+     "nombre": "Bauza FC",
+     "slug": "bauza-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/b4bc989283b5b529f990be6e1685e684.jpg",
      "pos": 9,
-     "pts": 13
+     "pts": 15
     },
     {
      "id": 991,
