@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T19:52:49.429Z",
+ "actualizado": "2026-11-05T00:39:28.773Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -2459,19 +2459,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.5968823648816061,
-      0.16199291007829236,
-      0.24112472504010155
+      0.5981431890595762,
+      0.1613256199029904,
+      0.24053119103743337
      ],
      "cambios": [
       {
        "equipoId": 718,
        "objetivo": "desciende",
-       "de": 0.734,
-       "a": 0.825
+       "de": 0.753,
+       "a": 0.863
       }
      ],
-     "max": 0.09099999999999997
+     "max": 0.10999999999999999
     },
     {
      "partido": {
@@ -2487,25 +2487,53 @@
       "fase": "regular"
      },
      "antes": [
-      0.5155652848665665,
-      0.18043028670831618,
-      0.30400442842511727
+      0.5165027964389822,
+      0.17986016025074064,
+      0.3036370433102772
      ],
      "cambios": [
       {
        "equipoId": 1001,
        "objetivo": "campeon",
-       "de": 0.073,
-       "a": 0.018
-      },
-      {
-       "equipoId": 1065,
-       "objetivo": "campeon",
-       "de": 0.408,
-       "a": 0.424
+       "de": 0.059,
+       "a": 0.001
       }
      ],
-     "max": 0.05499999999999999
+     "max": 0.057999999999999996
+    },
+    {
+     "partido": {
+      "id": 30229,
+      "fecha": 10,
+      "dia": "2026-10-24",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 192,
+      "b": 662,
+      "golesA": 1,
+      "golesB": 9,
+      "fase": "regular"
+     },
+     "antes": [
+      0.2700135209829842,
+      0.17273085142525701,
+      0.5572556275917587
+     ],
+     "cambios": [
+      {
+       "equipoId": 192,
+       "objetivo": "desciende",
+       "de": 0.209,
+       "a": 0.158
+      },
+      {
+       "equipoId": 662,
+       "objetivo": "campeon",
+       "de": 0.037,
+       "a": 0.078
+      }
+     ],
+     "max": 0.05099999999999999
     },
     {
      "partido": {
@@ -2521,47 +2549,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.16542484906076935,
-      0.19515758647715567,
-      0.639417564462075
+      0.10800935805844311,
+      0.17624418062062383,
+      0.7157464613209331
      ],
      "cambios": [
       {
        "equipoId": 788,
        "objetivo": "desciende",
        "de": 0.993,
-       "a": 0.943
+       "a": 0.961
       }
      ],
-     "max": 0.050000000000000044
-    },
-    {
-     "partido": {
-      "id": 30227,
-      "fecha": 10,
-      "dia": "2026-10-31",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 467,
-      "b": 744,
-      "golesA": 0,
-      "golesB": 4,
-      "fase": "regular"
-     },
-     "antes": [
-      0.0860906166737499,
-      0.0917658967605895,
-      0.8221434865656606
-     ],
-     "cambios": [
-      {
-       "equipoId": 744,
-       "objetivo": "campeon",
-       "de": 0.47,
-       "a": 0.493
-      }
-     ],
-     "max": 0.02300000000000002
+     "max": 0.03200000000000003
     }
    ],
    "equipos": [
@@ -2582,11 +2582,19 @@
      "pts": 22
     },
     {
+     "id": 662,
+     "nombre": "F.C. Barril (S)",
+     "slug": "fc-barril-s",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2505135595.png",
+     "pos": 3,
+     "pts": 20
+    },
+    {
      "id": 1176,
      "nombre": "Sol Oriental",
      "slug": "sol-oriental",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69837f9cab75d.jpeg",
-     "pos": 3,
+     "pos": 4,
      "pts": 20
     },
     {
@@ -2594,7 +2602,7 @@
      "nombre": "San Diego FC",
      "slug": "san-diego-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/661d2ea38de16.jpeg",
-     "pos": 4,
+     "pos": 5,
      "pts": 18
     },
     {
@@ -2602,14 +2610,6 @@
      "nombre": "Funebreros FC",
      "slug": "funebreros-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67a4fdc0e7c74.jpeg",
-     "pos": 5,
-     "pts": 17
-    },
-    {
-     "id": 662,
-     "nombre": "F.C. Barril (S)",
-     "slug": "fc-barril-s",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69f2505135595.png",
      "pos": 6,
      "pts": 17
     },
@@ -2659,7 +2659,7 @@
      "slug": "santa-cruz-de-montevideo",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/53301af554292763ed06c8498e693aae.jpg",
      "pos": 12,
-     "pts": 3
+     "pts": 0
     }
    ]
   },
