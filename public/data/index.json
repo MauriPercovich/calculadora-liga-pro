@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T19:32:15.072Z",
+ "actualizado": "2026-11-07T17:50:40.547Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -2439,129 +2439,45 @@
    "divisional": "A",
    "categoria": "Clausura",
    "anio": 2026,
-   "ultimaJugada": 10,
+   "ultimaJugada": 11,
    "totalFechas": 11,
    "esPrimera": true,
-   "jugados": 60,
-   "restantes": 6,
+   "jugados": 61,
+   "restantes": 5,
    "picantes": [
     {
      "partido": {
-      "id": 30226,
-      "fecha": 10,
-      "dia": "2026-10-24",
+      "id": 30235,
+      "fecha": 11,
+      "dia": "2026-10-31",
       "hora": null,
       "cancha": "Pro Fútbol",
-      "a": 858,
-      "b": 718,
-      "golesA": 6,
-      "golesB": 4,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5981431890595762,
-      0.1613256199029904,
-      0.24053119103743337
-     ],
-     "cambios": [
-      {
-       "equipoId": 718,
-       "objetivo": "desciende",
-       "de": 0.753,
-       "a": 0.863
-      }
-     ],
-     "max": 0.10999999999999999
-    },
-    {
-     "partido": {
-      "id": 30225,
-      "fecha": 10,
-      "dia": "2026-10-24",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 1065,
-      "b": 1001,
-      "golesA": 6,
-      "golesB": 4,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5165027964389822,
-      0.17986016025074064,
-      0.3036370433102772
-     ],
-     "cambios": [
-      {
-       "equipoId": 1001,
-       "objetivo": "campeon",
-       "de": 0.059,
-       "a": 0.001
-      }
-     ],
-     "max": 0.057999999999999996
-    },
-    {
-     "partido": {
-      "id": 30229,
-      "fecha": 10,
-      "dia": "2026-10-24",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 192,
-      "b": 662,
+      "a": 788,
+      "b": 868,
       "golesA": 1,
-      "golesB": 9,
+      "golesB": 1,
       "fase": "regular"
      },
      "antes": [
-      0.2700135209829842,
-      0.17273085142525701,
-      0.5572556275917587
-     ],
-     "cambios": [
-      {
-       "equipoId": 192,
-       "objetivo": "desciende",
-       "de": 0.209,
-       "a": 0.158
-      },
-      {
-       "equipoId": 662,
-       "objetivo": "campeon",
-       "de": 0.037,
-       "a": 0.078
-      }
-     ],
-     "max": 0.05099999999999999
-    },
-    {
-     "partido": {
-      "id": 30230,
-      "fecha": 10,
-      "dia": "2026-10-24",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 1257,
-      "b": 788,
-      "golesA": 0,
-      "golesB": 3,
-      "fase": "regular"
-     },
-     "antes": [
-      0.10800935805844311,
-      0.17624418062062383,
-      0.7157464613209331
+      0.2658846597814097,
+      0.21024709769319508,
+      0.5238682425253952
      ],
      "cambios": [
       {
        "equipoId": 788,
        "objetivo": "desciende",
-       "de": 0.993,
-       "a": 0.961
+       "de": 0.963,
+       "a": 1
+      },
+      {
+       "equipoId": 868,
+       "objetivo": "desciende",
+       "de": 0.022,
+       "a": 0
       }
      ],
-     "max": 0.03200000000000003
+     "max": 0.03700000000000003
     }
    ],
    "equipos": [
@@ -2619,7 +2535,7 @@
      "slug": "costanero-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd19ff23542.png",
      "pos": 7,
-     "pts": 13
+     "pts": 14
     },
     {
      "id": 718,
@@ -2643,7 +2559,7 @@
      "slug": "intrepidos-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67b6173ea8bf0.jpg",
      "pos": 10,
-     "pts": 9
+     "pts": 10
     },
     {
      "id": 467,
@@ -2672,8 +2588,8 @@
    "ultimaJugada": 14,
    "totalFechas": 15,
    "esPrimera": false,
-   "jugados": 77,
-   "restantes": 28,
+   "jugados": 81,
+   "restantes": 24,
    "picantes": [
     {
      "partido": {
@@ -2689,25 +2605,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.3933923580911842,
-      0.1784036830482967,
-      0.42820395886051893
+      0.40558479832015293,
+      0.17423292005271857,
+      0.42018228162712856
      ],
      "cambios": [
       {
        "equipoId": 211,
        "objetivo": "asciende",
-       "de": 0.255,
-       "a": 0.061
+       "de": 0.449,
+       "a": 0.143
       },
       {
        "equipoId": 1258,
        "objetivo": "asciende",
-       "de": 0.217,
-       "a": 0.33
+       "de": 0.298,
+       "a": 0.476
       }
      ],
-     "max": 0.194
+     "max": 0.30600000000000005
     },
     {
      "partido": {
@@ -2723,19 +2639,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.012005358974663679,
-      0.031312624090198235,
-      0.9566820169351381
+      0.012237428332798698,
+      0.03183585551001538,
+      0.9559267161571858
      ],
      "cambios": [
       {
        "equipoId": 571,
        "objetivo": "campeon",
-       "de": 0.278,
-       "a": 0.446
+       "de": 0.267,
+       "a": 0.437
       }
      ],
-     "max": 0.16799999999999998
+     "max": 0.16999999999999998
     },
     {
      "partido": {
@@ -2751,19 +2667,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.012943537554649923,
-      0.021366038081662053,
-      0.965690424363688
+      0.008637885869864003,
+      0.015241520318586846,
+      0.9761205938115491
      ],
      "cambios": [
       {
        "equipoId": 1256,
        "objetivo": "campeon",
-       "de": 0.529,
-       "a": 0.392
+       "de": 0.546,
+       "a": 0.402
       }
      ],
-     "max": 0.137
+     "max": 0.14400000000000002
     },
     {
      "partido": {
@@ -2779,25 +2695,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.2569029024999672,
-      0.17182166316852684,
-      0.571275434331506
+      0.25726810045816484,
+      0.17229467893785408,
+      0.570437220603981
      ],
      "cambios": [
       {
-       "equipoId": 1096,
-       "objetivo": "asciende",
-       "de": 0.086,
-       "a": 0.015
-      },
-      {
        "equipoId": 987,
        "objetivo": "asciende",
-       "de": 0.898,
-       "a": 0.959
+       "de": 0.846,
+       "a": 0.932
+      },
+      {
+       "equipoId": 1096,
+       "objetivo": "asciende",
+       "de": 0.057,
+       "a": 0.011
       }
      ],
-     "max": 0.071
+     "max": 0.08600000000000008
     }
    ],
    "equipos": [
@@ -2826,28 +2742,28 @@
      "pts": 24
     },
     {
-     "id": 275,
-     "nombre": "TFC",
-     "slug": "tfc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efbd8d050d20.png",
-     "pos": 4,
-     "pts": 21
-    },
-    {
      "id": 1258,
      "nombre": "Sportivo Malvin",
      "slug": "sportivo-malvin",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/20df960c5e61321cddda76dfb97bf3d9.jpg",
-     "pos": 5,
-     "pts": 20
+     "pos": 4,
+     "pts": 23
     },
     {
      "id": 211,
      "nombre": "Real Rejunte",
      "slug": "real-rejunte",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f073d27cf37c.png",
+     "pos": 5,
+     "pts": 22
+    },
+    {
+     "id": 275,
+     "nombre": "TFC",
+     "slug": "tfc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5efbd8d050d20.png",
      "pos": 6,
-     "pts": 19
+     "pts": 21
     },
     {
      "id": 997,
@@ -2855,7 +2771,7 @@
      "slug": "universidad-ort-uruguay",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/679d06d6b897f.png",
      "pos": 7,
-     "pts": 17
+     "pts": 20
     },
     {
      "id": 1283,
@@ -2903,7 +2819,7 @@
      "slug": "babacar-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67e59f538a932.png",
      "pos": 13,
-     "pts": 3
+     "pts": 6
     },
     {
      "id": 1162,
