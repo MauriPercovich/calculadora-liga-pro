@@ -1,10 +1,5 @@
 [
  {
-  "torneoId": 558,
-  "tipo": "anio-corregido",
-  "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
- },
- {
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
   "detalle": "Carlos magno fc: oficial 30, por resultados 27"
@@ -23,5 +18,25 @@
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
   "detalle": "Mala Racha FC: oficial 12, por resultados 9"
+ },
+ {
+  "torneoId": 550,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "C.S y D La U: oficial 20, por resultados 23"
+ },
+ {
+  "torneoId": 552,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Cristal Palas FC: oficial 14, por resultados 15"
+ },
+ {
+  "torneoId": 552,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Bidon SAD: oficial 8, por resultados 9"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "anio-corregido",
+  "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
  }
 ]
