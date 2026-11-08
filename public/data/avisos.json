@@ -1,8 +1,73 @@
 [
  {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Regum Fc: oficial 29, por resultados 28"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Cimarrón FC: oficial 29, por resultados 26"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Chula FC: oficial 23, por resultados 22"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Asgard FC: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Chalachela: oficial 19, por resultados 18"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Porfiados FC: oficial 14, por resultados 13"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La jauria: oficial 11, por resultados 10"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Habana FC: oficial 10, por resultados 7"
+ },
+ {
+  "torneoId": 538,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Polo Bamba F.C.: oficial 2, por resultados 1"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Lyon Fc: oficial 32, por resultados 29"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Larrobla FC: oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Niubeel: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Hermandad: oficial 20, por resultados 17"
+ },
+ {
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Carlos magno fc: oficial 30, por resultados 27"
+  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
  },
  {
   "torneoId": 540,
@@ -12,12 +77,22 @@
  {
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
+  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
  },
  {
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Mala Racha FC: oficial 12, por resultados 9"
+  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Garrufa F.C: oficial 9, por resultados 8"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Man Red: oficial 5, por resultados 4"
  },
  {
   "torneoId": 558,
