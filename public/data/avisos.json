@@ -45,26 +45,6 @@
   "detalle": "Polo Bamba F.C.: oficial 2, por resultados 1"
  },
  {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Lyon Fc: oficial 32, por resultados 29"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Larrobla FC: oficial 27, por resultados 24"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Niubeel: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Hermandad: oficial 20, por resultados 17"
- },
- {
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
   "detalle": "Carlos magno fc: oficial 33, por resultados 27"
@@ -83,6 +63,26 @@
   "torneoId": 540,
   "tipo": "ajuste-de-puntos",
   "detalle": "Saint Higadoff: oficial 15, por resultados 12"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Lyon Fc: oficial 32, por resultados 29"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Larrobla FC: oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Niubeel: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Hermandad: oficial 20, por resultados 17"
  },
  {
   "torneoId": 557,
