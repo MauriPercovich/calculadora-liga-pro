@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T04:27:21.198Z",
+ "actualizado": "2026-11-11T00:21:56.218Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -1125,7 +1125,7 @@
    "totalFechas": 11,
    "esPrimera": false,
    "jugados": 70,
-   "restantes": 6,
+   "restantes": 7,
    "picantes": [
     {
      "partido": {
@@ -1149,17 +1149,17 @@
       {
        "equipoId": 837,
        "objetivo": "asciende",
-       "de": 0.615,
-       "a": 0.083
+       "de": 0.616,
+       "a": 0.103
       },
       {
        "equipoId": 1204,
        "objetivo": "asciende",
-       "de": 0.44,
-       "a": 0.789
+       "de": 0.409,
+       "a": 0.796
       }
      ],
-     "max": 0.532
+     "max": 0.513
     },
     {
      "partido": {
@@ -1183,17 +1183,17 @@
       {
        "equipoId": 1288,
        "objetivo": "asciende",
-       "de": 0.272,
-       "a": 0.6
+       "de": 0.418,
+       "a": 0.731
       },
       {
        "equipoId": 1279,
        "objetivo": "asciende",
-       "de": 0.139,
+       "de": 0.085,
        "a": 0
       }
      ],
-     "max": 0.32799999999999996
+     "max": 0.313
     },
     {
      "partido": {
@@ -1217,51 +1217,51 @@
       {
        "equipoId": 991,
        "objetivo": "desciende",
-       "de": 0.25,
+       "de": 0.226,
        "a": 0
       },
       {
        "equipoId": 1186,
        "objetivo": "desciende",
-       "de": 0.932,
+       "de": 0.967,
        "a": 1
       }
      ],
-     "max": 0.25
+     "max": 0.226
     },
     {
      "partido": {
-      "id": 30131,
+      "id": 30130,
       "fecha": 10,
       "dia": "2026-10-20",
       "hora": null,
       "cancha": "Pro Fútbol",
-      "a": 1190,
-      "b": 1276,
-      "golesA": 2,
-      "golesB": 3,
+      "a": 1278,
+      "b": 1123,
+      "golesA": 4,
+      "golesB": 0,
       "fase": "regular"
      },
      "antes": [
-      0.17120909198368336,
-      0.14123930003471574,
-      0.6875516079816009
+      0.9172441658152601,
+      0.0501143384299222,
+      0.03264149575481757
      ],
      "cambios": [
       {
-       "equipoId": 1276,
-       "objetivo": "asciende",
-       "de": 0.379,
-       "a": 0.506
+       "equipoId": 1123,
+       "objetivo": "desciende",
+       "de": 0.881,
+       "a": 1
       },
       {
-       "equipoId": 1190,
-       "objetivo": "desciende",
-       "de": 0.908,
-       "a": 1
+       "equipoId": 1278,
+       "objetivo": "campeon",
+       "de": 0.813,
+       "a": 0.836
       }
      ],
-     "max": 0.127
+     "max": 0.119
     }
    ],
    "equipos": [
