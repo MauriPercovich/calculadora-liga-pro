@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T06:43:42.823Z",
+ "actualizado": "2026-11-12T01:49:20.433Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -4053,129 +4053,67 @@
    "divisional": "A",
    "categoria": "Clausura",
    "anio": 2026,
-   "ultimaJugada": 12,
+   "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": true,
-   "jugados": 70,
-   "restantes": 8,
+   "jugados": 73,
+   "restantes": 5,
    "picantes": [
     {
      "partido": {
-      "id": 29721,
-      "fecha": 12,
-      "dia": "2026-11-04",
+      "id": 29731,
+      "fecha": 13,
+      "dia": "2026-11-11",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 1152,
-      "b": 169,
-      "golesA": 4,
-      "golesB": 2,
+      "a": 1290,
+      "b": 699,
+      "golesA": 1,
+      "golesB": 9,
       "fase": "regular"
      },
      "antes": [
-      0.1261517707816274,
-      0.09406831354159102,
-      0.7797799156767815
-     ],
-     "cambios": [
-      {
-       "equipoId": 1152,
-       "objetivo": "desciende",
-       "de": 0.856,
-       "a": 0.765
-      },
-      {
-       "equipoId": 169,
-       "objetivo": "campeon",
-       "de": 0.025,
-       "a": 0.014
-      }
-     ],
-     "max": 0.09099999999999997
-    },
-    {
-     "partido": {
-      "id": 29724,
-      "fecha": 12,
-      "dia": "2026-11-04",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 699,
-      "b": 772,
-      "golesA": 12,
-      "golesB": 2,
-      "fase": "regular"
-     },
-     "antes": [
-      0.7203181907337676,
-      0.14067585686144826,
-      0.1390059524047842
+      0.07191205827281051,
+      0.10347396499005351,
+      0.824613976737136
      ],
      "cambios": [
       {
        "equipoId": 699,
        "objetivo": "campeon",
-       "de": 0.595,
-       "a": 0.682
+       "de": 0.688,
+       "a": 0.773
       }
      ],
-     "max": 0.08700000000000008
+     "max": 0.08500000000000008
     },
     {
      "partido": {
-      "id": 29722,
-      "fecha": 12,
-      "dia": "2026-11-04",
+      "id": 29732,
+      "fecha": 13,
+      "dia": "2026-11-11",
       "hora": null,
       "cancha": "Nasazzi",
-      "a": 710,
-      "b": 1227,
-      "golesA": 0,
-      "golesB": 3,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5732920948519783,
-      0.1691694499217957,
-      0.25753845522622604
-     ],
-     "cambios": [
-      {
-       "equipoId": 710,
-       "objetivo": "desciende",
-       "de": 0.003,
-       "a": 0.073
-      }
-     ],
-     "max": 0.06999999999999999
-    },
-    {
-     "partido": {
-      "id": 29723,
-      "fecha": 12,
-      "dia": "2026-11-04",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 630,
-      "b": 1035,
+      "a": 848,
+      "b": 1155,
       "golesA": 4,
-      "golesB": 3,
+      "golesB": 5,
       "fase": "regular"
      },
      "antes": [
-      0.7413262403347967,
-      0.12259917636246898,
-      0.13607458330273434
+      0.2848643729551914,
+      0.15662640325447214,
+      0.5585092237903364
      ],
      "cambios": [
       {
-       "equipoId": 630,
+       "equipoId": 1155,
        "objetivo": "campeon",
-       "de": 0.321,
-       "a": 0.252
+       "de": 0.05,
+       "a": 0.031
       }
      ],
-     "max": 0.069
+     "max": 0.019000000000000003
     }
    ],
    "equipos": [
@@ -4185,23 +4123,23 @@
      "slug": "la-barraca-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/64234aa2a8637.png",
      "pos": 1,
-     "pts": 28
-    },
-    {
-     "id": 630,
-     "nombre": "Nueva Escuela FC",
-     "slug": "nueva-escuela-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc6def48be7.png",
-     "pos": 2,
-     "pts": 24
+     "pts": 31
     },
     {
      "id": 1155,
      "nombre": "El Monte",
      "slug": "el-monte",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd21188c6b9.png",
+     "pos": 2,
+     "pts": 26
+    },
+    {
+     "id": 630,
+     "nombre": "Nueva Escuela FC",
+     "slug": "nueva-escuela-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62cc6def48be7.png",
      "pos": 3,
-     "pts": 23
+     "pts": 24
     },
     {
      "id": 169,
@@ -4209,7 +4147,7 @@
      "slug": "union",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/68c1bde6397fb.jpeg",
      "pos": 4,
-     "pts": 21
+     "pts": 24
     },
     {
      "id": 954,
@@ -4291,137 +4229,12 @@
    "divisional": "B",
    "categoria": "Clausura",
    "anio": 2026,
-   "ultimaJugada": 12,
+   "ultimaJugada": 13,
    "totalFechas": 13,
    "esPrimera": false,
-   "jugados": 72,
-   "restantes": 6,
-   "picantes": [
-    {
-     "partido": {
-      "id": 29803,
-      "fecha": 12,
-      "dia": "2026-10-28",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1284,
-      "b": 1280,
-      "golesA": 1,
-      "golesB": 5,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5742644809351581,
-      0.15898737958675288,
-      0.26674813947808895
-     ],
-     "cambios": [
-      {
-       "equipoId": 1280,
-       "objetivo": "desciende",
-       "de": 0.87,
-       "a": 0.282
-      },
-      {
-       "equipoId": 1284,
-       "objetivo": "asciende",
-       "de": 0.027,
-       "a": 0
-      }
-     ],
-     "max": 0.5880000000000001
-    },
-    {
-     "partido": {
-      "id": 29802,
-      "fecha": 12,
-      "dia": "2026-10-28",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1255,
-      "b": 1198,
-      "golesA": 2,
-      "golesB": 5,
-      "fase": "regular"
-     },
-     "antes": [
-      0.36109215615412354,
-      0.18206293790378236,
-      0.4568449059420941
-     ],
-     "cambios": [
-      {
-       "equipoId": 1255,
-       "objetivo": "desciende",
-       "de": 0.165,
-       "a": 0.59
-      }
-     ],
-     "max": 0.42499999999999993
-    },
-    {
-     "partido": {
-      "id": 29800,
-      "fecha": 12,
-      "dia": "2026-10-28",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1216,
-      "b": 1265,
-      "golesA": 2,
-      "golesB": 1,
-      "fase": "regular"
-     },
-     "antes": [
-      0.3048331571231401,
-      0.1885829236004941,
-      0.5065839192763658
-     ],
-     "cambios": [
-      {
-       "equipoId": 1265,
-       "objetivo": "desciende",
-       "de": 0.926,
-       "a": 1
-      }
-     ],
-     "max": 0.07399999999999995
-    },
-    {
-     "partido": {
-      "id": 29799,
-      "fecha": 12,
-      "dia": "2026-10-28",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1261,
-      "b": 1099,
-      "golesA": 4,
-      "golesB": 2,
-      "fase": "regular"
-     },
-     "antes": [
-      0.8463231932585844,
-      0.07663657182107839,
-      0.07704023492033728
-     ],
-     "cambios": [
-      {
-       "equipoId": 1099,
-       "objetivo": "asciende",
-       "de": 0.961,
-       "a": 1
-      },
-      {
-       "equipoId": 1261,
-       "objetivo": "campeon",
-       "de": 0.878,
-       "a": 0.864
-      }
-     ],
-     "max": 0.039000000000000035
-    }
-   ],
+   "jugados": 73,
+   "restantes": 5,
+   "picantes": [],
    "equipos": [
     {
      "id": 1261,
@@ -4429,7 +4242,7 @@
      "slug": "buff-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/9a847172e100bfb206273652f5470193.jpg",
      "pos": 1,
-     "pts": 30
+     "pts": 33
     },
     {
      "id": 1281,
