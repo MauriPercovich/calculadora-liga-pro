@@ -20,116 +20,6 @@
   "detalle": "Frozono: oficial 22, por resultados 19"
  },
  {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Tenka FC: oficial 35, por resultados 32"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Coloña FC.: oficial 35, por resultados 32"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Sportivo Postiglione: oficial 24, por resultados 21"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Azzurra: oficial 20, por resultados 19"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Noso: oficial 19, por resultados 18"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Tomillo Fc: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Kraken F.C: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Los Pillos FC: oficial 36, por resultados 33"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Los Bolly FC: oficial 35, por resultados 32"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Callejeros FC: oficial 25, por resultados 22"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "SLM FC: oficial 24, por resultados 21"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "SA Duros (L): oficial 16, por resultados 13"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Gesell FC: oficial 16, por resultados 15"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "NAUMELO FC: oficial 9, por resultados 8"
- },
- {
-  "torneoId": 535,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Toronja Mecánica FC: oficial 6, por resultados 3"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "FULLMINE F.C: oficial 29, por resultados 26"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "San Marino: oficial 29, por resultados 28"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Inside Lecce: oficial 25, por resultados 24"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Sparrow Boys: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "By Hormiga: oficial 22, por resultados 19"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Acadé: oficial 21, por resultados 18"
- },
- {
-  "torneoId": 534,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Fauno F.C: oficial 19, por resultados 16"
- },
- {
   "torneoId": 538,
   "tipo": "ajuste-de-puntos",
   "detalle": "Regum Fc: oficial 29, por resultados 28"
@@ -173,6 +63,76 @@
   "torneoId": 538,
   "tipo": "ajuste-de-puntos",
   "detalle": "Polo Bamba F.C.: oficial 2, por resultados 1"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Tenka FC: oficial 35, por resultados 32"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Coloña FC.: oficial 35, por resultados 32"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sportivo Postiglione: oficial 24, por resultados 21"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Azzurra: oficial 20, por resultados 19"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Noso: oficial 19, por resultados 18"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Tomillo Fc: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Kraken F.C: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "FULLMINE F.C: oficial 29, por resultados 26"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "San Marino: oficial 29, por resultados 28"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Inside Lecce: oficial 25, por resultados 24"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sparrow Boys: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "By Hormiga: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Acadé: oficial 21, por resultados 18"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Fauno F.C: oficial 19, por resultados 16"
  },
  {
   "torneoId": 540,
@@ -223,6 +183,46 @@
   "torneoId": 557,
   "tipo": "ajuste-de-puntos",
   "detalle": "Man Red: oficial 5, por resultados 4"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Los Pillos FC: oficial 36, por resultados 33"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Los Bolly FC: oficial 35, por resultados 32"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Callejeros FC: oficial 25, por resultados 22"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "SLM FC: oficial 24, por resultados 21"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "SA Duros (L): oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Gesell FC: oficial 16, por resultados 15"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "NAUMELO FC: oficial 9, por resultados 8"
+ },
+ {
+  "torneoId": 535,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Toronja Mecánica FC: oficial 6, por resultados 3"
  },
  {
   "torneoId": 558,

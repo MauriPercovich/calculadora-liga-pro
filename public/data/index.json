@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T07:26:49.843Z",
+ "actualizado": "2026-11-12T20:01:08.812Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -4321,12 +4321,6 @@
        "objetivo": "desciende",
        "de": 0.276,
        "a": 1
-      },
-      {
-       "equipoId": 536,
-       "objetivo": "campeon",
-       "de": 0.033,
-       "a": 0.048
       }
      ],
      "max": 0.724
@@ -4364,34 +4358,6 @@
       }
      ],
      "max": 0.577
-    },
-    {
-     "partido": {
-      "id": 29805,
-      "fecha": 13,
-      "dia": "2026-11-04",
-      "hora": null,
-      "cancha": "Nasazzi",
-      "a": 1265,
-      "b": 1261,
-      "golesA": 3,
-      "golesB": 9,
-      "fase": "regular"
-     },
-     "antes": [
-      0.04140469816856535,
-      0.06040482171993471,
-      0.8981904801114999
-     ],
-     "cambios": [
-      {
-       "equipoId": 1261,
-       "objetivo": "campeon",
-       "de": 0.869,
-       "a": 0.859
-      }
-     ],
-     "max": 0.010000000000000009
     }
    ],
    "equipos": [
