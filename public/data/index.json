@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T03:17:48.551Z",
+ "actualizado": "2026-11-16T22:10:01.200Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -2630,8 +2630,8 @@
    "ultimaJugada": 14,
    "totalFechas": 15,
    "esPrimera": false,
-   "jugados": 90,
-   "restantes": 15,
+   "jugados": 91,
+   "restantes": 14,
    "picantes": [
     {
      "partido": {
@@ -2647,25 +2647,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.4471670359104091,
-      0.17860412748651877,
-      0.3742288366030722
+      0.4473994619239578,
+      0.17831565363122587,
+      0.3742848844448163
      ],
      "cambios": [
       {
        "equipoId": 211,
        "objetivo": "asciende",
-       "de": 0.38,
-       "a": 0.075
+       "de": 0.376,
+       "a": 0.074
       },
       {
        "equipoId": 1258,
        "objetivo": "asciende",
-       "de": 0.582,
-       "a": 0.85
+       "de": 0.579,
+       "a": 0.842
       }
      ],
-     "max": 0.305
+     "max": 0.302
     },
     {
      "partido": {
@@ -2681,25 +2681,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.35483252681062105,
-      0.20073520358984676,
-      0.44443226959953225
+      0.3548902418758268,
+      0.2004367929547583,
+      0.4446729651694149
      ],
      "cambios": [
+      {
+       "equipoId": 987,
+       "objetivo": "asciende",
+       "de": 0.562,
+       "a": 0.837
+      },
       {
        "equipoId": 1096,
        "objetivo": "asciende",
        "de": 0.29,
-       "a": 0.027
-      },
-      {
-       "equipoId": 987,
-       "objetivo": "asciende",
-       "de": 0.575,
-       "a": 0.832
+       "a": 0.028
       }
      ],
-     "max": 0.26299999999999996
+     "max": 0.2749999999999999
     },
     {
      "partido": {
@@ -2715,19 +2715,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.011396685955011336,
-      0.02982114282693944,
-      0.9587821712180492
+      0.011571954694600217,
+      0.031622871416585166,
+      0.9568051738888147
      ],
      "cambios": [
       {
        "equipoId": 571,
        "objetivo": "campeon",
-       "de": 0.335,
-       "a": 0.483
+       "de": 0.315,
+       "a": 0.479
       }
      ],
-     "max": 0.14799999999999996
+     "max": 0.16399999999999998
     },
     {
      "partido": {
@@ -2743,19 +2743,19 @@
       "fase": "regular"
      },
      "antes": [
-      0.007573378674894645,
-      0.01405037971602958,
-      0.9783762416090758
+      0.012542133947866766,
+      0.021017795782878653,
+      0.9664400702692546
      ],
      "cambios": [
       {
        "equipoId": 1256,
        "objetivo": "campeon",
-       "de": 0.583,
-       "a": 0.458
+       "de": 0.601,
+       "a": 0.457
       }
      ],
-     "max": 0.12499999999999994
+     "max": 0.14399999999999996
     }
    ],
    "equipos": [
@@ -2853,7 +2853,7 @@
      "slug": "ligamentos-cruzeiro",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/668fe1a6814cf.jpeg",
      "pos": 12,
-     "pts": 7
+     "pts": 10
     },
     {
      "id": 893,
@@ -2915,17 +2915,17 @@
       {
        "equipoId": 285,
        "objetivo": "desciende",
-       "de": 0.267,
-       "a": 0
+       "de": 0.266,
+       "a": 1
       },
       {
        "equipoId": 1163,
        "objetivo": "desciende",
-       "de": 0.733,
-       "a": 1
+       "de": 0.734,
+       "a": 0
       }
      ],
-     "max": 0.267
+     "max": 0.734
     },
     {
      "partido": {
@@ -2949,11 +2949,11 @@
       {
        "equipoId": 50,
        "objetivo": "campeon",
-       "de": 0.038,
-       "a": 0.085
+       "de": 0.043,
+       "a": 0.087
       }
      ],
-     "max": 0.04700000000000001
+     "max": 0.044
     },
     {
      "partido": {
@@ -2977,17 +2977,17 @@
       {
        "equipoId": 63,
        "objetivo": "campeon",
-       "de": 0.031,
+       "de": 0.028,
        "a": 0
       },
       {
        "equipoId": 158,
        "objetivo": "campeon",
-       "de": 0.923,
-       "a": 0.909
+       "de": 0.92,
+       "a": 0.908
       }
      ],
-     "max": 0.031
+     "max": 0.028
     }
    ],
    "equipos": [
@@ -3048,20 +3048,20 @@
      "pts": 14
     },
     {
-     "id": 285,
-     "nombre": "Tunguele",
-     "slug": "tunguele",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62a35d7e24042.png",
-     "pos": 8,
-     "pts": 13
-    },
-    {
      "id": 1163,
      "nombre": "La jauria",
      "slug": "la-jauria",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/6967e39d8d890.png",
+     "pos": 8,
+     "pts": 14
+    },
+    {
+     "id": 285,
+     "nombre": "Tunguele",
+     "slug": "tunguele",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/62a35d7e24042.png",
      "pos": 9,
-     "pts": 11
+     "pts": 13
     },
     {
      "id": 423,
@@ -3123,11 +3123,11 @@
       {
        "equipoId": 1234,
        "objetivo": "asciende",
-       "de": 0.937,
+       "de": 0.93,
        "a": 0
       }
      ],
-     "max": 0.937
+     "max": 0.93
     },
     {
      "partido": {
@@ -3151,11 +3151,11 @@
       {
        "equipoId": 983,
        "objetivo": "asciende",
-       "de": 0.063,
+       "de": 0.07,
        "a": 1
       }
      ],
-     "max": 0.937
+     "max": 0.9299999999999999
     },
     {
      "partido": {
@@ -3179,11 +3179,17 @@
       {
        "equipoId": 1090,
        "objetivo": "desciende",
-       "de": 0.715,
+       "de": 0.718,
        "a": 1
+      },
+      {
+       "equipoId": 945,
+       "objetivo": "campeon",
+       "de": 0.001,
+       "a": 0.013
       }
      ],
-     "max": 0.28500000000000003
+     "max": 0.28200000000000003
     },
     {
      "partido": {
@@ -3221,7 +3227,7 @@
      "slug": "lyon-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/669ff61cde3c8.png",
      "pos": 1,
-     "pts": 32
+     "pts": 35
     },
     {
      "id": 646,
@@ -3232,18 +3238,18 @@
      "pts": 27
     },
     {
-     "id": 945,
-     "nombre": "Rivera Park",
-     "slug": "rivera-park",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd2004dbcbb.png",
-     "pos": 3,
-     "pts": 23
-    },
-    {
      "id": 983,
      "nombre": "Niubeel",
      "slug": "niubeel",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd1c505bb5c.png",
+     "pos": 3,
+     "pts": 26
+    },
+    {
+     "id": 945,
+     "nombre": "Rivera Park",
+     "slug": "rivera-park",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/69fd2004dbcbb.png",
      "pos": 4,
      "pts": 23
     },
@@ -3455,7 +3461,7 @@
     },
     {
      "id": 1274,
-     "nombre": "dinamo palermo",
+     "nombre": "Dinamo Palermo",
      "slug": "dinamo-palermo",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/77c5103e83aba0be9298edbfee85074b.jpg",
      "pos": 2,
