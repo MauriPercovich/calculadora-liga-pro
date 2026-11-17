@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-17T04:38:25.631Z",
+ "actualizado": "2026-11-17T21:03:32.491Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -1159,8 +1159,8 @@
    "ultimaJugada": 11,
    "totalFechas": 11,
    "esPrimera": false,
-   "jugados": 75,
-   "restantes": 2,
+   "jugados": 77,
+   "restantes": 0,
    "picantes": [
     {
      "partido": {
@@ -1176,25 +1176,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.4963678187444908,
-      0.17936034934871842,
-      0.3242718319067908
+      0.4967621341213929,
+      0.17904920240016198,
+      0.32418866347844505
      ],
      "cambios": [
       {
        "equipoId": 1276,
        "objetivo": "asciende",
-       "de": 0.343,
+       "de": 0.405,
        "a": 0
       },
       {
        "equipoId": 1037,
        "objetivo": "asciende",
-       "de": 0.031,
+       "de": 0.029,
        "a": 0
       }
      ],
-     "max": 0.343
+     "max": 0.405
     },
     {
      "partido": {
@@ -1210,25 +1210,25 @@
       "fase": "regular"
      },
      "antes": [
-      0.550480984520527,
-      0.17709825030554827,
-      0.27242076517392483
+      0.5682613967981874,
+      0.1757768140020618,
+      0.2559617891997507
      ],
      "cambios": [
       {
        "equipoId": 1288,
        "objetivo": "asciende",
-       "de": 0.74,
+       "de": 0.617,
        "a": 1
       },
       {
        "equipoId": 1000,
        "objetivo": "campeon",
-       "de": 0.095,
-       "a": 0.062
+       "de": 0.092,
+       "a": 0.061
       }
      ],
-     "max": 0.26
+     "max": 0.383
     },
     {
      "partido": {
@@ -1244,47 +1244,47 @@
       "fase": "regular"
      },
      "antes": [
-      0.7835265046130891,
-      0.11271324431400877,
-      0.10376025107290214
+      0.7844804055799187,
+      0.11220955879285303,
+      0.1033100356272282
      ],
      "cambios": [
       {
        "equipoId": 1204,
        "objetivo": "asciende",
-       "de": 0.779,
+       "de": 0.791,
        "a": 1
       }
      ],
-     "max": 0.22099999999999997
+     "max": 0.20899999999999996
     },
     {
      "partido": {
-      "id": 30137,
+      "id": 30139,
       "fecha": 11,
       "dia": "2026-10-27",
       "hora": null,
       "cancha": "Pro Fútbol",
-      "a": 1279,
-      "b": 1278,
-      "golesA": 0,
-      "golesB": 3,
+      "a": 837,
+      "b": 1186,
+      "golesA": 3,
+      "golesB": 0,
       "fase": "regular"
      },
      "antes": [
-      0.14828119312047364,
-      0.1255517947688505,
-      0.7261670121106758
+      0.7380109918788869,
+      0.13060540422451486,
+      0.13138360389659834
      ],
      "cambios": [
       {
-       "equipoId": 1278,
-       "objetivo": "campeon",
-       "de": 0.833,
-       "a": 0.857
+       "equipoId": 837,
+       "objetivo": "asciende",
+       "de": 0.158,
+       "a": 0
       }
      ],
-     "max": 0.02400000000000002
+     "max": 0.158
     }
    ],
    "equipos": [
@@ -1321,11 +1321,27 @@
      "pts": 21
     },
     {
+     "id": 837,
+     "nombre": "Vagabanda",
+     "slug": "vagabanda",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65d4a306f1725.png",
+     "pos": 5,
+     "pts": 20
+    },
+    {
      "id": 1276,
      "nombre": "By Hormiga",
      "slug": "by-hormiga",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/8d431c92be5d85c9756273b817f1f3f6.png",
-     "pos": 5,
+     "pos": 6,
+     "pts": 19
+    },
+    {
+     "id": 168,
+     "nombre": "Sporting Baroffio",
+     "slug": "sporting-baroffio",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162945581f4.png",
+     "pos": 7,
      "pts": 19
     },
     {
@@ -1333,24 +1349,8 @@
      "nombre": "Con Carpeta FC",
      "slug": "con-carpeta-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/26ae4bf4f3411aeed90877a3cd9e5abb.jpg",
-     "pos": 6,
-     "pts": 18
-    },
-    {
-     "id": 837,
-     "nombre": "Vagabanda",
-     "slug": "vagabanda",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/65d4a306f1725.png",
-     "pos": 7,
-     "pts": 17
-    },
-    {
-     "id": 168,
-     "nombre": "Sporting Baroffio",
-     "slug": "sporting-baroffio",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162945581f4.png",
      "pos": 8,
-     "pts": 16
+     "pts": 18
     },
     {
      "id": 1279,
