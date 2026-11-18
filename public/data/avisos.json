@@ -20,41 +20,6 @@
   "detalle": "Frozono: oficial 23, por resultados 19"
  },
  {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Coloña FC.: oficial 38, por resultados 32"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Tenka FC: oficial 35, por resultados 32"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Sportivo Postiglione: oficial 24, por resultados 21"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Azzurra: oficial 23, por resultados 19"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Tomillo Fc: oficial 20, por resultados 14"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Noso: oficial 19, por resultados 18"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Kraken F.C: oficial 17, por resultados 14"
- },
- {
   "torneoId": 538,
   "tipo": "ajuste-de-puntos",
   "detalle": "Regum Fc: oficial 29, por resultados 28"
@@ -100,39 +65,64 @@
   "detalle": "Polo Bamba F.C.: oficial 2, por resultados 1"
  },
  {
-  "torneoId": 534,
+  "torneoId": 539,
   "tipo": "ajuste-de-puntos",
-  "detalle": "FULLMINE F.C: oficial 29, por resultados 26"
+  "detalle": "Lyon Fc: oficial 35, por resultados 29"
  },
  {
-  "torneoId": 534,
+  "torneoId": 539,
   "tipo": "ajuste-de-puntos",
-  "detalle": "San Marino: oficial 29, por resultados 28"
+  "detalle": "Larrobla FC: oficial 27, por resultados 24"
  },
  {
-  "torneoId": 534,
+  "torneoId": 539,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Inside Lecce: oficial 28, por resultados 24"
+  "detalle": "Niubeel: oficial 26, por resultados 20"
  },
  {
-  "torneoId": 534,
+  "torneoId": 539,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Sparrow Boys: oficial 26, por resultados 20"
+  "detalle": "La Hermandad: oficial 20, por resultados 17"
  },
  {
-  "torneoId": 534,
+  "torneoId": 539,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Fauno F.C: oficial 22, por resultados 16"
+  "detalle": "Buitres FC: oficial 9, por resultados 6"
  },
  {
-  "torneoId": 534,
+  "torneoId": 533,
   "tipo": "ajuste-de-puntos",
-  "detalle": "By Hormiga: oficial 22, por resultados 19"
+  "detalle": "La Coloña FC.: oficial 38, por resultados 32"
  },
  {
-  "torneoId": 534,
+  "torneoId": 533,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Acadé: oficial 21, por resultados 18"
+  "detalle": "Tenka FC: oficial 35, por resultados 32"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sportivo Postiglione: oficial 24, por resultados 21"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Azzurra: oficial 23, por resultados 19"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Tomillo Fc: oficial 20, por resultados 14"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Noso: oficial 19, por resultados 18"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Kraken F.C: oficial 17, por resultados 14"
  },
  {
   "torneoId": 535,
@@ -195,29 +185,64 @@
   "detalle": "Saint Higadoff: oficial 15, por resultados 12"
  },
  {
-  "torneoId": 539,
+  "torneoId": 534,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Lyon Fc: oficial 35, por resultados 29"
+  "detalle": "FULLMINE F.C: oficial 29, por resultados 26"
  },
  {
-  "torneoId": 539,
+  "torneoId": 534,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Larrobla FC: oficial 27, por resultados 24"
+  "detalle": "San Marino: oficial 29, por resultados 28"
  },
  {
-  "torneoId": 539,
+  "torneoId": 534,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Niubeel: oficial 26, por resultados 20"
+  "detalle": "Inside Lecce: oficial 28, por resultados 24"
  },
  {
-  "torneoId": 539,
+  "torneoId": 534,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Hermandad: oficial 20, por resultados 17"
+  "detalle": "Sparrow Boys: oficial 26, por resultados 20"
  },
  {
-  "torneoId": 539,
+  "torneoId": 534,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Buitres FC: oficial 9, por resultados 6"
+  "detalle": "Fauno F.C: oficial 22, por resultados 16"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "By Hormiga: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 534,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Acadé: oficial 21, por resultados 18"
+ },
+ {
+  "torneoId": 546,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Maños Fc: oficial 31, por resultados 34"
+ },
+ {
+  "torneoId": 546,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Aston Montevideo: oficial 22, por resultados 25"
+ },
+ {
+  "torneoId": 546,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Seupo F.C: oficial 21, por resultados 24"
+ },
+ {
+  "torneoId": 546,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Bauza FC: oficial 15, por resultados 16"
+ },
+ {
+  "torneoId": 546,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Fenerbahce United: oficial 10, por resultados 11"
  },
  {
   "torneoId": 553,
@@ -248,26 +273,6 @@
   "torneoId": 553,
   "tipo": "ajuste-de-puntos",
   "detalle": "Biorn FC: oficial 11, por resultados 8"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "AS Rústicos: oficial 27, por resultados 24"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Casavalle FC: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Petro FC: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Colón FC: oficial 12, por resultados 9"
  },
  {
   "torneoId": 557,
@@ -328,5 +333,25 @@
   "torneoId": 558,
   "tipo": "ajuste-de-puntos",
   "detalle": "Del Oeste FC: oficial 7, por resultados 4"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "AS Rústicos: oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo Casavalle FC: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Petro FC: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Colón FC: oficial 12, por resultados 9"
  }
 ]
