@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T07:45:26.602Z",
+ "actualizado": "2026-11-19T02:07:05.017Z",
  "torneo": "Clausura 2026",
  "divisionales": [
   {
@@ -1170,40 +1170,6 @@
    "picantes": [
     {
      "partido": {
-      "id": 31139,
-      "fecha": 12,
-      "dia": "2026-11-03",
-      "hora": null,
-      "cancha": "Pro Fútbol",
-      "a": 1288,
-      "b": 1037,
-      "golesA": 1,
-      "golesB": 4,
-      "fase": "regular"
-     },
-     "antes": [
-      0.5291477284804107,
-      0.16893663130209316,
-      0.3019156402174961
-     ],
-     "cambios": [
-      {
-       "equipoId": 1288,
-       "objetivo": "asciende",
-       "de": 0.817,
-       "a": 0.479
-      },
-      {
-       "equipoId": 1037,
-       "objetivo": "asciende",
-       "de": 0.028,
-       "a": 0.007
-      }
-     ],
-     "max": 0.33799999999999997
-    },
-    {
-     "partido": {
       "id": 31142,
       "fecha": 12,
       "dia": "2026-11-03",
@@ -1224,17 +1190,51 @@
       {
        "equipoId": 1276,
        "objetivo": "asciende",
-       "de": 0.3,
+       "de": 0.369,
        "a": 0
       },
       {
        "equipoId": 837,
        "objetivo": "asciende",
-       "de": 0.174,
-       "a": 0.356
+       "de": 0.196,
+       "a": 0.449
       }
      ],
-     "max": 0.3
+     "max": 0.369
+    },
+    {
+     "partido": {
+      "id": 31139,
+      "fecha": 12,
+      "dia": "2026-11-03",
+      "hora": null,
+      "cancha": "Pro Fútbol",
+      "a": 1288,
+      "b": 1037,
+      "golesA": 1,
+      "golesB": 4,
+      "fase": "regular"
+     },
+     "antes": [
+      0.45858643103430113,
+      0.17463697954922838,
+      0.3667765894164704
+     ],
+     "cambios": [
+      {
+       "equipoId": 1288,
+       "objetivo": "asciende",
+       "de": 0.298,
+       "a": 0.001
+      },
+      {
+       "equipoId": 1037,
+       "objetivo": "asciende",
+       "de": 0.09,
+       "a": 0.187
+      }
+     ],
+     "max": 0.297
     },
     {
      "partido": {
@@ -1258,8 +1258,8 @@
       {
        "equipoId": 168,
        "objetivo": "asciende",
-       "de": 0.168,
-       "a": 0.363
+       "de": 0.278,
+       "a": 0.436
       },
       {
        "equipoId": 1123,
@@ -1268,7 +1268,7 @@
        "a": 1
       }
      ],
-     "max": 0.19499999999999998
+     "max": 0.15799999999999997
     },
     {
      "partido": {
@@ -1292,11 +1292,11 @@
       {
        "equipoId": 1204,
        "objetivo": "asciende",
-       "de": 0.653,
-       "a": 0.847
+       "de": 0.77,
+       "a": 0.927
       }
      ],
-     "max": 0.19399999999999995
+     "max": 0.15700000000000003
     }
    ],
    "equipos": [
@@ -1314,7 +1314,7 @@
      "slug": "aston-montevideo",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/67a4dd4479758.jpeg",
      "pos": 2,
-     "pts": 25
+     "pts": 28
     },
     {
      "id": 1204,
@@ -1333,19 +1333,11 @@
      "pts": 23
     },
     {
-     "id": 1288,
-     "nombre": "Hasta el filtro FC",
-     "slug": "hasta-el-filtro-fc",
-     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/aff473f53151d8e24e193fe0f23804b3.png",
-     "pos": 5,
-     "pts": 23
-    },
-    {
      "id": 168,
      "nombre": "Sporting Baroffio",
      "slug": "sporting-baroffio",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/5f162945581f4.png",
-     "pos": 6,
+     "pos": 5,
      "pts": 22
     },
     {
@@ -1353,8 +1345,16 @@
      "nombre": "Con Carpeta FC",
      "slug": "con-carpeta-fc",
      "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/26ae4bf4f3411aeed90877a3cd9e5abb.jpg",
-     "pos": 7,
+     "pos": 6,
      "pts": 21
+    },
+    {
+     "id": 1288,
+     "nombre": "Hasta el filtro FC",
+     "slug": "hasta-el-filtro-fc",
+     "escudo": "https://d35aopncnu5nn7.cloudfront.net/equipos/escudos/aff473f53151d8e24e193fe0f23804b3.png",
+     "pos": 7,
+     "pts": 20
     },
     {
      "id": 1276,

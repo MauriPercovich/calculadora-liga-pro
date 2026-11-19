@@ -1,25 +1,5 @@
 [
  {
-  "torneoId": 530,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "CSY Hamburguesero: oficial 29, por resultados 23"
- },
- {
-  "torneoId": 530,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La 97: oficial 26, por resultados 22"
- },
- {
-  "torneoId": 530,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Bea Suelta: oficial 26, por resultados 23"
- },
- {
-  "torneoId": 530,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Frozono: oficial 23, por resultados 19"
- },
- {
   "torneoId": 533,
   "tipo": "ajuste-de-puntos",
   "detalle": "La Coloña FC.: oficial 38, por resultados 32"
@@ -53,6 +33,26 @@
   "torneoId": 533,
   "tipo": "ajuste-de-puntos",
   "detalle": "Kraken F.C: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 530,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "CSY Hamburguesero: oficial 29, por resultados 23"
+ },
+ {
+  "torneoId": 530,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La 97: oficial 26, por resultados 22"
+ },
+ {
+  "torneoId": 530,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Bea Suelta: oficial 26, por resultados 23"
+ },
+ {
+  "torneoId": 530,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Frozono: oficial 23, por resultados 19"
  },
  {
   "torneoId": 534,
@@ -180,44 +180,54 @@
   "detalle": "Saint Higadoff: oficial 15, por resultados 12"
  },
  {
-  "torneoId": 535,
+  "torneoId": 553,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Los Pillos FC: oficial 37, por resultados 33"
+  "detalle": "M.F.C City: oficial 30, por resultados 27"
  },
  {
-  "torneoId": 535,
+  "torneoId": 553,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Los Bolly FC: oficial 36, por resultados 32"
+  "detalle": "La Ambulancia: oficial 28, por resultados 25"
  },
  {
-  "torneoId": 535,
+  "torneoId": 553,
   "tipo": "ajuste-de-puntos",
-  "detalle": "SLM FC: oficial 27, por resultados 21"
+  "detalle": "Velero Fc: oficial 21, por resultados 20"
  },
  {
-  "torneoId": 535,
+  "torneoId": 553,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Callejeros FC: oficial 25, por resultados 22"
+  "detalle": "Aston Montevideo (S): oficial 20, por resultados 17"
  },
  {
-  "torneoId": 535,
+  "torneoId": 553,
   "tipo": "ajuste-de-puntos",
-  "detalle": "SA Duros (L): oficial 17, por resultados 13"
+  "detalle": "Old Harwood: oficial 14, por resultados 13"
  },
  {
-  "torneoId": 535,
+  "torneoId": 553,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Gesell FC: oficial 17, por resultados 15"
+  "detalle": "Biorn FC: oficial 11, por resultados 8"
  },
  {
-  "torneoId": 535,
+  "torneoId": 556,
   "tipo": "ajuste-de-puntos",
-  "detalle": "NAUMELO FC: oficial 9, por resultados 8"
+  "detalle": "AS Rústicos: oficial 27, por resultados 24"
  },
  {
-  "torneoId": 535,
+  "torneoId": 556,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Toronja Mecánica FC: oficial 6, por resultados 3"
+  "detalle": "Deportivo Casavalle FC: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Petro FC: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Colón FC: oficial 12, por resultados 9"
  },
  {
   "torneoId": 557,
@@ -280,53 +290,43 @@
   "detalle": "Del Oeste FC: oficial 7, por resultados 4"
  },
  {
-  "torneoId": 553,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "M.F.C City: oficial 30, por resultados 27"
+  "detalle": "Los Pillos FC: oficial 37, por resultados 33"
  },
  {
-  "torneoId": 553,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "La Ambulancia: oficial 28, por resultados 25"
+  "detalle": "Los Bolly FC: oficial 36, por resultados 32"
  },
  {
-  "torneoId": 553,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Velero Fc: oficial 21, por resultados 20"
+  "detalle": "SLM FC: oficial 27, por resultados 21"
  },
  {
-  "torneoId": 553,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Aston Montevideo (S): oficial 20, por resultados 17"
+  "detalle": "Callejeros FC: oficial 25, por resultados 22"
  },
  {
-  "torneoId": 553,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Old Harwood: oficial 14, por resultados 13"
+  "detalle": "SA Duros (L): oficial 17, por resultados 13"
  },
  {
-  "torneoId": 553,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Biorn FC: oficial 11, por resultados 8"
+  "detalle": "Gesell FC: oficial 17, por resultados 15"
  },
  {
-  "torneoId": 556,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "AS Rústicos: oficial 27, por resultados 24"
+  "detalle": "NAUMELO FC: oficial 9, por resultados 8"
  },
  {
-  "torneoId": 556,
+  "torneoId": 535,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Casavalle FC: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Petro FC: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Colón FC: oficial 12, por resultados 9"
+  "detalle": "Toronja Mecánica FC: oficial 6, por resultados 3"
  }
 ]
