@@ -175,26 +175,6 @@
   "detalle": "Toronja Mecánica FC: oficial 6, por resultados 3"
  },
  {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
- },
- {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Dinamo Palermo: oficial 22, por resultados 19"
- },
- {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
- },
- {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
- },
- {
   "torneoId": 539,
   "tipo": "ajuste-de-puntos",
   "detalle": "Lyon Fc: oficial 35, por resultados 29"
@@ -218,6 +198,26 @@
   "torneoId": 539,
   "tipo": "ajuste-de-puntos",
   "detalle": "Buitres FC: oficial 9, por resultados 6"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Dinamo Palermo: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
  },
  {
   "torneoId": 553,
