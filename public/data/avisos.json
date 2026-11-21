@@ -1,5 +1,40 @@
 [
  {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Coloña FC.: oficial 38, por resultados 32"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Tenka FC: oficial 35, por resultados 32"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sportivo Postiglione: oficial 24, por resultados 21"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Azzurra: oficial 23, por resultados 19"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Tomillo Fc: oficial 20, por resultados 14"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Noso: oficial 19, por resultados 18"
+ },
+ {
+  "torneoId": 533,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Kraken F.C: oficial 17, por resultados 14"
+ },
+ {
   "torneoId": 530,
   "tipo": "ajuste-de-puntos",
   "detalle": "CSY Hamburguesero: oficial 29, por resultados 23"
@@ -53,41 +88,6 @@
   "torneoId": 534,
   "tipo": "ajuste-de-puntos",
   "detalle": "La Acadé: oficial 21, por resultados 18"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Coloña FC.: oficial 38, por resultados 32"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Tenka FC: oficial 35, por resultados 32"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Sportivo Postiglione: oficial 24, por resultados 21"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Azzurra: oficial 23, por resultados 19"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Tomillo Fc: oficial 20, por resultados 14"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Noso: oficial 19, por resultados 18"
- },
- {
-  "torneoId": 533,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Kraken F.C: oficial 17, por resultados 14"
  },
  {
   "torneoId": 538,
@@ -175,6 +175,26 @@
   "detalle": "Toronja Mecánica FC: oficial 6, por resultados 3"
  },
  {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Dinamo Palermo: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
+ },
+ {
   "torneoId": 539,
   "tipo": "ajuste-de-puntos",
   "detalle": "Lyon Fc: oficial 35, por resultados 29"
@@ -200,34 +220,49 @@
   "detalle": "Buitres FC: oficial 9, por resultados 6"
  },
  {
-  "torneoId": 540,
+  "torneoId": 547,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
+  "detalle": "Venta F.C: oficial 28, por resultados 27"
  },
  {
-  "torneoId": 540,
+  "torneoId": 547,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Dinamo Palermo: oficial 22, por resultados 19"
+  "detalle": "F.C. Barril (S): oficial 26, por resultados 23"
  },
  {
-  "torneoId": 540,
+  "torneoId": 547,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
+  "detalle": "Sol Oriental: oficial 24, por resultados 23"
  },
  {
-  "torneoId": 540,
+  "torneoId": 547,
   "tipo": "ajuste-de-puntos",
-  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
+  "detalle": "San Diego FC: oficial 21, por resultados 18"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Funebreros FC: oficial 20, por resultados 17"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Intrepidos fc: oficial 11, por resultados 10"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Birra Fratelli FC: oficial 7, por resultados 6"
+ },
+ {
+  "torneoId": 553,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Ambulancia: oficial 31, por resultados 25"
  },
  {
   "torneoId": 553,
   "tipo": "ajuste-de-puntos",
   "detalle": "M.F.C City: oficial 30, por resultados 27"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Ambulancia: oficial 28, por resultados 25"
  },
  {
   "torneoId": 553,
