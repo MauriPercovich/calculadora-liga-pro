@@ -1,210 +1,5 @@
 [
  {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
- },
- {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Dinamo Palermo: oficial 22, por resultados 19"
- },
- {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
- },
- {
-  "torneoId": 540,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Venta F.C: oficial 28, por resultados 27"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "F.C. Barril (S): oficial 26, por resultados 23"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Sol Oriental: oficial 24, por resultados 23"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "San Diego FC: oficial 21, por resultados 18"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Funebreros FC: oficial 20, por resultados 17"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Intrepidos fc: oficial 11, por resultados 10"
- },
- {
-  "torneoId": 547,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Birra Fratelli FC: oficial 7, por resultados 6"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Lyon Fc: oficial 35, por resultados 29"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Larrobla FC: oficial 27, por resultados 24"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Niubeel: oficial 26, por resultados 20"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Hermandad: oficial 20, por resultados 17"
- },
- {
-  "torneoId": 539,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Buitres FC: oficial 9, por resultados 6"
- },
- {
-  "torneoId": 554,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Bufarra: oficial 22, por resultados 19"
- },
- {
-  "torneoId": 554,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Prestcold FC: oficial 10, por resultados 9"
- },
- {
-  "torneoId": 554,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Bomba: oficial 5, por resultados 4"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "AS Rústicos: oficial 27, por resultados 24"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo Casavalle FC: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Petro FC: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 556,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Colón FC: oficial 12, por resultados 9"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "La Ambulancia: oficial 31, por resultados 25"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "M.F.C City: oficial 30, por resultados 27"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Velero Fc: oficial 22, por resultados 20"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Aston Montevideo (S): oficial 21, por resultados 17"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Old Harwood: oficial 14, por resultados 13"
- },
- {
-  "torneoId": 553,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Biorn FC: oficial 11, por resultados 8"
- },
- {
-  "torneoId": 558,
-  "tipo": "anio-corregido",
-  "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
- },
- {
-  "torneoId": 558,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "UDEM: oficial 23, por resultados 20"
- },
- {
-  "torneoId": 558,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "El Tunel FC: oficial 21, por resultados 20"
- },
- {
-  "torneoId": 558,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Croacia Fútbol Club: oficial 18, por resultados 17"
- },
- {
-  "torneoId": 558,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Los Poquitos De Siempre FC: oficial 16, por resultados 13"
- },
- {
-  "torneoId": 558,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Deportivo 29: oficial 16, por resultados 13"
- },
- {
-  "torneoId": 558,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Del Oeste FC: oficial 7, por resultados 4"
- },
- {
-  "torneoId": 557,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Galácticos V (Nasazzi): oficial 22, por resultados 19"
- },
- {
-  "torneoId": 557,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Club Atlético NPC: oficial 19, por resultados 16"
- },
- {
-  "torneoId": 557,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Sportivo Ponzi: oficial 17, por resultados 16"
- },
- {
-  "torneoId": 557,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Estrella de Galicia: oficial 17, por resultados 14"
- },
- {
-  "torneoId": 557,
-  "tipo": "ajuste-de-puntos",
-  "detalle": "Man Red: oficial 5, por resultados 4"
- },
- {
   "torneoId": 538,
   "tipo": "ajuste-de-puntos",
   "detalle": "Regum Fc: oficial 32, por resultados 28"
@@ -248,5 +43,180 @@
   "torneoId": 538,
   "tipo": "ajuste-de-puntos",
   "detalle": "Polo Bamba F.C.: oficial 2, por resultados 1"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Lyon Fc: oficial 35, por resultados 29"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Larrobla FC: oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Niubeel: oficial 26, por resultados 20"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Hermandad: oficial 20, por resultados 17"
+ },
+ {
+  "torneoId": 539,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Buitres FC: oficial 9, por resultados 6"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Carlos magno fc: oficial 33, por resultados 27"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Dinamo Palermo: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Mala Racha FC: oficial 15, por resultados 9"
+ },
+ {
+  "torneoId": 540,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Saint Higadoff: oficial 15, por resultados 12"
+ },
+ {
+  "torneoId": 554,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Bufarra: oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 554,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Prestcold FC: oficial 10, por resultados 9"
+ },
+ {
+  "torneoId": 554,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Bomba: oficial 5, por resultados 4"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "AS Rústicos: oficial 27, por resultados 24"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo Casavalle FC: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "La Petro FC: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 556,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Colón FC: oficial 12, por resultados 9"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Venta F.C: oficial 28, por resultados 27"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "F.C. Barril (S): oficial 26, por resultados 23"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sol Oriental: oficial 24, por resultados 23"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "San Diego FC: oficial 21, por resultados 18"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Funebreros FC: oficial 20, por resultados 17"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Intrepidos fc: oficial 11, por resultados 10"
+ },
+ {
+  "torneoId": 547,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Birra Fratelli FC: oficial 7, por resultados 6"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Galácticos V (Nasazzi): oficial 22, por resultados 19"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Club Atlético NPC: oficial 19, por resultados 16"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Sportivo Ponzi: oficial 17, por resultados 16"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Estrella de Galicia: oficial 17, por resultados 14"
+ },
+ {
+  "torneoId": 557,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Man Red: oficial 5, por resultados 4"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "anio-corregido",
+  "detalle": "06/09/2016 -> 06/09/2026 (La Pampara F.C vs Los Poquitos De Siempre FC)"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "UDEM: oficial 23, por resultados 20"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "El Tunel FC: oficial 21, por resultados 20"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Croacia Fútbol Club: oficial 18, por resultados 17"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Los Poquitos De Siempre FC: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Deportivo 29: oficial 16, por resultados 13"
+ },
+ {
+  "torneoId": 558,
+  "tipo": "ajuste-de-puntos",
+  "detalle": "Del Oeste FC: oficial 7, por resultados 4"
  }
 ]
